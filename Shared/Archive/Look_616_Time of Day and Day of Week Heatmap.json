@@ -1,0 +1,286 @@
+{
+  "content_metadata_id": 2657,
+  "id": 616,
+  "title": "Time of Day and Day of Week Heatmap",
+  "created_at": "2022-08-29 17:59:31 UTC",
+  "deleted_at": null,
+  "deleter_id": null,
+  "description": "A table showing the Day of Week as columns and Hour of Day rows counting sessions for each over the time frame specified by a Session Start Date range filter.",
+  "favorite_count": 0,
+  "is_run_on_load": true,
+  "last_accessed_at": "2022-09-02 21:38:57 UTC",
+  "last_updater_id": 13,
+  "query_id": 1142458,
+  "short_url": "/looks/616",
+  "updated_at": "2022-11-01 02:34:10 UTC",
+  "user_id": 1302,
+  "view_count": 1,
+  "user": {
+    "id": 1302
+  },
+  "space_id": 1462,
+  "space": {
+    "name": "Archive",
+    "parent_id": 1,
+    "id": 1462,
+    "content_metadata_id": 2316,
+    "created_at": "2021-10-13 19:02:06 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "query": {
+    "id": 1142458,
+    "view": "page_views",
+    "fields": [
+      "page_views.session_count",
+      "page_views.page_view_start_day_of_week",
+      "page_views.page_view_start_hour_of_day"
+    ],
+    "pivots": [
+      "page_views.page_view_start_day_of_week"
+    ],
+    "fill_fields": [
+      "page_views.page_view_start_hour_of_day",
+      "page_views.page_view_start_day_of_week"
+    ],
+    "filters": null,
+    "filter_expression": null,
+    "sorts": [
+      "page_views.page_view_start_day_of_week 0",
+      "page_views.page_view_start_hour_of_day"
+    ],
+    "limit": "500",
+    "column_limit": null,
+    "total": null,
+    "row_total": null,
+    "subtotals": null,
+    "vis_config": {
+      "show_view_names": false,
+      "show_row_numbers": false,
+      "transpose": false,
+      "truncate_text": false,
+      "hide_totals": false,
+      "hide_row_totals": false,
+      "size_to_fit": true,
+      "table_theme": "white",
+      "limit_displayed_rows": false,
+      "enable_conditional_formatting": true,
+      "header_text_alignment": "left",
+      "header_font_size": "11",
+      "rows_font_size": "11",
+      "conditional_formatting_include_totals": false,
+      "conditional_formatting_include_nulls": true,
+      "color_application": {
+        "collection_id": "7c56cc21-66e4-41c9-81ce-a60e1c3967b2",
+        "palette_id": "5d189dfc-4f46-46f3-822b-bfb0b61777b1",
+        "collection_default": false,
+        "collection_label": "Shoreline",
+        "palette_label": "Mixed categorical",
+        "palette_type": "Categorical",
+        "palette_colors": [
+          "#1A73E8",
+          "#12B5CB",
+          "#E52592",
+          "#E8710A",
+          "#F9AB00",
+          "#7CB342",
+          "#9334E6",
+          "#80868B",
+          "#079c98",
+          "#A8A116",
+          "#EA4335",
+          "#FF8168"
+        ]
+      },
+      "show_sql_query_menu_options": false,
+      "show_totals": true,
+      "show_row_totals": true,
+      "series_labels": {
+        "page_views.page_view_start_hour_of_day": "Hour of Day",
+        "page_views.page_view_start_day_of_week": "Day of Week"
+      },
+      "series_column_widths": {
+        "page_views.page_view_start_hour_of_day": 106
+      },
+      "series_cell_visualizations": {
+        "page_views.session_count": {
+          "is_active": false
+        }
+      },
+      "conditional_formatting": [
+        {
+          "type": "along a scale...",
+          "value": null,
+          "background_color": "#1A73E8",
+          "font_color": null,
+          "palette": {
+            "name": "Red to Yellow to Green",
+            "colors": [
+              "#F36254",
+              "#FCF758",
+              "#4FBC89"
+            ]
+          },
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "fields": [
+            "page_views.session_count"
+          ],
+          "color_application": {
+            "collection_id": "7c56cc21-66e4-41c9-81ce-a60e1c3967b2",
+            "palette_id": "56d0c358-10a0-4fd6-aa0b-b117bef527ab",
+            "options": {
+              "steps": 5,
+              "reverse": false
+            },
+            "collection_default": false,
+            "collection_label": "Shoreline",
+            "palette_label": "White to blue, sequential",
+            "palette_type": "Sequential",
+            "palette_stops": [
+              {
+                "color": "#FFFFFF",
+                "offset": 0
+              },
+              {
+                "color": "#1A73E8",
+                "offset": 100
+              }
+            ]
+          }
+        }
+      ],
+      "truncate_column_names": false,
+      "subtotals_at_bottom": false,
+      "series_types": {
+      },
+      "type": "looker_grid",
+      "hidden_fields": [
+
+      ],
+      "y_axes": [
+
+      ],
+      "defaults_version": 1
+    },
+    "filter_config": null,
+    "visible_ui_sections": null,
+    "slug": "vxSsft7",
+    "client_id": "ZX618GPS9j1kkcdVyINMpU",
+    "share_url": "https://analytics.gov.bc.ca/x/ZX618GPS9j1kkcdVyINMpU",
+    "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.session_count,page_views.page_view_start_day_of_week,page_views.page_view_start_hour_of_day&pivots=page_views.page_view_start_day_of_week&fill_fields=page_views.page_view_start_hour_of_day,page_views.page_view_start_day_of_week&sorts=page_views.page_view_start_day_of_week+0,page_views.page_view_start_hour_of_day&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Atrue%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2211%22%2C%22rows_font_size%22%3A%2211%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Atrue%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%225d189dfc-4f46-46f3-822b-bfb0b61777b1%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A%22Hour+of+Day%22%2C%22page_views.page_view_start_day_of_week%22%3A%22Day+of+Week%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A106%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%231A73E8%22%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3A%5B%22page_views.session_count%22%5D%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%2256d0c358-10a0-4fd6-aa0b-b117bef527ab%22%2C%22options%22%3A%7B%22steps%22%3A5%2C%22reverse%22%3Afalse%7D%7D%7D%5D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&origin=share-expanded",
+    "url": "/explore/snowplow_web_block/page_views?fields=page_views.session_count,page_views.page_view_start_day_of_week,page_views.page_view_start_hour_of_day&pivots=page_views.page_view_start_day_of_week&fill_fields=page_views.page_view_start_hour_of_day,page_views.page_view_start_day_of_week&sorts=page_views.page_view_start_day_of_week+0,page_views.page_view_start_hour_of_day&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Atrue%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2211%22%2C%22rows_font_size%22%3A%2211%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Atrue%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%225d189dfc-4f46-46f3-822b-bfb0b61777b1%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A%22Hour+of+Day%22%2C%22page_views.page_view_start_day_of_week%22%3A%22Day+of+Week%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A106%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%231A73E8%22%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3A%5B%22page_views.session_count%22%5D%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%2256d0c358-10a0-4fd6-aa0b-b117bef527ab%22%2C%22options%22%3A%7B%22steps%22%3A5%2C%22reverse%22%3Afalse%7D%7D%7D%5D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D",
+    "runtime": null,
+    "has_table_calculations": false,
+    "model": "snowplow_web_block",
+    "dynamic_fields": null,
+    "query_timezone": null,
+    "quick_calcs": null,
+    "analysis_config": null,
+    "can": {
+      "run": true,
+      "see_results": true,
+      "explore": true,
+      "create": true,
+      "show": true,
+      "cost_estimate": true,
+      "index": true,
+      "see_lookml": true,
+      "see_aggregate_table_lookml": true,
+      "see_derived_table_lookml": true,
+      "see_sql": true,
+      "save": true,
+      "generate_drill_links": true,
+      "download": true,
+      "download_unlimited": true,
+      "use_custom_fields": true,
+      "edit_custom_fields": true,
+      "edit_table_calculations": true,
+      "schedule": true,
+      "render": true
+    }
+  },
+  "url": "/explore/snowplow_web_block/page_views?fields=page_views.session_count,page_views.page_view_start_day_of_week,page_views.page_view_start_hour_of_day&pivots=page_views.page_view_start_day_of_week&fill_fields=page_views.page_view_start_hour_of_day,page_views.page_view_start_day_of_week&sorts=page_views.page_view_start_day_of_week+0,page_views.page_view_start_hour_of_day&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Atrue%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2211%22%2C%22rows_font_size%22%3A%2211%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Atrue%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%225d189dfc-4f46-46f3-822b-bfb0b61777b1%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A%22Hour+of+Day%22%2C%22page_views.page_view_start_day_of_week%22%3A%22Day+of+Week%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_view_start_hour_of_day%22%3A106%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%231A73E8%22%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3A%5B%22page_views.session_count%22%5D%2C%22color_application%22%3A%7B%22collection_id%22%3A%227c56cc21-66e4-41c9-81ce-a60e1c3967b2%22%2C%22palette_id%22%3A%2256d0c358-10a0-4fd6-aa0b-b117bef527ab%22%2C%22options%22%3A%7B%22steps%22%3A5%2C%22reverse%22%3Afalse%7D%7D%7D%5D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&title=Time+of+Day+and+Day+of+Week+Heatmap&look_id=616",
+  "folder": {
+    "name": "Archive",
+    "parent_id": 1,
+    "id": 1462,
+    "content_metadata_id": 2316,
+    "created_at": "2021-10-13 19:02:06 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "deleted": false,
+  "embed_url": "https://analytics.gov.bc.ca/embed/public/Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr",
+  "excel_file_url": "https://analytics.gov.bc.ca/looks/Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr.iqy?apply_formatting=true&apply_vis=true&filename=Time+of+Day+and+Day+of+Week+Heatmap",
+  "google_spreadsheet_formula": "=ImportXML(\"https://analytics.gov.bc.ca/looks/Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr.gsxml?apply_formatting=true&apply_vis=true\", \"//row\")",
+  "image_embed_url": "https://analytics.gov.bc.ca/looks/Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr.png",
+  "last_viewed_at": null,
+  "model": {
+    "id": "snowplow_web_block",
+    "label": "Snowplow Web Block"
+  },
+  "public": null,
+  "public_slug": "Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr",
+  "public_url": "https://analytics.gov.bc.ca/looks/Mz2TpkXfB9HpmjS8qvwnFcVV4fgGjCyr.txt?apply_formatting=true&apply_vis=true",
+  "folder_id": 1462,
+  "can": {
+    "download": true,
+    "download_unlimited": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "explore": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "update_publicity": true,
+    "show_errors": true,
+    "find_and_replace": true,
+    "schedule": true,
+    "render": true
+  }
+}

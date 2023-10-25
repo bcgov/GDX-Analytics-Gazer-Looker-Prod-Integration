@@ -1,0 +1,1286 @@
+{
+  "content_metadata_id": 2655,
+  "description": "",
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "VCH Dashboard",
+  "user_id": 13,
+  "slug": "IUdv8RhJByVjtTHK4Xqkuk",
+  "preferred_viewer": "dashboards-next",
+  "space": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2022-08-26 18:00:47 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 317,
+      "edit_uri": null,
+      "id": 3153,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142827,
+        "view": "page_views",
+        "fields": [
+          "page_views.page_view_count",
+          "page_views.page_display_url",
+          "page_views.marketing_campaign",
+          "page_views.page_view_start_date"
+        ],
+        "pivots": [
+          "page_views.page_view_start_date"
+        ],
+        "fill_fields": [
+          "page_views.page_view_start_date"
+        ],
+        "filters": {
+          "page_views.marketing_campaign": "VCHVAX%",
+          "page_views.page_view_start_date": "7 days ago for 7 days"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_view_count desc 0",
+          "page_views.page_view_start_date"
+        ],
+        "limit": "500",
+        "column_limit": null,
+        "total": true,
+        "row_total": "right",
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.page_display_url": "URL",
+            "page_views.page_view_start_date": "Date",
+            "page_views.page_view_count": "Page Views"
+          },
+          "series_column_widths": {
+            "page_views.page_display_url": 420
+          },
+          "series_cell_visualizations": {
+            "page_views.page_view_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "c6464e27-e7e2-0423-3d31-4af7c2e87ff7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#424fbd"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "page_views.marketing_campaign": [
+            {
+              "type": "starts",
+              "values": [
+                {
+                  "constant": "VCHVAX"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "page_views.page_view_start_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "PwHbbcp",
+        "client_id": "KDIDGbKQ3yuQAf1MucCUSJ",
+        "share_url": "https://analytics.gov.bc.ca/x/KDIDGbKQ3yuQAf1MucCUSJ",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_view_count,page_views.page_display_url,page_views.marketing_campaign,page_views.page_view_start_date&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.marketing_campaign]=VCHVAX%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views.page_view_count+desc+0,page_views.page_view_start_date&limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%2C%22page_views.page_view_count%22%3A%22Page+Views%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_display_url%22%3A420%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22c6464e27-e7e2-0423-3d31-4af7c2e87ff7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23424fbd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.marketing_campaign%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22VCHVAX%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_view_count,page_views.page_display_url,page_views.marketing_campaign,page_views.page_view_start_date&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.marketing_campaign]=VCHVAX%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views.page_view_count+desc+0,page_views.page_view_start_date&limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%2C%22page_views.page_view_count%22%3A%22Page+Views%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_display_url%22%3A420%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22c6464e27-e7e2-0423-3d31-4af7c2e87ff7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23424fbd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.marketing_campaign%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22VCHVAX%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142827,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91728,
+      "subtitle_text": null,
+      "title": "VCHVAX UTM Clicks",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91728,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.page_view_count desc 0",
+          "page_views.page_view_start_date"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142827,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142827,
+          "view": "page_views",
+          "fields": [
+            "page_views.page_view_count",
+            "page_views.page_display_url",
+            "page_views.marketing_campaign",
+            "page_views.page_view_start_date"
+          ],
+          "pivots": [
+            "page_views.page_view_start_date"
+          ],
+          "fill_fields": [
+            "page_views.page_view_start_date"
+          ],
+          "filters": {
+            "page_views.marketing_campaign": "VCHVAX%",
+            "page_views.page_view_start_date": "7 days ago for 7 days"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_view_count desc 0",
+            "page_views.page_view_start_date"
+          ],
+          "limit": "500",
+          "column_limit": null,
+          "total": true,
+          "row_total": "right",
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "series_labels": {
+              "page_views.page_display_url": "URL",
+              "page_views.page_view_start_date": "Date",
+              "page_views.page_view_count": "Page Views"
+            },
+            "series_column_widths": {
+              "page_views.page_display_url": 420
+            },
+            "series_cell_visualizations": {
+              "page_views.page_view_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "c6464e27-e7e2-0423-3d31-4af7c2e87ff7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#424fbd"
+                  ]
+                }
+              }
+            },
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "page_views.marketing_campaign": [
+              {
+                "type": "starts",
+                "values": [
+                  {
+                    "constant": "VCHVAX"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "page_views.page_view_start_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "PwHbbcp",
+          "client_id": "KDIDGbKQ3yuQAf1MucCUSJ",
+          "share_url": "https://analytics.gov.bc.ca/x/KDIDGbKQ3yuQAf1MucCUSJ",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_view_count,page_views.page_display_url,page_views.marketing_campaign,page_views.page_view_start_date&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.marketing_campaign]=VCHVAX%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views.page_view_count+desc+0,page_views.page_view_start_date&limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%2C%22page_views.page_view_count%22%3A%22Page+Views%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_display_url%22%3A420%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22c6464e27-e7e2-0423-3d31-4af7c2e87ff7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23424fbd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.marketing_campaign%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22VCHVAX%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_view_count,page_views.page_display_url,page_views.marketing_campaign,page_views.page_view_start_date&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.marketing_campaign]=VCHVAX%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views.page_view_count+desc+0,page_views.page_view_start_date&limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%2C%22page_views.page_view_count%22%3A%22Page+Views%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_display_url%22%3A420%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22c6464e27-e7e2-0423-3d31-4af7c2e87ff7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23424fbd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.marketing_campaign%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22VCHVAX%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.page_display_url": "URL",
+            "page_views.page_view_start_date": "Date",
+            "page_views.page_view_count": "Page Views"
+          },
+          "series_column_widths": {
+            "page_views.page_display_url": 420
+          },
+          "series_cell_visualizations": {
+            "page_views.page_view_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "c6464e27-e7e2-0423-3d31-4af7c2e87ff7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#424fbd"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 317,
+      "edit_uri": null,
+      "id": 3154,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142828,
+        "view": "page_views",
+        "fields": [
+          "page_views.page_display_url",
+          "page_views.page_view_start_date",
+          "page_views.page_view_count"
+        ],
+        "pivots": [
+          "page_views.page_view_start_date"
+        ],
+        "fill_fields": [
+          "page_views.page_view_start_date"
+        ],
+        "filters": {
+          "page_views.page_urlhost": "www.getvaccinated.gov.bc.ca",
+          "page_views.referrer_urlhost": "www.vch.ca",
+          "page_views.page_view_start_date": "7 days ago for 7 days",
+          "page_views.page_display_url": "https://www.getvaccinated.gov.bc.ca/s/"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_display_url",
+          "page_views.page_view_start_date"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": "right",
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.page_display_url": "URL",
+            "page_views.page_view_start_date": "Date"
+          },
+          "series_column_widths": {
+          },
+          "series_cell_visualizations": {
+            "page_views.page_view_count": {
+              "is_active": true
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "page_views.page_urlhost": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www.getvaccinated.gov.bc.ca"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "page_views.referrer_urlhost": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www.vch.ca"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ],
+          "page_views.page_view_start_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ],
+          "page_views.page_display_url": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "https://www.getvaccinated.gov.bc.ca/s/"
+                },
+                {
+                }
+              ],
+              "id": 3
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "g28ZF9w",
+        "client_id": "Aic7iV0lC1u6ebZ5mi69bI",
+        "share_url": "https://analytics.gov.bc.ca/x/Aic7iV0lC1u6ebZ5mi69bI",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.page_view_start_date,page_views.page_view_count&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.page_urlhost]=www.getvaccinated.gov.bc.ca&f[page_views.referrer_urlhost]=www.vch.ca&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_display_url]=https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F&sorts=page_views.page_display_url,page_views.page_view_start_date&limit=500&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%7D%2C%22series_column_widths%22%3A%7B%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.getvaccinated.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.vch.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.page_view_start_date,page_views.page_view_count&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.page_urlhost]=www.getvaccinated.gov.bc.ca&f[page_views.referrer_urlhost]=www.vch.ca&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_display_url]=https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F&sorts=page_views.page_display_url,page_views.page_view_start_date&limit=500&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%7D%2C%22series_column_widths%22%3A%7B%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.getvaccinated.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.vch.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142828,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91729,
+      "subtitle_text": null,
+      "title": "VCH clicks to GetVacccinated",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91729,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.page_display_url",
+          "page_views.page_view_start_date"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142828,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142828,
+          "view": "page_views",
+          "fields": [
+            "page_views.page_display_url",
+            "page_views.page_view_start_date",
+            "page_views.page_view_count"
+          ],
+          "pivots": [
+            "page_views.page_view_start_date"
+          ],
+          "fill_fields": [
+            "page_views.page_view_start_date"
+          ],
+          "filters": {
+            "page_views.page_urlhost": "www.getvaccinated.gov.bc.ca",
+            "page_views.referrer_urlhost": "www.vch.ca",
+            "page_views.page_view_start_date": "7 days ago for 7 days",
+            "page_views.page_display_url": "https://www.getvaccinated.gov.bc.ca/s/"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_display_url",
+            "page_views.page_view_start_date"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": "right",
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "series_labels": {
+              "page_views.page_display_url": "URL",
+              "page_views.page_view_start_date": "Date"
+            },
+            "series_column_widths": {
+            },
+            "series_cell_visualizations": {
+              "page_views.page_view_count": {
+                "is_active": true
+              }
+            },
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "page_views.page_urlhost": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www.getvaccinated.gov.bc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "page_views.referrer_urlhost": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www.vch.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ],
+            "page_views.page_view_start_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ],
+            "page_views.page_display_url": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "https://www.getvaccinated.gov.bc.ca/s/"
+                  },
+                  {
+                  }
+                ],
+                "id": 3
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "g28ZF9w",
+          "client_id": "Aic7iV0lC1u6ebZ5mi69bI",
+          "share_url": "https://analytics.gov.bc.ca/x/Aic7iV0lC1u6ebZ5mi69bI",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.page_view_start_date,page_views.page_view_count&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.page_urlhost]=www.getvaccinated.gov.bc.ca&f[page_views.referrer_urlhost]=www.vch.ca&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_display_url]=https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F&sorts=page_views.page_display_url,page_views.page_view_start_date&limit=500&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%7D%2C%22series_column_widths%22%3A%7B%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.getvaccinated.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.vch.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.page_view_start_date,page_views.page_view_count&pivots=page_views.page_view_start_date&fill_fields=page_views.page_view_start_date&f[page_views.page_urlhost]=www.getvaccinated.gov.bc.ca&f[page_views.referrer_urlhost]=www.vch.ca&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_display_url]=https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F&sorts=page_views.page_display_url,page_views.page_view_start_date&limit=500&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_view_start_date%22%3A%22Date%22%7D%2C%22series_column_widths%22%3A%7B%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.getvaccinated.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.vch.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.getvaccinated.gov.bc.ca%2Fs%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.page_display_url": "URL",
+            "page_views.page_view_start_date": "Date"
+          },
+          "series_column_widths": {
+          },
+          "series_cell_visualizations": {
+            "page_views.page_view_count": {
+              "is_active": true
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 1560,
+      "dashboard_id": 317,
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_view_start_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Page View Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page View Start Date",
+        "label_from_parameter": null,
+        "label_short": "Page View Start Date",
+        "map_layer": null,
+        "name": "page_views.page_view_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": "page_views.page_view_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_view_start_date",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 317,
+      "dashboard_id": 317,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "VCH Dashboard",
+      "dashboard_layout_components": [
+        {
+          "id": 3153,
+          "dashboard_layout_id": 317,
+          "dashboard_element_id": 3153,
+          "row": 0,
+          "column": 0,
+          "width": 24,
+          "height": 5,
+          "deleted": false,
+          "element_title": "VCHVAX UTM Clicks",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 3154,
+          "dashboard_layout_id": 317,
+          "dashboard_element_id": 3154,
+          "row": 5,
+          "column": 0,
+          "width": 24,
+          "height": 4,
+          "deleted": false,
+          "element_title": "VCH clicks to GetVacccinated",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-10-22 13:10:45 UTC",
+  "updated_at": "2022-08-30 22:30:59 UTC",
+  "last_updater_id": 13,
+  "last_updater_name": "Dan Pollock",
+  "user_name": "Dan Pollock",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 37,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 87,
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 317,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 37,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}

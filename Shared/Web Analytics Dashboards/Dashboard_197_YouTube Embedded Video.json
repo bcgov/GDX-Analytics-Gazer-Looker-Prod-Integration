@@ -1,0 +1,2068 @@
+{
+  "content_metadata_id": 1792,
+  "description": "",
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "YouTube Embedded Video",
+  "user_id": 513,
+  "slug": "HaUvpR6vSwPiCfkF5Maqd6",
+  "preferred_viewer": "dashboards-next",
+  "space": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2020-06-22 22:16:08 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 197,
+      "edit_uri": null,
+      "id": 2081,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": "above",
+      "note_state": "collapsed",
+      "note_text": "The top played and finished YouTube Embeds",
+      "note_text_as_html": "The top played and finished YouTube Embeds",
+      "query": {
+        "id": 436581,
+        "view": "youtube_embed_video",
+        "fields": [
+          "page_views.page_title",
+          "page_views.page_display_url",
+          "youtube_embed_video.author",
+          "youtube_embed_video.title",
+          "youtube_embed_video.video_id",
+          "youtube_embed_video.count_plays",
+          "youtube_embed_video.count_ended"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "youtube_embed_video.status": "Playing,Ended",
+          "page_views.flexible_filter_date_range": "7 days"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "youtube_embed_video.count_plays desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_labels": {
+            "youtube_embed_video.status_count": "Number of Plays",
+            "youtube_embed_video.author": "Video Author",
+            "youtube_embed_video.title": "Video Title",
+            "youtube_embed_video.count_plays": "Number of Plays",
+            "page_views.page_title": "Title",
+            "page_views.page_display_url": "URL",
+            "youtube_embed_video.count_ended": "Number of Finishes"
+          },
+          "series_column_widths": {
+            "youtube_embed_video.author": 115,
+            "youtube_embed_video.video_id": 105,
+            "youtube_embed_video.status_count": 145,
+            "youtube_embed_video.title": 155,
+            "page_views.page_title": 260,
+            "page_views.page_url": 365
+          },
+          "series_cell_visualizations": {
+            "youtube_embed_video.status_count": {
+              "is_active": false
+            }
+          },
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "youtube_embed_video.status": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Playing,Ended"
+                },
+                {
+                }
+              ],
+              "id": 56,
+              "error": false
+            }
+          ],
+          "page_views.flexible_filter_date_range": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "day"
+                },
+                {
+                }
+              ],
+              "id": 57
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "S3Ts33H",
+        "client_id": "zcHo96WnhtPofkog9HoJJI",
+        "share_url": "https://analytics.gov.bc.ca/x/zcHo96WnhtPofkog9HoJJI",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=page_views.page_title,page_views.page_display_url,youtube_embed_video.author,youtube_embed_video.title,youtube_embed_video.video_id,youtube_embed_video.count_plays,youtube_embed_video.count_ended&f[youtube_embed_video.status]=Playing%2CEnded&f[page_views.flexible_filter_date_range]=7+days&sorts=youtube_embed_video.count_plays+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22youtube_embed_video.status_count%22%3A%22Number+of+Plays%22%2C%22youtube_embed_video.author%22%3A%22Video+Author%22%2C%22youtube_embed_video.title%22%3A%22Video+Title%22%2C%22youtube_embed_video.count_plays%22%3A%22Number+of+Plays%22%2C%22page_views.page_title%22%3A%22Title%22%2C%22page_views.page_display_url%22%3A%22URL%22%2C%22youtube_embed_video.count_ended%22%3A%22Number+of+Finishes%22%7D%2C%22series_column_widths%22%3A%7B%22youtube_embed_video.author%22%3A115%2C%22youtube_embed_video.video_id%22%3A105%2C%22youtube_embed_video.status_count%22%3A145%2C%22youtube_embed_video.title%22%3A155%2C%22page_views.page_title%22%3A260%2C%22page_views.page_url%22%3A365%7D%2C%22series_cell_visualizations%22%3A%7B%22youtube_embed_video.status_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%2CEnded%22%7D%2C%7B%7D%5D%2C%22id%22%3A56%2C%22error%22%3Afalse%7D%5D%2C%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A57%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/youtube_embed_video?fields=page_views.page_title,page_views.page_display_url,youtube_embed_video.author,youtube_embed_video.title,youtube_embed_video.video_id,youtube_embed_video.count_plays,youtube_embed_video.count_ended&f[youtube_embed_video.status]=Playing%2CEnded&f[page_views.flexible_filter_date_range]=7+days&sorts=youtube_embed_video.count_plays+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22youtube_embed_video.status_count%22%3A%22Number+of+Plays%22%2C%22youtube_embed_video.author%22%3A%22Video+Author%22%2C%22youtube_embed_video.title%22%3A%22Video+Title%22%2C%22youtube_embed_video.count_plays%22%3A%22Number+of+Plays%22%2C%22page_views.page_title%22%3A%22Title%22%2C%22page_views.page_display_url%22%3A%22URL%22%2C%22youtube_embed_video.count_ended%22%3A%22Number+of+Finishes%22%7D%2C%22series_column_widths%22%3A%7B%22youtube_embed_video.author%22%3A115%2C%22youtube_embed_video.video_id%22%3A105%2C%22youtube_embed_video.status_count%22%3A145%2C%22youtube_embed_video.title%22%3A155%2C%22page_views.page_title%22%3A260%2C%22page_views.page_url%22%3A365%7D%2C%22series_cell_visualizations%22%3A%7B%22youtube_embed_video.status_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%2CEnded%22%7D%2C%7B%7D%5D%2C%22id%22%3A56%2C%22error%22%3Afalse%7D%5D%2C%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A57%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436581,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31281,
+      "subtitle_text": null,
+      "title": "Top YouTube Embeds",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31281,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "youtube_embed_video",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "page_views.page_view_start_marketing_drill_date"
+              },
+              {
+                "dashboard_filter_name": "URL",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Title",
+                "field": "page_views.page_title"
+              },
+              {
+                "dashboard_filter_name": "Section",
+                "field": "page_views.page_section"
+              },
+              {
+                "dashboard_filter_name": "Video ID",
+                "field": "youtube_embed_video.video_id"
+              },
+              {
+                "dashboard_filter_name": "Video Author",
+                "field": "youtube_embed_video.author"
+              },
+              {
+                "dashboard_filter_name": "Video Title",
+                "field": "youtube_embed_video.title"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "youtube_embed_video.count_plays desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436581,
+        "sql_query_id": null,
+        "query": {
+          "id": 436581,
+          "view": "youtube_embed_video",
+          "fields": [
+            "page_views.page_title",
+            "page_views.page_display_url",
+            "youtube_embed_video.author",
+            "youtube_embed_video.title",
+            "youtube_embed_video.video_id",
+            "youtube_embed_video.count_plays",
+            "youtube_embed_video.count_ended"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "youtube_embed_video.status": "Playing,Ended",
+            "page_views.flexible_filter_date_range": "7 days"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "youtube_embed_video.count_plays desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": false,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "series_labels": {
+              "youtube_embed_video.status_count": "Number of Plays",
+              "youtube_embed_video.author": "Video Author",
+              "youtube_embed_video.title": "Video Title",
+              "youtube_embed_video.count_plays": "Number of Plays",
+              "page_views.page_title": "Title",
+              "page_views.page_display_url": "URL",
+              "youtube_embed_video.count_ended": "Number of Finishes"
+            },
+            "series_column_widths": {
+              "youtube_embed_video.author": 115,
+              "youtube_embed_video.video_id": 105,
+              "youtube_embed_video.status_count": 145,
+              "youtube_embed_video.title": 155,
+              "page_views.page_title": 260,
+              "page_views.page_url": 365
+            },
+            "series_cell_visualizations": {
+              "youtube_embed_video.status_count": {
+                "is_active": false
+              }
+            },
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "youtube_embed_video.status": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Playing,Ended"
+                  },
+                  {
+                  }
+                ],
+                "id": 56,
+                "error": false
+              }
+            ],
+            "page_views.flexible_filter_date_range": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "day"
+                  },
+                  {
+                  }
+                ],
+                "id": 57
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "S3Ts33H",
+          "client_id": "zcHo96WnhtPofkog9HoJJI",
+          "share_url": "https://analytics.gov.bc.ca/x/zcHo96WnhtPofkog9HoJJI",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=page_views.page_title,page_views.page_display_url,youtube_embed_video.author,youtube_embed_video.title,youtube_embed_video.video_id,youtube_embed_video.count_plays,youtube_embed_video.count_ended&f[youtube_embed_video.status]=Playing%2CEnded&f[page_views.flexible_filter_date_range]=7+days&sorts=youtube_embed_video.count_plays+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22youtube_embed_video.status_count%22%3A%22Number+of+Plays%22%2C%22youtube_embed_video.author%22%3A%22Video+Author%22%2C%22youtube_embed_video.title%22%3A%22Video+Title%22%2C%22youtube_embed_video.count_plays%22%3A%22Number+of+Plays%22%2C%22page_views.page_title%22%3A%22Title%22%2C%22page_views.page_display_url%22%3A%22URL%22%2C%22youtube_embed_video.count_ended%22%3A%22Number+of+Finishes%22%7D%2C%22series_column_widths%22%3A%7B%22youtube_embed_video.author%22%3A115%2C%22youtube_embed_video.video_id%22%3A105%2C%22youtube_embed_video.status_count%22%3A145%2C%22youtube_embed_video.title%22%3A155%2C%22page_views.page_title%22%3A260%2C%22page_views.page_url%22%3A365%7D%2C%22series_cell_visualizations%22%3A%7B%22youtube_embed_video.status_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%2CEnded%22%7D%2C%7B%7D%5D%2C%22id%22%3A56%2C%22error%22%3Afalse%7D%5D%2C%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A57%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/youtube_embed_video?fields=page_views.page_title,page_views.page_display_url,youtube_embed_video.author,youtube_embed_video.title,youtube_embed_video.video_id,youtube_embed_video.count_plays,youtube_embed_video.count_ended&f[youtube_embed_video.status]=Playing%2CEnded&f[page_views.flexible_filter_date_range]=7+days&sorts=youtube_embed_video.count_plays+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22youtube_embed_video.status_count%22%3A%22Number+of+Plays%22%2C%22youtube_embed_video.author%22%3A%22Video+Author%22%2C%22youtube_embed_video.title%22%3A%22Video+Title%22%2C%22youtube_embed_video.count_plays%22%3A%22Number+of+Plays%22%2C%22page_views.page_title%22%3A%22Title%22%2C%22page_views.page_display_url%22%3A%22URL%22%2C%22youtube_embed_video.count_ended%22%3A%22Number+of+Finishes%22%7D%2C%22series_column_widths%22%3A%7B%22youtube_embed_video.author%22%3A115%2C%22youtube_embed_video.video_id%22%3A105%2C%22youtube_embed_video.status_count%22%3A145%2C%22youtube_embed_video.title%22%3A155%2C%22page_views.page_title%22%3A260%2C%22page_views.page_url%22%3A365%7D%2C%22series_cell_visualizations%22%3A%7B%22youtube_embed_video.status_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%2CEnded%22%7D%2C%7B%7D%5D%2C%22id%22%3A56%2C%22error%22%3Afalse%7D%5D%2C%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A57%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_labels": {
+            "youtube_embed_video.status_count": "Number of Plays",
+            "youtube_embed_video.author": "Video Author",
+            "youtube_embed_video.title": "Video Title",
+            "youtube_embed_video.count_plays": "Number of Plays",
+            "page_views.page_title": "Title",
+            "page_views.page_display_url": "URL",
+            "youtube_embed_video.count_ended": "Number of Finishes"
+          },
+          "series_column_widths": {
+            "youtube_embed_video.author": 115,
+            "youtube_embed_video.video_id": 105,
+            "youtube_embed_video.status_count": 145,
+            "youtube_embed_video.title": 155,
+            "page_views.page_title": 260,
+            "page_views.page_url": 365
+          },
+          "series_cell_visualizations": {
+            "youtube_embed_video.status_count": {
+              "is_active": false
+            }
+          },
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 197,
+      "edit_uri": null,
+      "id": 2102,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": "above",
+      "note_state": "collapsed",
+      "note_text": "",
+      "note_text_as_html": "",
+      "query": {
+        "id": 1430857,
+        "view": "youtube_embed_video",
+        "fields": [
+          "youtube_embed_video.status_count",
+          "page_views.date_window"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "youtube_embed_video.status": "Playing",
+          "page_views.is_in_current_period_or_last_period": "Yes"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.date_window"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "custom_color_enabled": true,
+          "show_single_value_title": true,
+          "show_comparison": true,
+          "comparison_type": "change",
+          "comparison_reverse_colors": false,
+          "show_comparison_label": true,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "single_value_title": "Total Video Plays",
+          "comparison_label": "from last period",
+          "conditional_formatting": [
+            {
+              "type": "equal to",
+              "value": null,
+              "background_color": "#62bad4",
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_sequential3",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to blue, sequential",
+                "palette_type": "Sequential",
+                "palette_stops": [
+                  {
+                    "color": "#ff0000",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#0000ff",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "type": "single_value",
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+            "page_views.date_window"
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "youtube_embed_video.status": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Playing"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "page_views.is_in_current_period_or_last_period": [
+            {
+              "type": "is",
+              "values": [
+                {
+                  "constant": "Yes"
+                },
+                {
+                }
+              ],
+              "id": 2
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "gFDCHGq",
+        "client_id": "lEjbbi1uy99ObWZc6IZmX8",
+        "share_url": "https://analytics.gov.bc.ca/x/lEjbbi1uy99ObWZc6IZmX8",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.status_count,page_views.date_window&f[youtube_embed_video.status]=Playing&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.date_window&limit=500&column_limit=50&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Total+Video+Plays%22%2C%22comparison_label%22%3A%22from+last+period%22%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22single_value%22%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22page_views.date_window%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22%28%24%7Byoutube_embed_video.status_count%7D+%2F+offset%28%24%7Byoutube_embed_video.status_count%7D%2C+1%29%29+-+1%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.status_count,page_views.date_window&f[youtube_embed_video.status]=Playing&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.date_window&limit=500&column_limit=50&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Total+Video+Plays%22%2C%22comparison_label%22%3A%22from+last+period%22%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22single_value%22%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22page_views.date_window%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22%28%24%7Byoutube_embed_video.status_count%7D+%2F+offset%28%24%7Byoutube_embed_video.status_count%7D%2C+1%29%29+-+1%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
+        "runtime": null,
+        "has_table_calculations": true,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"(${youtube_embed_video.status_count} / offset(${youtube_embed_video.status_count}, 1)) - 1\",\"value_format\":null,\"value_format_name\":\"percent_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1430857,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 106384,
+      "subtitle_text": null,
+      "title": "Total Video Plays",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 106384,
+        "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"(${youtube_embed_video.status_count} / offset(${youtube_embed_video.status_count}, 1)) - 1\",\"value_format\":null,\"value_format_name\":\"percent_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "youtube_embed_video",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "page_views.flexible_filter_date_range"
+              },
+              {
+                "dashboard_filter_name": "URL",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Title",
+                "field": "page_views.page_title"
+              },
+              {
+                "dashboard_filter_name": "Section",
+                "field": "page_views.page_section"
+              },
+              {
+                "dashboard_filter_name": "Video ID",
+                "field": "youtube_embed_video.video_id"
+              },
+              {
+                "dashboard_filter_name": "Video Author",
+                "field": "youtube_embed_video.author"
+              },
+              {
+                "dashboard_filter_name": "Video Title",
+                "field": "youtube_embed_video.title"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.date_window"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 1430857,
+        "sql_query_id": null,
+        "query": {
+          "id": 1430857,
+          "view": "youtube_embed_video",
+          "fields": [
+            "youtube_embed_video.status_count",
+            "page_views.date_window"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "youtube_embed_video.status": "Playing",
+            "page_views.is_in_current_period_or_last_period": "Yes"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.date_window"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "custom_color_enabled": true,
+            "show_single_value_title": true,
+            "show_comparison": true,
+            "comparison_type": "change",
+            "comparison_reverse_colors": false,
+            "show_comparison_label": true,
+            "enable_conditional_formatting": false,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "single_value_title": "Total Video Plays",
+            "comparison_label": "from last period",
+            "conditional_formatting": [
+              {
+                "type": "equal to",
+                "value": null,
+                "background_color": "#62bad4",
+                "font_color": null,
+                "color_application": {
+                  "collection_id": "legacy",
+                  "palette_id": "legacy_sequential3"
+                },
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "fields": null
+              }
+            ],
+            "type": "single_value",
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "header_text_alignment": "left",
+            "header_font_size": 12,
+            "rows_font_size": 12,
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+              "page_views.date_window"
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "youtube_embed_video.status": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Playing"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "page_views.is_in_current_period_or_last_period": [
+              {
+                "type": "is",
+                "values": [
+                  {
+                    "constant": "Yes"
+                  },
+                  {
+                  }
+                ],
+                "id": 2
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "gFDCHGq",
+          "client_id": "lEjbbi1uy99ObWZc6IZmX8",
+          "share_url": "https://analytics.gov.bc.ca/x/lEjbbi1uy99ObWZc6IZmX8",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.status_count,page_views.date_window&f[youtube_embed_video.status]=Playing&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.date_window&limit=500&column_limit=50&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Total+Video+Plays%22%2C%22comparison_label%22%3A%22from+last+period%22%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22single_value%22%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22page_views.date_window%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22%28%24%7Byoutube_embed_video.status_count%7D+%2F+offset%28%24%7Byoutube_embed_video.status_count%7D%2C+1%29%29+-+1%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.status_count,page_views.date_window&f[youtube_embed_video.status]=Playing&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.date_window&limit=500&column_limit=50&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Total+Video+Plays%22%2C%22comparison_label%22%3A%22from+last+period%22%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22single_value%22%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22page_views.date_window%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22youtube_embed_video.status%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Playing%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22%28%24%7Byoutube_embed_video.status_count%7D+%2F+offset%28%24%7Byoutube_embed_video.status_count%7D%2C+1%29%29+-+1%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
+          "runtime": null,
+          "has_table_calculations": true,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"(${youtube_embed_video.status_count} / offset(${youtube_embed_video.status_count}, 1)) - 1\",\"value_format\":null,\"value_format_name\":\"percent_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "custom_color_enabled": true,
+          "show_single_value_title": true,
+          "show_comparison": true,
+          "comparison_type": "change",
+          "comparison_reverse_colors": false,
+          "show_comparison_label": true,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "single_value_title": "Total Video Plays",
+          "comparison_label": "from last period",
+          "conditional_formatting": [
+            {
+              "type": "equal to",
+              "value": null,
+              "background_color": "#62bad4",
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_sequential3",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to blue, sequential",
+                "palette_type": "Sequential",
+                "palette_stops": [
+                  {
+                    "color": "#ff0000",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#0000ff",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "type": "single_value",
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+            "page_views.date_window"
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 197,
+      "edit_uri": null,
+      "id": 2103,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": "above",
+      "note_state": "collapsed",
+      "note_text": "This tile shows the count of video plays for a given embed on a given page. It will count the first time an embed is played on a single page view.",
+      "note_text_as_html": "This tile shows the count of video plays for a given embed on a given page. It will count the first time an embed is played on a single page view.",
+      "query": {
+        "id": 1334774,
+        "view": "youtube_embed_video",
+        "fields": [
+          "page_views.comparison_date",
+          "page_views.date_window",
+          "youtube_embed_video.count_plays"
+        ],
+        "pivots": [
+          "page_views.date_window"
+        ],
+        "fill_fields": null,
+        "filters": {
+          "page_views.flexible_filter_date_range": "7 days ago for 7 days",
+          "page_views.is_in_current_period_or_last_period": "Yes"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.comparison_date",
+          "page_views.date_window"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": false,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "show_null_points": false,
+          "interpolation": "linear",
+          "y_axes": [
+            {
+              "label": "Play Count",
+              "orientation": "left",
+              "series": [
+                {
+                  "axisId": "youtube_embed_video.status_count",
+                  "id": "Current Period - 0 - youtube_embed_video.status_count",
+                  "name": "Current Period"
+                },
+                {
+                  "axisId": "youtube_embed_video.status_count",
+                  "id": "Last Period - 1 - youtube_embed_video.status_count",
+                  "name": "Last Period"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "limit_displayed_rows_values": {
+            "show_hide": "hide",
+            "first_last": "first",
+            "num_rows": 0
+          },
+          "hide_legend": true,
+          "series_types": {
+          },
+          "custom_color_enabled": true,
+          "show_single_value_title": true,
+          "single_value_title": "Total Plays",
+          "show_comparison": true,
+          "comparison_type": "change",
+          "comparison_reverse_colors": false,
+          "show_comparison_label": true,
+          "comparison_label": "from last period",
+          "enable_conditional_formatting": false,
+          "conditional_formatting": [
+            {
+              "type": "equal to",
+              "value": null,
+              "background_color": "#62bad4",
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_sequential3",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to blue, sequential",
+                "palette_type": "Sequential",
+                "palette_stops": [
+                  {
+                    "color": "#ff0000",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#0000ff",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_line",
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ]
+        },
+        "filter_config": {
+          "page_views.flexible_filter_date_range": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 4,
+              "error": false
+            }
+          ],
+          "page_views.is_in_current_period_or_last_period": [
+            {
+              "type": "is",
+              "values": [
+                {
+                  "constant": "Yes"
+                },
+                {
+                }
+              ],
+              "id": 5
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "6t7Gw42",
+        "client_id": "WryP2EAkPTHHb2Td3Oany5",
+        "share_url": "https://analytics.gov.bc.ca/x/WryP2EAkPTHHb2Td3Oany5",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=page_views.comparison_date,page_views.date_window,youtube_embed_video.count_plays&pivots=page_views.date_window&f[page_views.flexible_filter_date_range]=7+days+ago+for+7+days&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.comparison_date,page_views.date_window&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Afalse%2C%22interpolation%22%3A%22linear%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Play+Count%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Current+Period+-+0+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Current+Period%22%7D%2C%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Last+Period+-+1+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Last+Period%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22hide_legend%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22single_value_title%22%3A%22Total+Plays%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22comparison_label%22%3A%22from+last+period%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_line%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/youtube_embed_video?fields=page_views.comparison_date,page_views.date_window,youtube_embed_video.count_plays&pivots=page_views.date_window&f[page_views.flexible_filter_date_range]=7+days+ago+for+7+days&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.comparison_date,page_views.date_window&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Afalse%2C%22interpolation%22%3A%22linear%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Play+Count%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Current+Period+-+0+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Current+Period%22%7D%2C%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Last+Period+-+1+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Last+Period%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22hide_legend%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22single_value_title%22%3A%22Total+Plays%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22comparison_label%22%3A%22from+last+period%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_line%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1334774,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 106383,
+      "subtitle_text": null,
+      "title": "Embed Video Plays Comparison",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 106383,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "youtube_embed_video",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "page_views.flexible_filter_date_range"
+              },
+              {
+                "dashboard_filter_name": "URL",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Title",
+                "field": "page_views.page_title"
+              },
+              {
+                "dashboard_filter_name": "Section",
+                "field": "page_views.page_section"
+              },
+              {
+                "dashboard_filter_name": "Video ID",
+                "field": "youtube_embed_video.video_id"
+              },
+              {
+                "dashboard_filter_name": "Video Author",
+                "field": "youtube_embed_video.author"
+              },
+              {
+                "dashboard_filter_name": "Video Title",
+                "field": "youtube_embed_video.title"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.comparison_date",
+          "page_views.date_window"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 1334774,
+        "sql_query_id": null,
+        "query": {
+          "id": 1334774,
+          "view": "youtube_embed_video",
+          "fields": [
+            "page_views.comparison_date",
+            "page_views.date_window",
+            "youtube_embed_video.count_plays"
+          ],
+          "pivots": [
+            "page_views.date_window"
+          ],
+          "fill_fields": null,
+          "filters": {
+            "page_views.flexible_filter_date_range": "7 days ago for 7 days",
+            "page_views.is_in_current_period_or_last_period": "Yes"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.comparison_date",
+            "page_views.date_window"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": false,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": false,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "limit_displayed_rows": false,
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "show_null_points": false,
+            "interpolation": "linear",
+            "y_axes": [
+              {
+                "label": "Play Count",
+                "orientation": "left",
+                "series": [
+                  {
+                    "axisId": "youtube_embed_video.status_count",
+                    "id": "Current Period - 0 - youtube_embed_video.status_count",
+                    "name": "Current Period"
+                  },
+                  {
+                    "axisId": "youtube_embed_video.status_count",
+                    "id": "Last Period - 1 - youtube_embed_video.status_count",
+                    "name": "Last Period"
+                  }
+                ],
+                "showLabels": true,
+                "showValues": true,
+                "unpinAxis": false,
+                "tickDensity": "default",
+                "tickDensityCustom": 5,
+                "type": "linear"
+              }
+            ],
+            "limit_displayed_rows_values": {
+              "show_hide": "hide",
+              "first_last": "first",
+              "num_rows": 0
+            },
+            "hide_legend": true,
+            "series_types": {
+            },
+            "custom_color_enabled": true,
+            "show_single_value_title": true,
+            "single_value_title": "Total Plays",
+            "show_comparison": true,
+            "comparison_type": "change",
+            "comparison_reverse_colors": false,
+            "show_comparison_label": true,
+            "comparison_label": "from last period",
+            "enable_conditional_formatting": false,
+            "conditional_formatting": [
+              {
+                "type": "equal to",
+                "value": null,
+                "background_color": "#62bad4",
+                "font_color": null,
+                "color_application": {
+                  "collection_id": "legacy",
+                  "palette_id": "legacy_sequential3"
+                },
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "fields": null
+              }
+            ],
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_line",
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "header_text_alignment": "left",
+            "header_font_size": 12,
+            "rows_font_size": 12,
+            "defaults_version": 1,
+            "hidden_fields": [
+
+            ]
+          },
+          "filter_config": {
+            "page_views.flexible_filter_date_range": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 4,
+                "error": false
+              }
+            ],
+            "page_views.is_in_current_period_or_last_period": [
+              {
+                "type": "is",
+                "values": [
+                  {
+                    "constant": "Yes"
+                  },
+                  {
+                  }
+                ],
+                "id": 5
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "6t7Gw42",
+          "client_id": "WryP2EAkPTHHb2Td3Oany5",
+          "share_url": "https://analytics.gov.bc.ca/x/WryP2EAkPTHHb2Td3Oany5",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=page_views.comparison_date,page_views.date_window,youtube_embed_video.count_plays&pivots=page_views.date_window&f[page_views.flexible_filter_date_range]=7+days+ago+for+7+days&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.comparison_date,page_views.date_window&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Afalse%2C%22interpolation%22%3A%22linear%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Play+Count%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Current+Period+-+0+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Current+Period%22%7D%2C%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Last+Period+-+1+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Last+Period%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22hide_legend%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22single_value_title%22%3A%22Total+Plays%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22comparison_label%22%3A%22from+last+period%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_line%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/youtube_embed_video?fields=page_views.comparison_date,page_views.date_window,youtube_embed_video.count_plays&pivots=page_views.date_window&f[page_views.flexible_filter_date_range]=7+days+ago+for+7+days&f[page_views.is_in_current_period_or_last_period]=Yes&sorts=page_views.comparison_date,page_views.date_window&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Afalse%2C%22interpolation%22%3A%22linear%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Play+Count%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Current+Period+-+0+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Current+Period%22%7D%2C%7B%22axisId%22%3A%22youtube_embed_video.status_count%22%2C%22id%22%3A%22Last+Period+-+1+-+youtube_embed_video.status_count%22%2C%22name%22%3A%22Last+Period%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22hide_legend%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22single_value_title%22%3A%22Total+Plays%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22comparison_label%22%3A%22from+last+period%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22equal+to%22%2C%22value%22%3Anull%2C%22background_color%22%3A%22%2362bad4%22%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_sequential3%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_line%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22page_views.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22page_views.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": false,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "show_null_points": false,
+          "interpolation": "linear",
+          "y_axes": [
+            {
+              "label": "Play Count",
+              "orientation": "left",
+              "series": [
+                {
+                  "axisId": "youtube_embed_video.status_count",
+                  "id": "Current Period - 0 - youtube_embed_video.status_count",
+                  "name": "Current Period"
+                },
+                {
+                  "axisId": "youtube_embed_video.status_count",
+                  "id": "Last Period - 1 - youtube_embed_video.status_count",
+                  "name": "Last Period"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "limit_displayed_rows_values": {
+            "show_hide": "hide",
+            "first_last": "first",
+            "num_rows": 0
+          },
+          "hide_legend": true,
+          "series_types": {
+          },
+          "custom_color_enabled": true,
+          "show_single_value_title": true,
+          "single_value_title": "Total Plays",
+          "show_comparison": true,
+          "comparison_type": "change",
+          "comparison_reverse_colors": false,
+          "show_comparison_label": true,
+          "comparison_label": "from last period",
+          "enable_conditional_formatting": false,
+          "conditional_formatting": [
+            {
+              "type": "equal to",
+              "value": null,
+              "background_color": "#62bad4",
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_sequential3",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to blue, sequential",
+                "palette_type": "Sequential",
+                "palette_stops": [
+                  {
+                    "color": "#ff0000",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#0000ff",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_line",
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": "",
+      "body_text_as_html": null,
+      "dashboard_id": 197,
+      "edit_uri": null,
+      "id": 2104,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": null,
+      "query_id": null,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": null,
+      "subtitle_text": null,
+      "title": null,
+      "title_hidden": false,
+      "title_text": "Embed Video Plays Comparison",
+      "type": "text",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": "Embed Video Plays Comparison",
+      "subtitle_text_as_html": null,
+      "result_maker": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": false,
+        "index": true,
+        "show": true,
+        "explore": false,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 930,
+      "dashboard_id": 197,
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "date_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days ago for 7 days",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 944,
+      "dashboard_id": 197,
+      "name": "URL",
+      "title": "URL",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 945,
+      "dashboard_id": 197,
+      "name": "Title",
+      "title": "Title",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 946,
+      "dashboard_id": 197,
+      "name": "Section",
+      "title": "Section",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 947,
+      "dashboard_id": 197,
+      "name": "Video ID",
+      "title": "Video ID",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 948,
+      "dashboard_id": 197,
+      "name": "Video Author",
+      "title": "Video Author",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 5,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 949,
+      "dashboard_id": 197,
+      "name": "Video Title",
+      "title": "Video Title",
+      "type": "string_filter",
+      "explore": "",
+      "dimension": null,
+      "row": 6,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1214,
+      "dashboard_id": 197,
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "site_cache",
+      "dimension": "site_cache.page_urlhost",
+      "row": 7,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "tag_list",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Site Cache Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "site_cache.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "site_cache",
+        "view_label": "Site Cache",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "site_cache",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "site_cache",
+        "suggest_dimension": "site_cache.page_urlhost",
+        "suggest_explore": "site_cache",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 197,
+      "dashboard_id": 197,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "YouTube Embedded Video",
+      "dashboard_layout_components": [
+        {
+          "id": 2081,
+          "dashboard_layout_id": 197,
+          "dashboard_element_id": 2081,
+          "row": 11,
+          "column": 1,
+          "width": 22,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Top YouTube Embeds",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2102,
+          "dashboard_layout_id": 197,
+          "dashboard_element_id": 2102,
+          "row": 2,
+          "column": 16,
+          "width": 6,
+          "height": 4,
+          "deleted": false,
+          "element_title": "Total Video Plays",
+          "element_title_hidden": false,
+          "vis_type": "single_value",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2103,
+          "dashboard_layout_id": 197,
+          "dashboard_element_id": 2103,
+          "row": 2,
+          "column": 1,
+          "width": 15,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Embed Video Plays Comparison",
+          "element_title_hidden": false,
+          "vis_type": "looker_line",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2104,
+          "dashboard_layout_id": 197,
+          "dashboard_element_id": 2104,
+          "row": 0,
+          "column": 2,
+          "width": 20,
+          "height": 2,
+          "deleted": false,
+          "element_title": "Embed Video Plays Comparison",
+          "element_title_hidden": false,
+          "vis_type": "text",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-08-16 21:09:19 UTC",
+  "updated_at": "2023-06-09 22:31:47 UTC",
+  "last_updater_id": 1723,
+  "last_updater_name": "Bradley Oldham",
+  "user_name": "Brendan Jennings",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 37,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 178,
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 197,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 37,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}
