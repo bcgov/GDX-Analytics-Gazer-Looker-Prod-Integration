@@ -1,0 +1,265 @@
+{
+  "content_metadata_id": 2113,
+  "id": 559,
+  "title": "Vaccine daily report",
+  "created_at": "2021-04-06 17:39:05 UTC",
+  "deleted_at": null,
+  "deleter_id": null,
+  "description": null,
+  "favorite_count": 0,
+  "is_run_on_load": true,
+  "last_accessed_at": "2023-10-01 13:00:34 UTC",
+  "last_updater_id": 1810,
+  "query_id": 1414614,
+  "short_url": "/looks/559",
+  "updated_at": "2023-06-01 15:59:08 UTC",
+  "user_id": 29,
+  "view_count": 22,
+  "user": {
+    "id": 29
+  },
+  "space_id": 109,
+  "space": {
+    "name": "Dev",
+    "parent_id": 36,
+    "id": 109,
+    "content_metadata_id": 398,
+    "created_at": "2018-12-18 08:01:55 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "query": {
+    "id": 1414614,
+    "view": "cfms_poc",
+    "fields": [
+      "cfms_poc.date",
+      "cfms_poc.services_count",
+      "cfms_poc.transaction_name"
+    ],
+    "pivots": [
+      "cfms_poc.transaction_name"
+    ],
+    "fill_fields": [
+      "cfms_poc.date"
+    ],
+    "filters": {
+      "cfms_poc.program_id": "Other - 044,Other - 045,Other - 046"
+    },
+    "filter_expression": "if(extract_months(now())-1 = 0, extract_years(${cfms_poc.date}) = extract_years(now())-1, extract_years(${cfms_poc.date}) = extract_years(now())) AND \nif(extract_months(now())-1 = 0, extract_months(${cfms_poc.date}) = 12, extract_months(${cfms_poc.date}) = (extract_months(now()) -1))",
+    "sorts": [
+      "cfms_poc.transaction_name 0",
+      "cfms_poc.date 0"
+    ],
+    "limit": "500",
+    "column_limit": "50",
+    "total": null,
+    "row_total": "right",
+    "subtotals": null,
+    "vis_config": {
+      "show_view_names": false,
+      "show_row_numbers": false,
+      "transpose": false,
+      "truncate_text": true,
+      "hide_totals": false,
+      "hide_row_totals": false,
+      "size_to_fit": true,
+      "table_theme": "white",
+      "limit_displayed_rows": false,
+      "enable_conditional_formatting": false,
+      "header_text_alignment": "left",
+      "header_font_size": "12",
+      "rows_font_size": "12",
+      "conditional_formatting_include_totals": false,
+      "conditional_formatting_include_nulls": false,
+      "show_sql_query_menu_options": false,
+      "show_totals": true,
+      "show_row_totals": true,
+      "series_labels": {
+        "cfms_poc.services_count": "Transactions"
+      },
+      "series_column_widths": {
+        "cfms_poc.date": 252
+      },
+      "series_cell_visualizations": {
+        "cfms_poc.services_count": {
+          "is_active": false
+        }
+      },
+      "series_text_format": {
+        "cfms_poc.services_count": {
+          "align": "left"
+        },
+        "cfms_poc.transaction_name": {
+          "align": "center"
+        }
+      },
+      "type": "looker_grid",
+      "x_axis_gridlines": false,
+      "y_axis_gridlines": true,
+      "show_y_axis_labels": true,
+      "show_y_axis_ticks": true,
+      "y_axis_tick_density": "default",
+      "y_axis_tick_density_custom": 5,
+      "show_x_axis_label": true,
+      "show_x_axis_ticks": true,
+      "y_axis_scale_mode": "linear",
+      "x_axis_reversed": false,
+      "y_axis_reversed": false,
+      "plot_size_by_field": false,
+      "trellis": "",
+      "stacking": "",
+      "legend_position": "center",
+      "point_style": "none",
+      "show_value_labels": false,
+      "label_density": 25,
+      "x_axis_scale": "auto",
+      "y_axis_combined": true,
+      "show_null_points": true,
+      "interpolation": "linear",
+      "defaults_version": 1,
+      "series_types": {
+      },
+      "hidden_fields": [
+
+      ],
+      "y_axes": [
+
+      ]
+    },
+    "filter_config": {
+      "cfms_poc.program_id": [
+        {
+          "type": "=",
+          "values": [
+            {
+              "constant": "Other - 044,Other - 045,Other - 046"
+            },
+            {
+            }
+          ],
+          "id": 0,
+          "error": false
+        }
+      ]
+    },
+    "visible_ui_sections": null,
+    "slug": "hwFTVsc",
+    "client_id": "AQ0SaDuq3QkMwtGliL5nCi",
+    "share_url": "https://analytics.gov.bc.ca/x/AQ0SaDuq3QkMwtGliL5nCi",
+    "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.date,cfms_poc.services_count,cfms_poc.transaction_name&pivots=cfms_poc.transaction_name&fill_fields=cfms_poc.date&f[cfms_poc.program_id]=Other+-+044%2COther+-+045%2COther+-+046&filter_expression=if%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29-1%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29%29+AND+%0Aif%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+12%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+%28extract_months%28now%28%29%29+-1%29%29&sorts=cfms_poc.transaction_name+0,cfms_poc.date+0&limit=500&column_limit=50&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22cfms_poc.services_count%22%3A%22Transactions%22%7D%2C%22series_column_widths%22%3A%7B%22cfms_poc.date%22%3A252%7D%2C%22series_cell_visualizations%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22align%22%3A%22left%22%7D%2C%22cfms_poc.transaction_name%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Other+-+044%2COther+-+045%2COther+-+046%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+    "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.date,cfms_poc.services_count,cfms_poc.transaction_name&pivots=cfms_poc.transaction_name&fill_fields=cfms_poc.date&f[cfms_poc.program_id]=Other+-+044%2COther+-+045%2COther+-+046&filter_expression=if%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29-1%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29%29+AND+%0Aif%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+12%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+%28extract_months%28now%28%29%29+-1%29%29&sorts=cfms_poc.transaction_name+0,cfms_poc.date+0&limit=500&column_limit=50&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22cfms_poc.services_count%22%3A%22Transactions%22%7D%2C%22series_column_widths%22%3A%7B%22cfms_poc.date%22%3A252%7D%2C%22series_cell_visualizations%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22align%22%3A%22left%22%7D%2C%22cfms_poc.transaction_name%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Other+-+044%2COther+-+045%2COther+-+046%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+    "runtime": null,
+    "has_table_calculations": false,
+    "model": "cfms_poc",
+    "dynamic_fields": "[]",
+    "query_timezone": null,
+    "quick_calcs": [
+
+    ],
+    "analysis_config": null,
+    "can": {
+      "run": true,
+      "see_results": true,
+      "explore": true,
+      "create": true,
+      "show": true,
+      "cost_estimate": true,
+      "index": true,
+      "see_lookml": true,
+      "see_aggregate_table_lookml": true,
+      "see_derived_table_lookml": true,
+      "see_sql": true,
+      "save": true,
+      "generate_drill_links": true,
+      "download": true,
+      "download_unlimited": true,
+      "use_custom_fields": true,
+      "edit_custom_fields": true,
+      "edit_table_calculations": true,
+      "schedule": true,
+      "render": true
+    }
+  },
+  "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.date,cfms_poc.services_count,cfms_poc.transaction_name&pivots=cfms_poc.transaction_name&fill_fields=cfms_poc.date&f[cfms_poc.program_id]=Other+-+044%2COther+-+045%2COther+-+046&filter_expression=if%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29-1%2C+extract_years%28%24%7Bcfms_poc.date%7D%29+%3D+extract_years%28now%28%29%29%29+AND+%0Aif%28extract_months%28now%28%29%29-1+%3D+0%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+12%2C+extract_months%28%24%7Bcfms_poc.date%7D%29+%3D+%28extract_months%28now%28%29%29+-1%29%29&sorts=cfms_poc.transaction_name+0,cfms_poc.date+0&limit=500&column_limit=50&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22cfms_poc.services_count%22%3A%22Transactions%22%7D%2C%22series_column_widths%22%3A%7B%22cfms_poc.date%22%3A252%7D%2C%22series_cell_visualizations%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22cfms_poc.services_count%22%3A%7B%22align%22%3A%22left%22%7D%2C%22cfms_poc.transaction_name%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Other+-+044%2COther+-+045%2COther+-+046%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&title=Vaccine+daily+report&look_id=559",
+  "folder": {
+    "name": "Dev",
+    "parent_id": 36,
+    "id": 109,
+    "content_metadata_id": 398,
+    "created_at": "2018-12-18 08:01:55 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "deleted": false,
+  "embed_url": "https://analytics.gov.bc.ca/embed/public/v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9",
+  "excel_file_url": "https://analytics.gov.bc.ca/looks/v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9.iqy?apply_formatting=true&apply_vis=true&filename=Vaccine+daily+report",
+  "google_spreadsheet_formula": "=ImportXML(\"https://analytics.gov.bc.ca/looks/v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9.gsxml?apply_formatting=true&apply_vis=true\", \"//row\")",
+  "image_embed_url": "https://analytics.gov.bc.ca/looks/v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9.png",
+  "last_viewed_at": null,
+  "model": {
+    "id": "cfms_poc",
+    "label": "Cfms Poc"
+  },
+  "public": null,
+  "public_slug": "v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9",
+  "public_url": "https://analytics.gov.bc.ca/looks/v467CXkyBzKCB4Jvy6M3CS2KQxkrzFW9.txt?apply_formatting=true&apply_vis=true",
+  "folder_id": 109,
+  "can": {
+    "download": true,
+    "download_unlimited": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "explore": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "update_publicity": true,
+    "show_errors": true,
+    "find_and_replace": true,
+    "schedule": true,
+    "render": true
+  }
+}

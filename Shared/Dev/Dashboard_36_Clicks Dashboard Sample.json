@@ -1,0 +1,1240 @@
+{
+  "content_metadata_id": 192,
+  "description": null,
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "Clicks Dashboard Sample",
+  "user_id": 35,
+  "slug": "Xt0n0ywDzc48j2KouEUVAC",
+  "preferred_viewer": "dashboards-next",
+  "space": {
+    "name": "Dev",
+    "parent_id": 1,
+    "id": 149,
+    "content_metadata_id": 568,
+    "created_at": "2019-02-04 05:46:33 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2018-08-01 22:45:35 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 36,
+      "edit_uri": null,
+      "id": 369,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 37315,
+        "view": "clicks",
+        "fields": [
+          "clicks.target_file",
+          "clicks.target_url",
+          "clicks.download_click_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "clicks.click_time_date": "2017/02/01 to 2017/05/01",
+          "clicks.target_extension": "pdf",
+          "clicks.target_host": "www2.gov.bc.ca"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "clicks.download_click_count desc"
+        ],
+        "limit": "10",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "stacking": "",
+          "show_value_labels": true,
+          "label_density": 25,
+          "legend_position": "center",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": true,
+          "point_style": "none",
+          "limit_displayed_rows": true,
+          "y_axis_combined": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "x_axis_scale": "auto",
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_bar",
+          "series_types": {
+          },
+          "limit_displayed_rows_values": {
+            "show_hide": "show",
+            "first_last": "first",
+            "num_rows": "5"
+          },
+          "y_axes": [
+            {
+              "label": "",
+              "orientation": "bottom",
+              "series": [
+                {
+                  "id": "clicks.download_click_count",
+                  "name": "Clicks Download Click Count",
+                  "axisId": "clicks.download_click_count"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "hidden_fields": [
+
+          ]
+        },
+        "filter_config": {
+          "clicks.click_time_date": [
+            {
+              "type": "between",
+              "values": [
+                {
+                  "date": "2017-02-01T21:47:48.498Z",
+                  "unit": "day",
+                  "tz": true,
+                  "constant": "7"
+                },
+                {
+                  "date": "2017-05-01T21:47:48.498Z",
+                  "unit": "day",
+                  "tz": true
+                }
+              ],
+              "id": 4,
+              "error": false
+            }
+          ],
+          "clicks.target_extension": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "pdf"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ],
+          "clicks.target_host": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www2.gov.bc.ca"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "wP3Ph58",
+        "client_id": "lA6QUjjR3GLtzwnIpXIKdy",
+        "share_url": "https://analytics.gov.bc.ca/x/lA6QUjjR3GLtzwnIpXIKdy",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_file,clicks.target_url,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&limit=10&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_file,clicks.target_url,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&limit=10&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 37315,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 3397,
+      "subtitle_text": null,
+      "title": "Top 5 pdf downloads on www2.gov.bc.ca",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 3397,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "clicks.click_time_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "clicks.download_click_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 37315,
+        "sql_query_id": null,
+        "query": {
+          "id": 37315,
+          "view": "clicks",
+          "fields": [
+            "clicks.target_file",
+            "clicks.target_url",
+            "clicks.download_click_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "clicks.click_time_date": "2017/02/01 to 2017/05/01",
+            "clicks.target_extension": "pdf",
+            "clicks.target_host": "www2.gov.bc.ca"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "clicks.download_click_count desc"
+          ],
+          "limit": "10",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "stacking": "",
+            "show_value_labels": true,
+            "label_density": 25,
+            "legend_position": "center",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": true,
+            "point_style": "none",
+            "limit_displayed_rows": true,
+            "y_axis_combined": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "x_axis_scale": "auto",
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "show_row_numbers": true,
+            "truncate_column_names": false,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "table_theme": "editable",
+            "enable_conditional_formatting": false,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_bar",
+            "series_types": {
+            },
+            "limit_displayed_rows_values": {
+              "show_hide": "show",
+              "first_last": "first",
+              "num_rows": "5"
+            },
+            "y_axes": [
+              {
+                "label": "",
+                "orientation": "bottom",
+                "series": [
+                  {
+                    "id": "clicks.download_click_count",
+                    "name": "Clicks Download Click Count",
+                    "axisId": "clicks.download_click_count"
+                  }
+                ],
+                "showLabels": true,
+                "showValues": true,
+                "unpinAxis": false,
+                "tickDensity": "default",
+                "tickDensityCustom": 5,
+                "type": "linear"
+              }
+            ],
+            "hidden_fields": [
+
+            ]
+          },
+          "filter_config": {
+            "clicks.click_time_date": [
+              {
+                "type": "between",
+                "values": [
+                  {
+                    "date": "2017-02-01T21:47:48.498Z",
+                    "unit": "day",
+                    "tz": true,
+                    "constant": "7"
+                  },
+                  {
+                    "date": "2017-05-01T21:47:48.498Z",
+                    "unit": "day",
+                    "tz": true
+                  }
+                ],
+                "id": 4,
+                "error": false
+              }
+            ],
+            "clicks.target_extension": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "pdf"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ],
+            "clicks.target_host": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www2.gov.bc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "wP3Ph58",
+          "client_id": "lA6QUjjR3GLtzwnIpXIKdy",
+          "share_url": "https://analytics.gov.bc.ca/x/lA6QUjjR3GLtzwnIpXIKdy",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_file,clicks.target_url,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&limit=10&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_file,clicks.target_url,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&limit=10&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "stacking": "",
+          "show_value_labels": true,
+          "label_density": 25,
+          "legend_position": "center",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": true,
+          "point_style": "none",
+          "limit_displayed_rows": true,
+          "y_axis_combined": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "x_axis_scale": "auto",
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_bar",
+          "series_types": {
+          },
+          "limit_displayed_rows_values": {
+            "show_hide": "show",
+            "first_last": "first",
+            "num_rows": "5"
+          },
+          "y_axes": [
+            {
+              "label": "",
+              "orientation": "bottom",
+              "series": [
+                {
+                  "id": "clicks.download_click_count",
+                  "name": "Clicks Download Click Count",
+                  "axisId": "clicks.download_click_count"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "hidden_fields": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 36,
+      "edit_uri": null,
+      "id": 370,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 37316,
+        "view": "clicks",
+        "fields": [
+          "clicks.page_url",
+          "clicks.target_file",
+          "clicks.download_click_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "clicks.click_time_date": "2017/02/01 to 2017/05/01",
+          "clicks.target_extension": "pdf",
+          "clicks.target_host": "www2.gov.bc.ca"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "clicks.download_click_count desc"
+        ],
+        "limit": null,
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "stacking": "",
+          "show_value_labels": true,
+          "label_density": 25,
+          "legend_position": "center",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": true,
+          "point_style": "none",
+          "limit_displayed_rows": true,
+          "y_axis_combined": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "x_axis_scale": "auto",
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_bar",
+          "series_types": {
+          },
+          "limit_displayed_rows_values": {
+            "show_hide": "show",
+            "first_last": "first",
+            "num_rows": "5"
+          },
+          "y_axes": [
+            {
+              "label": "",
+              "orientation": "bottom",
+              "series": [
+                {
+                  "id": "clicks.download_click_count",
+                  "name": "Clicks Download Click Count",
+                  "axisId": "clicks.download_click_count"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "hidden_fields": [
+
+          ]
+        },
+        "filter_config": {
+          "clicks.click_time_date": [
+            {
+              "type": "between",
+              "values": [
+                {
+                  "date": "2017-02-01T21:47:48.498Z",
+                  "unit": "day",
+                  "tz": true,
+                  "constant": "7"
+                },
+                {
+                  "date": "2017-05-01T21:47:48.498Z",
+                  "unit": "day",
+                  "tz": true
+                }
+              ],
+              "id": 4,
+              "error": false
+            }
+          ],
+          "clicks.target_extension": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "pdf"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ],
+          "clicks.target_host": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www2.gov.bc.ca"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "JkddX72",
+        "client_id": "d0wYTmEccpyKmmUD6Zb7Vk",
+        "share_url": "https://analytics.gov.bc.ca/x/d0wYTmEccpyKmmUD6Zb7Vk",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_file,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_file,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 37316,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 3398,
+      "subtitle_text": null,
+      "title": "Referral URL for Top 5 Local Hosted PDF Downloads",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 3398,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "clicks.click_time_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "clicks.download_click_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 37316,
+        "sql_query_id": null,
+        "query": {
+          "id": 37316,
+          "view": "clicks",
+          "fields": [
+            "clicks.page_url",
+            "clicks.target_file",
+            "clicks.download_click_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "clicks.click_time_date": "2017/02/01 to 2017/05/01",
+            "clicks.target_extension": "pdf",
+            "clicks.target_host": "www2.gov.bc.ca"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "clicks.download_click_count desc"
+          ],
+          "limit": null,
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "stacking": "",
+            "show_value_labels": true,
+            "label_density": 25,
+            "legend_position": "center",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": true,
+            "point_style": "none",
+            "limit_displayed_rows": true,
+            "y_axis_combined": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "x_axis_scale": "auto",
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "show_row_numbers": true,
+            "truncate_column_names": false,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "table_theme": "editable",
+            "enable_conditional_formatting": false,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_bar",
+            "series_types": {
+            },
+            "limit_displayed_rows_values": {
+              "show_hide": "show",
+              "first_last": "first",
+              "num_rows": "5"
+            },
+            "y_axes": [
+              {
+                "label": "",
+                "orientation": "bottom",
+                "series": [
+                  {
+                    "id": "clicks.download_click_count",
+                    "name": "Clicks Download Click Count",
+                    "axisId": "clicks.download_click_count"
+                  }
+                ],
+                "showLabels": true,
+                "showValues": true,
+                "unpinAxis": false,
+                "tickDensity": "default",
+                "tickDensityCustom": 5,
+                "type": "linear"
+              }
+            ],
+            "hidden_fields": [
+
+            ]
+          },
+          "filter_config": {
+            "clicks.click_time_date": [
+              {
+                "type": "between",
+                "values": [
+                  {
+                    "date": "2017-02-01T21:47:48.498Z",
+                    "unit": "day",
+                    "tz": true,
+                    "constant": "7"
+                  },
+                  {
+                    "date": "2017-05-01T21:47:48.498Z",
+                    "unit": "day",
+                    "tz": true
+                  }
+                ],
+                "id": 4,
+                "error": false
+              }
+            ],
+            "clicks.target_extension": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "pdf"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ],
+            "clicks.target_host": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www2.gov.bc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "JkddX72",
+          "client_id": "d0wYTmEccpyKmmUD6Zb7Vk",
+          "share_url": "https://analytics.gov.bc.ca/x/d0wYTmEccpyKmmUD6Zb7Vk",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_file,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_file,clicks.download_click_count&f[clicks.click_time_date]=2017%2F02%2F01+to+2017%2F05%2F01&f[clicks.target_extension]=pdf&f[clicks.target_host]=www2.gov.bc.ca&sorts=clicks.download_click_count+desc&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_bar%22%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%225%22%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22bottom%22%2C%22series%22%3A%5B%7B%22id%22%3A%22clicks.download_click_count%22%2C%22name%22%3A%22Clicks+Download+Click+Count%22%2C%22axisId%22%3A%22clicks.download_click_count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22between%22%2C%22values%22%3A%5B%7B%22date%22%3A%222017-02-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%2C%22constant%22%3A%227%22%7D%2C%7B%22date%22%3A%222017-05-01T21%3A47%3A48.498Z%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_extension%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "stacking": "",
+          "show_value_labels": true,
+          "label_density": 25,
+          "legend_position": "center",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": true,
+          "point_style": "none",
+          "limit_displayed_rows": true,
+          "y_axis_combined": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "x_axis_scale": "auto",
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_bar",
+          "series_types": {
+          },
+          "limit_displayed_rows_values": {
+            "show_hide": "show",
+            "first_last": "first",
+            "num_rows": "5"
+          },
+          "y_axes": [
+            {
+              "label": "",
+              "orientation": "bottom",
+              "series": [
+                {
+                  "id": "clicks.download_click_count",
+                  "name": "Clicks Download Click Count",
+                  "axisId": "clicks.download_click_count"
+                }
+              ],
+              "showLabels": true,
+              "showValues": true,
+              "unpinAxis": false,
+              "tickDensity": "default",
+              "tickDensityCustom": 5,
+              "type": "linear"
+            }
+          ],
+          "hidden_fields": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 105,
+      "dashboard_id": 36,
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.click_time_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "2017/08/01 to 2017/09/01",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The timestamp for the page view as recorded by the collector.",
+        "enumerations": null,
+        "field_group_label": "Click",
+        "fill_style": "range",
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Click Time Date",
+        "label_from_parameter": null,
+        "label_short": "Click Time Date",
+        "map_layer": null,
+        "name": "clicks.click_time_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "dimension_group": "clicks.click_time",
+        "error": null,
+        "field_group_variant": "Click Time Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.click_time_date",
+        "suggest_explore": "clicks",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 36,
+      "dashboard_id": 36,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "Clicks Dashboard Sample",
+      "dashboard_layout_components": [
+        {
+          "id": 369,
+          "dashboard_layout_id": 36,
+          "dashboard_element_id": 369,
+          "row": 0,
+          "column": 0,
+          "width": 12,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Top 5 pdf downloads on www2.gov.bc.ca",
+          "element_title_hidden": false,
+          "vis_type": "looker_bar",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 370,
+          "dashboard_layout_id": 36,
+          "dashboard_element_id": 370,
+          "row": 0,
+          "column": 12,
+          "width": 11,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Referral URL for Top 5 Local Hosted PDF Downloads",
+          "element_title_hidden": false,
+          "vis_type": "looker_bar",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2021-09-22 20:26:54 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "last_updater_name": "",
+  "user_name": "Mark Walle",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 149,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 18,
+  "folder": {
+    "name": "Dev",
+    "parent_id": 1,
+    "id": 149,
+    "content_metadata_id": 568,
+    "created_at": "2019-02-04 05:46:33 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 36,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 149,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}

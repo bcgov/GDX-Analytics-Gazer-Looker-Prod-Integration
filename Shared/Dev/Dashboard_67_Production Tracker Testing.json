@@ -1,0 +1,3211 @@
+{
+  "content_metadata_id": 385,
+  "description": "This dashboard will be used to test the production tracker. Please set the date you view the site, also what the url of the site you are testing.",
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "Production Tracker Testing",
+  "user_id": 8,
+  "slug": "9wxfQjgQ5GQfb8BUlDTCVu",
+  "preferred_viewer": "dashboards",
+  "space": {
+    "name": "Dev",
+    "parent_id": 1,
+    "id": 149,
+    "content_metadata_id": 568,
+    "created_at": "2019-02-04 05:46:33 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2018-12-17 18:19:46 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 655,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 436273,
+        "view": "page_views",
+        "fields": [
+          "page_views.app_id",
+          "page_views.node_id",
+          "page_views.page_url",
+          "page_views.page_view_count",
+          "page_views.page_urlhost"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "5Fsh72w",
+        "client_id": "19BHDNWK4qasEG5yDEn7KZ",
+        "share_url": "https://analytics.gov.bc.ca/x/19BHDNWK4qasEG5yDEn7KZ",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.app_id,page_views.node_id,page_views.page_url,page_views.page_view_count,page_views.page_urlhost&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.app_id,page_views.node_id,page_views.page_url,page_views.page_view_count,page_views.page_urlhost&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436273,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31024,
+      "subtitle_text": null,
+      "title": "Tracker Testing Page Views",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31024,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "page_views.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "URL query",
+                "field": "page_views.page_urlquery"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436273,
+        "sql_query_id": null,
+        "query": {
+          "id": 436273,
+          "view": "page_views",
+          "fields": [
+            "page_views.app_id",
+            "page_views.node_id",
+            "page_views.page_url",
+            "page_views.page_view_count",
+            "page_views.page_urlhost"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_view_count desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "5Fsh72w",
+          "client_id": "19BHDNWK4qasEG5yDEn7KZ",
+          "share_url": "https://analytics.gov.bc.ca/x/19BHDNWK4qasEG5yDEn7KZ",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.app_id,page_views.node_id,page_views.page_url,page_views.page_view_count,page_views.page_urlhost&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.app_id,page_views.node_id,page_views.page_url,page_views.page_view_count,page_views.page_urlhost&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 656,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 66166,
+        "view": "page_views",
+        "fields": [
+          "page_views.page_referrer",
+          "page_views.page_url",
+          "page_views.page_view_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "page_views.page_referrer": "-NULL"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "page_views.page_referrer": [
+            {
+              "type": "!null",
+              "values": [
+                {
+                  "constant": ""
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "vw7cjpk",
+        "client_id": "AXMKWPW7sdrA0rqR6tjpo5",
+        "share_url": "https://analytics.gov.bc.ca/x/AXMKWPW7sdrA0rqR6tjpo5",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_url,page_views.page_view_count&f[page_views.page_referrer]=-NULL&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_url,page_views.page_view_count&f[page_views.page_referrer]=-NULL&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 66166,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 5788,
+      "subtitle_text": null,
+      "title": "Tracker Testing Page Referrer",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 5788,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "page_views.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 66166,
+        "sql_query_id": null,
+        "query": {
+          "id": 66166,
+          "view": "page_views",
+          "fields": [
+            "page_views.page_referrer",
+            "page_views.page_url",
+            "page_views.page_view_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "page_views.page_referrer": "-NULL"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_view_count desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "page_views.page_referrer": [
+              {
+                "type": "!null",
+                "values": [
+                  {
+                    "constant": ""
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "vw7cjpk",
+          "client_id": "AXMKWPW7sdrA0rqR6tjpo5",
+          "share_url": "https://analytics.gov.bc.ca/x/AXMKWPW7sdrA0rqR6tjpo5",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_url,page_views.page_view_count&f[page_views.page_referrer]=-NULL&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_url,page_views.page_view_count&f[page_views.page_referrer]=-NULL&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 657,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 436146,
+        "view": "page_views",
+        "fields": [
+          "page_views.browser_family",
+          "page_views.page_url",
+          "page_views.page_view_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "z5xFRgt",
+        "client_id": "NVmJqB7SpRKV1K2Iho3QXI",
+        "share_url": "https://analytics.gov.bc.ca/x/NVmJqB7SpRKV1K2Iho3QXI",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.browser_family,page_views.page_url,page_views.page_view_count&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.browser_family,page_views.page_url,page_views.page_view_count&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436146,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31025,
+      "subtitle_text": null,
+      "title": "Tracker Testing Browser",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31025,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "page_views.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "page_views.page_view_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436146,
+        "sql_query_id": null,
+        "query": {
+          "id": 436146,
+          "view": "page_views",
+          "fields": [
+            "page_views.browser_family",
+            "page_views.page_url",
+            "page_views.page_view_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_view_count desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "z5xFRgt",
+          "client_id": "NVmJqB7SpRKV1K2Iho3QXI",
+          "share_url": "https://analytics.gov.bc.ca/x/NVmJqB7SpRKV1K2Iho3QXI",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.browser_family,page_views.page_url,page_views.page_view_count&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.browser_family,page_views.page_url,page_views.page_view_count&sorts=page_views.page_view_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 658,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 436147,
+        "view": "clicks",
+        "fields": [
+          "clicks.page_url",
+          "clicks.target_url",
+          "clicks.click_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": [
+          "clicks.click_count desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "JNJ3HH2",
+        "client_id": "FhL29PrW6hgz4QSRC4VEBE",
+        "share_url": "https://analytics.gov.bc.ca/x/FhL29PrW6hgz4QSRC4VEBE",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_url,clicks.click_count&sorts=clicks.click_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_url,clicks.click_count&sorts=clicks.click_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436147,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31026,
+      "subtitle_text": null,
+      "title": "Tracker Testing Link Click",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31026,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "clicks.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "clicks.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "clicks.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "clicks.click_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436147,
+        "sql_query_id": null,
+        "query": {
+          "id": 436147,
+          "view": "clicks",
+          "fields": [
+            "clicks.page_url",
+            "clicks.target_url",
+            "clicks.click_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": [
+            "clicks.click_count desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "JNJ3HH2",
+          "client_id": "FhL29PrW6hgz4QSRC4VEBE",
+          "share_url": "https://analytics.gov.bc.ca/x/FhL29PrW6hgz4QSRC4VEBE",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_url,clicks.click_count&sorts=clicks.click_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_url,clicks.target_url,clicks.click_count&sorts=clicks.click_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 659,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 436148,
+        "view": "searches",
+        "fields": [
+          "searches.page_url",
+          "searches.node_id",
+          "searches.search_terms",
+          "searches.search_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "searches.search_terms": "-EMPTY"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "searches.search_count desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "searches.search_terms": [
+            {
+              "type": "!empty",
+              "values": [
+                {
+                  "constant": ""
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "K9M8gPs",
+        "client_id": "aWGA9cGdEhvCRu8rXJw3fX",
+        "share_url": "https://analytics.gov.bc.ca/x/aWGA9cGdEhvCRu8rXJw3fX",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_url,searches.node_id,searches.search_terms,searches.search_count&f[searches.search_terms]=-EMPTY&sorts=searches.search_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.search_terms%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/searches?fields=searches.page_url,searches.node_id,searches.search_terms,searches.search_count&f[searches.search_terms]=-EMPTY&sorts=searches.search_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.search_terms%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436148,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31027,
+      "subtitle_text": null,
+      "title": "Tracker Testing Search",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31027,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "searches",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "searches.search_time_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "searches.page_url"
+              },
+              {
+                "dashboard_filter_name": "Search Node ID",
+                "field": "cmslite_themes.node_id"
+              },
+              {
+                "dashboard_filter_name": "Search Term",
+                "field": "searches.search_terms"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "searches.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "searches.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "searches.search_count desc"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436148,
+        "sql_query_id": null,
+        "query": {
+          "id": 436148,
+          "view": "searches",
+          "fields": [
+            "searches.page_url",
+            "searches.node_id",
+            "searches.search_terms",
+            "searches.search_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "searches.search_terms": "-EMPTY"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "searches.search_count desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "searches.search_terms": [
+              {
+                "type": "!empty",
+                "values": [
+                  {
+                    "constant": ""
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "K9M8gPs",
+          "client_id": "aWGA9cGdEhvCRu8rXJw3fX",
+          "share_url": "https://analytics.gov.bc.ca/x/aWGA9cGdEhvCRu8rXJw3fX",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_url,searches.node_id,searches.search_terms,searches.search_count&f[searches.search_terms]=-EMPTY&sorts=searches.search_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.search_terms%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/searches?fields=searches.page_url,searches.node_id,searches.search_terms,searches.search_count&f[searches.search_terms]=-EMPTY&sorts=searches.search_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.search_terms%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": "This is where to view the data for the production tracker testing. Select the date you did the testing, also what the page url is. The page url filter is set to 'contains' because if you are testing a wide range of pages like gov, or a exact url. \n\nThe node id  is only on the Main Gov site, but it is important to know if it is being collected.",
+      "body_text_as_html": "<p>This is where to view the data for the production tracker testing. Select the date you did the testing, also what the page url is. The page url filter is set to ‘contains’ because if you are testing a wide range of pages like gov, or a exact url.</p>\n\n<p>The node id  is only on the Main Gov site, but it is important to know if it is being collected.</p>\n",
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 660,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": null,
+      "query_id": null,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": null,
+      "subtitle_text": null,
+      "title": null,
+      "title_hidden": false,
+      "title_text": "Tracker Testing",
+      "type": "text",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": "Tracker Testing",
+      "subtitle_text_as_html": null,
+      "result_maker": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": false,
+        "index": true,
+        "show": true,
+        "explore": false,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 661,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 436150,
+        "view": "page_views",
+        "fields": [
+          "page_views.session_id"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": null,
+        "limit": "500",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "yDRK3Gw",
+        "client_id": "pKzKE48ZZf4jmDjAuk77e7",
+        "share_url": "https://analytics.gov.bc.ca/x/pKzKE48ZZf4jmDjAuk77e7",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.session_id&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.session_id&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 436150,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 31028,
+      "subtitle_text": null,
+      "title": "Testing Session ID",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 31028,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "page_views.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "URL query",
+                "field": "page_views.page_urlquery"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": null,
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 436150,
+        "sql_query_id": null,
+        "query": {
+          "id": 436150,
+          "view": "page_views",
+          "fields": [
+            "page_views.session_id"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": null,
+          "limit": "500",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "type": "table",
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "yDRK3Gw",
+          "client_id": "pKzKE48ZZf4jmDjAuk77e7",
+          "share_url": "https://analytics.gov.bc.ca/x/pKzKE48ZZf4jmDjAuk77e7",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.session_id&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.session_id&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "type": "table",
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 2966,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142752,
+        "view": "youtube_embed_video",
+        "fields": [
+          "youtube_embed_video.title",
+          "youtube_embed_video.status",
+          "youtube_embed_video.status_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": [
+          "youtube_embed_video.title"
+        ],
+        "limit": "500",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "TM4dYXF",
+        "client_id": "qL4ORDBpwkDKWefCe4774b",
+        "share_url": "https://analytics.gov.bc.ca/x/qL4ORDBpwkDKWefCe4774b",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.title,youtube_embed_video.status,youtube_embed_video.status_count&sorts=youtube_embed_video.title&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.title,youtube_embed_video.status,youtube_embed_video.status_count&sorts=youtube_embed_video.title&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142752,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91650,
+      "subtitle_text": null,
+      "title": "YouTube Embed Video",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91650,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "youtube_embed_video",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "page_views.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "youtube_embed_video.title"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 1142752,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142752,
+          "view": "youtube_embed_video",
+          "fields": [
+            "youtube_embed_video.title",
+            "youtube_embed_video.status",
+            "youtube_embed_video.status_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": [
+            "youtube_embed_video.title"
+          ],
+          "limit": "500",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": 12,
+            "rows_font_size": 12,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "TM4dYXF",
+          "client_id": "qL4ORDBpwkDKWefCe4774b",
+          "share_url": "https://analytics.gov.bc.ca/x/qL4ORDBpwkDKWefCe4774b",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.title,youtube_embed_video.status,youtube_embed_video.status_count&sorts=youtube_embed_video.title&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/youtube_embed_video?fields=youtube_embed_video.title,youtube_embed_video.status,youtube_embed_video.status_count&sorts=youtube_embed_video.title&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 3079,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142792,
+        "view": "form_action",
+        "fields": [
+          "form_action.action",
+          "form_action.row_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": [
+          "form_action.action"
+        ],
+        "limit": "500",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "jsY7Rtb",
+        "client_id": "hnsClri9LqizTaaLevMm2b",
+        "share_url": "https://analytics.gov.bc.ca/x/hnsClri9LqizTaaLevMm2b",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/form_action?fields=form_action.action,form_action.row_count&sorts=form_action.action&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/form_action?fields=form_action.action,form_action.row_count&sorts=form_action.action&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142792,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91693,
+      "subtitle_text": null,
+      "title": "Form Actions",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91693,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "form_action",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "form_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "form_action.action"
+        ],
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 1142792,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142792,
+          "view": "form_action",
+          "fields": [
+            "form_action.action",
+            "form_action.row_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": [
+            "form_action.action"
+          ],
+          "limit": "500",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": 12,
+            "rows_font_size": 12,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "jsY7Rtb",
+          "client_id": "hnsClri9LqizTaaLevMm2b",
+          "share_url": "https://analytics.gov.bc.ca/x/hnsClri9LqizTaaLevMm2b",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/form_action?fields=form_action.action,form_action.row_count&sorts=form_action.action&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/form_action?fields=form_action.action,form_action.row_count&sorts=form_action.action&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 67,
+      "edit_uri": null,
+      "id": 3080,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142793,
+        "view": "forms",
+        "fields": [
+          "forms.count",
+          "forms.form_id",
+          "page_views.page_display_url"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": null,
+        "filter_expression": null,
+        "sorts": null,
+        "limit": "500",
+        "column_limit": null,
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": null,
+        "visible_ui_sections": null,
+        "slug": "yv57JxJ",
+        "client_id": "pAvgPUTjfdaflz0M6VrVgv",
+        "share_url": "https://analytics.gov.bc.ca/x/pAvgPUTjfdaflz0M6VrVgv",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/forms?fields=forms.count,forms.form_id,page_views.page_display_url&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/forms?fields=forms.count,forms.form_id,page_views.page_display_url&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142793,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91694,
+      "subtitle_text": null,
+      "title": "Form Submissions",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91694,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "forms",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Tested",
+                "field": "forms.form_submission_date"
+              },
+              {
+                "dashboard_filter_name": "URL Host Testing",
+                "field": "page_views.page_url"
+              },
+              {
+                "dashboard_filter_name": "Session ID",
+                "field": "page_views.session_id"
+              },
+              {
+                "dashboard_filter_name": "App ID",
+                "field": "page_views.app_id"
+              }
+            ]
+          }
+        ],
+        "sorts": null,
+        "merge_result_id": null,
+        "total": null,
+        "query_id": 1142793,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142793,
+          "view": "forms",
+          "fields": [
+            "forms.count",
+            "forms.form_id",
+            "page_views.page_display_url"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": null,
+          "filter_expression": null,
+          "sorts": null,
+          "limit": "500",
+          "column_limit": null,
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": 12,
+            "rows_font_size": 12,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": null,
+          "visible_ui_sections": null,
+          "slug": "yv57JxJ",
+          "client_id": "pAvgPUTjfdaflz0M6VrVgv",
+          "share_url": "https://analytics.gov.bc.ca/x/pAvgPUTjfdaflz0M6VrVgv",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/forms?fields=forms.count,forms.form_id,page_views.page_display_url&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/forms?fields=forms.count,forms.form_id,page_views.page_display_url&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": 12,
+          "rows_font_size": 12,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 229,
+      "dashboard_id": 67,
+      "name": "Date Tested",
+      "title": "Date Tested",
+      "type": "date_filter",
+      "explore": null,
+      "dimension": null,
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": null,
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 230,
+      "dashboard_id": 67,
+      "name": "URL Host Testing",
+      "title": "URL Host Testing",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_url",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The web page URL.",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page URL",
+        "label_from_parameter": null,
+        "label_short": "Page URL",
+        "map_layer": null,
+        "name": "page_views.page_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_url",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 232,
+      "dashboard_id": 67,
+      "name": "Search Node ID",
+      "title": "Search Node ID",
+      "type": "field_filter",
+      "explore": "searches",
+      "dimension": "searches.node_id",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The CMS Lite node identifier for Gov pages.",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Searches Node ID",
+        "label_from_parameter": null,
+        "label_short": "Node ID",
+        "map_layer": null,
+        "name": "searches.node_id",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "searches",
+        "view_label": "Searches",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "searches",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Node ID",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "searches",
+        "suggest_dimension": "searches.node_id",
+        "suggest_explore": "searches",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=645",
+        "permanent": null,
+        "source_file": "Views/searches.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/searches.view.lkml",
+        "sql": "${TABLE}.node_id",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 233,
+      "dashboard_id": 67,
+      "name": "Search Term",
+      "title": "Search Term",
+      "type": "field_filter",
+      "explore": "searches",
+      "dimension": "searches.search_terms",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The search term(s) that were queried.",
+        "enumerations": null,
+        "field_group_label": "Results",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Searches Search Terms",
+        "label_from_parameter": null,
+        "label_short": "Search Terms",
+        "map_layer": null,
+        "name": "searches.search_terms",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "searches",
+        "view_label": "Searches",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "searches",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Search Terms",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "searches",
+        "suggest_dimension": "searches.search_terms",
+        "suggest_explore": "searches",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsearches.view.lkml?line=72",
+        "permanent": null,
+        "source_file": "Views/searches.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/searches.view.lkml",
+        "sql": "${TABLE}.terms ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 236,
+      "dashboard_id": 67,
+      "name": "URL query",
+      "title": "URL query",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_urlquery",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The querystring of the URL.",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page Urlquery",
+        "label_from_parameter": null,
+        "label_short": "Page Urlquery",
+        "map_layer": null,
+        "name": "page_views.page_urlquery",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlquery",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_urlquery",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=107",
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_urlquery ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 237,
+      "dashboard_id": 67,
+      "name": "Session ID",
+      "title": "Session ID",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.session_id",
+      "row": 5,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "A unique identifier for a given user session, based on IP and timestamp.",
+        "enumerations": null,
+        "field_group_label": "Session",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Session ID",
+        "label_from_parameter": null,
+        "label_short": "Session ID",
+        "map_layer": null,
+        "name": "page_views.session_id",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Session ID",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.session_id",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=239",
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.session_id ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 951,
+      "dashboard_id": 67,
+      "name": "App ID",
+      "title": "App ID",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.app_id",
+      "row": 6,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The application identifier from which the event originated.",
+        "enumerations": null,
+        "field_group_label": "Application",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views App ID",
+        "label_from_parameter": null,
+        "label_short": "App ID",
+        "map_layer": null,
+        "name": "page_views.app_id",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "App ID",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.app_id",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=6",
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.app_id ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 67,
+      "dashboard_id": 67,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "Production Tracker Testing",
+      "dashboard_layout_components": [
+        {
+          "id": 655,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 655,
+          "row": 3,
+          "column": 3,
+          "width": 14,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Tracker Testing Page Views",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 656,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 656,
+          "row": 12,
+          "column": 3,
+          "width": 14,
+          "height": 8,
+          "deleted": false,
+          "element_title": "Tracker Testing Page Referrer",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 657,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 657,
+          "row": 27,
+          "column": 3,
+          "width": 14,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Tracker Testing Browser",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 658,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 658,
+          "row": 20,
+          "column": 3,
+          "width": 14,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Tracker Testing Link Click",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 659,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 659,
+          "row": 33,
+          "column": 3,
+          "width": 14,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Tracker Testing Search",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 660,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 660,
+          "row": 0,
+          "column": 17,
+          "width": 7,
+          "height": 9,
+          "deleted": false,
+          "element_title": "Tracker Testing",
+          "element_title_hidden": false,
+          "vis_type": "text",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 661,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 661,
+          "row": 0,
+          "column": 3,
+          "width": 14,
+          "height": 3,
+          "deleted": false,
+          "element_title": "Testing Session ID",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2966,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 2966,
+          "row": 39,
+          "column": 3,
+          "width": 14,
+          "height": 7,
+          "deleted": false,
+          "element_title": "YouTube Embed Video",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 3079,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 3079,
+          "row": 46,
+          "column": 3,
+          "width": 9,
+          "height": 8,
+          "deleted": false,
+          "element_title": "Form Actions",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 3080,
+          "dashboard_layout_id": 67,
+          "dashboard_element_id": 3080,
+          "row": 46,
+          "column": 12,
+          "width": 8,
+          "height": 8,
+          "deleted": false,
+          "element_title": "Form Submissions",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-09-26 16:53:48 UTC",
+  "updated_at": "2022-04-21 18:59:18 UTC",
+  "last_updater_id": 513,
+  "last_updater_name": "Brendan Jennings",
+  "user_name": "Ryan Janes",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 149,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 304,
+  "folder": {
+    "name": "Dev",
+    "parent_id": 1,
+    "id": 149,
+    "content_metadata_id": 568,
+    "created_at": "2019-02-04 05:46:33 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 2,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 67,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 149,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}

@@ -1,0 +1,2578 @@
+{
+  "content_metadata_id": 2337,
+  "description": null,
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "LDB Custom Reports (Dev)",
+  "user_id": 13,
+  "slug": "QL93mAHrZPRT9JBEUA9U3p",
+  "preferred_viewer": "dashboards-next",
+  "space": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2021-11-03 04:12:58 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 277,
+      "edit_uri": null,
+      "id": 2855,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142701,
+        "view": "ldb_clicks",
+        "fields": [
+          "ldb_clicks.event_date",
+          "ldb_sku.category",
+          "ldb_clicks.where_to_buy_count",
+          "ldb_clicks.where_to_buy_count_by_session"
+        ],
+        "pivots": [
+          "ldb_sku.category"
+        ],
+        "fill_fields": [
+          "ldb_clicks.event_date"
+        ],
+        "filters": {
+          "ldb_clicks.event_date": "7 days ago for 7 days",
+          "ldb_sku.category": "-EMPTY"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "ldb_clicks.event_date desc",
+          "ldb_sku.category"
+        ],
+        "limit": "500",
+        "column_limit": null,
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "ldb_clicks.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "ldb_sku.category": [
+            {
+              "type": "!empty",
+              "values": [
+                {
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "wDPKmpq",
+        "client_id": "5XolKAnVXp4kNHiJ0ADzyK",
+        "share_url": "https://analytics.gov.bc.ca/x/5XolKAnVXp4kNHiJ0ADzyK",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.event_date,ldb_sku.category,ldb_clicks.where_to_buy_count,ldb_clicks.where_to_buy_count_by_session&pivots=ldb_sku.category&fill_fields=ldb_clicks.event_date&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=-EMPTY&sorts=ldb_clicks.event_date+desc,ldb_sku.category&limit=500&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.event_date,ldb_sku.category,ldb_clicks.where_to_buy_count,ldb_clicks.where_to_buy_count_by_session&pivots=ldb_sku.category&fill_fields=ldb_clicks.event_date&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=-EMPTY&sorts=ldb_clicks.event_date+desc,ldb_sku.category&limit=500&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142701,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91601,
+      "subtitle_text": null,
+      "title": "Where to Buy by Category",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91601,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "ldb_clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "ldb_clicks.event_date"
+              },
+              {
+                "dashboard_filter_name": "Country",
+                "field": "ldb_sku.country"
+              },
+              {
+                "dashboard_filter_name": "Region",
+                "field": "ldb_sku.region"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "ldb_clicks.event_date desc",
+          "ldb_sku.category"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142701,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142701,
+          "view": "ldb_clicks",
+          "fields": [
+            "ldb_clicks.event_date",
+            "ldb_sku.category",
+            "ldb_clicks.where_to_buy_count",
+            "ldb_clicks.where_to_buy_count_by_session"
+          ],
+          "pivots": [
+            "ldb_sku.category"
+          ],
+          "fill_fields": [
+            "ldb_clicks.event_date"
+          ],
+          "filters": {
+            "ldb_clicks.event_date": "7 days ago for 7 days",
+            "ldb_sku.category": "-EMPTY"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "ldb_clicks.event_date desc",
+            "ldb_sku.category"
+          ],
+          "limit": "500",
+          "column_limit": null,
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "series_cell_visualizations": {
+              "ldb_clicks.where_to_buy_count": {
+                "is_active": true
+              },
+              "ldb_clicks.where_to_buy_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#894FBC"
+                  ]
+                }
+              }
+            },
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "ldb_clicks.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "ldb_sku.category": [
+              {
+                "type": "!empty",
+                "values": [
+                  {
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "wDPKmpq",
+          "client_id": "5XolKAnVXp4kNHiJ0ADzyK",
+          "share_url": "https://analytics.gov.bc.ca/x/5XolKAnVXp4kNHiJ0ADzyK",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.event_date,ldb_sku.category,ldb_clicks.where_to_buy_count,ldb_clicks.where_to_buy_count_by_session&pivots=ldb_sku.category&fill_fields=ldb_clicks.event_date&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=-EMPTY&sorts=ldb_clicks.event_date+desc,ldb_sku.category&limit=500&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.event_date,ldb_sku.category,ldb_clicks.where_to_buy_count,ldb_clicks.where_to_buy_count_by_session&pivots=ldb_sku.category&fill_fields=ldb_clicks.event_date&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=-EMPTY&sorts=ldb_clicks.event_date+desc,ldb_sku.category&limit=500&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 277,
+      "edit_uri": null,
+      "id": 2856,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142702,
+        "view": "ldb_clicks",
+        "fields": [
+          "ldb_sku.product_name",
+          "ldb_sku.country",
+          "ldb_sku.region",
+          "ldb_clicks.add_to_cellar_count",
+          "ldb_clicks.add_to_cellar_count_by_session"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "ldb_clicks.event_date": "7 days ago for 7 days",
+          "ldb_sku.category": "Wine"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_column_widths": {
+            "ldb_sku.country": 150,
+            "ldb_clicks.add_to_cellar_count": 190,
+            "ldb_clicks.add_to_cellar_count_by_session": 190,
+            "ldb_sku.region": 150
+          },
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#BC4F89"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "ldb_clicks.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "ldb_sku.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Wine"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "cWSSMZN",
+        "client_id": "do9CPkblS27noK7Il5VQ6w",
+        "share_url": "https://analytics.gov.bc.ca/x/do9CPkblS27noK7Il5VQ6w",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.product_name,ldb_sku.country,ldb_sku.region,ldb_clicks.add_to_cellar_count,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_column_widths%22%3A%7B%22ldb_sku.country%22%3A150%2C%22ldb_clicks.add_to_cellar_count%22%3A190%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A190%2C%22ldb_sku.region%22%3A150%7D%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.product_name,ldb_sku.country,ldb_sku.region,ldb_clicks.add_to_cellar_count,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_column_widths%22%3A%7B%22ldb_sku.country%22%3A150%2C%22ldb_clicks.add_to_cellar_count%22%3A190%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A190%2C%22ldb_sku.region%22%3A150%7D%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142702,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91602,
+      "subtitle_text": null,
+      "title": "Top Wines Added to Cellar",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91602,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "ldb_clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "ldb_clicks.event_date"
+              },
+              {
+                "dashboard_filter_name": "Country",
+                "field": "ldb_sku.country"
+              },
+              {
+                "dashboard_filter_name": "Region",
+                "field": "ldb_sku.region"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142702,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142702,
+          "view": "ldb_clicks",
+          "fields": [
+            "ldb_sku.product_name",
+            "ldb_sku.country",
+            "ldb_sku.region",
+            "ldb_clicks.add_to_cellar_count",
+            "ldb_clicks.add_to_cellar_count_by_session"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "ldb_clicks.event_date": "7 days ago for 7 days",
+            "ldb_sku.category": "Wine"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "ldb_clicks.add_to_cellar_count_by_session desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "series_column_widths": {
+              "ldb_sku.country": 150,
+              "ldb_clicks.add_to_cellar_count": 190,
+              "ldb_clicks.add_to_cellar_count_by_session": 190,
+              "ldb_sku.region": 150
+            },
+            "series_cell_visualizations": {
+              "ldb_clicks.where_to_buy_count": {
+                "is_active": true
+              },
+              "ldb_clicks.where_to_buy_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#894FBC"
+                  ]
+                }
+              },
+              "ldb_clicks.add_to_cellar_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#BC4F89"
+                  ]
+                }
+              },
+              "ldb_clicks.add_to_cellar_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "ldb_clicks.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "ldb_sku.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Wine"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "cWSSMZN",
+          "client_id": "do9CPkblS27noK7Il5VQ6w",
+          "share_url": "https://analytics.gov.bc.ca/x/do9CPkblS27noK7Il5VQ6w",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.product_name,ldb_sku.country,ldb_sku.region,ldb_clicks.add_to_cellar_count,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_column_widths%22%3A%7B%22ldb_sku.country%22%3A150%2C%22ldb_clicks.add_to_cellar_count%22%3A190%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A190%2C%22ldb_sku.region%22%3A150%7D%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.product_name,ldb_sku.country,ldb_sku.region,ldb_clicks.add_to_cellar_count,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_column_widths%22%3A%7B%22ldb_sku.country%22%3A150%2C%22ldb_clicks.add_to_cellar_count%22%3A190%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A190%2C%22ldb_sku.region%22%3A150%7D%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_column_widths": {
+            "ldb_sku.country": 150,
+            "ldb_clicks.add_to_cellar_count": 190,
+            "ldb_clicks.add_to_cellar_count_by_session": 190,
+            "ldb_sku.region": 150
+          },
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#BC4F89"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 277,
+      "edit_uri": null,
+      "id": 2857,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142703,
+        "view": "ldb_clicks",
+        "fields": [
+          "ldb_clicks.add_to_cellar_count_by_session",
+          "ldb_clicks.where_to_buy_count_by_session",
+          "ldb_sku.sub_category"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "ldb_clicks.event_date": "7 days ago for 7 days",
+          "ldb_sku.category": "Spirits"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "limit": "500",
+        "column_limit": null,
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "size_to_fit": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "table_theme": "white",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "type": "looker_column",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "ldb_clicks.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "ldb_sku.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Spirits"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "ggWvqcg",
+        "client_id": "cpudjzSIOPGqlURrXUKSt5",
+        "share_url": "https://analytics.gov.bc.ca/x/cpudjzSIOPGqlURrXUKSt5",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.add_to_cellar_count_by_session,ldb_clicks.where_to_buy_count_by_session,ldb_sku.sub_category&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Spirits&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=500&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Spirits%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.add_to_cellar_count_by_session,ldb_clicks.where_to_buy_count_by_session,ldb_sku.sub_category&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Spirits&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=500&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Spirits%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142703,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91603,
+      "subtitle_text": null,
+      "title": "Top Spirit Sub Categories",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91603,
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "ldb_clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "ldb_clicks.event_date"
+              },
+              {
+                "dashboard_filter_name": "Country",
+                "field": "ldb_sku.country"
+              },
+              {
+                "dashboard_filter_name": "Region",
+                "field": "ldb_sku.region"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142703,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142703,
+          "view": "ldb_clicks",
+          "fields": [
+            "ldb_clicks.add_to_cellar_count_by_session",
+            "ldb_clicks.where_to_buy_count_by_session",
+            "ldb_sku.sub_category"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "ldb_clicks.event_date": "7 days ago for 7 days",
+            "ldb_sku.category": "Spirits"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "ldb_clicks.add_to_cellar_count_by_session desc"
+          ],
+          "limit": "500",
+          "column_limit": null,
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": false,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "limit_displayed_rows": false,
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "size_to_fit": true,
+            "series_cell_visualizations": {
+              "ldb_clicks.where_to_buy_count": {
+                "is_active": true
+              },
+              "ldb_clicks.where_to_buy_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#894FBC"
+                  ]
+                }
+              }
+            },
+            "table_theme": "white",
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "type": "looker_column",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "ldb_clicks.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "ldb_sku.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Spirits"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "ggWvqcg",
+          "client_id": "cpudjzSIOPGqlURrXUKSt5",
+          "share_url": "https://analytics.gov.bc.ca/x/cpudjzSIOPGqlURrXUKSt5",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.add_to_cellar_count_by_session,ldb_clicks.where_to_buy_count_by_session,ldb_sku.sub_category&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Spirits&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=500&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Spirits%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_clicks.add_to_cellar_count_by_session,ldb_clicks.where_to_buy_count_by_session,ldb_sku.sub_category&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Spirits&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=500&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%7D%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Spirits%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "size_to_fit": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "table_theme": "white",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "type": "looker_column",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 277,
+      "edit_uri": null,
+      "id": 2858,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1142704,
+        "view": "ldb_clicks",
+        "fields": [
+          "ldb_sku.country",
+          "ldb_clicks.add_to_cellar_count_by_session"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "ldb_clicks.event_date": "7 days ago for 7 days",
+          "ldb_sku.category": "Wine"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "limit": "20",
+        "column_limit": null,
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#BC4F89"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_column",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "ldb_clicks.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "ldb_sku.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Wine"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "sn4KfYT",
+        "client_id": "yovEA2c1UVu4xmPdbS8jwC",
+        "share_url": "https://analytics.gov.bc.ca/x/yovEA2c1UVu4xmPdbS8jwC",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.country,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.country,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1142704,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 91604,
+      "subtitle_text": null,
+      "title": "Top Wines Added to Cellar by Country",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 91604,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "ldb_clicks",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "ldb_clicks.event_date"
+              },
+              {
+                "dashboard_filter_name": "Country",
+                "field": "ldb_sku.country"
+              },
+              {
+                "dashboard_filter_name": "Region",
+                "field": "ldb_sku.region"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "ldb_clicks.add_to_cellar_count_by_session desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1142704,
+        "sql_query_id": null,
+        "query": {
+          "id": 1142704,
+          "view": "ldb_clicks",
+          "fields": [
+            "ldb_sku.country",
+            "ldb_clicks.add_to_cellar_count_by_session"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "ldb_clicks.event_date": "7 days ago for 7 days",
+            "ldb_sku.category": "Wine"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "ldb_clicks.add_to_cellar_count_by_session desc"
+          ],
+          "limit": "20",
+          "column_limit": null,
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": false,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "limit_displayed_rows": false,
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "series_cell_visualizations": {
+              "ldb_clicks.where_to_buy_count": {
+                "is_active": true
+              },
+              "ldb_clicks.where_to_buy_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#894FBC"
+                  ]
+                }
+              },
+              "ldb_clicks.add_to_cellar_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#BC4F89"
+                  ]
+                }
+              },
+              "ldb_clicks.add_to_cellar_count_by_session": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "type": "looker_column",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "ldb_clicks.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "ldb_sku.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Wine"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "sn4KfYT",
+          "client_id": "yovEA2c1UVu4xmPdbS8jwC",
+          "share_url": "https://analytics.gov.bc.ca/x/yovEA2c1UVu4xmPdbS8jwC",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.country,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/ldb_clicks?fields=ldb_sku.country,ldb_clicks.add_to_cellar_count_by_session&f[ldb_clicks.event_date]=7+days+ago+for+7+days&f[ldb_sku.category]=Wine&sorts=ldb_clicks.add_to_cellar_count_by_session+desc&limit=20&total=on&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22ldb_clicks.where_to_buy_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22ldb_clicks.where_to_buy_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22156b6ed8-537e-1716-f033-5d4234586a86%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23894FBC%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22366e8b31-f0a7-4ac3-447b-a19169a9b5c0%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23BC4F89%22%5D%7D%7D%2C%22ldb_clicks.add_to_cellar_count_by_session%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2265958d11-a64b-e0cb-cb4e-7682cf54af8e%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22ldb_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22ldb_sku.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Wine%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "series_cell_visualizations": {
+            "ldb_clicks.where_to_buy_count": {
+              "is_active": true
+            },
+            "ldb_clicks.where_to_buy_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "156b6ed8-537e-1716-f033-5d4234586a86",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#894FBC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "366e8b31-f0a7-4ac3-447b-a19169a9b5c0",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#BC4F89"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "ldb_clicks.add_to_cellar_count_by_session": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "65958d11-a64b-e0cb-cb4e-7682cf54af8e",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_column",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 1417,
+      "dashboard_id": 277,
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "ldb_clicks",
+      "dimension": "ldb_clicks.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "LDB Clicks Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "ldb_clicks.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "view": "ldb_clicks",
+        "view_label": "LDB Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "ldb_clicks",
+        "dimension_group": "ldb_clicks.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "ldb_clicks",
+        "suggest_dimension": "ldb_clicks.event_date",
+        "suggest_explore": "ldb_clicks",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_clicks.view.lkml?line=48",
+        "permanent": null,
+        "source_file": "Views/ldb_clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/ldb_clicks.view.lkml",
+        "sql": "${TABLE}.timestamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1418,
+      "dashboard_id": 277,
+      "name": "Country",
+      "title": "Country",
+      "type": "field_filter",
+      "explore": "ldb_clicks",
+      "dimension": "ldb_sku.country",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "tag_list",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "LDB SKU Lookup Table Country",
+        "label_from_parameter": null,
+        "label_short": "Country",
+        "map_layer": {
+          "url": "/data/world_noantarctica.topo-f95987c9c5.json",
+          "name": "countries",
+          "feature_key": "world",
+          "property_key": null,
+          "property_label_key": "name",
+          "projection": "kavrayskiy7",
+          "format": "",
+          "extents_json_url": null,
+          "max_zoom_level": null,
+          "min_zoom_level": null
+        },
+        "name": "ldb_sku.country",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "ldb_sku",
+        "view_label": "LDB SKU Lookup Table",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "ldb_sku",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Country",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "ldb_sku",
+        "suggest_dimension": "ldb_sku.country",
+        "suggest_explore": "ldb_clicks",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_sku.view.lkml?line=51",
+        "permanent": null,
+        "source_file": "Views/ldb_sku.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/ldb_sku.view.lkml",
+        "sql": "${TABLE}.country ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1419,
+      "dashboard_id": 277,
+      "name": "Region",
+      "title": "Region",
+      "type": "field_filter",
+      "explore": "ldb_clicks",
+      "dimension": "ldb_sku.region",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "LDB SKU Lookup Table Region",
+        "label_from_parameter": null,
+        "label_short": "Region",
+        "map_layer": null,
+        "name": "ldb_sku.region",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "ldb_sku",
+        "view_label": "LDB SKU Lookup Table",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "ldb_sku",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Region",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "ldb_sku",
+        "suggest_dimension": "ldb_sku.region",
+        "suggest_explore": "ldb_clicks",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_sku.view.lkml?line=57",
+        "permanent": null,
+        "source_file": "Views/ldb_sku.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/ldb_sku.view.lkml",
+        "sql": "${TABLE}.region ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 277,
+      "dashboard_id": 277,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "LDB Custom Reports (Dev)",
+      "dashboard_layout_components": [
+        {
+          "id": 2855,
+          "dashboard_layout_id": 277,
+          "dashboard_element_id": 2855,
+          "row": 0,
+          "column": 0,
+          "width": 24,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Where to Buy by Category",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2856,
+          "dashboard_layout_id": 277,
+          "dashboard_element_id": 2856,
+          "row": 14,
+          "column": 0,
+          "width": 20,
+          "height": 10,
+          "deleted": false,
+          "element_title": "Top Wines Added to Cellar",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2857,
+          "dashboard_layout_id": 277,
+          "dashboard_element_id": 2857,
+          "row": 6,
+          "column": 12,
+          "width": 12,
+          "height": 8,
+          "deleted": false,
+          "element_title": "Top Spirit Sub Categories",
+          "element_title_hidden": false,
+          "vis_type": "looker_column",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 2858,
+          "dashboard_layout_id": 277,
+          "dashboard_element_id": 2858,
+          "row": 6,
+          "column": 0,
+          "width": 12,
+          "height": 8,
+          "deleted": false,
+          "element_title": "Top Wines Added to Cellar by Country",
+          "element_title_hidden": false,
+          "vis_type": "looker_column",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-03-08 05:35:54 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "last_updater_name": "",
+  "user_name": "Dan Pollock",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 37,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 13,
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 277,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 37,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}

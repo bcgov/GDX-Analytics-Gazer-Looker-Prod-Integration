@@ -1,0 +1,1014 @@
+{
+  "content_metadata_id": 2852,
+  "description": "",
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "RTB #1 - Google searches with 0 clicks, at least 100 impressions",
+  "user_id": 1302,
+  "slug": "pWiFZOo6IOIbe133jsBia9",
+  "preferred_viewer": "dashboards-next",
+  "space": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2023-02-14 23:12:00 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 357,
+      "edit_uri": null,
+      "id": 3344,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": "above",
+      "note_state": "collapsed",
+      "note_text": "<p style=\"background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;\">\n\n<b>Purpose</b>: View Google Searches that resulted in 0 clicks to an RTB page, but did have at least 100 impressions. <br>\nThis may provide clues that people are searching for something related to RTB, but not seeing the relevant link.<br>\nThe default filters are 0 clicks and 100 or more impressions. Change these settings as needed. <br><br>\n\n<b>More Information</b>: To learn more about web analytics definitions for metrics and how to navigate standard dashboards, <a href=\"https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics\">go to the Web Analytics Guide.</a>\n\n<br>\n\n</p\n",
+      "note_text_as_html": "&lt;p style=&quot;background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;&quot;&gt;\n\n&lt;b&gt;Purpose&lt;/b&gt;: View Google Searches that resulted in 0 clicks to an RTB page, but did have at least 100 impressions. &lt;br&gt;\nThis may provide clues that people are searching for something related to RTB, but not seeing the relevant link.&lt;br&gt;\nThe default filters are 0 clicks and 100 or more impressions. Change these settings as needed. &lt;br&gt;&lt;br&gt;\n\n&lt;b&gt;More Information&lt;/b&gt;: To learn more about web analytics definitions for metrics and how to navigate standard dashboards, &lt;a href=&quot;https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics&quot;&gt;go to the Web Analytics Guide.&lt;/a&gt;\n\n&lt;br&gt;\n\n&lt;/p\n",
+      "query": {
+        "id": 1335814,
+        "view": "google_search",
+        "fields": [
+          "google_search.query",
+          "google_search.page",
+          "google_search.total_impressions",
+          "google_search.total_clicks",
+          "google_search.total_click_through_rate"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "google_search.google_search_date": "24 months ago for 24 months",
+          "google_search.page": "%gov/content/housing-tenancy/residential-tenancies%",
+          "google_search.total_clicks": "0",
+          "google_search.total_impressions": ">=100",
+          "google_search.subtheme": "Residential Tenancies,Housing & Tenancy Search"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "google_search.total_impressions desc"
+        ],
+        "limit": "1000",
+        "column_limit": null,
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "series_labels": {
+            "google_search.query": "Search Query"
+          },
+          "type": "table",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "google_search.google_search_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "24",
+                  "unit": "c_mo"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "google_search.page": [
+            {
+              "type": "contains",
+              "values": [
+                {
+                  "constant": "gov/content/housing-tenancy/residential-tenancies"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ],
+          "google_search.total_clicks": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "0"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ],
+          "google_search.total_impressions": [
+            {
+              "type": ">=",
+              "values": [
+                {
+                  "constant": "100"
+                },
+                {
+                }
+              ],
+              "id": 3,
+              "error": false
+            }
+          ],
+          "google_search.subtheme": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Residential Tenancies"
+                },
+                {
+                }
+              ],
+              "id": 4,
+              "error": false
+            },
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Housing & Tenancy Search"
+                },
+                {
+                }
+              ],
+              "id": 5,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "GpBfXvc",
+        "client_id": "l7x9DZQxuSr3BwTdUTaxA5",
+        "share_url": "https://analytics.gov.bc.ca/x/l7x9DZQxuSr3BwTdUTaxA5",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.page,google_search.total_impressions,google_search.total_clicks,google_search.total_click_through_rate&f[google_search.google_search_date]=24+months+ago+for+24+months&f[google_search.page]=%25gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%25&f[google_search.total_clicks]=0&f[google_search.total_impressions]=%3E%3D100&f[google_search.subtheme]=Residential+Tenancies%2CHousing+%26+Tenancy+Search&sorts=google_search.total_impressions+desc&limit=1000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_labels%22%3A%7B%22google_search.query%22%3A%22Search+Query%22%7D%2C%22type%22%3A%22table%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2224%22%2C%22unit%22%3A%22c_mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.page%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_clicks%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%220%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_impressions%22%3A%5B%7B%22type%22%3A%22%5Cu003e%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22100%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.subtheme%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Residential+Tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%2C%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Housing+%5Cu0026+Tenancy+Search%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/google_api/google_search?fields=google_search.query,google_search.page,google_search.total_impressions,google_search.total_clicks,google_search.total_click_through_rate&f[google_search.google_search_date]=24+months+ago+for+24+months&f[google_search.page]=%25gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%25&f[google_search.total_clicks]=0&f[google_search.total_impressions]=%3E%3D100&f[google_search.subtheme]=Residential+Tenancies%2CHousing+%26+Tenancy+Search&sorts=google_search.total_impressions+desc&limit=1000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_labels%22%3A%7B%22google_search.query%22%3A%22Search+Query%22%7D%2C%22type%22%3A%22table%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2224%22%2C%22unit%22%3A%22c_mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.page%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_clicks%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%220%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_impressions%22%3A%5B%7B%22type%22%3A%22%5Cu003e%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22100%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.subtheme%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Residential+Tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%2C%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Housing+%5Cu0026+Tenancy+Search%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "google_api",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1335814,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 101951,
+      "subtitle_text": null,
+      "title": "Google searches with 0 clicks, at least 100 impressions",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 101951,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "google_api",
+            "view": "google_search",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Total Clicks",
+                "field": "google_search.total_clicks"
+              },
+              {
+                "dashboard_filter_name": "Total Impressions",
+                "field": "google_search.total_impressions"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "google_search.google_search_date"
+              },
+              {
+                "dashboard_filter_name": "Search Query",
+                "field": "google_search.query"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "google_search.total_impressions desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1335814,
+        "sql_query_id": null,
+        "query": {
+          "id": 1335814,
+          "view": "google_search",
+          "fields": [
+            "google_search.query",
+            "google_search.page",
+            "google_search.total_impressions",
+            "google_search.total_clicks",
+            "google_search.total_click_through_rate"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "google_search.google_search_date": "24 months ago for 24 months",
+            "google_search.page": "%gov/content/housing-tenancy/residential-tenancies%",
+            "google_search.total_clicks": "0",
+            "google_search.total_impressions": ">=100",
+            "google_search.subtheme": "Residential Tenancies,Housing & Tenancy Search"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "google_search.total_impressions desc"
+          ],
+          "limit": "1000",
+          "column_limit": null,
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "truncate_column_names": false,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "table_theme": "editable",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "series_labels": {
+              "google_search.query": "Search Query"
+            },
+            "type": "table",
+            "defaults_version": 1,
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "google_search.google_search_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "24",
+                    "unit": "c_mo"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "google_search.page": [
+              {
+                "type": "contains",
+                "values": [
+                  {
+                    "constant": "gov/content/housing-tenancy/residential-tenancies"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ],
+            "google_search.total_clicks": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "0"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ],
+            "google_search.total_impressions": [
+              {
+                "type": ">=",
+                "values": [
+                  {
+                    "constant": "100"
+                  },
+                  {
+                  }
+                ],
+                "id": 3,
+                "error": false
+              }
+            ],
+            "google_search.subtheme": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Residential Tenancies"
+                  },
+                  {
+                  }
+                ],
+                "id": 4,
+                "error": false
+              },
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Housing & Tenancy Search"
+                  },
+                  {
+                  }
+                ],
+                "id": 5,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "GpBfXvc",
+          "client_id": "l7x9DZQxuSr3BwTdUTaxA5",
+          "share_url": "https://analytics.gov.bc.ca/x/l7x9DZQxuSr3BwTdUTaxA5",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.page,google_search.total_impressions,google_search.total_clicks,google_search.total_click_through_rate&f[google_search.google_search_date]=24+months+ago+for+24+months&f[google_search.page]=%25gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%25&f[google_search.total_clicks]=0&f[google_search.total_impressions]=%3E%3D100&f[google_search.subtheme]=Residential+Tenancies%2CHousing+%26+Tenancy+Search&sorts=google_search.total_impressions+desc&limit=1000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_labels%22%3A%7B%22google_search.query%22%3A%22Search+Query%22%7D%2C%22type%22%3A%22table%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2224%22%2C%22unit%22%3A%22c_mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.page%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_clicks%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%220%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_impressions%22%3A%5B%7B%22type%22%3A%22%5Cu003e%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22100%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.subtheme%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Residential+Tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%2C%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Housing+%5Cu0026+Tenancy+Search%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/google_api/google_search?fields=google_search.query,google_search.page,google_search.total_impressions,google_search.total_clicks,google_search.total_click_through_rate&f[google_search.google_search_date]=24+months+ago+for+24+months&f[google_search.page]=%25gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%25&f[google_search.total_clicks]=0&f[google_search.total_impressions]=%3E%3D100&f[google_search.subtheme]=Residential+Tenancies%2CHousing+%26+Tenancy+Search&sorts=google_search.total_impressions+desc&limit=1000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22series_labels%22%3A%7B%22google_search.query%22%3A%22Search+Query%22%7D%2C%22type%22%3A%22table%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2224%22%2C%22unit%22%3A%22c_mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.page%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22gov%2Fcontent%2Fhousing-tenancy%2Fresidential-tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_clicks%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%220%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22google_search.total_impressions%22%3A%5B%7B%22type%22%3A%22%5Cu003e%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22100%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.subtheme%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Residential+Tenancies%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%2C%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Housing+%5Cu0026+Tenancy+Search%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "google_api",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "series_labels": {
+            "google_search.query": "Search Query"
+          },
+          "type": "table",
+          "defaults_version": 1,
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": 1737,
+      "dashboard_id": 357,
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "google_search",
+      "dimension": "google_search.google_search_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "google_api",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Google Search Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Google Search Google Search Date",
+        "label_from_parameter": null,
+        "label_short": "Google Search Date",
+        "map_layer": null,
+        "name": "google_search.google_search_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "view": "google_search",
+        "view_label": "Google Search",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "google_search",
+        "dimension_group": "google_search.google_search",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "google_api",
+        "scope": "google_search",
+        "suggest_dimension": "google_search.google_search_date",
+        "suggest_explore": "google_search",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1740,
+      "dashboard_id": 357,
+      "name": "Subtheme",
+      "title": "Subtheme",
+      "type": "field_filter",
+      "explore": "theme_cache",
+      "dimension": "google_search.subtheme",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "google_api",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Residential Tenancies,Housing & Tenancy Search",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1738,
+      "dashboard_id": 357,
+      "name": "Total Clicks",
+      "title": "Total Clicks",
+      "type": "field_filter",
+      "explore": "google_search",
+      "dimension": "google_search.total_clicks",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "range_slider",
+        "display": "inline"
+      },
+      "model": "google_api",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "0",
+      "field": {
+        "align": "right",
+        "can_filter": true,
+        "category": "measure",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Counts",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": true,
+        "label": "Google Search Total Clicks",
+        "label_from_parameter": null,
+        "label_short": "Total Clicks",
+        "map_layer": null,
+        "name": "google_search.total_clicks",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "sum",
+        "user_attribute_filter_types": [
+          "number",
+          "advanced_filter_number"
+        ],
+        "value_format": null,
+        "view": "google_search",
+        "view_label": "Google Search",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "google_search",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Total Clicks",
+        "measure": true,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "google_api",
+        "scope": "google_search",
+        "suggest_dimension": "google_search.total_clicks",
+        "suggest_explore": "google_search",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/google_api/files/Views%2Fgoogle_search.view.lkml?line=111",
+        "permanent": null,
+        "source_file": "Views/google_search.view.lkml",
+        "source_file_path": "google_api/Views/google_search.view.lkml",
+        "sql": "${TABLE}.clicks",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1739,
+      "dashboard_id": 357,
+      "name": "Total Impressions",
+      "title": "Total Impressions",
+      "type": "field_filter",
+      "explore": "google_search",
+      "dimension": "google_search.total_impressions",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "range_slider",
+        "display": "inline"
+      },
+      "model": "google_api",
+      "listens_to_filters": [
+
+      ],
+      "default_value": ">=100",
+      "field": {
+        "align": "right",
+        "can_filter": true,
+        "category": "measure",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Counts",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": true,
+        "label": "Google Search Total Impressions",
+        "label_from_parameter": null,
+        "label_short": "Total Impressions",
+        "map_layer": null,
+        "name": "google_search.total_impressions",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "sum",
+        "user_attribute_filter_types": [
+          "number",
+          "advanced_filter_number"
+        ],
+        "value_format": null,
+        "view": "google_search",
+        "view_label": "Google Search",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "google_search",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Total Impressions",
+        "measure": true,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "google_api",
+        "scope": "google_search",
+        "suggest_dimension": "google_search.total_impressions",
+        "suggest_explore": "google_search",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/google_api/files/Views%2Fgoogle_search.view.lkml?line=116",
+        "permanent": null,
+        "source_file": "Views/google_search.view.lkml",
+        "source_file_path": "google_api/Views/google_search.view.lkml",
+        "sql": "${TABLE}.impressions",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": 1746,
+      "dashboard_id": 357,
+      "name": "Search Query",
+      "title": "Search Query",
+      "type": "field_filter",
+      "explore": "google_search",
+      "dimension": "google_search.query",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "google_api",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Google Search Query",
+        "label_from_parameter": null,
+        "label_short": "Query",
+        "map_layer": null,
+        "name": "google_search.query",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "google_search",
+        "view_label": "Google Search",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "google_search",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Query",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "google_api",
+        "scope": "google_search",
+        "suggest_dimension": "google_search.query",
+        "suggest_explore": "google_search",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": null,
+        "permanent": null,
+        "source_file": "",
+        "source_file_path": "",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": 357,
+      "dashboard_id": 357,
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "RTB #1 - Google searches with 0 clicks, at least 100 impressions",
+      "dashboard_layout_components": [
+        {
+          "id": 3344,
+          "dashboard_layout_id": 357,
+          "dashboard_element_id": 3344,
+          "row": 0,
+          "column": 0,
+          "width": 24,
+          "height": 12,
+          "deleted": false,
+          "element_title": "Google searches with 0 clicks, at least 100 impressions",
+          "element_title_hidden": false,
+          "vis_type": "table",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-04-03 19:58:46 UTC",
+  "updated_at": "2023-02-14 23:38:20 UTC",
+  "last_updater_id": 1302,
+  "last_updater_name": "Linda Mah",
+  "user_name": "Linda Mah",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "space_id": 37,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 14,
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": 1,
+    "id": 37,
+    "content_metadata_id": 105,
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": 13,
+    "external_id": null,
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "content_favorite_id": null,
+  "id": 357,
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "folder_id": 37,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}
