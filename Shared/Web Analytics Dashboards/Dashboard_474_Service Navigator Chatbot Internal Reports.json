@@ -1,14 +1,14 @@
 {
-  "content_metadata_id": 2963,
+  "content_metadata_id": 3347,
   "description": "",
   "hidden": false,
   "query_timezone": null,
   "readonly": false,
   "refresh_interval": null,
   "refresh_interval_to_i": null,
-  "title": "Chatbot Intents List",
+  "title": "Service Navigator Chatbot Internal Reports",
   "user_id": 13,
-  "slug": "2OIjQuJGdVmc3MSLAzlkHh",
+  "slug": "jWtxAbtaY8H8X0XZjk3Xkb",
   "preferred_viewer": "dashboards-next",
   "space": {
     "name": "Web Analytics Dashboards",
@@ -40,15 +40,15 @@
   },
   "alert_sync_with_dashboard_filter_enabled": false,
   "background_color": null,
-  "created_at": "2023-04-11 18:49:36 UTC",
+  "created_at": "2024-01-04 02:06:26 UTC",
   "crossfilter_enabled": false,
   "dashboard_elements": [
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": 393,
+      "dashboard_id": 474,
       "edit_uri": null,
-      "id": 3705,
+      "id": 4531,
       "look": null,
       "look_id": null,
       "lookml_link_id": null,
@@ -246,6 +246,10 @@
               {
                 "dashboard_filter_name": "Device Is Mobile (Yes / No)",
                 "field": "page_views.device_is_mobile"
+              },
+              {
+                "dashboard_filter_name": "Intent Category",
+                "field": "chatbot_intents_and_clicks.intent_category"
               }
             ]
           }
@@ -483,12 +487,518 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 474,
+      "edit_uri": null,
+      "id": 4532,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1667972,
+        "view": "chatbot",
+        "fields": [
+          "page_views.chatbot_page_display_url",
+          "page_views.session_count",
+          "chatbot.question_count",
+          "chatbot.link_click_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "page_views.page_view_start_date": "7 days ago for 7 days",
+          "chatbot.action": "\"ask_question\",\"get_answer\",close,hello,\"link_click\",open"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "chatbot.question_count desc"
+        ],
+        "limit": "20",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "column_order": [
+            "$$$_row_numbers_$$$",
+            "page_views.chatbot_page_display_url",
+            "page_views.session_count",
+            "page_views.page_view_count",
+            "chatbot.question_count",
+            "chatbot.link_click_count"
+          ],
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "page_views.chatbot_page_display_url": "URL",
+            "page_views.session_count": "Sessions w/ Chatbot",
+            "page_views.page_view_count": "Chat Views",
+            "chatbot.question_count": "Chat bot requests",
+            "chatbot.link_click_count": "Link Clicks"
+          },
+          "series_column_widths": {
+            "page_views.chatbot_page_display_url": 600
+          },
+          "series_cell_visualizations": {
+            "page_views.session_count": {
+              "is_active": false
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        },
+        "filter_config": {
+          "page_views.page_view_start_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "chatbot.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "ask_question,get_answer,close,hello,link_click,open"
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "nCzpwDk",
+        "client_id": "2BV7rRUkb1TXRdaC8AfiYB",
+        "share_url": "https://analytics.gov.bc.ca/x/2BV7rRUkb1TXRdaC8AfiYB",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot?fields=page_views.chatbot_page_display_url,page_views.session_count,chatbot.question_count,chatbot.link_click_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[chatbot.action]=%22ask_question%22%2C%22get_answer%22%2Cclose%2Chello%2C%22link_click%22%2Copen&sorts=chatbot.question_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22page_views.chatbot_page_display_url%22%2C%22page_views.session_count%22%2C%22page_views.page_view_count%22%2C%22chatbot.question_count%22%2C%22chatbot.link_click_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22page_views.chatbot_page_display_url%22%3A%22URL%22%2C%22page_views.session_count%22%3A%22Sessions+w%2F+Chatbot%22%2C%22page_views.page_view_count%22%3A%22Chat+Views%22%2C%22chatbot.question_count%22%3A%22Chat+bot+requests%22%2C%22chatbot.link_click_count%22%3A%22Link+Clicks%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.chatbot_page_display_url%22%3A600%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22ask_question%2Cget_answer%2Cclose%2Chello%2Clink_click%2Copen%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/chatbot?fields=page_views.chatbot_page_display_url,page_views.session_count,chatbot.question_count,chatbot.link_click_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[chatbot.action]=%22ask_question%22%2C%22get_answer%22%2Cclose%2Chello%2C%22link_click%22%2Copen&sorts=chatbot.question_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22page_views.chatbot_page_display_url%22%2C%22page_views.session_count%22%2C%22page_views.page_view_count%22%2C%22chatbot.question_count%22%2C%22chatbot.link_click_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22page_views.chatbot_page_display_url%22%3A%22URL%22%2C%22page_views.session_count%22%3A%22Sessions+w%2F+Chatbot%22%2C%22page_views.page_view_count%22%3A%22Chat+Views%22%2C%22chatbot.question_count%22%3A%22Chat+bot+requests%22%2C%22chatbot.link_click_count%22%3A%22Link+Clicks%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.chatbot_page_display_url%22%3A600%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22ask_question%2Cget_answer%2Cclose%2Chello%2Clink_click%2Copen%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "runtime": null,
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1667972,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 116597,
+      "subtitle_text": null,
+      "title": "Top www2.gov.bc.ca URLs Where Chatbot is Used",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 116597,
+        "dynamic_fields": "[]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "chatbot",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "chatbot.event_date"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
+              },
+              {
+                "dashboard_filter_name": "URL",
+                "field": "page_views.chatbot_page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Device Is Mobile (Yes / No)",
+                "field": "page_views.device_is_mobile"
+              },
+              {
+                "dashboard_filter_name": "Intent Category",
+                "field": "chatbot.intent_category"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "chatbot.question_count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1667972,
+        "sql_query_id": null,
+        "query": {
+          "id": 1667972,
+          "view": "chatbot",
+          "fields": [
+            "page_views.chatbot_page_display_url",
+            "page_views.session_count",
+            "chatbot.question_count",
+            "chatbot.link_click_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "page_views.page_view_start_date": "7 days ago for 7 days",
+            "chatbot.action": "\"ask_question\",\"get_answer\",close,hello,\"link_click\",open"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "chatbot.question_count desc"
+          ],
+          "limit": "20",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "editable",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "column_order": [
+              "$$$_row_numbers_$$$",
+              "page_views.chatbot_page_display_url",
+              "page_views.session_count",
+              "page_views.page_view_count",
+              "chatbot.question_count",
+              "chatbot.link_click_count"
+            ],
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "page_views.chatbot_page_display_url": "URL",
+              "page_views.session_count": "Sessions w/ Chatbot",
+              "page_views.page_view_count": "Chat Views",
+              "chatbot.question_count": "Chat bot requests",
+              "chatbot.link_click_count": "Link Clicks"
+            },
+            "series_column_widths": {
+              "page_views.chatbot_page_display_url": 600
+            },
+            "series_cell_visualizations": {
+              "page_views.session_count": {
+                "is_active": false
+              }
+            },
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ]
+          },
+          "filter_config": {
+            "page_views.page_view_start_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "chatbot.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "ask_question,get_answer,close,hello,link_click,open"
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "nCzpwDk",
+          "client_id": "2BV7rRUkb1TXRdaC8AfiYB",
+          "share_url": "https://analytics.gov.bc.ca/x/2BV7rRUkb1TXRdaC8AfiYB",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot?fields=page_views.chatbot_page_display_url,page_views.session_count,chatbot.question_count,chatbot.link_click_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[chatbot.action]=%22ask_question%22%2C%22get_answer%22%2Cclose%2Chello%2C%22link_click%22%2Copen&sorts=chatbot.question_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22page_views.chatbot_page_display_url%22%2C%22page_views.session_count%22%2C%22page_views.page_view_count%22%2C%22chatbot.question_count%22%2C%22chatbot.link_click_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22page_views.chatbot_page_display_url%22%3A%22URL%22%2C%22page_views.session_count%22%3A%22Sessions+w%2F+Chatbot%22%2C%22page_views.page_view_count%22%3A%22Chat+Views%22%2C%22chatbot.question_count%22%3A%22Chat+bot+requests%22%2C%22chatbot.link_click_count%22%3A%22Link+Clicks%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.chatbot_page_display_url%22%3A600%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22ask_question%2Cget_answer%2Cclose%2Chello%2Clink_click%2Copen%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/chatbot?fields=page_views.chatbot_page_display_url,page_views.session_count,chatbot.question_count,chatbot.link_click_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[chatbot.action]=%22ask_question%22%2C%22get_answer%22%2Cclose%2Chello%2C%22link_click%22%2Copen&sorts=chatbot.question_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22page_views.chatbot_page_display_url%22%2C%22page_views.session_count%22%2C%22page_views.page_view_count%22%2C%22chatbot.question_count%22%2C%22chatbot.link_click_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22page_views.chatbot_page_display_url%22%3A%22URL%22%2C%22page_views.session_count%22%3A%22Sessions+w%2F+Chatbot%22%2C%22page_views.page_view_count%22%3A%22Chat+Views%22%2C%22chatbot.question_count%22%3A%22Chat+bot+requests%22%2C%22chatbot.link_click_count%22%3A%22Link+Clicks%22%7D%2C%22series_column_widths%22%3A%7B%22page_views.chatbot_page_display_url%22%3A600%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22ask_question%2Cget_answer%2Cclose%2Chello%2Clink_click%2Copen%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "runtime": null,
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "column_order": [
+            "$$$_row_numbers_$$$",
+            "page_views.chatbot_page_display_url",
+            "page_views.session_count",
+            "page_views.page_view_count",
+            "chatbot.question_count",
+            "chatbot.link_click_count"
+          ],
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "page_views.chatbot_page_display_url": "URL",
+            "page_views.session_count": "Sessions w/ Chatbot",
+            "page_views.page_view_count": "Chat Views",
+            "chatbot.question_count": "Chat bot requests",
+            "chatbot.link_click_count": "Link Clicks"
+          },
+          "series_column_widths": {
+            "page_views.chatbot_page_display_url": 600
+          },
+          "series_cell_visualizations": {
+            "page_views.session_count": {
+              "is_active": false
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ]
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_filters": [
     {
-      "id": 1868,
-      "dashboard_id": 393,
+      "id": 2129,
+      "dashboard_id": 474,
       "name": "Event Date",
       "title": "Event Date",
       "type": "field_filter",
@@ -584,8 +1094,8 @@
       }
     },
     {
-      "id": 1881,
-      "dashboard_id": 393,
+      "id": 2130,
+      "dashboard_id": 474,
       "name": "Site",
       "title": "Site",
       "type": "field_filter",
@@ -596,10 +1106,7 @@
       "required": false,
       "ui_config": {
         "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
+        "display": "popover"
       },
       "model": "snowplow_web_block",
       "listens_to_filters": [
@@ -678,8 +1185,8 @@
       }
     },
     {
-      "id": 1882,
-      "dashboard_id": 393,
+      "id": 2131,
+      "dashboard_id": 474,
       "name": "URL",
       "title": "URL",
       "type": "field_filter",
@@ -772,8 +1279,8 @@
       }
     },
     {
-      "id": 1883,
-      "dashboard_id": 393,
+      "id": 2132,
+      "dashboard_id": 474,
       "name": "Device Is Mobile (Yes / No)",
       "title": "Device Is Mobile (Yes / No)",
       "type": "field_filter",
@@ -870,29 +1377,140 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "id": 2133,
+      "dashboard_id": 474,
+      "name": "Intent Category",
+      "title": "Intent Category",
+      "type": "field_filter",
+      "explore": "chatbot_intents_and_clicks",
+      "dimension": "chatbot_intents_and_clicks.intent_category",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Intents",
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Chatbot Intents and Clicks Intent Category",
+        "label_from_parameter": null,
+        "label_short": "Intent Category",
+        "map_layer": null,
+        "name": "chatbot_intents_and_clicks.intent_category",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "chatbot_intents_and_clicks",
+        "view_label": "Chatbot Intents and Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "chatbot_intents_and_clicks",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Intent Category",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "chatbot_intents_and_clicks",
+        "suggest_dimension": "chatbot_intents_and_clicks.intent_category",
+        "suggest_explore": "chatbot_intents_and_clicks",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fchatbot_intents_and_clicks.view.lkml?line=136",
+        "permanent": null,
+        "source_file": "Views/chatbot_intents_and_clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/chatbot_intents_and_clicks.view.lkml",
+        "sql": "chatbot_intents_and_clicks.intent_category",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_layouts": [
     {
-      "id": 393,
-      "dashboard_id": 393,
+      "id": 474,
+      "dashboard_id": 474,
       "type": "newspaper",
       "active": true,
       "column_width": null,
       "width": null,
       "deleted": false,
-      "dashboard_title": "Chatbot Intents List",
+      "dashboard_title": "Service Navigator Chatbot Internal Reports",
       "dashboard_layout_components": [
         {
-          "id": 3705,
-          "dashboard_layout_id": 393,
-          "dashboard_element_id": 3705,
+          "id": 4531,
+          "dashboard_layout_id": 474,
+          "dashboard_element_id": 4531,
           "row": 0,
           "column": 0,
           "width": 24,
           "height": 12,
           "deleted": false,
           "element_title": "Chatbot Intents List",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 4532,
+          "dashboard_layout_id": 474,
+          "dashboard_element_id": 4532,
+          "row": 12,
+          "column": 0,
+          "width": 24,
+          "height": 10,
+          "deleted": false,
+          "element_title": "Top www2.gov.bc.ca URLs Where Chatbot is Used",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
@@ -920,8 +1538,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-01-04 02:03:57 UTC",
-  "updated_at": "2023-04-26 19:11:50 UTC",
+  "last_accessed_at": "2024-01-04 21:07:34 UTC",
+  "updated_at": "2024-01-04 20:21:53 UTC",
   "last_updater_id": 13,
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -934,7 +1552,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 14,
+  "view_count": 6,
   "folder": {
     "name": "Web Analytics Dashboards",
     "parent_id": 1,
@@ -964,7 +1582,7 @@
     }
   },
   "content_favorite_id": null,
-  "id": 393,
+  "id": 474,
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
