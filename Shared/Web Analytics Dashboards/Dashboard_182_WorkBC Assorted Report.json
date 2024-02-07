@@ -235,12 +235,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "page_views.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
               }
             ]
           }
@@ -698,12 +698,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "page_views.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
               }
             ]
           }
@@ -1198,12 +1198,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "page_views.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
               }
             ]
           }
@@ -1668,12 +1668,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "page_views.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
               }
             ]
           }
@@ -2122,12 +2122,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "clicks.click_time_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "clicks.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "clicks.click_time_date"
               }
             ]
           }
@@ -2694,12 +2694,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "page_views.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
               }
             ]
           }
@@ -3170,12 +3170,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "searches.search_time_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "searches.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "searches.search_time_date"
               }
             ]
           }
@@ -3542,12 +3542,12 @@
             "name": null,
             "listen": [
               {
-                "dashboard_filter_name": "Date",
-                "field": "clicks.click_time_date"
-              },
-              {
                 "dashboard_filter_name": "Government IPs",
                 "field": "clicks.is_government"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "clicks.click_time_date"
               }
             ]
           }
@@ -3691,6 +3691,713 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": 182,
+      "edit_uri": null,
+      "id": 4589,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": 1725262,
+        "view": "searches",
+        "fields": [
+          "searches.search_terms",
+          "searches.search_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "searches.search_time_date": "7 days ago for 7 days",
+          "searches.page_display_url": "",
+          "searches.page_urlhost": "workbc.ca,www.workbc.ca",
+          "searches.page_referrer": "https://www.workbc.ca/plan-career/explore-careers%"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "searches.search_count desc"
+        ],
+        "limit": "20",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "color_application": {
+            "collection_id": "legacy",
+            "palette_id": "looker_classic",
+            "collection_default": true,
+            "collection_label": "Legacy",
+            "palette_label": "Looker classic, mixed categorical",
+            "palette_type": "Categorical",
+            "palette_colors": [
+              "#62bad4",
+              "#a9c574",
+              "#929292",
+              "#9fdee0",
+              "#1f3e5a",
+              "#90c8ae",
+              "#92818d",
+              "#c5c6a6",
+              "#82c2ca",
+              "#cee0a0",
+              "#928fb4",
+              "#9fc190"
+            ]
+          },
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "searches.search_terms": "Search Term",
+            "searches.search_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "searches.search_count": {
+              "is_active": false
+            }
+          },
+          "series_text_format": {
+            "of_searches": {
+              "align": "right"
+            }
+          },
+          "conditional_formatting": [
+            {
+              "type": "along a scale...",
+              "value": null,
+              "background_color": null,
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_diverging1",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to yellow to green, diverging",
+                "palette_type": "Diverging",
+                "palette_stops": [
+                  {
+                    "color": "#F36254",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#FCF758",
+                    "offset": 50
+                  },
+                  {
+                    "color": "#4FBC89",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          }
+        },
+        "filter_config": {
+          "searches.search_time_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "searches.page_display_url": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": ""
+                },
+                {
+                }
+              ],
+              "id": 1,
+              "error": false
+            }
+          ],
+          "searches.page_urlhost": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "workbc.ca,www.workbc.ca"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ],
+          "searches.page_referrer": [
+            {
+              "type": "starts",
+              "values": [
+                {
+                  "constant": "https://www.workbc.ca/plan-career/explore-careers"
+                },
+                {
+                }
+              ],
+              "id": 3,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "CRgMTqz",
+        "client_id": "3ulLQsaux24YKPxRAqY1dc",
+        "share_url": "https://analytics.gov.bc.ca/x/3ulLQsaux24YKPxRAqY1dc",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.search_terms,searches.search_count&f[searches.search_time_date]=7+days+ago+for+7+days&f[searches.page_display_url]=&f[searches.page_urlhost]=workbc.ca%2Cwww.workbc.ca&f[searches.page_referrer]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%25&sorts=searches.search_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22looker_classic%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22searches.search_terms%22%3A%22Search+Term%22%2C%22searches.search_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.search_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22of_searches%22%3A%7B%22align%22%3A%22right%22%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_diverging1%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22workbc.ca%2Cwww.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Searches%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_searches%22%2C%22args%22%3A%5B%22searches.search_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/searches?fields=searches.search_terms,searches.search_count&f[searches.search_time_date]=7+days+ago+for+7+days&f[searches.page_display_url]=&f[searches.page_urlhost]=workbc.ca%2Cwww.workbc.ca&f[searches.page_referrer]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%25&sorts=searches.search_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22looker_classic%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22searches.search_terms%22%3A%22Search+Term%22%2C%22searches.search_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.search_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22of_searches%22%3A%7B%22align%22%3A%22right%22%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_diverging1%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22workbc.ca%2Cwww.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Searches%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_searches%22%2C%22args%22%3A%5B%22searches.search_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
+        "runtime": null,
+        "has_table_calculations": true,
+        "model": "snowplow_web_block",
+        "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Searches\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_searches\",\"args\":[\"searches.search_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\",\"expression\":\"(${searches.search_count} / sum(${searches.search_count}))\"}]",
+        "query_timezone": null,
+        "quick_calcs": [
+          {
+            "expression": "(${searches.search_count} / sum(${searches.search_count}))",
+            "definition": {
+              "category": "table_calculation",
+              "label": "% of Searches",
+              "value_format": null,
+              "value_format_name": "percent_1",
+              "calculation_type": "percent_of_column_sum",
+              "table_calculation": "of_searches",
+              "args": [
+                "searches.search_count"
+              ],
+              "_kind_hint": "measure",
+              "_type_hint": "number"
+            },
+            "name": "of_searches"
+          }
+        ],
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": 1725262,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": 118814,
+      "subtitle_text": null,
+      "title": "Explore Careers - Top Site Search Terms",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "result_maker": {
+        "id": 118814,
+        "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Searches\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_searches\",\"args\":[\"searches.search_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "searches",
+            "name": null,
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "searches.search_time_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "searches.search_count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": 1725262,
+        "sql_query_id": null,
+        "query": {
+          "id": 1725262,
+          "view": "searches",
+          "fields": [
+            "searches.search_terms",
+            "searches.search_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "searches.search_time_date": "7 days ago for 7 days",
+            "searches.page_display_url": "",
+            "searches.page_urlhost": "workbc.ca,www.workbc.ca",
+            "searches.page_referrer": "https://www.workbc.ca/plan-career/explore-careers%"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "searches.search_count desc"
+          ],
+          "limit": "20",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "editable",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "color_application": {
+              "collection_id": "legacy",
+              "palette_id": "looker_classic"
+            },
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "searches.search_terms": "Search Term",
+              "searches.search_count": "Search Count"
+            },
+            "series_cell_visualizations": {
+              "searches.search_count": {
+                "is_active": false
+              }
+            },
+            "series_text_format": {
+              "of_searches": {
+                "align": "right"
+              }
+            },
+            "conditional_formatting": [
+              {
+                "type": "along a scale...",
+                "value": null,
+                "background_color": null,
+                "font_color": null,
+                "color_application": {
+                  "collection_id": "legacy",
+                  "palette_id": "legacy_diverging1"
+                },
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "fields": null
+              }
+            ],
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            }
+          },
+          "filter_config": {
+            "searches.search_time_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "searches.page_display_url": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": ""
+                  },
+                  {
+                  }
+                ],
+                "id": 1,
+                "error": false
+              }
+            ],
+            "searches.page_urlhost": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "workbc.ca,www.workbc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ],
+            "searches.page_referrer": [
+              {
+                "type": "starts",
+                "values": [
+                  {
+                    "constant": "https://www.workbc.ca/plan-career/explore-careers"
+                  },
+                  {
+                  }
+                ],
+                "id": 3,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "CRgMTqz",
+          "client_id": "3ulLQsaux24YKPxRAqY1dc",
+          "share_url": "https://analytics.gov.bc.ca/x/3ulLQsaux24YKPxRAqY1dc",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.search_terms,searches.search_count&f[searches.search_time_date]=7+days+ago+for+7+days&f[searches.page_display_url]=&f[searches.page_urlhost]=workbc.ca%2Cwww.workbc.ca&f[searches.page_referrer]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%25&sorts=searches.search_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22looker_classic%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22searches.search_terms%22%3A%22Search+Term%22%2C%22searches.search_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.search_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22of_searches%22%3A%7B%22align%22%3A%22right%22%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_diverging1%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22workbc.ca%2Cwww.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Searches%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_searches%22%2C%22args%22%3A%5B%22searches.search_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/searches?fields=searches.search_terms,searches.search_count&f[searches.search_time_date]=7+days+ago+for+7+days&f[searches.page_display_url]=&f[searches.page_urlhost]=workbc.ca%2Cwww.workbc.ca&f[searches.page_referrer]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%25&sorts=searches.search_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22looker_classic%22%7D%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22searches.search_terms%22%3A%22Search+Term%22%2C%22searches.search_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.search_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22of_searches%22%3A%7B%22align%22%3A%22right%22%7D%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22along+a+scale...%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22color_application%22%3A%7B%22collection_id%22%3A%22legacy%22%2C%22palette_id%22%3A%22legacy_diverging1%22%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22workbc.ca%2Cwww.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fexplore-careers%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Searches%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_searches%22%2C%22args%22%3A%5B%22searches.search_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
+          "runtime": null,
+          "has_table_calculations": true,
+          "model": "snowplow_web_block",
+          "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Searches\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_searches\",\"args\":[\"searches.search_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\",\"expression\":\"(${searches.search_count} / sum(${searches.search_count}))\"}]",
+          "query_timezone": null,
+          "quick_calcs": [
+            {
+              "expression": "(${searches.search_count} / sum(${searches.search_count}))",
+              "definition": {
+                "category": "table_calculation",
+                "label": "% of Searches",
+                "value_format": null,
+                "value_format_name": "percent_1",
+                "calculation_type": "percent_of_column_sum",
+                "table_calculation": "of_searches",
+                "args": [
+                  "searches.search_count"
+                ],
+                "_kind_hint": "measure",
+                "_type_hint": "number"
+              },
+              "name": "of_searches"
+            }
+          ],
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "color_application": {
+            "collection_id": "legacy",
+            "palette_id": "looker_classic",
+            "collection_default": true,
+            "collection_label": "Legacy",
+            "palette_label": "Looker classic, mixed categorical",
+            "palette_type": "Categorical",
+            "palette_colors": [
+              "#62bad4",
+              "#a9c574",
+              "#929292",
+              "#9fdee0",
+              "#1f3e5a",
+              "#90c8ae",
+              "#92818d",
+              "#c5c6a6",
+              "#82c2ca",
+              "#cee0a0",
+              "#928fb4",
+              "#9fc190"
+            ]
+          },
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "searches.search_terms": "Search Term",
+            "searches.search_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "searches.search_count": {
+              "is_active": false
+            }
+          },
+          "series_text_format": {
+            "of_searches": {
+              "align": "right"
+            }
+          },
+          "conditional_formatting": [
+            {
+              "type": "along a scale...",
+              "value": null,
+              "background_color": null,
+              "font_color": null,
+              "color_application": {
+                "collection_id": "legacy",
+                "palette_id": "legacy_diverging1",
+                "collection_default": true,
+                "collection_label": "Legacy",
+                "palette_label": "Red to yellow to green, diverging",
+                "palette_type": "Diverging",
+                "palette_stops": [
+                  {
+                    "color": "#F36254",
+                    "offset": 0
+                  },
+                  {
+                    "color": "#FCF758",
+                    "offset": 50
+                  },
+                  {
+                    "color": "#4FBC89",
+                    "offset": 100
+                  }
+                ]
+              },
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "fields": null
+            }
+          ],
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "body_text": "",
+      "body_text_as_html": null,
+      "dashboard_id": 182,
+      "edit_uri": null,
+      "id": 4590,
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": null,
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": null,
+      "query_id": null,
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": null,
+      "subtitle_text": "",
+      "title": null,
+      "title_hidden": false,
+      "title_text": "Explore Careers",
+      "type": "text",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": "Explore Careers",
+      "subtitle_text_as_html": null,
+      "result_maker": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": false,
+        "index": true,
+        "show": true,
+        "explore": false,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_filters": [
@@ -3707,7 +4414,10 @@
       "required": false,
       "ui_config": {
         "type": "advanced",
-        "display": "popover"
+        "display": "popover",
+        "options": [
+
+        ]
       },
       "model": "snowplow_web_block",
       "listens_to_filters": [
@@ -3925,8 +4635,8 @@
           "dashboard_layout_id": 182,
           "dashboard_element_id": 1885,
           "row": 10,
-          "column": 5,
-          "width": 14,
+          "column": 3,
+          "width": 18,
           "height": 8,
           "deleted": false,
           "element_title": "Usage By Country (Log Scale)",
@@ -4159,6 +4869,46 @@
             "update": true,
             "destroy": true
           }
+        },
+        {
+          "id": 4589,
+          "dashboard_layout_id": 182,
+          "dashboard_element_id": 4589,
+          "row": 53,
+          "column": 0,
+          "width": 12,
+          "height": 10,
+          "deleted": false,
+          "element_title": "Explore Careers - Top Site Search Terms",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": 4590,
+          "dashboard_layout_id": 182,
+          "dashboard_element_id": 4590,
+          "row": 51,
+          "column": 0,
+          "width": 22,
+          "height": 2,
+          "deleted": false,
+          "element_title": "Explore Careers",
+          "element_title_hidden": false,
+          "vis_type": "text",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
         }
       ],
       "can": {
@@ -4177,10 +4927,10 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-02-02 19:40:22 UTC",
-  "updated_at": "2023-05-08 22:08:34 UTC",
-  "last_updater_id": 13,
-  "last_updater_name": "Dan Pollock",
+  "last_accessed_at": "2024-02-07 00:01:22 UTC",
+  "updated_at": "2024-02-06 23:44:55 UTC",
+  "last_updater_id": 1302,
+  "last_updater_name": "Linda Mah",
   "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
@@ -4191,7 +4941,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 133,
+  "view_count": 138,
   "folder": {
     "name": "Web Analytics Dashboards",
     "parent_id": 1,
