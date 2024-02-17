@@ -30,31 +30,32 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1736224",
+        "id": "1750649",
         "view": "healthgateway_actions",
         "fields": [
           "healthgateway_actions.count",
           "healthgateway_actions.session_count",
           "healthgateway_actions.dataset",
           "healthgateway_actions.type",
-          "page_views.device_type"
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.user_count"
         ],
         "pivots": [
-          "page_views.device_type"
+          "healthgateway_actions.device_type"
         ],
         "fill_fields": null,
         "filters": {
           "healthgateway_actions.event_date": "7 days ago for 7 days",
           "healthgateway_actions.action": "Download",
           "healthgateway_actions.dataset": "BC Cancer",
-          "page_views.device_type": "-EMPTY",
           "healthgateway_actions.actor": "User",
-          "healthgateway_actions.text": "Document"
+          "healthgateway_actions.text": "Document",
+          "healthgateway_actions.device_type": "Computer,Mobile,Tablet"
         },
         "filter_expression": null,
         "sorts": [
-          "healthgateway_actions.count desc 0",
-          "page_views.device_type"
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.type 0"
         ],
         "limit": "500",
         "column_limit": "50",
@@ -80,6 +81,14 @@
           "show_sql_query_menu_options": false,
           "show_totals": true,
           "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 100,
+          "series_labels": {
+          },
+          "series_column_widths": {
+            "healthgateway_actions.dataset": 100,
+            "healthgateway_actions.type": 100
+          },
           "series_cell_visualizations": {
             "healthgateway_actions.count": {
               "is_active": true
@@ -92,6 +101,19 @@
                 "custom_colors": [
                   "#ffffff",
                   "#210070"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "healthgateway_actions.user_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
                 ],
                 "collection_default": true,
                 "collection_label": "Legacy"
@@ -180,20 +202,6 @@
               "error": false
             }
           ],
-          "page_views.device_type": [
-            {
-              "type": "!empty",
-              "values": [
-                {
-                  "constant": ""
-                },
-                {
-                }
-              ],
-              "id": 4,
-              "error": false
-            }
-          ],
           "healthgateway_actions.actor": [
             {
               "type": "=",
@@ -221,14 +229,28 @@
               "id": 7,
               "error": false
             }
+          ],
+          "healthgateway_actions.device_type": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Computer,Mobile,Tablet"
+                },
+                {
+                }
+              ],
+              "id": 8,
+              "error": false
+            }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "rH6HGhr",
-        "client_id": "mg6VONu9SdgHh8XAVlvUUE",
-        "share_url": "https://analytics.gov.bc.ca/x/mg6VONu9SdgHh8XAVlvUUE",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,page_views.device_type&pivots=page_views.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[page_views.device_type]=-EMPTY&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&sorts=healthgateway_actions.count+desc+0,page_views.device_type&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.device_type%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,page_views.device_type&pivots=page_views.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[page_views.device_type]=-EMPTY&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&sorts=healthgateway_actions.count+desc+0,page_views.device_type&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.device_type%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%7D",
+        "slug": "bDmN4CG",
+        "client_id": "MSTgRhFz3wFYztpTSgzVor",
+        "share_url": "https://analytics.gov.bc.ca/x/MSTgRhFz3wFYztpTSgzVor",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=Computer%2CMobile%2CTablet&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_labels%22%3A%7B%7D%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Computer%2CMobile%2CTablet%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=Computer%2CMobile%2CTablet&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_labels%22%3A%7B%7D%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Computer%2CMobile%2CTablet%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
         "model": "snowplow_web_block",
         "dynamic_fields": null,
@@ -258,12 +280,12 @@
           "render": true
         }
       },
-      "query_id": "1736224",
+      "query_id": "1750649",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "119204",
+      "result_maker_id": "119762",
       "subtitle_text": null,
-      "title": "BC Cancer Report",
+      "title": "BC Cancer Report (Web)",
       "title_hidden": false,
       "title_text": null,
       "type": "vis",
@@ -273,7 +295,7 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "result_maker": {
-        "id": "119204",
+        "id": "119762",
         "dynamic_fields": null,
         "filterables": [
           {
@@ -289,39 +311,40 @@
           }
         ],
         "sorts": [
-          "healthgateway_actions.count desc 0",
-          "page_views.device_type"
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.type 0"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1736224",
+        "query_id": "1750649",
         "sql_query_id": "",
         "query": {
-          "id": "1736224",
+          "id": "1750649",
           "view": "healthgateway_actions",
           "fields": [
             "healthgateway_actions.count",
             "healthgateway_actions.session_count",
             "healthgateway_actions.dataset",
             "healthgateway_actions.type",
-            "page_views.device_type"
+            "healthgateway_actions.device_type",
+            "healthgateway_actions.user_count"
           ],
           "pivots": [
-            "page_views.device_type"
+            "healthgateway_actions.device_type"
           ],
           "fill_fields": null,
           "filters": {
             "healthgateway_actions.event_date": "7 days ago for 7 days",
             "healthgateway_actions.action": "Download",
             "healthgateway_actions.dataset": "BC Cancer",
-            "page_views.device_type": "-EMPTY",
             "healthgateway_actions.actor": "User",
-            "healthgateway_actions.text": "Document"
+            "healthgateway_actions.text": "Document",
+            "healthgateway_actions.device_type": "Computer,Mobile,Tablet"
           },
           "filter_expression": null,
           "sorts": [
-            "healthgateway_actions.count desc 0",
-            "page_views.device_type"
+            "healthgateway_actions.device_type",
+            "healthgateway_actions.type 0"
           ],
           "limit": "500",
           "column_limit": "50",
@@ -347,6 +370,14 @@
             "show_sql_query_menu_options": false,
             "show_totals": true,
             "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 100,
+            "series_labels": {
+            },
+            "series_column_widths": {
+              "healthgateway_actions.dataset": 100,
+              "healthgateway_actions.type": 100
+            },
             "series_cell_visualizations": {
               "healthgateway_actions.count": {
                 "is_active": true
@@ -359,6 +390,17 @@
                   "custom_colors": [
                     "#ffffff",
                     "#210070"
+                  ]
+                }
+              },
+              "healthgateway_actions.user_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
                   ]
                 }
               }
@@ -445,20 +487,6 @@
                 "error": false
               }
             ],
-            "page_views.device_type": [
-              {
-                "type": "!empty",
-                "values": [
-                  {
-                    "constant": ""
-                  },
-                  {
-                  }
-                ],
-                "id": 4,
-                "error": false
-              }
-            ],
             "healthgateway_actions.actor": [
               {
                 "type": "=",
@@ -486,14 +514,28 @@
                 "id": 7,
                 "error": false
               }
+            ],
+            "healthgateway_actions.device_type": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Computer,Mobile,Tablet"
+                  },
+                  {
+                  }
+                ],
+                "id": 8,
+                "error": false
+              }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "rH6HGhr",
-          "client_id": "mg6VONu9SdgHh8XAVlvUUE",
-          "share_url": "https://analytics.gov.bc.ca/x/mg6VONu9SdgHh8XAVlvUUE",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,page_views.device_type&pivots=page_views.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[page_views.device_type]=-EMPTY&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&sorts=healthgateway_actions.count+desc+0,page_views.device_type&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.device_type%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,page_views.device_type&pivots=page_views.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[page_views.device_type]=-EMPTY&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&sorts=healthgateway_actions.count+desc+0,page_views.device_type&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22page_views.device_type%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%7D",
+          "slug": "bDmN4CG",
+          "client_id": "MSTgRhFz3wFYztpTSgzVor",
+          "share_url": "https://analytics.gov.bc.ca/x/MSTgRhFz3wFYztpTSgzVor",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=Computer%2CMobile%2CTablet&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_labels%22%3A%7B%7D%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Computer%2CMobile%2CTablet%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.session_count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=Computer%2CMobile%2CTablet&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_labels%22%3A%7B%7D%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Computer%2CMobile%2CTablet%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
           "model": "snowplow_web_block",
           "dynamic_fields": null,
@@ -542,6 +584,14 @@
           "show_sql_query_menu_options": false,
           "show_totals": true,
           "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 100,
+          "series_labels": {
+          },
+          "series_column_widths": {
+            "healthgateway_actions.dataset": 100,
+            "healthgateway_actions.type": 100
+          },
           "series_cell_visualizations": {
             "healthgateway_actions.count": {
               "is_active": true
@@ -554,6 +604,674 @@
                 "custom_colors": [
                   "#ffffff",
                   "#210070"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "healthgateway_actions.user_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ],
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "480",
+      "edit_uri": null,
+      "id": "4600",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1750653",
+        "view": "healthgateway_actions",
+        "fields": [
+          "healthgateway_actions.count",
+          "healthgateway_actions.dataset",
+          "healthgateway_actions.type",
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.user_count"
+        ],
+        "pivots": [
+          "healthgateway_actions.device_type"
+        ],
+        "fill_fields": null,
+        "filters": {
+          "healthgateway_actions.event_date": "7 days ago for 7 days",
+          "healthgateway_actions.action": "Download",
+          "healthgateway_actions.dataset": "BC Cancer",
+          "healthgateway_actions.actor": "User",
+          "healthgateway_actions.text": "Document",
+          "healthgateway_actions.device_type": "android,iOS"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.type 0"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 100,
+          "series_column_widths": {
+            "healthgateway_actions.dataset": 100,
+            "healthgateway_actions.type": 100
+          },
+          "series_cell_visualizations": {
+            "healthgateway_actions.count": {
+              "is_active": true
+            },
+            "healthgateway_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "30d5e6e2-d4e3-2cd8-2786-878ca5dca699",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#210070"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "healthgateway_actions.user_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "type": "looker_grid",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_fields": [
+
+          ],
+          "y_axes": [
+
+          ],
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "healthgateway_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 0,
+              "error": false
+            }
+          ],
+          "healthgateway_actions.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Download"
+                },
+                {
+                }
+              ],
+              "id": 3,
+              "error": false
+            }
+          ],
+          "healthgateway_actions.dataset": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "BC Cancer"
+                },
+                {
+                }
+              ],
+              "id": 2,
+              "error": false
+            }
+          ],
+          "healthgateway_actions.actor": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "User"
+                },
+                {
+                }
+              ],
+              "id": 6,
+              "error": false
+            }
+          ],
+          "healthgateway_actions.text": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Document"
+                },
+                {
+                }
+              ],
+              "id": 7,
+              "error": false
+            }
+          ],
+          "healthgateway_actions.device_type": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "android,iOS"
+                },
+                {
+                }
+              ],
+              "id": 8,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "QVdVJ4G",
+        "client_id": "k7g5iyanmr0UYVeIMqJ1Ek",
+        "share_url": "https://analytics.gov.bc.ca/x/k7g5iyanmr0UYVeIMqJ1Ek",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=android%2CiOS&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22android%2CiOS%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=android%2CiOS&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22android%2CiOS%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1750653",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "119763",
+      "subtitle_text": null,
+      "title": "BC Cancer Report (App)",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "119763",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "healthgateway_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "healthgateway_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "healthgateway_actions.device_type",
+          "healthgateway_actions.type 0"
+        ],
+        "merge_result_id": null,
+        "total": false,
+        "query_id": "1750653",
+        "sql_query_id": "",
+        "query": {
+          "id": "1750653",
+          "view": "healthgateway_actions",
+          "fields": [
+            "healthgateway_actions.count",
+            "healthgateway_actions.dataset",
+            "healthgateway_actions.type",
+            "healthgateway_actions.device_type",
+            "healthgateway_actions.user_count"
+          ],
+          "pivots": [
+            "healthgateway_actions.device_type"
+          ],
+          "fill_fields": null,
+          "filters": {
+            "healthgateway_actions.event_date": "7 days ago for 7 days",
+            "healthgateway_actions.action": "Download",
+            "healthgateway_actions.dataset": "BC Cancer",
+            "healthgateway_actions.actor": "User",
+            "healthgateway_actions.text": "Document",
+            "healthgateway_actions.device_type": "android,iOS"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "healthgateway_actions.device_type",
+            "healthgateway_actions.type 0"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 100,
+            "series_column_widths": {
+              "healthgateway_actions.dataset": 100,
+              "healthgateway_actions.type": 100
+            },
+            "series_cell_visualizations": {
+              "healthgateway_actions.count": {
+                "is_active": true
+              },
+              "healthgateway_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "30d5e6e2-d4e3-2cd8-2786-878ca5dca699",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#210070"
+                  ]
+                }
+              },
+              "healthgateway_actions.user_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "type": "looker_grid",
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_fields": [
+
+            ],
+            "y_axes": [
+
+            ],
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "healthgateway_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 0,
+                "error": false
+              }
+            ],
+            "healthgateway_actions.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Download"
+                  },
+                  {
+                  }
+                ],
+                "id": 3,
+                "error": false
+              }
+            ],
+            "healthgateway_actions.dataset": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "BC Cancer"
+                  },
+                  {
+                  }
+                ],
+                "id": 2,
+                "error": false
+              }
+            ],
+            "healthgateway_actions.actor": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "User"
+                  },
+                  {
+                  }
+                ],
+                "id": 6,
+                "error": false
+              }
+            ],
+            "healthgateway_actions.text": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Document"
+                  },
+                  {
+                  }
+                ],
+                "id": 7,
+                "error": false
+              }
+            ],
+            "healthgateway_actions.device_type": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "android,iOS"
+                  },
+                  {
+                  }
+                ],
+                "id": 8,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "QVdVJ4G",
+          "client_id": "k7g5iyanmr0UYVeIMqJ1Ek",
+          "share_url": "https://analytics.gov.bc.ca/x/k7g5iyanmr0UYVeIMqJ1Ek",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=android%2CiOS&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22android%2CiOS%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/healthgateway_actions?fields=healthgateway_actions.count,healthgateway_actions.dataset,healthgateway_actions.type,healthgateway_actions.device_type,healthgateway_actions.user_count&pivots=healthgateway_actions.device_type&f[healthgateway_actions.event_date]=7+days+ago+for+7+days&f[healthgateway_actions.action]=Download&f[healthgateway_actions.dataset]=BC+Cancer&f[healthgateway_actions.actor]=User&f[healthgateway_actions.text]=Document&f[healthgateway_actions.device_type]=android%2CiOS&sorts=healthgateway_actions.device_type,healthgateway_actions.type+0&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A100%2C%22series_column_widths%22%3A%7B%22healthgateway_actions.dataset%22%3A100%2C%22healthgateway_actions.type%22%3A100%7D%2C%22series_cell_visualizations%22%3A%7B%22healthgateway_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22healthgateway_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2230d5e6e2-d4e3-2cd8-2786-878ca5dca699%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%23210070%22%5D%7D%7D%2C%22healthgateway_actions.user_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%22b439ac2d-6ec3-721c-c36f-14a75f710abf%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22healthgateway_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Download%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.dataset%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22BC+Cancer%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.actor%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22User%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.text%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Document%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%2C%22error%22%3Afalse%7D%5D%2C%22healthgateway_actions.device_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22android%2CiOS%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%2C%22error%22%3Afalse%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 100,
+          "series_column_widths": {
+            "healthgateway_actions.dataset": 100,
+            "healthgateway_actions.type": 100
+          },
+          "series_cell_visualizations": {
+            "healthgateway_actions.count": {
+              "is_active": true
+            },
+            "healthgateway_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "30d5e6e2-d4e3-2cd8-2786-878ca5dca699",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#210070"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "healthgateway_actions.user_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "b439ac2d-6ec3-721c-c36f-14a75f710abf",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
                 ],
                 "collection_default": true,
                 "collection_label": "Legacy"
@@ -695,7 +1413,7 @@
           "name": "day",
           "count": 1
         },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fhealthgateway_actions.view.lkml?line=87",
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fhealthgateway_actions.view.lkml?line=90",
         "permanent": null,
         "source_file": "Views/healthgateway_actions.view.lkml",
         "source_file_path": "snowplow_web_block/Views/healthgateway_actions.view.lkml",
@@ -733,9 +1451,29 @@
           "row": 0,
           "column": 0,
           "width": 24,
-          "height": 12,
+          "height": 3,
           "deleted": false,
-          "element_title": "BC Cancer Report",
+          "element_title": "BC Cancer Report (Web)",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4600",
+          "dashboard_layout_id": "480",
+          "dashboard_element_id": "4600",
+          "row": 3,
+          "column": 0,
+          "width": 15,
+          "height": 3,
+          "deleted": false,
+          "element_title": "BC Cancer Report (App)",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
@@ -763,8 +1501,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-02-14 15:20:47 UTC",
-  "updated_at": "2024-02-10 00:30:01 UTC",
+  "last_accessed_at": "2024-02-16 23:13:29 UTC",
+  "updated_at": "2024-02-16 23:13:16 UTC",
   "last_updater_id": "13",
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -776,7 +1514,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 4,
+  "view_count": 12,
   "url": "/dashboards/480",
   "folder": {
     "name": "Web Analytics Dashboards",
