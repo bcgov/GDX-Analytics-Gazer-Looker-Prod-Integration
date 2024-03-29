@@ -1,26 +1,26 @@
 {
-  "content_metadata_id": "2594",
+  "content_metadata_id": "3439",
   "description": "",
   "hidden": false,
   "query_timezone": null,
   "readonly": false,
   "refresh_interval": null,
   "refresh_interval_to_i": null,
-  "title": "Chat bot training analysis - Pass 2 ",
-  "user_id": "1443",
-  "slug": "wbCoKdxtEwzSPYpJaXLbxX",
+  "title": "Chatbot training analysis",
+  "user_id": "2183",
+  "slug": "II9y2Zi4iblwZWN5TfgStm",
   "preferred_viewer": "dashboards-next",
   "alert_sync_with_dashboard_filter_enabled": false,
   "background_color": null,
-  "created_at": "2022-06-24 01:39:47 UTC",
+  "created_at": "2024-03-27 16:16:35 UTC",
   "crossfilter_enabled": false,
   "dashboard_elements": [
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": "313",
+      "dashboard_id": "487",
       "edit_uri": null,
-      "id": "4261",
+      "id": "4621",
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
@@ -222,8 +222,8 @@
             "name": "",
             "listen": [
               {
-                "dashboard_filter_name": "Which Bot",
-                "field": "chatbot_new_internal_reports.which_bot"
+                "dashboard_filter_name": "Dashboard ID",
+                "field": "chatbot_new_internal_reports.dashboard_id"
               }
             ]
           }
@@ -488,9 +488,9 @@
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": "313",
+      "dashboard_id": "487",
       "edit_uri": null,
-      "id": "4263",
+      "id": "4622",
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
@@ -749,8 +749,8 @@
                 "field": "chatbot_new_internal_reports.timestamp_date"
               },
               {
-                "dashboard_filter_name": "Which Bot",
-                "field": "chatbot_new_internal_reports.which_bot"
+                "dashboard_filter_name": "Dashboard ID",
+                "field": "chatbot_new_internal_reports.dashboard_id"
               }
             ]
           }
@@ -1145,9 +1145,9 @@
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": "313",
+      "dashboard_id": "487",
       "edit_uri": null,
-      "id": "4264",
+      "id": "4623",
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
@@ -1458,8 +1458,8 @@
                 "field": "chatbot_new_internal_reports.timestamp_date"
               },
               {
-                "dashboard_filter_name": "Which Bot",
-                "field": "chatbot_new_internal_reports.which_bot"
+                "dashboard_filter_name": "Dashboard ID",
+                "field": "chatbot_new_internal_reports.dashboard_id"
               }
             ]
           }
@@ -1930,9 +1930,9 @@
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": "313",
+      "dashboard_id": "487",
       "edit_uri": null,
-      "id": "4275",
+      "id": "4624",
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
@@ -2212,8 +2212,8 @@
             "name": "",
             "listen": [
               {
-                "dashboard_filter_name": "Which Bot",
-                "field": "chatbot_new_internal_reports.which_bot"
+                "dashboard_filter_name": "Dashboard ID",
+                "field": "chatbot_new_internal_reports.dashboard_id"
               }
             ]
           }
@@ -2616,9 +2616,9 @@
     {
       "body_text": null,
       "body_text_as_html": null,
-      "dashboard_id": "313",
+      "dashboard_id": "487",
       "edit_uri": null,
-      "id": "4288",
+      "id": "4625",
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
@@ -2897,8 +2897,8 @@
             "name": "",
             "listen": [
               {
-                "dashboard_filter_name": "Which Bot",
-                "field": "chatbot_new_internal_reports.which_bot"
+                "dashboard_filter_name": "Dashboard ID",
+                "field": "chatbot_new_internal_reports.dashboard_id"
               }
             ]
           }
@@ -3344,8 +3344,8 @@
   ],
   "dashboard_filters": [
     {
-      "id": "2003",
-      "dashboard_id": "313",
+      "id": "2174",
+      "dashboard_id": "487",
       "name": "Timestamp Date",
       "title": "Timestamp Date",
       "type": "field_filter",
@@ -3441,25 +3441,29 @@
       }
     },
     {
-      "id": "2177",
-      "dashboard_id": "313",
-      "name": "Which Bot",
-      "title": "Which Bot",
+      "id": "2175",
+      "dashboard_id": "487",
+      "name": "Dashboard ID",
+      "title": "Dashboard ID",
       "type": "field_filter",
       "explore": "chatbot_new_internal_reports",
-      "dimension": "chatbot_new_internal_reports.which_bot",
+      "dimension": "chatbot_new_internal_reports.dashboard_id",
       "row": 1,
       "allow_multiple_values": true,
       "required": false,
       "ui_config": {
-        "type": "advanced",
+        "options": [
+          "COVID",
+          "SERVNAV"
+        ],
+        "type": "dropdown_menu",
         "display": "popover"
       },
       "model": "chatbot_internal_reports",
       "listens_to_filters": [
 
       ],
-      "default_value": "GOV-COVID",
+      "default_value": "COVID",
       "field": {
         "align": "left",
         "can_filter": true,
@@ -3474,11 +3478,11 @@
         "hidden": false,
         "is_filter": false,
         "is_numeric": false,
-        "label": "Chatbot New Internal Reports Which Bot",
+        "label": "Chatbot New Internal Reports Dashboard ID",
         "label_from_parameter": null,
-        "label_short": "Which Bot",
+        "label_short": "Dashboard ID",
         "map_layer": null,
-        "name": "chatbot_new_internal_reports.which_bot",
+        "name": "chatbot_new_internal_reports.dashboard_id",
         "strict_value_format": false,
         "requires_refresh_on_sort": false,
         "sortable": true,
@@ -3499,24 +3503,24 @@
         "original_view": "chatbot_new_internal_reports",
         "dimension_group": null,
         "error": null,
-        "field_group_variant": "Which Bot",
+        "field_group_variant": "Dashboard ID",
         "measure": false,
         "parameter": false,
         "primary_key": false,
         "project_name": "chatbot_internal_reports",
         "scope": "chatbot_new_internal_reports",
-        "suggest_dimension": "chatbot_new_internal_reports.which_bot",
+        "suggest_dimension": "chatbot_new_internal_reports.dashboard_id",
         "suggest_explore": "chatbot_new_internal_reports",
         "suggestable": true,
         "is_fiscal": false,
         "is_timeframe": false,
         "can_time_filter": false,
         "time_interval": null,
-        "lookml_link": null,
+        "lookml_link": "/projects/chatbot_internal_reports/files/Views%2Fchatbot_new_internal_reports.view.lkml?line=22",
         "permanent": null,
-        "source_file": "",
-        "source_file_path": "",
-        "sql": null,
+        "source_file": "Views/chatbot_new_internal_reports.view.lkml",
+        "source_file_path": "chatbot_internal_reports/Views/chatbot_new_internal_reports.view.lkml",
+        "sql": "${TABLE}.dashboard_id ",
         "sql_case": null,
         "filters": null,
         "times_used": 0
@@ -3534,19 +3538,19 @@
   ],
   "dashboard_layouts": [
     {
-      "id": "313",
-      "dashboard_id": "313",
+      "id": "487",
+      "dashboard_id": "487",
       "type": "newspaper",
       "active": true,
       "column_width": null,
       "width": null,
       "deleted": false,
-      "dashboard_title": "Chat bot training analysis - Pass 2 ",
+      "dashboard_title": "Chatbot training analysis",
       "dashboard_layout_components": [
         {
-          "id": "4261",
-          "dashboard_layout_id": "313",
-          "dashboard_element_id": "4261",
+          "id": "4621",
+          "dashboard_layout_id": "487",
+          "dashboard_element_id": "4621",
           "row": 11,
           "column": 0,
           "width": 13,
@@ -3564,9 +3568,9 @@
           }
         },
         {
-          "id": "4263",
-          "dashboard_layout_id": "313",
-          "dashboard_element_id": "4263",
+          "id": "4622",
+          "dashboard_layout_id": "487",
+          "dashboard_element_id": "4622",
           "row": 0,
           "column": 0,
           "width": 16,
@@ -3584,9 +3588,9 @@
           }
         },
         {
-          "id": "4264",
-          "dashboard_layout_id": "313",
-          "dashboard_element_id": "4264",
+          "id": "4623",
+          "dashboard_layout_id": "487",
+          "dashboard_element_id": "4623",
           "row": 0,
           "column": 16,
           "width": 8,
@@ -3604,9 +3608,9 @@
           }
         },
         {
-          "id": "4275",
-          "dashboard_layout_id": "313",
-          "dashboard_element_id": "4275",
+          "id": "4624",
+          "dashboard_layout_id": "487",
+          "dashboard_element_id": "4624",
           "row": 11,
           "column": 13,
           "width": 11,
@@ -3624,9 +3628,9 @@
           }
         },
         {
-          "id": "4288",
-          "dashboard_layout_id": "313",
-          "dashboard_element_id": "4288",
+          "id": "4625",
+          "dashboard_layout_id": "487",
+          "dashboard_element_id": "4625",
           "row": 21,
           "column": 0,
           "width": 24,
@@ -3657,14 +3661,14 @@
   "deleter_id": null,
   "edit_uri": null,
   "enable_viz_full_screen": true,
-  "favorite_count": 1,
+  "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-03-28 23:44:38 UTC",
-  "updated_at": "2024-03-28 07:55:13 UTC",
-  "last_updater_id": "13",
-  "last_updater_name": "Dan Pollock",
-  "user_name": "Kevan Mikkelsen",
+  "last_accessed_at": "2024-03-28 15:46:53 UTC",
+  "updated_at": "2024-03-28 15:57:11 UTC",
+  "last_updater_id": "2183",
+  "last_updater_name": "Katie Stafford",
+  "user_name": "Katie Stafford",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -3673,8 +3677,8 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 338,
-  "url": "/dashboards/313",
+  "view_count": 2,
+  "url": "/dashboards/487",
   "folder": {
     "name": "Chatbot Internal Reports",
     "parent_id": "1",
@@ -3705,7 +3709,7 @@
   },
   "folder_id": "1501",
   "content_favorite_id": null,
-  "id": "313",
+  "id": "487",
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
