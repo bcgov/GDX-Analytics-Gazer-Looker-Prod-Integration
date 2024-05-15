@@ -277,6 +277,10 @@
               {
                 "dashboard_filter_name": "Page URL",
                 "field": "page_views.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
               }
             ]
           }
@@ -835,6 +839,10 @@
               {
                 "dashboard_filter_name": "Page URL",
                 "field": "page_views.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
               }
             ]
           }
@@ -1371,6 +1379,10 @@
               {
                 "dashboard_filter_name": "Page URL",
                 "field": "page_views.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "page_views.page_urlhost"
               }
             ]
           }
@@ -1884,6 +1896,97 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "id": "2213",
+      "dashboard_id": "297",
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_urlhost",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "tag_list",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The web page domain or host.",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "page_views.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "site_cache.page_urlhost",
+        "suggest_explore": "site_cache",
+        "suggestable": true,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=197",
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_urlhost ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_layouts": [
@@ -1974,8 +2077,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-05-12 17:24:23 UTC",
-  "updated_at": "2022-04-05 04:14:55 UTC",
+  "last_accessed_at": "2024-05-14 23:04:51 UTC",
+  "updated_at": "2024-05-14 22:59:59 UTC",
   "last_updater_id": "13",
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -1987,7 +2090,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 12,
+  "view_count": 14,
   "url": "/dashboards/297",
   "folder": {
     "name": "Web Analytics Dashboards",
