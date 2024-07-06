@@ -2518,18 +2518,19 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1534655",
+        "id": "1924667",
         "view": "drivebc_actions",
         "fields": [
           "drivebc_actions.count",
           "drivebc_actions.session_count",
-          "drivebc_actions.label"
+          "drivebc_actions.sub_label"
         ],
         "pivots": null,
         "fill_fields": null,
         "filters": {
           "drivebc_actions.event_date": "7 days ago for 7 days",
-          "drivebc_actions.category": "RoadCond"
+          "drivebc_actions.category": "event",
+          "drivebc_actions.label": "roadConditions"
         },
         "filter_expression": null,
         "sorts": [
@@ -2564,7 +2565,7 @@
           "series_labels": {
             "drivebc_actions.count": "Click Count",
             "drivebc_actions.session_count": "Session Count",
-            "drivebc_actions.sub_label": "Severity"
+            "drivebc_actions.sub_label": "Road Condition"
           },
           "series_cell_visualizations": {
             "drivebc_actions.count": {
@@ -2604,8 +2605,7 @@
                 {
                 }
               ],
-              "id": 1,
-              "error": false
+              "id": 13
             }
           ],
           "drivebc_actions.category": [
@@ -2613,22 +2613,34 @@
               "type": "=",
               "values": [
                 {
-                  "constant": "RoadCond"
+                  "constant": "event"
                 },
                 {
                 }
               ],
-              "id": 3,
-              "error": false
+              "id": 14
+            }
+          ],
+          "drivebc_actions.label": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "roadConditions"
+                },
+                {
+                }
+              ],
+              "id": 15
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "QPxKwC9",
-        "client_id": "1oga8d6qfPos2bvESYXXlK",
-        "share_url": "https://analytics.gov.bc.ca/x/1oga8d6qfPos2bvESYXXlK",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=RoadCond&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Severity%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22RoadCond%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=RoadCond&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Severity%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22RoadCond%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
+        "slug": "nMYGCwb",
+        "client_id": "jrA132k8sy7lwTsmNDgBhi",
+        "share_url": "https://analytics.gov.bc.ca/x/jrA132k8sy7lwTsmNDgBhi",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=roadConditions&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Road+Condition%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22roadConditions%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=roadConditions&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Road+Condition%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22roadConditions%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D",
         "has_table_calculations": false,
         "model": "snowplow_web_block",
         "dynamic_fields": null,
@@ -2658,12 +2670,12 @@
           "render": true
         }
       },
-      "query_id": "1534655",
+      "query_id": "1924667",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "110062",
+      "result_maker_id": "124772",
       "subtitle_text": null,
-      "title": "Top Road Conditions",
+      "title": "Top Road Conditions (Beta)",
       "title_hidden": false,
       "title_text": null,
       "type": "vis",
@@ -2673,7 +2685,7 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "result_maker": {
-        "id": "110062",
+        "id": "124772",
         "dynamic_fields": null,
         "filterables": [
           {
@@ -2697,21 +2709,22 @@
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "1534655",
+        "query_id": "1924667",
         "sql_query_id": "",
         "query": {
-          "id": "1534655",
+          "id": "1924667",
           "view": "drivebc_actions",
           "fields": [
             "drivebc_actions.count",
             "drivebc_actions.session_count",
-            "drivebc_actions.label"
+            "drivebc_actions.sub_label"
           ],
           "pivots": null,
           "fill_fields": null,
           "filters": {
             "drivebc_actions.event_date": "7 days ago for 7 days",
-            "drivebc_actions.category": "RoadCond"
+            "drivebc_actions.category": "event",
+            "drivebc_actions.label": "roadConditions"
           },
           "filter_expression": null,
           "sorts": [
@@ -2746,7 +2759,7 @@
             "series_labels": {
               "drivebc_actions.count": "Click Count",
               "drivebc_actions.session_count": "Session Count",
-              "drivebc_actions.sub_label": "Severity"
+              "drivebc_actions.sub_label": "Road Condition"
             },
             "series_cell_visualizations": {
               "drivebc_actions.count": {
@@ -2784,8 +2797,7 @@
                   {
                   }
                 ],
-                "id": 1,
-                "error": false
+                "id": 13
               }
             ],
             "drivebc_actions.category": [
@@ -2793,22 +2805,34 @@
                 "type": "=",
                 "values": [
                   {
-                    "constant": "RoadCond"
+                    "constant": "event"
                   },
                   {
                   }
                 ],
-                "id": 3,
-                "error": false
+                "id": 14
+              }
+            ],
+            "drivebc_actions.label": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "roadConditions"
+                  },
+                  {
+                  }
+                ],
+                "id": 15
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "QPxKwC9",
-          "client_id": "1oga8d6qfPos2bvESYXXlK",
-          "share_url": "https://analytics.gov.bc.ca/x/1oga8d6qfPos2bvESYXXlK",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=RoadCond&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Severity%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22RoadCond%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=RoadCond&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Severity%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22RoadCond%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
+          "slug": "nMYGCwb",
+          "client_id": "jrA132k8sy7lwTsmNDgBhi",
+          "share_url": "https://analytics.gov.bc.ca/x/jrA132k8sy7lwTsmNDgBhi",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=roadConditions&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Road+Condition%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22roadConditions%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=roadConditions&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Road+Condition%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22roadConditions%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D",
           "has_table_calculations": false,
           "model": "snowplow_web_block",
           "dynamic_fields": null,
@@ -2862,7 +2886,7 @@
           "series_labels": {
             "drivebc_actions.count": "Click Count",
             "drivebc_actions.session_count": "Session Count",
-            "drivebc_actions.sub_label": "Severity"
+            "drivebc_actions.sub_label": "Road Condition"
           },
           "series_cell_visualizations": {
             "drivebc_actions.count": {
@@ -4489,6 +4513,2927 @@
       "alerts": [
 
       ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4770",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924681",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.sub_label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "event",
+          "drivebc_actions.label": "minorEvents"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Minor Delay"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 19
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "event"
+                },
+                {
+                }
+              ],
+              "id": 20
+            }
+          ],
+          "drivebc_actions.label": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "minorEvents"
+                },
+                {
+                }
+              ],
+              "id": 21
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "4YwTN9g",
+        "client_id": "4P3BTR8mbCfN61fEWULiHA",
+        "share_url": "https://analytics.gov.bc.ca/x/4P3BTR8mbCfN61fEWULiHA",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=minorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Minor+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A20%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22minorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A21%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=minorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Minor+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A20%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22minorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A21%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924681",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124773",
+      "subtitle_text": null,
+      "title": "Top Minor Delays (Beta)",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124773",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924681",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924681",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.sub_label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "event",
+            "drivebc_actions.label": "minorEvents"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Minor Delay"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 19
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "event"
+                  },
+                  {
+                  }
+                ],
+                "id": 20
+              }
+            ],
+            "drivebc_actions.label": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "minorEvents"
+                  },
+                  {
+                  }
+                ],
+                "id": 21
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "4YwTN9g",
+          "client_id": "4P3BTR8mbCfN61fEWULiHA",
+          "share_url": "https://analytics.gov.bc.ca/x/4P3BTR8mbCfN61fEWULiHA",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=minorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Minor+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A20%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22minorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A21%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=minorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Minor+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A20%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22minorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A21%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Minor Delay"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4771",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924657",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.sub_label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "event",
+          "drivebc_actions.label": "closures"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Closure"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 5
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "event"
+                },
+                {
+                }
+              ],
+              "id": 6
+            }
+          ],
+          "drivebc_actions.label": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "closures"
+                },
+                {
+                }
+              ],
+              "id": 7
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "Zh9VwGf",
+        "client_id": "cwMrUTMgHD0wTjPxR69A0Y",
+        "share_url": "https://analytics.gov.bc.ca/x/cwMrUTMgHD0wTjPxR69A0Y",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=closures&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Closure%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22closures%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=closures&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Closure%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22closures%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924657",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124774",
+      "subtitle_text": null,
+      "title": "Top Closures (Beta)",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124774",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924657",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924657",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.sub_label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "event",
+            "drivebc_actions.label": "closures"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Closure"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 5
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "event"
+                  },
+                  {
+                  }
+                ],
+                "id": 6
+              }
+            ],
+            "drivebc_actions.label": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "closures"
+                  },
+                  {
+                  }
+                ],
+                "id": 7
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "Zh9VwGf",
+          "client_id": "cwMrUTMgHD0wTjPxR69A0Y",
+          "share_url": "https://analytics.gov.bc.ca/x/cwMrUTMgHD0wTjPxR69A0Y",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=closures&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Closure%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22closures%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=closures&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Closure%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22closures%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Closure"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4772",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924685",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.sub_label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "event",
+          "drivebc_actions.label": "majorEvents"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 25
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "event"
+                },
+                {
+                }
+              ],
+              "id": 26
+            }
+          ],
+          "drivebc_actions.label": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "majorEvents"
+                },
+                {
+                }
+              ],
+              "id": 27
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "TjdMVSg",
+        "client_id": "P6DuoZB8MLZ09kXHRRYcBe",
+        "share_url": "https://analytics.gov.bc.ca/x/P6DuoZB8MLZ09kXHRRYcBe",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=majorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A26%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22majorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A27%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=majorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A26%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22majorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A27%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924685",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124775",
+      "subtitle_text": null,
+      "title": "Top Major Delays (Beta)",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124775",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924685",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924685",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.sub_label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "event",
+            "drivebc_actions.label": "majorEvents"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Major Delay"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 25
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "event"
+                  },
+                  {
+                  }
+                ],
+                "id": 26
+              }
+            ],
+            "drivebc_actions.label": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "majorEvents"
+                  },
+                  {
+                  }
+                ],
+                "id": 27
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "TjdMVSg",
+          "client_id": "P6DuoZB8MLZ09kXHRRYcBe",
+          "share_url": "https://analytics.gov.bc.ca/x/P6DuoZB8MLZ09kXHRRYcBe",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=majorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A26%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22majorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A27%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=majorEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A26%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22majorEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A27%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4773",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924692",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.sub_label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "event",
+          "drivebc_actions.label": "futureEvents"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Future Planned Event"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 31
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "event"
+                },
+                {
+                }
+              ],
+              "id": 32
+            }
+          ],
+          "drivebc_actions.label": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "futureEvents"
+                },
+                {
+                }
+              ],
+              "id": 33
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "D6KQYhg",
+        "client_id": "j0Cf9YCIseFzW0dZnVwiB6",
+        "share_url": "https://analytics.gov.bc.ca/x/j0Cf9YCIseFzW0dZnVwiB6",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=futureEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Future+Planned+Event%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A31%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A32%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22futureEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A33%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=futureEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Future+Planned+Event%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A31%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A32%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22futureEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A33%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924692",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124776",
+      "subtitle_text": null,
+      "title": "Top Future Planned Events (Beta)",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124776",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924692",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924692",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.sub_label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "event",
+            "drivebc_actions.label": "futureEvents"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Future Planned Event"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 31
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "event"
+                  },
+                  {
+                  }
+                ],
+                "id": 32
+              }
+            ],
+            "drivebc_actions.label": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "futureEvents"
+                  },
+                  {
+                  }
+                ],
+                "id": 33
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "D6KQYhg",
+          "client_id": "j0Cf9YCIseFzW0dZnVwiB6",
+          "share_url": "https://analytics.gov.bc.ca/x/j0Cf9YCIseFzW0dZnVwiB6",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=futureEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Future+Planned+Event%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A31%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A32%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22futureEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A33%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.sub_label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=event&f[drivebc_actions.label]=futureEvents&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Future+Planned+Event%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A31%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22event%22%7D%2C%7B%7D%5D%2C%22id%22%3A32%7D%5D%2C%22drivebc_actions.label%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22futureEvents%22%7D%2C%7B%7D%5D%2C%22id%22%3A33%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Future Planned Event"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4774",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924733",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "Weather,regional weather"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Weather Area"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 59
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Weather,regional weather"
+                },
+                {
+                }
+              ],
+              "id": 60
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "Bn7nnXx",
+        "client_id": "TXMYMirQC4xWSwdIM8HyJ5",
+        "share_url": "https://analytics.gov.bc.ca/x/TXMYMirQC4xWSwdIM8HyJ5",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Weather%2Cregional+weather&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Weather+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A59%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Weather%2Cregional+weather%22%7D%2C%7B%7D%5D%2C%22id%22%3A60%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Weather%2Cregional+weather&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Weather+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A59%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Weather%2Cregional+weather%22%7D%2C%7B%7D%5D%2C%22id%22%3A60%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924733",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124780",
+      "subtitle_text": null,
+      "title": "Top Weather Areas",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124780",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924733",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924733",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "Weather,regional weather"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Major Delay",
+              "drivebc_actions.label": "Weather Area"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 59
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Weather,regional weather"
+                  },
+                  {
+                  }
+                ],
+                "id": 60
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "Bn7nnXx",
+          "client_id": "TXMYMirQC4xWSwdIM8HyJ5",
+          "share_url": "https://analytics.gov.bc.ca/x/TXMYMirQC4xWSwdIM8HyJ5",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Weather%2Cregional+weather&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Weather+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A59%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Weather%2Cregional+weather%22%7D%2C%7B%7D%5D%2C%22id%22%3A60%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Weather%2Cregional+weather&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Weather+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A59%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Weather%2Cregional+weather%22%7D%2C%7B%7D%5D%2C%22id%22%3A60%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Weather Area"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4775",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924738",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "Ferry,ferry"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Ferry"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 61
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "Ferry,ferry"
+                },
+                {
+                }
+              ],
+              "id": 62
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "FgnhVzn",
+        "client_id": "wnf1HRR3cUhz6TZsUJKexr",
+        "share_url": "https://analytics.gov.bc.ca/x/wnf1HRR3cUhz6TZsUJKexr",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Ferry%2Cferry&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Ferry%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A61%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Ferry%2Cferry%22%7D%2C%7B%7D%5D%2C%22id%22%3A62%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Ferry%2Cferry&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Ferry%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A61%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Ferry%2Cferry%22%7D%2C%7B%7D%5D%2C%22id%22%3A62%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924738",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124781",
+      "subtitle_text": null,
+      "title": "Top Ferries",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124781",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924738",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924738",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "Ferry,ferry"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Major Delay",
+              "drivebc_actions.label": "Ferry"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 61
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "Ferry,ferry"
+                  },
+                  {
+                  }
+                ],
+                "id": 62
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "FgnhVzn",
+          "client_id": "wnf1HRR3cUhz6TZsUJKexr",
+          "share_url": "https://analytics.gov.bc.ca/x/wnf1HRR3cUhz6TZsUJKexr",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Ferry%2Cferry&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Ferry%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A61%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Ferry%2Cferry%22%7D%2C%7B%7D%5D%2C%22id%22%3A62%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=Ferry%2Cferry&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Ferry%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A61%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Ferry%2Cferry%22%7D%2C%7B%7D%5D%2C%22id%22%3A62%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Ferry"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "456",
+      "edit_uri": null,
+      "id": "4776",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "1924741",
+        "view": "drivebc_actions",
+        "fields": [
+          "drivebc_actions.count",
+          "drivebc_actions.session_count",
+          "drivebc_actions.label"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "drivebc_actions.event_date": "7 days ago for 7 days",
+          "drivebc_actions.category": "restAreas,rest stop"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Rest Area"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        },
+        "filter_config": {
+          "drivebc_actions.event_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "7",
+                  "unit": "c_day"
+                },
+                {
+                }
+              ],
+              "id": 63
+            }
+          ],
+          "drivebc_actions.category": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "restAreas,rest stop"
+                },
+                {
+                }
+              ],
+              "id": 64
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "KKYT6C2",
+        "client_id": "mgKii7mXZfefLXqzHadt2V",
+        "share_url": "https://analytics.gov.bc.ca/x/mgKii7mXZfefLXqzHadt2V",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=restAreas%2Crest+stop&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Rest+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A63%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22restAreas%2Crest+stop%22%7D%2C%7B%7D%5D%2C%22id%22%3A64%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=restAreas%2Crest+stop&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Rest+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A63%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22restAreas%2Crest+stop%22%7D%2C%7B%7D%5D%2C%22id%22%3A64%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "1924741",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "124782",
+      "subtitle_text": null,
+      "title": "Top Rest Areas",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "124782",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "drivebc_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Section",
+                "field": "drivebc_actions.section"
+              },
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "drivebc_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "drivebc_actions.count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "1924741",
+        "sql_query_id": "",
+        "query": {
+          "id": "1924741",
+          "view": "drivebc_actions",
+          "fields": [
+            "drivebc_actions.count",
+            "drivebc_actions.session_count",
+            "drivebc_actions.label"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "drivebc_actions.event_date": "7 days ago for 7 days",
+            "drivebc_actions.category": "restAreas,rest stop"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "drivebc_actions.count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "drivebc_actions.count": "Click Count",
+              "drivebc_actions.session_count": "Session Count",
+              "drivebc_actions.sub_label": "Major Delay",
+              "drivebc_actions.label": "Rest Area"
+            },
+            "series_cell_visualizations": {
+              "drivebc_actions.count": {
+                "is_active": true
+              },
+              "drivebc_actions.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "truncate_column_names": false,
+            "type": "looker_grid",
+            "defaults_version": 1,
+            "series_types": {
+            },
+            "hidden_pivots": {
+            }
+          },
+          "filter_config": {
+            "drivebc_actions.event_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "7",
+                    "unit": "c_day"
+                  },
+                  {
+                  }
+                ],
+                "id": 63
+              }
+            ],
+            "drivebc_actions.category": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "restAreas,rest stop"
+                  },
+                  {
+                  }
+                ],
+                "id": 64
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "KKYT6C2",
+          "client_id": "mgKii7mXZfefLXqzHadt2V",
+          "share_url": "https://analytics.gov.bc.ca/x/mgKii7mXZfefLXqzHadt2V",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=restAreas%2Crest+stop&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Rest+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A63%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22restAreas%2Crest+stop%22%7D%2C%7B%7D%5D%2C%22id%22%3A64%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/drivebc_actions?fields=drivebc_actions.count,drivebc_actions.session_count,drivebc_actions.label&f[drivebc_actions.event_date]=7+days+ago+for+7+days&f[drivebc_actions.category]=restAreas%2Crest+stop&sorts=drivebc_actions.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22drivebc_actions.count%22%3A%22Click+Count%22%2C%22drivebc_actions.session_count%22%3A%22Session+Count%22%2C%22drivebc_actions.sub_label%22%3A%22Major+Delay%22%2C%22drivebc_actions.label%22%3A%22Rest+Area%22%7D%2C%22series_cell_visualizations%22%3A%7B%22drivebc_actions.count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22drivebc_actions.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%222d24cec8-e118-9ec9-0f3d-c09faa85bfdd%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_pivots%22%3A%7B%7D%7D&filter_config=%7B%22drivebc_actions.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A63%7D%5D%2C%22drivebc_actions.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22restAreas%2Crest+stop%22%7D%2C%7B%7D%5D%2C%22id%22%3A64%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "drivebc_actions.count": "Click Count",
+            "drivebc_actions.session_count": "Session Count",
+            "drivebc_actions.sub_label": "Major Delay",
+            "drivebc_actions.label": "Rest Area"
+          },
+          "series_cell_visualizations": {
+            "drivebc_actions.count": {
+              "is_active": true
+            },
+            "drivebc_actions.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "2d24cec8-e118-9ec9-0f3d-c09faa85bfdd",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "truncate_column_names": false,
+          "type": "looker_grid",
+          "defaults_version": 1,
+          "series_types": {
+          },
+          "hidden_pivots": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
     }
   ],
   "dashboard_filters": [
@@ -4601,11 +7546,7 @@
       "allow_multiple_values": true,
       "required": false,
       "ui_config": {
-        "options": [
-          "desktop-map",
-          "mobile-map"
-        ],
-        "type": "button_toggles",
+        "type": "tag_list",
         "display": "inline"
       },
       "model": "snowplow_web_block",
@@ -4760,7 +7701,7 @@
           "id": "4283",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4282",
-          "row": 22,
+          "row": 28,
           "column": 0,
           "width": 12,
           "height": 4,
@@ -4783,7 +7724,7 @@
           "row": 7,
           "column": 12,
           "width": 12,
-          "height": 10,
+          "height": 6,
           "deleted": false,
           "element_title": "Top Webcams",
           "element_title_hidden": false,
@@ -4800,10 +7741,10 @@
           "id": "4285",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4285",
-          "row": 17,
+          "row": 13,
           "column": 12,
           "width": 12,
-          "height": 10,
+          "height": 6,
           "deleted": false,
           "element_title": "Top Message Signs",
           "element_title_hidden": false,
@@ -4820,12 +7761,12 @@
           "id": "4286",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4286",
-          "row": 30,
-          "column": 0,
+          "row": 23,
+          "column": 12,
           "width": 12,
-          "height": 3,
+          "height": 6,
           "deleted": false,
-          "element_title": "Top Road Conditions",
+          "element_title": "Top Road Conditions (Beta)",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
@@ -4840,8 +7781,8 @@
           "id": "4287",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4287",
-          "row": 26,
-          "column": 0,
+          "row": 29,
+          "column": 12,
           "width": 12,
           "height": 4,
           "deleted": false,
@@ -4860,7 +7801,7 @@
           "id": "4306",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4306",
-          "row": 34,
+          "row": 52,
           "column": 6,
           "width": 12,
           "height": 10,
@@ -4880,7 +7821,7 @@
           "id": "4307",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4307",
-          "row": 33,
+          "row": 51,
           "column": 6,
           "width": 12,
           "height": 1,
@@ -4900,7 +7841,7 @@
           "id": "4619",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4619",
-          "row": 44,
+          "row": 62,
           "column": 6,
           "width": 12,
           "height": 10,
@@ -4920,12 +7861,152 @@
           "id": "4684",
           "dashboard_layout_id": "456",
           "dashboard_element_id": "4684",
-          "row": 27,
+          "row": 19,
           "column": 12,
           "width": 12,
           "height": 4,
           "deleted": false,
           "element_title": "Top Beta Events",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4770",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4770",
+          "row": 38,
+          "column": 0,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Minor Delays (Beta)",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4771",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4772",
+          "row": 32,
+          "column": 0,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Major Delays (Beta)",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4772",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4771",
+          "row": 22,
+          "column": 0,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Closures (Beta)",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4773",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4773",
+          "row": 33,
+          "column": 12,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Future Planned Events (Beta)",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4774",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4774",
+          "row": 39,
+          "column": 12,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Weather Areas",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4775",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4775",
+          "row": 45,
+          "column": 12,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Ferries",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "4776",
+          "dashboard_layout_id": "456",
+          "dashboard_element_id": "4776",
+          "row": 44,
+          "column": 0,
+          "width": 12,
+          "height": 6,
+          "deleted": false,
+          "element_title": "Top Rest Areas",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
@@ -4953,8 +8034,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-06-24 17:49:44 UTC",
-  "updated_at": "2024-06-03 06:03:00 UTC",
+  "last_accessed_at": "2024-07-05 17:51:42 UTC",
+  "updated_at": "2024-07-04 06:48:52 UTC",
   "last_updater_id": "13",
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -4966,7 +8047,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 15,
+  "view_count": 18,
   "url": "/dashboards/456",
   "folder": {
     "name": "Web Analytics Dashboards",
