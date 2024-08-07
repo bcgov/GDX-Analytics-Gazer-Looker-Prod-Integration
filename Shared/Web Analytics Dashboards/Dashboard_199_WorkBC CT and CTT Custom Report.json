@@ -30,7 +30,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "545991",
+        "id": "1984756",
         "view": "page_views",
         "fields": [
           "page_views.page_title",
@@ -41,8 +41,8 @@
         "fill_fields": null,
         "filters": {
           "page_views.page_view_start_date": "7 days ago for 7 days",
-          "page_views.page_urlhost": "www.careertrekbc.ca",
-          "page_views.page_display_url": "https://www.careertrekbc.ca/episode/%"
+          "page_views.page_urlhost": "www.workbc.ca,www2.workbc.ca",
+          "page_views.page_display_url": "https://www.workbc.ca/plan-career/career-trek-videosm/episode%,https://www.workbc.ca/plan-career/career-trek-videosepisode%"
         },
         "filter_expression": null,
         "sorts": [
@@ -114,7 +114,211 @@
           "y_axes": [
 
           ],
-          "defaults_version": 1
+          "defaults_version": 1,
+          "minimum_column_width": 75,
+          "query_fields": {
+            "measures": [
+              {
+                "align": "right",
+                "can_filter": true,
+                "category": "measure",
+                "default_filter_value": null,
+                "description": "",
+                "enumerations": null,
+                "field_group_label": "Counts",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": true,
+                "label": "Page Views Page View Count",
+                "label_from_parameter": null,
+                "label_short": "Page View Count",
+                "map_layer": null,
+                "name": "page_views.page_view_count",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "count_distinct",
+                "user_attribute_filter_types": [
+                  "number",
+                  "advanced_filter_number"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page View Count",
+                "measure": true,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_view_count",
+                "suggest_explore": "page_views",
+                "suggestable": false,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=463",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${page_view_id} ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0,
+                "sorted": {
+                  "desc": true,
+                  "sort_index": 0
+                }
+              }
+            ],
+            "dimensions": [
+              {
+                "align": "left",
+                "can_filter": true,
+                "category": "dimension",
+                "default_filter_value": null,
+                "description": "The web page title.",
+                "enumerations": null,
+                "field_group_label": "Page",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": false,
+                "label": "Page Views Page Title",
+                "label_from_parameter": null,
+                "label_short": "Page Title",
+                "map_layer": null,
+                "name": "page_views.page_title",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "string",
+                "user_attribute_filter_types": [
+                  "string",
+                  "advanced_filter_string"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page Title",
+                "measure": false,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_title",
+                "suggest_explore": "page_views",
+                "suggestable": true,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=50",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${TABLE}.page_title ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0
+              },
+              {
+                "align": "left",
+                "can_filter": true,
+                "category": "dimension",
+                "default_filter_value": null,
+                "description": "Cleaned URL of the page without query string or standard file names like index.html",
+                "enumerations": null,
+                "field_group_label": "Page",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": false,
+                "label": "Page Views Page Display URL",
+                "label_from_parameter": null,
+                "label_short": "Page Display URL",
+                "map_layer": null,
+                "name": "page_views.page_display_url",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "string",
+                "user_attribute_filter_types": [
+                  "string",
+                  "advanced_filter_string"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page Display URL",
+                "measure": false,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_display_url",
+                "suggest_explore": "page_views",
+                "suggestable": true,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${TABLE}.page_display_url ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0
+              }
+            ],
+            "table_calculations": [
+
+            ],
+            "pivots": [
+
+            ]
+          },
+          "series_column_widths": {
+            "page_views.page_title": 189,
+            "page_views.page_view_count": 288
+          }
         },
         "filter_config": {
           "page_views.page_view_start_date": [
@@ -128,8 +332,7 @@
                 {
                 }
               ],
-              "id": 16,
-              "error": false
+              "id": 12
             }
           ],
           "page_views.page_urlhost": [
@@ -137,13 +340,12 @@
               "type": "=",
               "values": [
                 {
-                  "constant": "www.careertrekbc.ca"
+                  "constant": "www.workbc.ca,www2.workbc.ca"
                 },
                 {
                 }
               ],
-              "id": 17,
-              "error": false
+              "id": 13
             }
           ],
           "page_views.page_display_url": [
@@ -151,22 +353,21 @@
               "type": "starts",
               "values": [
                 {
-                  "constant": "https://www.careertrekbc.ca/episode/"
+                  "constant": "https://www.workbc.ca/plan-career/career-trek-videosm/episode,https://www.workbc.ca/plan-career/career-trek-videosepisode"
                 },
                 {
                 }
               ],
-              "id": 24,
-              "error": false
+              "id": 14
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "Jm2s97B",
-        "client_id": "nqT7EuTWc0HATpxwrqBP8y",
-        "share_url": "https://analytics.gov.bc.ca/x/nqT7EuTWc0HATpxwrqBP8y",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "slug": "qWyjBRW",
+        "client_id": "xYpdKfXPcwtx5GMc7tZuOt",
+        "share_url": "https://analytics.gov.bc.ca/x/xYpdKfXPcwtx5GMc7tZuOt",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%25%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%2C%22minimum_column_width%22%3A75%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Page+Views+Page+View+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+View+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_view_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+View+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_view_count%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fpage_views.view.lkml%3Fline%3D463%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7Bpage_view_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+web+page+title.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Title%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Title%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_title%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Title%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_title%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D50%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_title+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_display_url%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%5D%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_title%22%3A189%2C%22page_views.page_view_count%22%3A288%7D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%25%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%2C%22minimum_column_width%22%3A75%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Page+Views+Page+View+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+View+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_view_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+View+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_view_count%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fpage_views.view.lkml%3Fline%3D463%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7Bpage_view_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+web+page+title.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Title%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Title%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_title%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Title%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_title%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D50%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_title+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_display_url%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%5D%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_title%22%3A189%2C%22page_views.page_view_count%22%3A288%7D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
         "model": "snowplow_web_block",
         "dynamic_fields": "[]",
@@ -198,10 +399,10 @@
           "render": true
         }
       },
-      "query_id": "545991",
+      "query_id": "1984756",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "38889",
+      "result_maker_id": "125984",
       "subtitle_text": null,
       "title": "Top Career Trek Episodes",
       "title_hidden": false,
@@ -213,7 +414,7 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "result_maker": {
-        "id": "38889",
+        "id": "125984",
         "dynamic_fields": "[]",
         "filterables": [
           {
@@ -237,10 +438,10 @@
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "545991",
+        "query_id": "1984756",
         "sql_query_id": "",
         "query": {
-          "id": "545991",
+          "id": "1984756",
           "view": "page_views",
           "fields": [
             "page_views.page_title",
@@ -251,8 +452,8 @@
           "fill_fields": null,
           "filters": {
             "page_views.page_view_start_date": "7 days ago for 7 days",
-            "page_views.page_urlhost": "www.careertrekbc.ca",
-            "page_views.page_display_url": "https://www.careertrekbc.ca/episode/%"
+            "page_views.page_urlhost": "www.workbc.ca,www2.workbc.ca",
+            "page_views.page_display_url": "https://www.workbc.ca/plan-career/career-trek-videosm/episode%,https://www.workbc.ca/plan-career/career-trek-videosepisode%"
           },
           "filter_expression": null,
           "sorts": [
@@ -324,7 +525,211 @@
             "y_axes": [
 
             ],
-            "defaults_version": 1
+            "defaults_version": 1,
+            "minimum_column_width": 75,
+            "query_fields": {
+              "measures": [
+                {
+                  "align": "right",
+                  "can_filter": true,
+                  "category": "measure",
+                  "default_filter_value": null,
+                  "description": "",
+                  "enumerations": null,
+                  "field_group_label": "Counts",
+                  "fill_style": null,
+                  "fiscal_month_offset": 3,
+                  "has_allowed_values": false,
+                  "hidden": false,
+                  "is_filter": false,
+                  "is_numeric": true,
+                  "label": "Page Views Page View Count",
+                  "label_from_parameter": null,
+                  "label_short": "Page View Count",
+                  "map_layer": null,
+                  "name": "page_views.page_view_count",
+                  "strict_value_format": false,
+                  "requires_refresh_on_sort": false,
+                  "sortable": true,
+                  "suggestions": null,
+                  "tags": [
+
+                  ],
+                  "type": "count_distinct",
+                  "user_attribute_filter_types": [
+                    "number",
+                    "advanced_filter_number"
+                  ],
+                  "value_format": null,
+                  "view": "page_views",
+                  "view_label": "Page Views",
+                  "dynamic": false,
+                  "week_start_day": "sunday",
+                  "original_view": "page_views",
+                  "dimension_group": null,
+                  "error": null,
+                  "field_group_variant": "Page View Count",
+                  "measure": true,
+                  "parameter": false,
+                  "primary_key": false,
+                  "project_name": "snowplow_web_block",
+                  "scope": "page_views",
+                  "suggest_dimension": "page_views.page_view_count",
+                  "suggest_explore": "page_views",
+                  "suggestable": false,
+                  "is_fiscal": false,
+                  "is_timeframe": false,
+                  "can_time_filter": false,
+                  "time_interval": null,
+                  "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=463",
+                  "permanent": null,
+                  "source_file": "Views/page_views.view.lkml",
+                  "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                  "sql": "${page_view_id} ",
+                  "sql_case": null,
+                  "filters": null,
+                  "times_used": 0,
+                  "sorted": {
+                    "desc": true,
+                    "sort_index": 0
+                  }
+                }
+              ],
+              "dimensions": [
+                {
+                  "align": "left",
+                  "can_filter": true,
+                  "category": "dimension",
+                  "default_filter_value": null,
+                  "description": "The web page title.",
+                  "enumerations": null,
+                  "field_group_label": "Page",
+                  "fill_style": null,
+                  "fiscal_month_offset": 3,
+                  "has_allowed_values": false,
+                  "hidden": false,
+                  "is_filter": false,
+                  "is_numeric": false,
+                  "label": "Page Views Page Title",
+                  "label_from_parameter": null,
+                  "label_short": "Page Title",
+                  "map_layer": null,
+                  "name": "page_views.page_title",
+                  "strict_value_format": false,
+                  "requires_refresh_on_sort": false,
+                  "sortable": true,
+                  "suggestions": null,
+                  "tags": [
+
+                  ],
+                  "type": "string",
+                  "user_attribute_filter_types": [
+                    "string",
+                    "advanced_filter_string"
+                  ],
+                  "value_format": null,
+                  "view": "page_views",
+                  "view_label": "Page Views",
+                  "dynamic": false,
+                  "week_start_day": "sunday",
+                  "original_view": "page_views",
+                  "dimension_group": null,
+                  "error": null,
+                  "field_group_variant": "Page Title",
+                  "measure": false,
+                  "parameter": false,
+                  "primary_key": false,
+                  "project_name": "snowplow_web_block",
+                  "scope": "page_views",
+                  "suggest_dimension": "page_views.page_title",
+                  "suggest_explore": "page_views",
+                  "suggestable": true,
+                  "is_fiscal": false,
+                  "is_timeframe": false,
+                  "can_time_filter": false,
+                  "time_interval": null,
+                  "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=50",
+                  "permanent": null,
+                  "source_file": "Views/page_views.view.lkml",
+                  "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                  "sql": "${TABLE}.page_title ",
+                  "sql_case": null,
+                  "filters": null,
+                  "times_used": 0
+                },
+                {
+                  "align": "left",
+                  "can_filter": true,
+                  "category": "dimension",
+                  "default_filter_value": null,
+                  "description": "Cleaned URL of the page without query string or standard file names like index.html",
+                  "enumerations": null,
+                  "field_group_label": "Page",
+                  "fill_style": null,
+                  "fiscal_month_offset": 3,
+                  "has_allowed_values": false,
+                  "hidden": false,
+                  "is_filter": false,
+                  "is_numeric": false,
+                  "label": "Page Views Page Display URL",
+                  "label_from_parameter": null,
+                  "label_short": "Page Display URL",
+                  "map_layer": null,
+                  "name": "page_views.page_display_url",
+                  "strict_value_format": false,
+                  "requires_refresh_on_sort": false,
+                  "sortable": true,
+                  "suggestions": null,
+                  "tags": [
+
+                  ],
+                  "type": "string",
+                  "user_attribute_filter_types": [
+                    "string",
+                    "advanced_filter_string"
+                  ],
+                  "value_format": null,
+                  "view": "page_views",
+                  "view_label": "Page Views",
+                  "dynamic": false,
+                  "week_start_day": "sunday",
+                  "original_view": "page_views",
+                  "dimension_group": null,
+                  "error": null,
+                  "field_group_variant": "Page Display URL",
+                  "measure": false,
+                  "parameter": false,
+                  "primary_key": false,
+                  "project_name": "snowplow_web_block",
+                  "scope": "page_views",
+                  "suggest_dimension": "page_views.page_display_url",
+                  "suggest_explore": "page_views",
+                  "suggestable": true,
+                  "is_fiscal": false,
+                  "is_timeframe": false,
+                  "can_time_filter": false,
+                  "time_interval": null,
+                  "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+                  "permanent": null,
+                  "source_file": "Views/page_views.view.lkml",
+                  "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                  "sql": "${TABLE}.page_display_url ",
+                  "sql_case": null,
+                  "filters": null,
+                  "times_used": 0
+                }
+              ],
+              "table_calculations": [
+
+              ],
+              "pivots": [
+
+              ]
+            },
+            "series_column_widths": {
+              "page_views.page_title": 189,
+              "page_views.page_view_count": 288
+            }
           },
           "filter_config": {
             "page_views.page_view_start_date": [
@@ -338,8 +743,7 @@
                   {
                   }
                 ],
-                "id": 16,
-                "error": false
+                "id": 12
               }
             ],
             "page_views.page_urlhost": [
@@ -347,13 +751,12 @@
                 "type": "=",
                 "values": [
                   {
-                    "constant": "www.careertrekbc.ca"
+                    "constant": "www.workbc.ca,www2.workbc.ca"
                   },
                   {
                   }
                 ],
-                "id": 17,
-                "error": false
+                "id": 13
               }
             ],
             "page_views.page_display_url": [
@@ -361,22 +764,21 @@
                 "type": "starts",
                 "values": [
                   {
-                    "constant": "https://www.careertrekbc.ca/episode/"
+                    "constant": "https://www.workbc.ca/plan-career/career-trek-videosm/episode,https://www.workbc.ca/plan-career/career-trek-videosepisode"
                   },
                   {
                   }
                 ],
-                "id": 24,
-                "error": false
+                "id": 14
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "Jm2s97B",
-          "client_id": "nqT7EuTWc0HATpxwrqBP8y",
-          "share_url": "https://analytics.gov.bc.ca/x/nqT7EuTWc0HATpxwrqBP8y",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.careertrekbc.ca%2Fepisode%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "slug": "qWyjBRW",
+          "client_id": "xYpdKfXPcwtx5GMc7tZuOt",
+          "share_url": "https://analytics.gov.bc.ca/x/xYpdKfXPcwtx5GMc7tZuOt",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%25%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%2C%22minimum_column_width%22%3A75%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Page+Views+Page+View+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+View+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_view_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+View+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_view_count%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fpage_views.view.lkml%3Fline%3D463%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7Bpage_view_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+web+page+title.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Title%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Title%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_title%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Title%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_title%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D50%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_title+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_display_url%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%5D%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_title%22%3A189%2C%22page_views.page_view_count%22%3A288%7D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_title,page_views.page_display_url,page_views.page_view_count&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%25%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_display_url%22%3A%22URL%22%2C%22page_views.page_title%22%3A%22Title%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%2C%22defaults_version%22%3A1%2C%22minimum_column_width%22%3A75%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Page+Views+Page+View+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+View+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_view_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+View+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_view_count%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fpage_views.view.lkml%3Fline%3D463%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7Bpage_view_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+web+page+title.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Title%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Title%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_title%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Title%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_title%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D50%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_title+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Page+Views+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22page_views.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22page_views%22%2C%22view_label%22%3A%22Page+Views%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22page_views%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22page_views%22%2C%22suggest_dimension%22%3A%22page_views.page_display_url%22%2C%22suggest_explore%22%3A%22page_views%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fpage_views.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fpage_views.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%5D%7D%2C%22series_column_widths%22%3A%7B%22page_views.page_title%22%3A189%2C%22page_views.page_view_count%22%3A288%7D%7D&filter_config=%7B%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosm%2Fepisode%2Chttps%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videosepisode%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
           "model": "snowplow_web_block",
           "dynamic_fields": "[]",
@@ -469,7 +871,211 @@
           "y_axes": [
 
           ],
-          "defaults_version": 1
+          "defaults_version": 1,
+          "minimum_column_width": 75,
+          "query_fields": {
+            "measures": [
+              {
+                "align": "right",
+                "can_filter": true,
+                "category": "measure",
+                "default_filter_value": null,
+                "description": "",
+                "enumerations": null,
+                "field_group_label": "Counts",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": true,
+                "label": "Page Views Page View Count",
+                "label_from_parameter": null,
+                "label_short": "Page View Count",
+                "map_layer": null,
+                "name": "page_views.page_view_count",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "count_distinct",
+                "user_attribute_filter_types": [
+                  "number",
+                  "advanced_filter_number"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page View Count",
+                "measure": true,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_view_count",
+                "suggest_explore": "page_views",
+                "suggestable": false,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=463",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${page_view_id} ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0,
+                "sorted": {
+                  "desc": true,
+                  "sort_index": 0
+                }
+              }
+            ],
+            "dimensions": [
+              {
+                "align": "left",
+                "can_filter": true,
+                "category": "dimension",
+                "default_filter_value": null,
+                "description": "The web page title.",
+                "enumerations": null,
+                "field_group_label": "Page",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": false,
+                "label": "Page Views Page Title",
+                "label_from_parameter": null,
+                "label_short": "Page Title",
+                "map_layer": null,
+                "name": "page_views.page_title",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "string",
+                "user_attribute_filter_types": [
+                  "string",
+                  "advanced_filter_string"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page Title",
+                "measure": false,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_title",
+                "suggest_explore": "page_views",
+                "suggestable": true,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=50",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${TABLE}.page_title ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0
+              },
+              {
+                "align": "left",
+                "can_filter": true,
+                "category": "dimension",
+                "default_filter_value": null,
+                "description": "Cleaned URL of the page without query string or standard file names like index.html",
+                "enumerations": null,
+                "field_group_label": "Page",
+                "fill_style": null,
+                "fiscal_month_offset": 3,
+                "has_allowed_values": false,
+                "hidden": false,
+                "is_filter": false,
+                "is_numeric": false,
+                "label": "Page Views Page Display URL",
+                "label_from_parameter": null,
+                "label_short": "Page Display URL",
+                "map_layer": null,
+                "name": "page_views.page_display_url",
+                "strict_value_format": false,
+                "requires_refresh_on_sort": false,
+                "sortable": true,
+                "suggestions": null,
+                "tags": [
+
+                ],
+                "type": "string",
+                "user_attribute_filter_types": [
+                  "string",
+                  "advanced_filter_string"
+                ],
+                "value_format": null,
+                "view": "page_views",
+                "view_label": "Page Views",
+                "dynamic": false,
+                "week_start_day": "sunday",
+                "original_view": "page_views",
+                "dimension_group": null,
+                "error": null,
+                "field_group_variant": "Page Display URL",
+                "measure": false,
+                "parameter": false,
+                "primary_key": false,
+                "project_name": "snowplow_web_block",
+                "scope": "page_views",
+                "suggest_dimension": "page_views.page_display_url",
+                "suggest_explore": "page_views",
+                "suggestable": true,
+                "is_fiscal": false,
+                "is_timeframe": false,
+                "can_time_filter": false,
+                "time_interval": null,
+                "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+                "permanent": null,
+                "source_file": "Views/page_views.view.lkml",
+                "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+                "sql": "${TABLE}.page_display_url ",
+                "sql_case": null,
+                "filters": null,
+                "times_used": 0
+              }
+            ],
+            "table_calculations": [
+
+            ],
+            "pivots": [
+
+            ]
+          },
+          "series_column_widths": {
+            "page_views.page_title": 189,
+            "page_views.page_view_count": 288
+          }
         }
       },
       "can": {
@@ -503,7 +1109,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "312280",
+        "id": "1984773",
         "view": "page_views",
         "fields": [
           "page_views.page_referrer",
@@ -512,8 +1118,10 @@
         "pivots": null,
         "fill_fields": null,
         "filters": {
-          "page_views.page_urlhost": "www.careertrekbc.ca",
-          "page_views.referrer_urlhost": "-www.careertrekbc.ca"
+          "page_views.page_urlhost": "www.workbc.ca,www2.workbc.ca",
+          "page_views.referrer_urlhost": "",
+          "page_views.page_referrer": "-https://www.workbc.ca/plan-career/career-trek-videos%",
+          "page_views.page_display_url": "https://www.workbc.ca/plan-career/career-trek-videos%"
         },
         "filter_expression": null,
         "sorts": [
@@ -525,13 +1133,23 @@
         "row_total": null,
         "subtotals": null,
         "vis_config": {
-          "show_totals": true,
-          "show_row_totals": true,
           "show_view_names": false,
           "show_row_numbers": true,
           "transpose": false,
           "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
           "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_totals": true,
+          "show_row_totals": true,
           "series_labels": {
             "page_views.page_view_count": "Page Views",
             "page_views.page_referrer": "Referral URL"
@@ -541,18 +1159,8 @@
               "is_active": false
             }
           },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "header_text_alignment": "left",
-          "header_font_size": "12",
-          "rows_font_size": "12",
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
           "truncate_column_names": false,
           "subtotals_at_bottom": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
           "type": "looker_grid",
           "hidden_fields": [
 
@@ -561,7 +1169,8 @@
 
           ],
           "series_types": {
-          }
+          },
+          "defaults_version": 1
         },
         "filter_config": {
           "page_views.page_urlhost": [
@@ -569,36 +1178,60 @@
               "type": "=",
               "values": [
                 {
-                  "constant": "www.careertrekbc.ca"
+                  "constant": "www.workbc.ca,www2.workbc.ca"
                 },
                 {
                 }
               ],
-              "id": 17,
-              "error": false
+              "id": 37
             }
           ],
           "page_views.referrer_urlhost": [
             {
-              "type": "!=",
+              "type": "=",
               "values": [
                 {
-                  "constant": "www.careertrekbc.ca"
+                  "constant": ""
                 },
                 {
                 }
               ],
-              "id": 24,
-              "error": false
+              "id": 38
+            }
+          ],
+          "page_views.page_referrer": [
+            {
+              "type": "!starts",
+              "values": [
+                {
+                  "constant": "https://www.workbc.ca/plan-career/career-trek-videos"
+                },
+                {
+                }
+              ],
+              "id": 39
+            }
+          ],
+          "page_views.page_display_url": [
+            {
+              "type": "starts",
+              "values": [
+                {
+                  "constant": "https://www.workbc.ca/plan-career/career-trek-videos"
+                },
+                {
+                }
+              ],
+              "id": 40
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "QHrqs9h",
-        "client_id": "ad3JiI5jFB96MIL6DufOKj",
-        "share_url": "https://analytics.gov.bc.ca/x/ad3JiI5jFB96MIL6DufOKj",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.referrer_urlhost]=-www.careertrekbc.ca&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.referrer_urlhost]=-www.careertrekbc.ca&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "slug": "9yCw669",
+        "client_id": "Bk5ffR7a1NsPtAovTtbOAk",
+        "share_url": "https://analytics.gov.bc.ca/x/Bk5ffR7a1NsPtAovTtbOAk",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.referrer_urlhost]=&f[page_views.page_referrer]=-https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%7D%5D%2C%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A39%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A40%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.referrer_urlhost]=&f[page_views.page_referrer]=-https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%7D%5D%2C%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A39%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A40%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
         "model": "snowplow_web_block",
         "dynamic_fields": "[]",
@@ -630,10 +1263,10 @@
           "render": true
         }
       },
-      "query_id": "312280",
+      "query_id": "1984773",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "21223",
+      "result_maker_id": "125985",
       "subtitle_text": null,
       "title": "Top External Referrers to Career Trek",
       "title_hidden": false,
@@ -645,7 +1278,7 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "result_maker": {
-        "id": "21223",
+        "id": "125985",
         "dynamic_fields": "[]",
         "filterables": [
           {
@@ -669,10 +1302,10 @@
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "312280",
+        "query_id": "1984773",
         "sql_query_id": "",
         "query": {
-          "id": "312280",
+          "id": "1984773",
           "view": "page_views",
           "fields": [
             "page_views.page_referrer",
@@ -681,8 +1314,10 @@
           "pivots": null,
           "fill_fields": null,
           "filters": {
-            "page_views.page_urlhost": "www.careertrekbc.ca",
-            "page_views.referrer_urlhost": "-www.careertrekbc.ca"
+            "page_views.page_urlhost": "www.workbc.ca,www2.workbc.ca",
+            "page_views.referrer_urlhost": "",
+            "page_views.page_referrer": "-https://www.workbc.ca/plan-career/career-trek-videos%",
+            "page_views.page_display_url": "https://www.workbc.ca/plan-career/career-trek-videos%"
           },
           "filter_expression": null,
           "sorts": [
@@ -694,13 +1329,23 @@
           "row_total": null,
           "subtotals": null,
           "vis_config": {
-            "show_totals": true,
-            "show_row_totals": true,
             "show_view_names": false,
             "show_row_numbers": true,
             "transpose": false,
             "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
             "size_to_fit": true,
+            "table_theme": "editable",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_totals": true,
+            "show_row_totals": true,
             "series_labels": {
               "page_views.page_view_count": "Page Views",
               "page_views.page_referrer": "Referral URL"
@@ -710,18 +1355,8 @@
                 "is_active": false
               }
             },
-            "table_theme": "editable",
-            "limit_displayed_rows": false,
-            "enable_conditional_formatting": false,
-            "header_text_alignment": "left",
-            "header_font_size": "12",
-            "rows_font_size": "12",
-            "conditional_formatting_include_totals": false,
-            "conditional_formatting_include_nulls": false,
             "truncate_column_names": false,
             "subtotals_at_bottom": false,
-            "hide_totals": false,
-            "hide_row_totals": false,
             "type": "looker_grid",
             "hidden_fields": [
 
@@ -730,7 +1365,8 @@
 
             ],
             "series_types": {
-            }
+            },
+            "defaults_version": 1
           },
           "filter_config": {
             "page_views.page_urlhost": [
@@ -738,36 +1374,60 @@
                 "type": "=",
                 "values": [
                   {
-                    "constant": "www.careertrekbc.ca"
+                    "constant": "www.workbc.ca,www2.workbc.ca"
                   },
                   {
                   }
                 ],
-                "id": 17,
-                "error": false
+                "id": 37
               }
             ],
             "page_views.referrer_urlhost": [
               {
-                "type": "!=",
+                "type": "=",
                 "values": [
                   {
-                    "constant": "www.careertrekbc.ca"
+                    "constant": ""
                   },
                   {
                   }
                 ],
-                "id": 24,
-                "error": false
+                "id": 38
+              }
+            ],
+            "page_views.page_referrer": [
+              {
+                "type": "!starts",
+                "values": [
+                  {
+                    "constant": "https://www.workbc.ca/plan-career/career-trek-videos"
+                  },
+                  {
+                  }
+                ],
+                "id": 39
+              }
+            ],
+            "page_views.page_display_url": [
+              {
+                "type": "starts",
+                "values": [
+                  {
+                    "constant": "https://www.workbc.ca/plan-career/career-trek-videos"
+                  },
+                  {
+                  }
+                ],
+                "id": 40
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "QHrqs9h",
-          "client_id": "ad3JiI5jFB96MIL6DufOKj",
-          "share_url": "https://analytics.gov.bc.ca/x/ad3JiI5jFB96MIL6DufOKj",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.referrer_urlhost]=-www.careertrekbc.ca&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.careertrekbc.ca&f[page_views.referrer_urlhost]=-www.careertrekbc.ca&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22size_to_fit%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.careertrekbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "slug": "9yCw669",
+          "client_id": "Bk5ffR7a1NsPtAovTtbOAk",
+          "share_url": "https://analytics.gov.bc.ca/x/Bk5ffR7a1NsPtAovTtbOAk",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.referrer_urlhost]=&f[page_views.page_referrer]=-https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%7D%5D%2C%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A39%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A40%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_referrer,page_views.page_view_count&f[page_views.page_urlhost]=www.workbc.ca%2Cwww2.workbc.ca&f[page_views.referrer_urlhost]=&f[page_views.page_referrer]=-https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&f[page_views.page_display_url]=https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%25&sorts=page_views.page_view_count+desc&limit=20&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22page_views.page_view_count%22%3A%22Page+Views%22%2C%22page_views.page_referrer%22%3A%22Referral+URL%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.page_view_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22subtotals_at_bottom%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.workbc.ca%2Cwww2.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%7D%5D%2C%22page_views.page_referrer%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A39%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.workbc.ca%2Fplan-career%2Fcareer-trek-videos%22%7D%2C%7B%7D%5D%2C%22id%22%3A40%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
           "model": "snowplow_web_block",
           "dynamic_fields": "[]",
@@ -800,13 +1460,23 @@
           }
         },
         "vis_config": {
-          "show_totals": true,
-          "show_row_totals": true,
           "show_view_names": false,
           "show_row_numbers": true,
           "transpose": false,
           "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
           "size_to_fit": true,
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_totals": true,
+          "show_row_totals": true,
           "series_labels": {
             "page_views.page_view_count": "Page Views",
             "page_views.page_referrer": "Referral URL"
@@ -816,18 +1486,8 @@
               "is_active": false
             }
           },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "header_text_alignment": "left",
-          "header_font_size": "12",
-          "rows_font_size": "12",
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
           "truncate_column_names": false,
           "subtotals_at_bottom": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
           "type": "looker_grid",
           "hidden_fields": [
 
@@ -836,7 +1496,8 @@
 
           ],
           "series_types": {
-          }
+          },
+          "defaults_version": 1
         }
       },
       "can": {
@@ -3017,8 +3678,8 @@
           "dashboard_element_id": "2052",
           "row": 2,
           "column": 0,
-          "width": 12,
-          "height": 7,
+          "width": 24,
+          "height": 11,
           "deleted": false,
           "element_title": "Top Career Trek Episodes",
           "element_title_hidden": false,
@@ -3035,10 +3696,10 @@
           "id": "2053",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2053",
-          "row": 2,
-          "column": 12,
-          "width": 12,
-          "height": 7,
+          "row": 13,
+          "column": 0,
+          "width": 24,
+          "height": 11,
           "deleted": false,
           "element_title": "Top External Referrers to Career Trek",
           "element_title_hidden": false,
@@ -3075,7 +3736,7 @@
           "id": "2339",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2339",
-          "row": 9,
+          "row": 24,
           "column": 7,
           "width": 10,
           "height": 2,
@@ -3095,7 +3756,7 @@
           "id": "2340",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2340",
-          "row": 11,
+          "row": 26,
           "column": 0,
           "width": 12,
           "height": 9,
@@ -3115,7 +3776,7 @@
           "id": "2341",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2341",
-          "row": 11,
+          "row": 26,
           "column": 12,
           "width": 12,
           "height": 9,
@@ -3135,7 +3796,7 @@
           "id": "2400",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2400",
-          "row": 20,
+          "row": 35,
           "column": 9,
           "width": 15,
           "height": 8,
@@ -3155,7 +3816,7 @@
           "id": "2401",
           "dashboard_layout_id": "199",
           "dashboard_element_id": "2401",
-          "row": 20,
+          "row": 35,
           "column": 0,
           "width": 9,
           "height": 8,
@@ -3188,10 +3849,10 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2024-08-02 18:26:11 UTC",
-  "updated_at": "2023-05-08 22:08:21 UTC",
-  "last_updater_id": "13",
-  "last_updater_name": "Dan Pollock",
+  "last_accessed_at": "2024-08-07 01:35:39 UTC",
+  "updated_at": "2024-08-06 18:04:25 UTC",
+  "last_updater_id": "1302",
+  "last_updater_name": "Linda Mah",
   "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
@@ -3201,7 +3862,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 85,
+  "view_count": 86,
   "url": "/dashboards/199",
   "folder": {
     "name": "Web Analytics Dashboards",
