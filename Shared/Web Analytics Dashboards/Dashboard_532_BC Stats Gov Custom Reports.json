@@ -223,6 +223,10 @@
               {
                 "dashboard_filter_name": "Target URL",
                 "field": "clicks.target_url"
+              },
+              {
+                "dashboard_filter_name": "Click Count",
+                "field": "clicks.click_count"
               }
             ]
           }
@@ -697,6 +701,10 @@
               {
                 "dashboard_filter_name": "Target URL",
                 "field": "clicks.target_url"
+              },
+              {
+                "dashboard_filter_name": "Click Count",
+                "field": "clicks.click_count"
               }
             ]
           }
@@ -1155,6 +1163,100 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "id": "2476",
+      "dashboard_id": "532",
+      "name": "Click Count",
+      "title": "Click Count",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.click_count",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": ">=20",
+      "field": {
+        "align": "right",
+        "can_filter": true,
+        "category": "measure",
+        "default_filter_value": null,
+        "description": "A count of all the clicks in this Explore (link clicks and downloads).",
+        "enumerations": null,
+        "field_group_label": "Counts",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": true,
+        "label": "Clicks Click Count",
+        "label_from_parameter": null,
+        "label_short": "Click Count",
+        "map_layer": null,
+        "name": "clicks.click_count",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "count_distinct",
+        "user_attribute_filter_types": [
+          "number",
+          "advanced_filter_number"
+        ],
+        "value_format": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Click Count",
+        "measure": true,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.click_count",
+        "suggest_explore": "clicks",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fclicks.view.lkml?line=440",
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${click_id} ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_layouts": [
@@ -1225,8 +1327,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2025-03-26 17:14:50 UTC",
-  "updated_at": "2025-02-06 05:38:32 UTC",
+  "last_accessed_at": "2025-03-26 18:57:24 UTC",
+  "updated_at": "2025-03-26 18:57:20 UTC",
   "last_updater_id": "13",
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -1238,7 +1340,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 13,
+  "view_count": 14,
   "url": "/dashboards/532",
   "folder": {
     "name": "Web Analytics Dashboards",
