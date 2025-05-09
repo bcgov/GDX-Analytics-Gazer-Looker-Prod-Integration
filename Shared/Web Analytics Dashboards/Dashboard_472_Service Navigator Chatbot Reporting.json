@@ -5028,7 +5028,7 @@
       "look": null,
       "look_id": null,
       "lookml_link_id": "",
-      "merge_result_id": "PfufH0SrFffFWF7oJzNqaW",
+      "merge_result_id": "8ibO8x7eIyiGG8N8uBbWxc",
       "note_display": null,
       "note_state": null,
       "note_text": null,
@@ -5037,7 +5037,7 @@
       "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "93845",
+      "result_maker_id": "146902",
       "subtitle_text": null,
       "title": "Top Intents",
       "title_hidden": false,
@@ -5049,7 +5049,7 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "result_maker": {
-        "id": "93845",
+        "id": "146902",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${chatbot_intents_and_clicks.answer_count} - ${q1_chatbot_intents_and_clicks.answer_count}\",\"label\":\"Change\",\"value_format\":\"[\\u003c0]-0;[=0]0;[\\u003e0]+0\",\"value_format_name\":\"__custom\",\"_kind_hint\":\"measure\",\"table_calculation\":\"change\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"abs(${chatbot_intents_and_clicks.answer_count} - ${q1_chatbot_intents_and_clicks.answer_count})\",\"label\":\"Absolute Change\",\"value_format\":null,\"value_format_name\":\"\",\"_kind_hint\":\"measure\",\"table_calculation\":\"absolute_change\",\"_type_hint\":\"number\"}]",
         "filterables": [
           {
@@ -5142,7 +5142,7 @@
         "sorts": [
           "chatbot_intents_and_clicks.answer_count desc"
         ],
-        "merge_result_id": "PfufH0SrFffFWF7oJzNqaW",
+        "merge_result_id": "8ibO8x7eIyiGG8N8uBbWxc",
         "total": false,
         "query_id": null,
         "sql_query_id": "",
@@ -5655,7 +5655,7 @@
         "pivots": [
 
         ],
-        "result_maker_id": "93845",
+        "result_maker_id": "146902",
         "sorts": [
           "chatbot_intents_and_clicks.answer_count desc"
         ],
@@ -6147,15 +6147,15 @@
 
           ]
         },
-        "id": "PfufH0SrFffFWF7oJzNqaW",
+        "id": "8ibO8x7eIyiGG8N8uBbWxc",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${chatbot_intents_and_clicks.answer_count} - ${q1_chatbot_intents_and_clicks.answer_count}\",\"label\":\"Change\",\"value_format\":\"[\\u003c0]-0;[=0]0;[\\u003e0]+0\",\"value_format_name\":\"__custom\",\"_kind_hint\":\"measure\",\"table_calculation\":\"change\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"abs(${chatbot_intents_and_clicks.answer_count} - ${q1_chatbot_intents_and_clicks.answer_count})\",\"label\":\"Absolute Change\",\"value_format\":null,\"value_format_name\":\"\",\"_kind_hint\":\"measure\",\"table_calculation\":\"absolute_change\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
             "name": "Chatbot Intents and Clicks",
-            "query_id": "1165113",
+            "query_id": "2456723",
             "merge_fields": null,
             "query": {
-              "id": "1165113",
+              "id": "2456723",
               "view": "chatbot_intents_and_clicks",
               "fields": [
                 "chatbot_intents_and_clicks.intent",
@@ -6167,7 +6167,8 @@
               "fill_fields": null,
               "filters": {
                 "chatbot_intents_and_clicks.action": "\"get_answer\"",
-                "chatbot_intents_and_clicks.event_date": "7 days ago for 7 days"
+                "chatbot_intents_and_clicks.event_date": "7 days ago for 7 days",
+                "chatbot_intents_and_clicks.intent": "-WELCOME%,-Offer%"
               },
               "filter_expression": null,
               "sorts": [
@@ -6246,8 +6247,7 @@
                       {
                       }
                     ],
-                    "id": 0,
-                    "error": false
+                    "id": 6
                   }
                 ],
                 "chatbot_intents_and_clicks.event_date": [
@@ -6261,17 +6261,29 @@
                       {
                       }
                     ],
-                    "id": 11,
-                    "error": false
+                    "id": 7
+                  }
+                ],
+                "chatbot_intents_and_clicks.intent": [
+                  {
+                    "type": "!starts",
+                    "values": [
+                      {
+                        "constant": "WELCOME,Offer"
+                      },
+                      {
+                      }
+                    ],
+                    "id": 8
                   }
                 ]
               },
               "visible_ui_sections": null,
-              "slug": "gCtDDrD",
-              "client_id": "nvoFLiEnohVPvxlsl8w44j",
-              "share_url": "https://analytics.gov.bc.ca/x/nvoFLiEnohVPvxlsl8w44j",
-              "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.intent_category,chatbot_intents_and_clicks.sample_question,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.action]=%22get_answer%22&f[chatbot_intents_and_clicks.event_date]=7+days+ago+for+7+days&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.date_window%22%3A%22.%22%2C%22chatbot_intents_and_clicks.answer_count%22%3A%22Current+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_value_format%22%3A%7B%22chatbot_intents_and_clicks.average_intent_confidence%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%2C%22chatbot_intents_and_clicks.average_sentiment_score%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22get_answer%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-              "url": "/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.intent_category,chatbot_intents_and_clicks.sample_question,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.action]=%22get_answer%22&f[chatbot_intents_and_clicks.event_date]=7+days+ago+for+7+days&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.date_window%22%3A%22.%22%2C%22chatbot_intents_and_clicks.answer_count%22%3A%22Current+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_value_format%22%3A%7B%22chatbot_intents_and_clicks.average_intent_confidence%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%2C%22chatbot_intents_and_clicks.average_sentiment_score%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22get_answer%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+              "slug": "kNC8dj5",
+              "client_id": "oz25bHHHhIBeDmn0VTRwrF",
+              "share_url": "https://analytics.gov.bc.ca/x/oz25bHHHhIBeDmn0VTRwrF",
+              "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.intent_category,chatbot_intents_and_clicks.sample_question,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.action]=%22get_answer%22&f[chatbot_intents_and_clicks.event_date]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.intent]=-WELCOME%25%2C-Offer%25&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.date_window%22%3A%22.%22%2C%22chatbot_intents_and_clicks.answer_count%22%3A%22Current+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_value_format%22%3A%7B%22chatbot_intents_and_clicks.average_intent_confidence%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%2C%22chatbot_intents_and_clicks.average_sentiment_score%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22get_answer%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22chatbot_intents_and_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22chatbot_intents_and_clicks.intent%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22WELCOME%2COffer%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+              "url": "/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.intent_category,chatbot_intents_and_clicks.sample_question,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.action]=%22get_answer%22&f[chatbot_intents_and_clicks.event_date]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.intent]=-WELCOME%25%2C-Offer%25&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.date_window%22%3A%22.%22%2C%22chatbot_intents_and_clicks.answer_count%22%3A%22Current+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_value_format%22%3A%7B%22chatbot_intents_and_clicks.average_intent_confidence%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%2C%22chatbot_intents_and_clicks.average_sentiment_score%22%3A%7B%22name%22%3A%22decimal_3%22%2C%22decimals%22%3A%223%22%2C%22format_string%22%3A%22%23%2C%23%230.000%22%2C%22label%22%3A%22Decimals+%283%29%22%2C%22label_prefix%22%3A%22Decimals%22%7D%7D%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22get_answer%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22chatbot_intents_and_clicks.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22chatbot_intents_and_clicks.intent%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22WELCOME%2COffer%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
               "model": "snowplow_web_block",
               "dynamic_fields": "[]",
@@ -6306,7 +6318,7 @@
           },
           {
             "name": "Chatbot Intents and Clicks 2",
-            "query_id": "1178757",
+            "query_id": "2455676",
             "merge_fields": [
               {
                 "field_name": "chatbot_intents_and_clicks.intent",
@@ -6314,7 +6326,7 @@
               }
             ],
             "query": {
-              "id": "1178757",
+              "id": "2455676",
               "view": "chatbot_intents_and_clicks",
               "fields": [
                 "chatbot_intents_and_clicks.intent",
@@ -6326,14 +6338,15 @@
                 "chatbot_intents_and_clicks.flexible_filter_date_range": "7 days ago for 7 days",
                 "chatbot_intents_and_clicks.comparison_period": "Previous Period",
                 "chatbot_intents_and_clicks.date_window": "Last Period",
-                "chatbot_intents_and_clicks.is_in_current_period_or_last_period": "Yes"
+                "chatbot_intents_and_clicks.is_in_current_period_or_last_period": "Yes",
+                "chatbot_intents_and_clicks.intent": "-WELCOME%,-Offer%"
               },
               "filter_expression": null,
               "sorts": [
                 "chatbot_intents_and_clicks.answer_count desc"
               ],
               "limit": "500",
-              "column_limit": null,
+              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -6413,8 +6426,7 @@
                       {
                       }
                     ],
-                    "id": 0,
-                    "error": false
+                    "id": 11
                   }
                 ],
                 "chatbot_intents_and_clicks.comparison_period": [
@@ -6427,7 +6439,7 @@
                       {
                       }
                     ],
-                    "id": 1
+                    "id": 12
                   }
                 ],
                 "chatbot_intents_and_clicks.date_window": [
@@ -6440,8 +6452,7 @@
                       {
                       }
                     ],
-                    "id": 2,
-                    "error": false
+                    "id": 13
                   }
                 ],
                 "chatbot_intents_and_clicks.is_in_current_period_or_last_period": [
@@ -6454,16 +6465,29 @@
                       {
                       }
                     ],
-                    "id": 3
+                    "id": 14
+                  }
+                ],
+                "chatbot_intents_and_clicks.intent": [
+                  {
+                    "type": "!starts",
+                    "values": [
+                      {
+                        "constant": "WELCOME,Offer"
+                      },
+                      {
+                      }
+                    ],
+                    "id": 15
                   }
                 ]
               },
               "visible_ui_sections": null,
-              "slug": "h9YhxfH",
-              "client_id": "IZebG6Y3WqzRFJcdOZfULv",
-              "share_url": "https://analytics.gov.bc.ca/x/IZebG6Y3WqzRFJcdOZfULv",
-              "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.flexible_filter_date_range]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.comparison_period]=Previous+Period&f[chatbot_intents_and_clicks.date_window]=Last+Period&f[chatbot_intents_and_clicks.is_in_current_period_or_last_period]=Yes&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%22Last+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.comparison_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Previous+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22chatbot_intents_and_clicks.date_window%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Last+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D&origin=share-expanded",
-              "url": "/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.flexible_filter_date_range]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.comparison_period]=Previous+Period&f[chatbot_intents_and_clicks.date_window]=Last+Period&f[chatbot_intents_and_clicks.is_in_current_period_or_last_period]=Yes&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%22Last+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.comparison_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Previous+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22chatbot_intents_and_clicks.date_window%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Last+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22chatbot_intents_and_clicks.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%7D%5D%7D",
+              "slug": "pZfzXjd",
+              "client_id": "EsiQrAI70uLgO8OimpmWPs",
+              "share_url": "https://analytics.gov.bc.ca/x/EsiQrAI70uLgO8OimpmWPs",
+              "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.flexible_filter_date_range]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.comparison_period]=Previous+Period&f[chatbot_intents_and_clicks.date_window]=Last+Period&f[chatbot_intents_and_clicks.is_in_current_period_or_last_period]=Yes&f[chatbot_intents_and_clicks.intent]=-WELCOME%25%2C-Offer%25&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%22Last+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%7D%5D%2C%22chatbot_intents_and_clicks.comparison_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Previous+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22chatbot_intents_and_clicks.date_window%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Last+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22chatbot_intents_and_clicks.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22chatbot_intents_and_clicks.intent%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22WELCOME%2COffer%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D&origin=share-expanded",
+              "url": "/explore/snowplow_web_block/chatbot_intents_and_clicks?fields=chatbot_intents_and_clicks.intent,chatbot_intents_and_clicks.answer_count&f[chatbot_intents_and_clicks.flexible_filter_date_range]=7+days+ago+for+7+days&f[chatbot_intents_and_clicks.comparison_period]=Previous+Period&f[chatbot_intents_and_clicks.date_window]=Last+Period&f[chatbot_intents_and_clicks.is_in_current_period_or_last_period]=Yes&f[chatbot_intents_and_clicks.intent]=-WELCOME%25%2C-Offer%25&sorts=chatbot_intents_and_clicks.answer_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%22Last+Period+Answer+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22chatbot_intents_and_clicks.answer_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22chatbot_intents_and_clicks.flexible_filter_date_range%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%7D%5D%2C%22chatbot_intents_and_clicks.comparison_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Previous+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%7D%5D%2C%22chatbot_intents_and_clicks.date_window%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Last+Period%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%7D%5D%2C%22chatbot_intents_and_clicks.is_in_current_period_or_last_period%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22chatbot_intents_and_clicks.intent%22%3A%5B%7B%22type%22%3A%22%21starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22WELCOME%2COffer%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D",
               "has_table_calculations": false,
               "model": "snowplow_web_block",
               "dynamic_fields": null,
@@ -11859,7 +11883,7 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2025-05-07 20:27:40 UTC",
+  "last_accessed_at": "2025-05-08 22:46:51 UTC",
   "updated_at": "2025-03-06 18:59:58 UTC",
   "last_updater_id": "2128",
   "last_updater_name": "Ozdemir Ozcelik",
@@ -11872,7 +11896,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 40,
+  "view_count": 44,
   "url": "/dashboards/472",
   "folder": {
     "name": "Web Analytics Dashboards",
