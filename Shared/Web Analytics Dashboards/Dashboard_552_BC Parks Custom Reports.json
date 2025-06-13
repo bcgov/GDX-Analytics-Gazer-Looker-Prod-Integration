@@ -1,0 +1,2475 @@
+{
+  "content_metadata_id": "3950",
+  "description": "",
+  "hidden": false,
+  "query_timezone": null,
+  "readonly": false,
+  "refresh_interval": null,
+  "refresh_interval_to_i": null,
+  "title": "BC Parks Custom Reports",
+  "user_id": "13",
+  "slug": "VbAXik8qWTJGneJs2H7Eql",
+  "preferred_viewer": "dashboards-next",
+  "alert_sync_with_dashboard_filter_enabled": false,
+  "background_color": null,
+  "created_at": "2025-06-12 06:24:15 UTC",
+  "crossfilter_enabled": false,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "552",
+      "edit_uri": null,
+      "id": "5318",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "2494618",
+        "view": "bcparks_action",
+        "fields": [
+          "bcparks_action.label",
+          "bcparks_action.accordion_open_count",
+          "bcparks_action.accordion_close_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "bcparks_action.event_date": "1 day ago for 1 day",
+          "bcparks_action.action": "\"accordion_close\",\"accordion_open\""
+        },
+        "filter_expression": null,
+        "sorts": [
+          "bcparks_action.accordion_open_count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        },
+        "filter_config": {
+          "bcparks_action.event_date": [
+            {
+              "type": "advanced",
+              "values": [
+                {
+                  "constant": "1 day ago for 1 day"
+                },
+                {
+                }
+              ],
+              "id": 1
+            }
+          ],
+          "bcparks_action.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "accordion_close,accordion_open"
+                },
+                {
+                }
+              ],
+              "id": 2
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "D4rvvJY",
+        "client_id": "mRMIRLbtWcImlLojZJIEKq",
+        "share_url": "https://analytics.gov.bc.ca/x/mRMIRLbtWcImlLojZJIEKq",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.accordion_open_count,bcparks_action.accordion_close_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22accordion_close%22%2C%22accordion_open%22&sorts=bcparks_action.accordion_open_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22accordion_close%2Caccordion_open%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.accordion_open_count,bcparks_action.accordion_close_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22accordion_close%22%2C%22accordion_open%22&sorts=bcparks_action.accordion_open_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22accordion_close%2Caccordion_open%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "2494618",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "148019",
+      "subtitle_text": null,
+      "title": "Top Accordions",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "148019",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "bcparks_action",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "bcparks_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "bcparks_action.area"
+              },
+              {
+                "dashboard_filter_name": "Park Name",
+                "field": "bcparks_action.park_name"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "bcparks_action.accordion_open_count desc"
+        ],
+        "merge_result_id": null,
+        "total": false,
+        "query_id": "2494618",
+        "sql_query_id": "",
+        "query": {
+          "id": "2494618",
+          "view": "bcparks_action",
+          "fields": [
+            "bcparks_action.label",
+            "bcparks_action.accordion_open_count",
+            "bcparks_action.accordion_close_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "bcparks_action.event_date": "1 day ago for 1 day",
+            "bcparks_action.action": "\"accordion_close\",\"accordion_open\""
+          },
+          "filter_expression": null,
+          "sorts": [
+            "bcparks_action.accordion_open_count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "gray",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_cell_visualizations": {
+              "bcparks_action.accordion_open_count": {
+                "is_active": true
+              },
+              "bcparks_action.accordion_close_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "hidden_pivots": {
+            },
+            "type": "looker_grid",
+            "truncate_column_names": false,
+            "defaults_version": 1,
+            "series_types": {
+            }
+          },
+          "filter_config": {
+            "bcparks_action.event_date": [
+              {
+                "type": "advanced",
+                "values": [
+                  {
+                    "constant": "1 day ago for 1 day"
+                  },
+                  {
+                  }
+                ],
+                "id": 1
+              }
+            ],
+            "bcparks_action.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "accordion_close,accordion_open"
+                  },
+                  {
+                  }
+                ],
+                "id": 2
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "D4rvvJY",
+          "client_id": "mRMIRLbtWcImlLojZJIEKq",
+          "share_url": "https://analytics.gov.bc.ca/x/mRMIRLbtWcImlLojZJIEKq",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.accordion_open_count,bcparks_action.accordion_close_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22accordion_close%22%2C%22accordion_open%22&sorts=bcparks_action.accordion_open_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22accordion_close%2Caccordion_open%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.accordion_open_count,bcparks_action.accordion_close_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22accordion_close%22%2C%22accordion_open%22&sorts=bcparks_action.accordion_open_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22accordion_close%2Caccordion_open%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "552",
+      "edit_uri": null,
+      "id": "5319",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "2494810",
+        "view": "bcparks_action",
+        "fields": [
+          "bcparks_action.row_count",
+          "bcparks_action.session_count",
+          "bcparks_action.area"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "bcparks_action.event_date": "1 day ago for 1 day",
+          "bcparks_action.action": "search,\"update_search\"",
+          "bcparks_action.area": "-EMPTY"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "bcparks_action.row_count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "bcparks_action.row_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.row_count": {
+              "is_active": true
+            },
+            "bcparks_action.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        },
+        "filter_config": {
+          "bcparks_action.event_date": [
+            {
+              "type": "advanced",
+              "values": [
+                {
+                  "constant": "1 day ago for 1 day"
+                },
+                {
+                }
+              ],
+              "id": 17
+            }
+          ],
+          "bcparks_action.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "search,update_search"
+                },
+                {
+                }
+              ],
+              "id": 18
+            }
+          ],
+          "bcparks_action.area": [
+            {
+              "type": "!empty",
+              "values": [
+                {
+                },
+                {
+                }
+              ],
+              "id": 19
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "NPs3F5D",
+        "client_id": "e2SktrOtwXuhLtrAQy9PKz",
+        "share_url": "https://analytics.gov.bc.ca/x/e2SktrOtwXuhLtrAQy9PKz",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.area&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&f[bcparks_action.area]=-EMPTY&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22bcparks_action.area%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.area&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&f[bcparks_action.area]=-EMPTY&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22bcparks_action.area%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "2494810",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "148029",
+      "subtitle_text": null,
+      "title": "Top Areas",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "148029",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "bcparks_action",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "bcparks_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "Park Name",
+                "field": "bcparks_action.park_name"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "bcparks_action.row_count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "2494810",
+        "sql_query_id": "",
+        "query": {
+          "id": "2494810",
+          "view": "bcparks_action",
+          "fields": [
+            "bcparks_action.row_count",
+            "bcparks_action.session_count",
+            "bcparks_action.area"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "bcparks_action.event_date": "1 day ago for 1 day",
+            "bcparks_action.action": "search,\"update_search\"",
+            "bcparks_action.area": "-EMPTY"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "bcparks_action.row_count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "gray",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "bcparks_action.row_count": "Search Count"
+            },
+            "series_cell_visualizations": {
+              "bcparks_action.accordion_open_count": {
+                "is_active": true
+              },
+              "bcparks_action.accordion_close_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              },
+              "bcparks_action.row_count": {
+                "is_active": true
+              },
+              "bcparks_action.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "hidden_pivots": {
+            },
+            "type": "looker_grid",
+            "truncate_column_names": false,
+            "defaults_version": 1,
+            "series_types": {
+            }
+          },
+          "filter_config": {
+            "bcparks_action.event_date": [
+              {
+                "type": "advanced",
+                "values": [
+                  {
+                    "constant": "1 day ago for 1 day"
+                  },
+                  {
+                  }
+                ],
+                "id": 17
+              }
+            ],
+            "bcparks_action.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "search,update_search"
+                  },
+                  {
+                  }
+                ],
+                "id": 18
+              }
+            ],
+            "bcparks_action.area": [
+              {
+                "type": "!empty",
+                "values": [
+                  {
+                  },
+                  {
+                  }
+                ],
+                "id": 19
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "NPs3F5D",
+          "client_id": "e2SktrOtwXuhLtrAQy9PKz",
+          "share_url": "https://analytics.gov.bc.ca/x/e2SktrOtwXuhLtrAQy9PKz",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.area&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&f[bcparks_action.area]=-EMPTY&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22bcparks_action.area%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.area&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&f[bcparks_action.area]=-EMPTY&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22bcparks_action.area%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "bcparks_action.row_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.row_count": {
+              "is_active": true
+            },
+            "bcparks_action.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "552",
+      "edit_uri": null,
+      "id": "5320",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "2494648",
+        "view": "bcparks_action",
+        "fields": [
+          "bcparks_action.row_count",
+          "bcparks_action.session_count",
+          "bcparks_action.park_name"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "bcparks_action.event_date": "1 day ago for 1 day",
+          "bcparks_action.action": "search,\"update_search\""
+        },
+        "filter_expression": null,
+        "sorts": [
+          "bcparks_action.row_count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": true,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "bcparks_action.row_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.row_count": {
+              "is_active": true
+            },
+            "bcparks_action.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        },
+        "filter_config": {
+          "bcparks_action.event_date": [
+            {
+              "type": "advanced",
+              "values": [
+                {
+                  "constant": "1 day ago for 1 day"
+                },
+                {
+                }
+              ],
+              "id": 6
+            }
+          ],
+          "bcparks_action.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "search,update_search"
+                },
+                {
+                }
+              ],
+              "id": 7
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "swQbyBv",
+        "client_id": "LyeCvB2prdNduJhMs3DMaT",
+        "share_url": "https://analytics.gov.bc.ca/x/LyeCvB2prdNduJhMs3DMaT",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.park_name&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.park_name&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "2494648",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "148022",
+      "subtitle_text": null,
+      "title": "Top Parks",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "148022",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "bcparks_action",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "bcparks_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "bcparks_action.area"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "bcparks_action.row_count desc"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "query_id": "2494648",
+        "sql_query_id": "",
+        "query": {
+          "id": "2494648",
+          "view": "bcparks_action",
+          "fields": [
+            "bcparks_action.row_count",
+            "bcparks_action.session_count",
+            "bcparks_action.park_name"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "bcparks_action.event_date": "1 day ago for 1 day",
+            "bcparks_action.action": "search,\"update_search\""
+          },
+          "filter_expression": null,
+          "sorts": [
+            "bcparks_action.row_count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": true,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "gray",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_labels": {
+              "bcparks_action.row_count": "Search Count"
+            },
+            "series_cell_visualizations": {
+              "bcparks_action.accordion_open_count": {
+                "is_active": true
+              },
+              "bcparks_action.accordion_close_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              },
+              "bcparks_action.row_count": {
+                "is_active": true
+              },
+              "bcparks_action.session_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "hidden_pivots": {
+            },
+            "type": "looker_grid",
+            "truncate_column_names": false,
+            "defaults_version": 1,
+            "series_types": {
+            }
+          },
+          "filter_config": {
+            "bcparks_action.event_date": [
+              {
+                "type": "advanced",
+                "values": [
+                  {
+                    "constant": "1 day ago for 1 day"
+                  },
+                  {
+                  }
+                ],
+                "id": 6
+              }
+            ],
+            "bcparks_action.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "search,update_search"
+                  },
+                  {
+                  }
+                ],
+                "id": 7
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "swQbyBv",
+          "client_id": "LyeCvB2prdNduJhMs3DMaT",
+          "share_url": "https://analytics.gov.bc.ca/x/LyeCvB2prdNduJhMs3DMaT",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.park_name&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.row_count,bcparks_action.session_count,bcparks_action.park_name&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&sorts=bcparks_action.row_count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.row_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.session_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%227e24814d-29dc-87b0-f33d-9371b159cc44%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_labels": {
+            "bcparks_action.row_count": "Search Count"
+          },
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.row_count": {
+              "is_active": true
+            },
+            "bcparks_action.session_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "7e24814d-29dc-87b0-f33d-9371b159cc44",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "552",
+      "edit_uri": null,
+      "id": "5321",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "2494705",
+        "view": "bcparks_action",
+        "fields": [
+          "bcparks_action.activities_count",
+          "bcparks_action.area_count",
+          "bcparks_action.camping_count",
+          "bcparks_action.facilities_count",
+          "bcparks_action.row_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "bcparks_action.event_date": "1 day ago for 1 day",
+          "bcparks_action.action": "search,\"update_search\""
+        },
+        "filter_expression": null,
+        "sorts": [
+
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": false,
+          "show_x_axis_ticks": false,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "x_axis_zoom": true,
+          "y_axis_zoom": true,
+          "series_types": {
+          },
+          "series_labels": {
+            "bcparks_action.row_count": "All Searches"
+          },
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_column",
+          "truncate_column_names": false,
+          "defaults_version": 1
+        },
+        "filter_config": {
+          "bcparks_action.event_date": [
+            {
+              "type": "advanced",
+              "values": [
+                {
+                  "constant": "1 day ago for 1 day"
+                },
+                {
+                }
+              ],
+              "id": 14
+            }
+          ],
+          "bcparks_action.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "search,update_search"
+                },
+                {
+                }
+              ],
+              "id": 15
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "Hw9vQ4c",
+        "client_id": "7MC9PpfDigdvGXH6xuG35L",
+        "share_url": "https://analytics.gov.bc.ca/x/7MC9PpfDigdvGXH6xuG35L",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.activities_count,bcparks_action.area_count,bcparks_action.camping_count,bcparks_action.facilities_count,bcparks_action.row_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_zoom%22%3Atrue%2C%22y_axis_zoom%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22All+Searches%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_column%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.activities_count,bcparks_action.area_count,bcparks_action.camping_count,bcparks_action.facilities_count,bcparks_action.row_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_zoom%22%3Atrue%2C%22y_axis_zoom%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22All+Searches%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_column%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "2494705",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "148023",
+      "subtitle_text": null,
+      "title": "Top Filter Categories",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "148023",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "bcparks_action",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "bcparks_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "bcparks_action.area"
+              },
+              {
+                "dashboard_filter_name": "Park Name",
+                "field": "bcparks_action.park_name"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+
+        ],
+        "merge_result_id": null,
+        "total": false,
+        "query_id": "2494705",
+        "sql_query_id": "",
+        "query": {
+          "id": "2494705",
+          "view": "bcparks_action",
+          "fields": [
+            "bcparks_action.activities_count",
+            "bcparks_action.area_count",
+            "bcparks_action.camping_count",
+            "bcparks_action.facilities_count",
+            "bcparks_action.row_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "bcparks_action.event_date": "1 day ago for 1 day",
+            "bcparks_action.action": "search,\"update_search\""
+          },
+          "filter_expression": null,
+          "sorts": [
+
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_view_names": false,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": false,
+            "show_x_axis_ticks": false,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "limit_displayed_rows": false,
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": false,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "x_axis_zoom": true,
+            "y_axis_zoom": true,
+            "series_types": {
+            },
+            "series_labels": {
+              "bcparks_action.row_count": "All Searches"
+            },
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "gray",
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_cell_visualizations": {
+              "bcparks_action.accordion_open_count": {
+                "is_active": true
+              },
+              "bcparks_action.accordion_close_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              }
+            },
+            "hidden_pivots": {
+            },
+            "type": "looker_column",
+            "truncate_column_names": false,
+            "defaults_version": 1
+          },
+          "filter_config": {
+            "bcparks_action.event_date": [
+              {
+                "type": "advanced",
+                "values": [
+                  {
+                    "constant": "1 day ago for 1 day"
+                  },
+                  {
+                  }
+                ],
+                "id": 14
+              }
+            ],
+            "bcparks_action.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "search,update_search"
+                  },
+                  {
+                  }
+                ],
+                "id": 15
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "Hw9vQ4c",
+          "client_id": "7MC9PpfDigdvGXH6xuG35L",
+          "share_url": "https://analytics.gov.bc.ca/x/7MC9PpfDigdvGXH6xuG35L",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.activities_count,bcparks_action.area_count,bcparks_action.camping_count,bcparks_action.facilities_count,bcparks_action.row_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_zoom%22%3Atrue%2C%22y_axis_zoom%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22All+Searches%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_column%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.activities_count,bcparks_action.area_count,bcparks_action.camping_count,bcparks_action.facilities_count,bcparks_action.row_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=search%2C%22update_search%22&limit=500&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_zoom%22%3Atrue%2C%22y_axis_zoom%22%3Atrue%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22bcparks_action.row_count%22%3A%22All+Searches%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_column%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22search%2Cupdate_search%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": false,
+          "show_x_axis_ticks": false,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "limit_displayed_rows": false,
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": false,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "x_axis_zoom": true,
+          "y_axis_zoom": true,
+          "series_types": {
+          },
+          "series_labels": {
+            "bcparks_action.row_count": "All Searches"
+          },
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_column",
+          "truncate_column_names": false,
+          "defaults_version": 1
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    },
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "552",
+      "edit_uri": null,
+      "id": "5322",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": null,
+      "note_state": null,
+      "note_text": null,
+      "note_text_as_html": null,
+      "query": {
+        "id": "2494678",
+        "view": "bcparks_action",
+        "fields": [
+          "bcparks_action.label",
+          "bcparks_action.link_click_count"
+        ],
+        "pivots": null,
+        "fill_fields": null,
+        "filters": {
+          "bcparks_action.event_date": "1 day ago for 1 day",
+          "bcparks_action.action": "\"link_click\""
+        },
+        "filter_expression": null,
+        "sorts": [
+          "bcparks_action.link_click_count desc"
+        ],
+        "limit": "500",
+        "column_limit": "50",
+        "total": null,
+        "row_total": null,
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.link_click_count": {
+              "is_active": true
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        },
+        "filter_config": {
+          "bcparks_action.event_date": [
+            {
+              "type": "advanced",
+              "values": [
+                {
+                  "constant": "1 day ago for 1 day"
+                },
+                {
+                }
+              ],
+              "id": 4
+            }
+          ],
+          "bcparks_action.action": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "link_click"
+                },
+                {
+                }
+              ],
+              "id": 5
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "SxWmwGm",
+        "client_id": "gktSkdXsjpuJ8VezNdiH5K",
+        "share_url": "https://analytics.gov.bc.ca/x/gktSkdXsjpuJ8VezNdiH5K",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.link_click_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22link_click%22&sorts=bcparks_action.link_click_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.link_click_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22link_click%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.link_click_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22link_click%22&sorts=bcparks_action.link_click_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.link_click_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22link_click%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D",
+        "has_table_calculations": false,
+        "model": "snowplow_web_block",
+        "dynamic_fields": null,
+        "query_timezone": null,
+        "quick_calcs": null,
+        "analysis_config": null,
+        "can": {
+          "run": true,
+          "see_results": true,
+          "explore": true,
+          "create": true,
+          "show": true,
+          "cost_estimate": true,
+          "index": true,
+          "see_lookml": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_sql": true,
+          "save": true,
+          "generate_drill_links": true,
+          "download": true,
+          "download_unlimited": true,
+          "use_custom_fields": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "schedule": true,
+          "render": true
+        }
+      },
+      "query_id": "2494678",
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "148024",
+      "subtitle_text": null,
+      "title": "Top Link Clicks",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "result_maker": {
+        "id": "148024",
+        "dynamic_fields": null,
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "bcparks_action",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "bcparks_action.event_date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "bcparks_action.area"
+              },
+              {
+                "dashboard_filter_name": "Park Name",
+                "field": "bcparks_action.park_name"
+              }
+            ]
+          }
+        ],
+        "sorts": [
+          "bcparks_action.link_click_count desc"
+        ],
+        "merge_result_id": null,
+        "total": false,
+        "query_id": "2494678",
+        "sql_query_id": "",
+        "query": {
+          "id": "2494678",
+          "view": "bcparks_action",
+          "fields": [
+            "bcparks_action.label",
+            "bcparks_action.link_click_count"
+          ],
+          "pivots": null,
+          "fill_fields": null,
+          "filters": {
+            "bcparks_action.event_date": "1 day ago for 1 day",
+            "bcparks_action.action": "\"link_click\""
+          },
+          "filter_expression": null,
+          "sorts": [
+            "bcparks_action.link_click_count desc"
+          ],
+          "limit": "500",
+          "column_limit": "50",
+          "total": null,
+          "row_total": null,
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "gray",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "left",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "minimum_column_width": 75,
+            "series_cell_visualizations": {
+              "bcparks_action.accordion_open_count": {
+                "is_active": true
+              },
+              "bcparks_action.accordion_close_count": {
+                "is_active": true,
+                "palette": {
+                  "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                  "collection_id": "legacy",
+                  "custom_colors": [
+                    "#ffffff",
+                    "#4F89BC"
+                  ]
+                }
+              },
+              "bcparks_action.link_click_count": {
+                "is_active": true
+              }
+            },
+            "hidden_pivots": {
+            },
+            "type": "looker_grid",
+            "truncate_column_names": false,
+            "defaults_version": 1,
+            "series_types": {
+            }
+          },
+          "filter_config": {
+            "bcparks_action.event_date": [
+              {
+                "type": "advanced",
+                "values": [
+                  {
+                    "constant": "1 day ago for 1 day"
+                  },
+                  {
+                  }
+                ],
+                "id": 4
+              }
+            ],
+            "bcparks_action.action": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "link_click"
+                  },
+                  {
+                  }
+                ],
+                "id": 5
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "SxWmwGm",
+          "client_id": "gktSkdXsjpuJ8VezNdiH5K",
+          "share_url": "https://analytics.gov.bc.ca/x/gktSkdXsjpuJ8VezNdiH5K",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.link_click_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22link_click%22&sorts=bcparks_action.link_click_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.link_click_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22link_click%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/bcparks_action?fields=bcparks_action.label,bcparks_action.link_click_count&f[bcparks_action.event_date]=1+day+ago+for+1+day&f[bcparks_action.action]=%22link_click%22&sorts=bcparks_action.link_click_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22gray%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_cell_visualizations%22%3A%7B%22bcparks_action.accordion_open_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22bcparks_action.accordion_close_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2223fc0975-ff64-ad96-1feb-398b52c176a7%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%234F89BC%22%5D%7D%7D%2C%22bcparks_action.link_click_count%22%3A%7B%22is_active%22%3Atrue%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22truncate_column_names%22%3Afalse%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%7D&filter_config=%7B%22bcparks_action.event_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221+day+ago+for+1+day%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%7D%5D%2C%22bcparks_action.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22link_click%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%7D",
+          "has_table_calculations": false,
+          "model": "snowplow_web_block",
+          "dynamic_fields": null,
+          "query_timezone": null,
+          "quick_calcs": null,
+          "analysis_config": null,
+          "can": {
+            "run": true,
+            "see_results": true,
+            "explore": true,
+            "create": true,
+            "show": true,
+            "cost_estimate": true,
+            "index": true,
+            "see_lookml": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_sql": true,
+            "save": true,
+            "generate_drill_links": true,
+            "download": true,
+            "download_unlimited": true,
+            "use_custom_fields": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "schedule": true,
+            "render": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "gray",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "left",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "minimum_column_width": 75,
+          "series_cell_visualizations": {
+            "bcparks_action.accordion_open_count": {
+              "is_active": true
+            },
+            "bcparks_action.accordion_close_count": {
+              "is_active": true,
+              "palette": {
+                "palette_id": "23fc0975-ff64-ad96-1feb-398b52c176a7",
+                "collection_id": "legacy",
+                "custom_colors": [
+                  "#ffffff",
+                  "#4F89BC"
+                ],
+                "collection_default": true,
+                "collection_label": "Legacy"
+              }
+            },
+            "bcparks_action.link_click_count": {
+              "is_active": true
+            }
+          },
+          "hidden_pivots": {
+          },
+          "type": "looker_grid",
+          "truncate_column_names": false,
+          "defaults_version": 1,
+          "series_types": {
+          }
+        }
+      },
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "see_aggregate_table_lookml": true,
+        "index": true,
+        "show": true,
+        "explore": true,
+        "run": false,
+        "show_errors": true,
+        "find_and_replace": true
+      },
+      "alerts": [
+
+      ]
+    }
+  ],
+  "dashboard_filters": [
+    {
+      "id": "2494",
+      "dashboard_id": "552",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "bcparks_action",
+      "dimension": "bcparks_action.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": "2497",
+      "dashboard_id": "552",
+      "name": "Area",
+      "title": "Area",
+      "type": "field_filter",
+      "explore": "bcparks_action",
+      "dimension": "bcparks_action.area",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "tag_list",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    },
+    {
+      "id": "2496",
+      "dashboard_id": "552",
+      "name": "Park Name",
+      "title": "Park Name",
+      "type": "field_filter",
+      "explore": "bcparks_action",
+      "dimension": "bcparks_action.park_name",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "tag_list",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": "552",
+      "dashboard_id": "552",
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "BC Parks Custom Reports",
+      "dashboard_layout_components": [
+        {
+          "id": "5318",
+          "dashboard_layout_id": "552",
+          "dashboard_element_id": "5318",
+          "row": 14,
+          "column": 0,
+          "width": 12,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Top Accordions",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "5319",
+          "dashboard_layout_id": "552",
+          "dashboard_element_id": "5319",
+          "row": 0,
+          "column": 0,
+          "width": 12,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Top Areas",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "5320",
+          "dashboard_layout_id": "552",
+          "dashboard_element_id": "5320",
+          "row": 0,
+          "column": 12,
+          "width": 12,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Top Parks",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "5321",
+          "dashboard_layout_id": "552",
+          "dashboard_element_id": "5322",
+          "row": 7,
+          "column": 12,
+          "width": 12,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Top Link Clicks",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        },
+        {
+          "id": "5322",
+          "dashboard_layout_id": "552",
+          "dashboard_element_id": "5321",
+          "row": 7,
+          "column": 0,
+          "width": 12,
+          "height": 7,
+          "deleted": false,
+          "element_title": "Top Filter Categories",
+          "element_title_hidden": false,
+          "vis_type": "looker_column",
+          "can": {
+            "index": true,
+            "show": true,
+            "create": true,
+            "update": true,
+            "destroy": true
+          }
+        }
+      ],
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2025-06-12 16:21:07 UTC",
+  "updated_at": "2025-06-12 16:21:42 UTC",
+  "last_updater_id": "13",
+  "last_updater_name": "Dan Pollock",
+  "user_name": "Dan Pollock",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 3,
+  "url": "/dashboards/552",
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": "1",
+    "id": "37",
+    "content_metadata_id": "105",
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "child_count": 0,
+    "can": {
+      "index": true,
+      "show": true,
+      "create": true,
+      "see_admin_spaces": true,
+      "save_shared_space_as_embed_user": true,
+      "destroy": true,
+      "update": true,
+      "move_content": true,
+      "edit_content": true
+    }
+  },
+  "folder_id": "37",
+  "content_favorite_id": null,
+  "id": "552",
+  "model": null,
+  "deleted": false,
+  "last_viewed_at": null,
+  "appearance": null,
+  "can": {
+    "download": true,
+    "see_aggregate_table_lookml": true,
+    "index": true,
+    "show": true,
+    "copy": true,
+    "run": true,
+    "create": true,
+    "move": true,
+    "update": true,
+    "destroy": true,
+    "recover": true,
+    "see_lookml": true,
+    "schedule": true,
+    "render": true
+  }
+}
