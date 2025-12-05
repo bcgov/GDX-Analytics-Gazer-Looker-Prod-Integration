@@ -189,6 +189,10 @@
               {
                 "dashboard_filter_name": "Message",
                 "field": "bchep_action_debug.message"
+              },
+              {
+                "dashboard_filter_name": "City",
+                "field": "bchep_action_debug.geo_city"
               }
             ]
           }
@@ -1261,6 +1265,40 @@
         "show_errors": true,
         "find_and_replace": true
       }
+    },
+    {
+      "id": "2549",
+      "dashboard_id": "506",
+      "name": "City",
+      "title": "City",
+      "type": "field_filter",
+      "explore": "bchep_action_debug",
+      "dimension": "bchep_action_debug.geo_city",
+      "row": 10,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "update": true,
+        "destroy": true,
+        "index": true,
+        "show": true,
+        "show_errors": true,
+        "find_and_replace": true
+      }
     }
   ],
   "dashboard_layouts": [
@@ -1311,8 +1349,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2025-09-24 22:22:40 UTC",
-  "updated_at": "2024-09-27 22:16:22 UTC",
+  "last_accessed_at": "2025-12-05 00:11:38 UTC",
+  "updated_at": "2025-12-05 00:10:58 UTC",
   "last_updater_id": "13",
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
@@ -1324,7 +1362,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 14,
+  "view_count": 16,
   "url": "/dashboards/506",
   "folder": {
     "name": "Web Analytics Dashboards",
