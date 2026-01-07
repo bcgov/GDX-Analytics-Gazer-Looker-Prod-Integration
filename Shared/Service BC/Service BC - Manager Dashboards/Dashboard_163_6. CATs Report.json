@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1679",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31158",
@@ -44,9 +44,52 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31158",
         "dynamic_fields": "[{\"table_calculation\":\"meaningful_pages\",\"label\":\"Meaningful pages\",\"expression\":\"${cats.count} -\\nif(is_null(${q1_cats.count})=yes, 0, ${q1_cats.count}) -\\nif(is_null(${q2_cats.count})=yes, 0, ${q2_cats.count})-\\nif(is_null(${q3_cats.count})=yes, 0, ${q3_cats.count}) -\\nif(is_null(${q4_cats.count})=yes, 0, ${q4_cats.count})\\n  \\n\\n\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent\",\"label\":\"Percent\",\"expression\":\"${meaningful_pages}/sum(${meaningful_pages})\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+          "meaningful_pages desc"
+        ],
+        "merge_result_id": "rrs8msPxefXQgu3Ks05L6o",
+        "total": true,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "series_labels": {
+            "cats.count": "Total Pages",
+            "q1_cats.count": "TOU Pages",
+            "q2_cats.count": "Service A-Z and Search pages",
+            "q3_cats.count": "Error pages",
+            "total": "Total Webpages",
+            "q4_cats.count": "Meaningless pages"
+          },
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "subtotals_at_bottom": false,
+          "type": "table",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "q1_cats.count",
+            "q2_cats.count",
+            "q3_cats.count",
+            "q4_cats.count",
+            "cats.count"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -144,60 +187,20 @@
             ]
           }
         ],
-        "sorts": [
-          "meaningful_pages desc"
-        ],
-        "merge_result_id": "rrs8msPxefXQgu3Ks05L6o",
-        "total": true,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "truncate_column_names": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "series_labels": {
-            "cats.count": "Total Pages",
-            "q1_cats.count": "TOU Pages",
-            "q2_cats.count": "Service A-Z and Search pages",
-            "q3_cats.count": "Error pages",
-            "total": "Total Webpages",
-            "q4_cats.count": "Meaningless pages"
-          },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "subtotals_at_bottom": false,
-          "type": "table",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "q1_cats.count",
-            "q2_cats.count",
-            "q3_cats.count",
-            "q4_cats.count",
-            "cats.count"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -251,12 +254,12 @@
         "source_queries": [
           {
             "name": "Cats",
-            "query_id": "194117",
             "merge_fields": [
 
             ],
+            "query_id": "28Nbt7s",
+            "query_slug": "28Nbt7s",
             "query": {
-              "id": "194117",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -271,8 +274,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "5000",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -391,7 +392,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&sorts=cats.count+desc&limit=5000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&sorts=cats.count+desc&limit=5000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "28Nbt7s",
               "model": "cfms_poc",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -399,40 +403,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 3",
-            "query_id": "436444",
             "merge_fields": [
               {
                 "field_name": "cats.page_owner",
                 "source_field_name": "cats.page_owner"
               }
             ],
+            "query_id": "5WbV7hX",
+            "query_slug": "5WbV7hX",
             "query": {
-              "id": "436444",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -448,8 +453,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -499,46 +502,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "5WbV7hX",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 4",
-            "query_id": "436445",
             "merge_fields": [
               {
                 "field_name": "cats.page_owner",
                 "source_field_name": "cats.page_owner"
               }
             ],
+            "query_id": "HbwbmCy",
+            "query_slug": "HbwbmCy",
             "query": {
-              "id": "436445",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -553,8 +560,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -589,46 +594,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "HbwbmCy",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 2",
-            "query_id": "436446",
             "merge_fields": [
               {
                 "field_name": "cats.page_owner",
                 "source_field_name": "cats.page_owner"
               }
             ],
+            "query_id": "ZwGPRbM",
+            "query_slug": "ZwGPRbM",
             "query": {
-              "id": "436446",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -644,8 +653,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -710,46 +717,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "ZwGPRbM",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 5",
-            "query_id": "436447",
             "merge_fields": [
               {
                 "field_name": "cats.page_owner",
                 "source_field_name": "cats.page_owner"
               }
             ],
+            "query_id": "xHFkXD5",
+            "query_slug": "xHFkXD5",
             "query": {
-              "id": "436447",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -765,8 +776,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -815,47 +824,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.page_owner&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "xHFkXD5",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -863,6 +877,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1681",
       "look": null,
@@ -874,7 +889,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31159",
@@ -888,9 +902,50 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31159",
         "dynamic_fields": "[{\"table_calculation\":\"meaningful_pages\",\"label\":\"Meaningful pages\",\"expression\":\"${cats.count}-\\nif(is_null(${q1_cats.count}),0,${q1_cats.count})-\\nif(is_null(${q2_cats.count}),0,${q2_cats.count})-\\nif(is_null(${q3_cats.count}),0,${q3_cats.count})-\\nif(is_null(${q4_cats.count}),0,${q4_cats.count})\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+          "meaningful_pages desc"
+        ],
+        "merge_result_id": "wCFmQqNBjI87SD7DREQ9AG",
+        "total": true,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "series_labels": {
+            "cats.count": "Total Pages",
+            "q1_cats.count": "Citizens used CATs",
+            "q2_cats.count": "Service A-Z and Search pages",
+            "q3_cats.count": "Error pages",
+            "total": "Total Webpages",
+            "q4_cats.count": "Meaningless pages"
+          },
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "subtotals_at_bottom": false,
+          "type": "table",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "q4_cats.count",
+            "q3_cats.count",
+            "q2_cats.count"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -988,58 +1043,20 @@
             ]
           }
         ],
-        "sorts": [
-          "meaningful_pages desc"
-        ],
-        "merge_result_id": "wCFmQqNBjI87SD7DREQ9AG",
-        "total": true,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "truncate_column_names": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "series_labels": {
-            "cats.count": "Total Pages",
-            "q1_cats.count": "Citizens used CATs",
-            "q2_cats.count": "Service A-Z and Search pages",
-            "q3_cats.count": "Error pages",
-            "total": "Total Webpages",
-            "q4_cats.count": "Meaningless pages"
-          },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "subtotals_at_bottom": false,
-          "type": "table",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "q4_cats.count",
-            "q3_cats.count",
-            "q2_cats.count"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1091,12 +1108,12 @@
         "source_queries": [
           {
             "name": "Cats",
-            "query_id": "176590",
             "merge_fields": [
 
             ],
+            "query_id": "8tp8N6n",
+            "query_slug": "8tp8N6n",
             "query": {
-              "id": "176590",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -1111,8 +1128,6 @@
               "sorts": [
 
               ],
-              "limit": "5000",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1231,7 +1246,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&limit=5000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&limit=5000&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "8tp8N6n",
               "model": "cfms_poc",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1239,40 +1257,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 3",
-            "query_id": "436434",
             "merge_fields": [
               {
                 "field_name": "cats.office_name",
                 "source_field_name": "cats.office_name"
               }
             ],
+            "query_id": "rN767zg",
+            "query_slug": "rN767zg",
             "query": {
-              "id": "436434",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -1288,8 +1307,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1339,46 +1356,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "rN767zg",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 4",
-            "query_id": "436435",
             "merge_fields": [
               {
                 "field_name": "cats.office_name",
                 "source_field_name": "cats.office_name"
               }
             ],
+            "query_id": "rNbgwBB",
+            "query_slug": "rNbgwBB",
             "query": {
-              "id": "436435",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -1393,8 +1414,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1429,46 +1448,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "rNbgwBB",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 2",
-            "query_id": "436436",
             "merge_fields": [
               {
                 "field_name": "cats.office_name",
                 "source_field_name": "cats.office_name"
               }
             ],
+            "query_id": "dnP2QGT",
+            "query_slug": "dnP2QGT",
             "query": {
-              "id": "436436",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -1484,8 +1507,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1550,46 +1571,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "dnP2QGT",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 5",
-            "query_id": "436437",
             "merge_fields": [
               {
                 "field_name": "cats.office_name",
                 "source_field_name": "cats.office_name"
               }
             ],
+            "query_id": "MgvVwqt",
+            "query_slug": "MgvVwqt",
             "query": {
-              "id": "436437",
               "view": "cats",
               "fields": [
                 "cats.count",
@@ -1605,8 +1630,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1655,47 +1678,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count,cats.office_name&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "MgvVwqt",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1703,6 +1731,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1682",
       "look": null,
@@ -1714,7 +1743,6 @@
       "note_text": "",
       "note_text_as_html": "",
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31160",
@@ -1728,9 +1756,53 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31160",
         "dynamic_fields": "[{\"table_calculation\":\"ministry_webpages\",\"label\":\"Ministry Webpages\",\"expression\":\"${cats.count}-${q1_cats.count}-${q2_cats.count}-${q3_cats.count}-${q4_cats.count}\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"of_useful_hits\",\"label\":\"% of useful hits\",\"expression\":\"ceiling(${cats.count}/${ministry_webpages})\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+          "ministry_webpages desc"
+        ],
+        "merge_result_id": "hXfH2AtamSbqUkvWndwXSJ",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "series_labels": {
+            "cats.count": "Total Pages",
+            "q1_cats.count": "TOU Pages",
+            "q2_cats.count": "Service A-Z and Search pages",
+            "q3_cats.count": "Error pages",
+            "total": "Total Webpages",
+            "q4_cats.count": "Meaningless pages"
+          },
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "subtotals_at_bottom": false,
+          "type": "single_value",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "q4_cats.count",
+            "cats.count",
+            "q1_cats.count",
+            "q2_cats.count",
+            "q3_cats.count",
+            "ministry_webpages"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -1828,61 +1900,20 @@
             ]
           }
         ],
-        "sorts": [
-          "ministry_webpages desc"
-        ],
-        "merge_result_id": "hXfH2AtamSbqUkvWndwXSJ",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "truncate_column_names": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "series_labels": {
-            "cats.count": "Total Pages",
-            "q1_cats.count": "TOU Pages",
-            "q2_cats.count": "Service A-Z and Search pages",
-            "q3_cats.count": "Error pages",
-            "total": "Total Webpages",
-            "q4_cats.count": "Meaningless pages"
-          },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "subtotals_at_bottom": false,
-          "type": "single_value",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "q4_cats.count",
-            "cats.count",
-            "q1_cats.count",
-            "q2_cats.count",
-            "q3_cats.count",
-            "ministry_webpages"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1937,12 +1968,12 @@
         "source_queries": [
           {
             "name": "Cats",
-            "query_id": "176843",
             "merge_fields": [
 
             ],
+            "query_id": "MTskrMG",
+            "query_slug": "MTskrMG",
             "query": {
-              "id": "176843",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -1957,8 +1988,6 @@
               "sorts": [
 
               ],
-              "limit": "5000",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2093,7 +2122,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A15%3A21.773Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A95%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A15%3A21.773Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A95%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "MTskrMG",
               "model": "cfms_poc",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2101,37 +2133,38 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 3",
-            "query_id": "436438",
             "merge_fields": [
 
             ],
+            "query_id": "4YwBTY2",
+            "query_slug": "4YwBTY2",
             "query": {
-              "id": "436438",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -2147,8 +2180,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2214,43 +2245,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A16%3A04.229Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A16%3A04.229Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "4YwBTY2",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 4",
-            "query_id": "436439",
             "merge_fields": [
 
             ],
+            "query_id": "PqmxghS",
+            "query_slug": "PqmxghS",
             "query": {
-              "id": "436439",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -2264,8 +2299,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2300,43 +2333,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "PqmxghS",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 2",
-            "query_id": "436440",
             "merge_fields": [
 
             ],
+            "query_id": "h89dxjm",
+            "query_slug": "h89dxjm",
             "query": {
-              "id": "436440",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -2352,8 +2389,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2434,43 +2469,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A17%3A41.823Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A17%3A41.823Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "h89dxjm",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 5",
-            "query_id": "436441",
             "merge_fields": [
 
             ],
+            "query_id": "SXHBTbc",
+            "query_slug": "SXHBTbc",
             "query": {
-              "id": "436441",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -2486,8 +2525,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2552,47 +2589,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A17%3A19.235Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.date]=after+2019%2F08%2F21&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-08-21T01%3A17%3A19.235Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "SXHBTbc",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -2600,6 +2642,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1683",
       "look": null,
@@ -2611,7 +2654,6 @@
       "note_text": "landed on one meaningful page",
       "note_text_as_html": "landed on one meaningful page",
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31157",
@@ -2625,9 +2667,53 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31157",
         "dynamic_fields": "[{\"table_calculation\":\"ministry_webpages\",\"label\":\"Ministry Webpages\",\"expression\":\"${cats.count}-${q1_cats.count}-${q2_cats.count}-${q3_cats.count}-${q4_cats.count}\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"of_people_ended_with_a_useful_page\",\"label\":\"% of people ended with a useful page\",\"expression\":\"(${ministry_webpages}/${q1_cats.count})\",\"value_format\":null,\"value_format_name\":\"percent_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+          "ministry_webpages desc"
+        ],
+        "merge_result_id": "diNXbuJIIG4El4aPoA6YUq",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "series_labels": {
+            "cats.count": "Total Pages",
+            "q1_cats.count": "TOU Pages",
+            "q2_cats.count": "Service A-Z and Search pages",
+            "q3_cats.count": "Error pages",
+            "total": "Total Webpages",
+            "q4_cats.count": "Meaningless pages"
+          },
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "subtotals_at_bottom": false,
+          "type": "single_value",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "q4_cats.count",
+            "cats.count",
+            "q1_cats.count",
+            "q2_cats.count",
+            "q3_cats.count",
+            "ministry_webpages"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -2725,61 +2811,20 @@
             ]
           }
         ],
-        "sorts": [
-          "ministry_webpages desc"
-        ],
-        "merge_result_id": "diNXbuJIIG4El4aPoA6YUq",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "truncate_column_names": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "series_labels": {
-            "cats.count": "Total Pages",
-            "q1_cats.count": "TOU Pages",
-            "q2_cats.count": "Service A-Z and Search pages",
-            "q3_cats.count": "Error pages",
-            "total": "Total Webpages",
-            "q4_cats.count": "Meaningless pages"
-          },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "subtotals_at_bottom": false,
-          "type": "single_value",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "q4_cats.count",
-            "cats.count",
-            "q1_cats.count",
-            "q2_cats.count",
-            "q3_cats.count",
-            "ministry_webpages"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -2834,12 +2879,12 @@
         "source_queries": [
           {
             "name": "Cats",
-            "query_id": "176579",
             "merge_fields": [
 
             ],
+            "query_id": "TzxY52v",
+            "query_slug": "TzxY52v",
             "query": {
-              "id": "176579",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -2853,8 +2898,6 @@
               "sorts": [
 
               ],
-              "limit": "5000",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2973,7 +3016,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "TzxY52v",
               "model": "cfms_poc",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2981,37 +3027,38 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 3",
-            "query_id": "436442",
             "merge_fields": [
 
             ],
+            "query_id": "j8bGXPf",
+            "query_slug": "j8bGXPf",
             "query": {
-              "id": "436442",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -3026,8 +3073,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -3077,43 +3122,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "j8bGXPf",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 4",
-            "query_id": "436439",
             "merge_fields": [
 
             ],
+            "query_id": "PqmxghS",
+            "query_slug": "PqmxghS",
             "query": {
-              "id": "436439",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -3127,8 +3176,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -3163,43 +3210,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "PqmxghS",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 2",
-            "query_id": "436443",
             "merge_fields": [
 
             ],
+            "query_id": "pr2vNTx",
+            "query_slug": "pr2vNTx",
             "query": {
-              "id": "436443",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -3214,8 +3265,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -3280,43 +3329,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "pr2vNTx",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 5",
-            "query_id": "436433",
             "merge_fields": [
 
             ],
+            "query_id": "NKDT6hf",
+            "query_slug": "NKDT6hf",
             "query": {
-              "id": "436433",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -3331,8 +3384,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -3381,47 +3432,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "NKDT6hf",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -3429,6 +3485,7 @@
       "body_text": "<font color=\"red\" size = \"4\">CATs Usage by Citizens</font>\n<p><font color=\"black\" >The KPI included are:\n<br><font color=\"black\" > - # of BC government pages viewed;\n<br><font color=\"black\" > - # of Pages related to a Ministry.\n</font></p>\n<br>\n<br><font color=\"red\" size = \"4\"># of CATs Visitors</font>\n<p><font color=\"black\" >\nThe Term of Use (TOU) page is the first page whenever citizens use CATs.  Therefore the # of TOU pages viewed is how many sessions that citizens used CATs terminal. It is reported as the approximation to the # of citizens, although  a citizen could conduct multiple sessions and click the TOU page multiple times.</font>\n<i><br><font color=\"blue\"  size = \"1.8\">* This TOU page data is available only  since Aug 22, 2019.</font></i>\n<br>\n<br><font color=\"red\" size = \"4\">CATs effectiveness</font>\n<p><font color=\"black\" >\n- The % of citizens landed on at least one meaningful page.\n<br>- In order to land on one meaningful page, how many pages do Citizens have to navigate.</font>\n<i><br><font color=\"blue\" size = \"1.9\" >* A meaningful page is when a page is owned by a ministry or the url is for a downloadable form or document.</font></i>\n</p>",
       "body_text_as_html": "<font color=\"red\" size=\"4\">CATs Usage by Citizens</font>\n<p><font color=\"black\">The KPI included are:\n<br><font color=\"black\"> - # of BC government pages viewed;\n<br><font color=\"black\"> - # of Pages related to a Ministry.\n</font>&lt;/p&gt;\n<br>\n<br><font color=\"red\" size=\"4\"># of CATs Visitors</font>\n</font></font></p><p><font color=\"black\">\nThe Term of Use (TOU) page is the first page whenever citizens use CATs.  Therefore the # of TOU pages viewed is how many sessions that citizens used CATs terminal. It is reported as the approximation to the # of citizens, although  a citizen could conduct multiple sessions and click the TOU page multiple times.</font>\n<i><br><font color=\"blue\" size=\"1.8\">* This TOU page data is available only  since Aug 22, 2019.</font></i>\n<br>\n<br><font color=\"red\" size=\"4\">CATs effectiveness</font>\n</p><p><font color=\"black\">\n- The % of citizens landed on at least one meaningful page.\n<br>- In order to land on one meaningful page, how many pages do Citizens have to navigate.</font>\n<i><br><font color=\"blue\" size=\"1.9\">* A meaningful page is when a page is owned by a ministry or the url is for a downloadable form or document.</font></i>\n</p>\n<p></p><p></p>\n",
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1685",
       "look": null,
@@ -3440,7 +3497,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -3454,18 +3510,21 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -3475,6 +3534,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1686",
       "look": null,
@@ -3486,7 +3546,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "436442",
         "view": "cats",
         "fields": [
           "cats.count"
@@ -3501,8 +3560,6 @@
         "sorts": [
 
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -3552,35 +3609,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "j8bGXPf",
         "model": "cfms_poc",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "436442",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31161",
@@ -3594,39 +3654,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "j8bGXPf",
       "result_maker": {
         "id": "31161",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "cfms_poc",
-            "view": "cats",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Reporting Period",
-                "field": "cats.date"
-              },
-              {
-                "dashboard_filter_name": "Area",
-                "field": "cats.area_number"
-              },
-              {
-                "dashboard_filter_name": "Office",
-                "field": "cats.office_name"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "436442",
         "sql_query_id": "",
         "query": {
-          "id": "436442",
           "view": "cats",
           "fields": [
             "cats.count"
@@ -3641,8 +3680,6 @@
           "sorts": [
 
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -3692,32 +3729,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "j8bGXPf",
           "model": "cfms_poc",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3728,19 +3769,42 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "cfms_poc",
+            "view": "cats",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Reporting Period",
+                "field": "cats.date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "cats.area_number"
+              },
+              {
+                "dashboard_filter_name": "Office",
+                "field": "cats.office_name"
+              }
+            ]
+          }
+        ],
+        "query_id": "j8bGXPf"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3750,6 +3814,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1687",
       "look": null,
@@ -3761,7 +3826,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31162",
@@ -3775,9 +3839,53 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31162",
         "dynamic_fields": "[{\"table_calculation\":\"ministry_webpages\",\"label\":\"Ministry Webpages\",\"expression\":\"${cats.count}-${q1_cats.count}-${q2_cats.count}-${q3_cats.count}-${q4_cats.count}\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"destination_\",\"label\":\"Destination --\\u003e\",\"expression\":\"if(row()=1, \\\"Service BC\\\", null)\",\"value_format\":null,\"value_format_name\":null,\"_kind_hint\":\"dimension\",\"_type_hint\":\"string\"}]",
+        "sorts": [
+          "ministry_webpages desc"
+        ],
+        "merge_result_id": "iznoNAtrTg6jvutCumLD51",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "truncate_column_names": false,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "series_labels": {
+            "cats.count": "Total Pages",
+            "q1_cats.count": "TOU Pages",
+            "q2_cats.count": "Service A-Z and Search pages",
+            "q3_cats.count": "Error pages",
+            "total": "Total Webpages",
+            "q4_cats.count": "Meaningless pages"
+          },
+          "table_theme": "editable",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "subtotals_at_bottom": false,
+          "type": "single_value",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "cats.count",
+            "q1_cats.count",
+            "q2_cats.count",
+            "q3_cats.count",
+            "q4_cats.count",
+            "destination_"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -3875,61 +3983,20 @@
             ]
           }
         ],
-        "sorts": [
-          "ministry_webpages desc"
-        ],
-        "merge_result_id": "iznoNAtrTg6jvutCumLD51",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "truncate_column_names": false,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "series_labels": {
-            "cats.count": "Total Pages",
-            "q1_cats.count": "TOU Pages",
-            "q2_cats.count": "Service A-Z and Search pages",
-            "q3_cats.count": "Error pages",
-            "total": "Total Webpages",
-            "q4_cats.count": "Meaningless pages"
-          },
-          "table_theme": "editable",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "subtotals_at_bottom": false,
-          "type": "single_value",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "cats.count",
-            "q1_cats.count",
-            "q2_cats.count",
-            "q3_cats.count",
-            "q4_cats.count",
-            "destination_"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -3984,12 +4051,12 @@
         "source_queries": [
           {
             "name": "Cats",
-            "query_id": "176579",
             "merge_fields": [
 
             ],
+            "query_id": "TzxY52v",
+            "query_slug": "TzxY52v",
             "query": {
-              "id": "176579",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -4003,8 +4070,6 @@
               "sorts": [
 
               ],
-              "limit": "5000",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4123,7 +4188,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22table%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "TzxY52v",
               "model": "cfms_poc",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -4131,37 +4199,38 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 3",
-            "query_id": "436442",
             "merge_fields": [
 
             ],
+            "query_id": "j8bGXPf",
+            "query_slug": "j8bGXPf",
             "query": {
-              "id": "436442",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -4176,8 +4245,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4227,43 +4294,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Fcommunity-access-terminal%25%2C%25%2Fcats%2Ftou.html%25&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22single_value%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Fcommunity-access-terminal%2C%2Fcats%2Ftou.html%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "j8bGXPf",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 4",
-            "query_id": "436439",
             "merge_fields": [
 
             ],
+            "query_id": "PqmxghS",
+            "query_slug": "PqmxghS",
             "query": {
-              "id": "436439",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -4277,8 +4348,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4313,43 +4382,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&filter_expression=%24%7Bcats.page_owner%7D+%3D+%22Search%22+OR+contains%28+%24%7Bcats.url%7D+%2C+%22%2Fservices-a-z%22%29&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "PqmxghS",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 2",
-            "query_id": "436443",
             "merge_fields": [
 
             ],
+            "query_id": "pr2vNTx",
+            "query_slug": "pr2vNTx",
             "query": {
-              "id": "436443",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -4364,8 +4437,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4430,43 +4501,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%25%2Ferrors%2F%25&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%22cats.count%22%3A%22Errors%22%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22table%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2Ferrors%2F%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "pr2vNTx",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cats 5",
-            "query_id": "436433",
             "merge_fields": [
 
             ],
+            "query_id": "NKDT6hf",
+            "query_slug": "NKDT6hf",
             "query": {
-              "id": "436433",
               "view": "cats",
               "fields": [
                 "cats.count"
@@ -4481,8 +4556,6 @@
               "sorts": [
                 "cats.count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4531,47 +4604,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&f[cats.url]=%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF&sorts=cats.count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cats.url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%2F%2C%2F%2F%2C%2F%2Fgov%2Ftopic.page%2C%2Fgov%2Ftopic.page%2C%2Fassets%2Fdownload%2F6124280C12B44DA492667E23E8BC38BF%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "NKDT6hf",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -4579,6 +4657,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "163",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1688",
       "look": null,
@@ -4590,7 +4669,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "187249",
         "view": "cats",
         "fields": [
           "cats.count"
@@ -4604,8 +4682,6 @@
         "sorts": [
 
         ],
-        "limit": "5000",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -4724,7 +4800,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "Q7YjDhz",
         "model": "cfms_poc",
+        "limit": "5000",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -4732,29 +4811,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "187249",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "12702",
@@ -4768,39 +4847,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "Q7YjDhz",
       "result_maker": {
         "id": "12702",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "cfms_poc",
-            "view": "cats",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Reporting Period",
-                "field": "cats.date"
-              },
-              {
-                "dashboard_filter_name": "Area",
-                "field": "cats.area_number"
-              },
-              {
-                "dashboard_filter_name": "Office",
-                "field": "cats.office_name"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "187249",
         "sql_query_id": "",
         "query": {
-          "id": "187249",
           "view": "cats",
           "fields": [
             "cats.count"
@@ -4814,8 +4872,6 @@
           "sorts": [
 
           ],
-          "limit": "5000",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -4934,7 +4990,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/cfms_poc/cats?fields=cats.count&f[cats.office_owner]=Service+BC&limit=5000&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Afalse%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22series_labels%22%3A%7B%7D%2C%22table_theme%22%3A%22editable%22%2C%22limit_displayed_rows%22%3Atrue%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22show%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A%224%22%7D%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22conditional_formatting_include_totals%22%3Atrue%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22leftAxisLabelVisible%22%3Afalse%2C%22leftAxisLabel%22%3A%22%22%2C%22rightAxisLabelVisible%22%3Afalse%2C%22rightAxisLabel%22%3A%22%22%2C%22barColors%22%3A%5B%22red%22%2C%22blue%22%5D%2C%22smoothedBars%22%3Afalse%2C%22orientation%22%3A%22automatic%22%2C%22labelPosition%22%3A%22left%22%2C%22percentType%22%3A%22total%22%2C%22percentPosition%22%3A%22inline%22%2C%22valuePosition%22%3A%22right%22%2C%22labelColorEnabled%22%3Afalse%2C%22labelColor%22%3A%22%23FFF%22%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22hidden_fields%22%3A%5B%22sbd_office_and_null%22%2C%22null_and_null%22%2C%22sbd_office_and_ministries%22%2C%22null_and_ministries%22%2C%22null_and_gcpe%22%2C%22office_and_gcpe%22%5D%2C%22series_types%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cats.office_owner%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Service+BC%22%7D%2C%7B%7D%5D%2C%22id%22%3A94%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "Q7YjDhz",
           "model": "cfms_poc",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -4942,26 +5001,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -5055,19 +5115,42 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "cfms_poc",
+            "view": "cats",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Reporting Period",
+                "field": "cats.date"
+              },
+              {
+                "dashboard_filter_name": "Area",
+                "field": "cats.area_number"
+              },
+              {
+                "dashboard_filter_name": "Office",
+                "field": "cats.office_name"
+              }
+            ]
+          }
+        ],
+        "query_id": "Q7YjDhz"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -5158,12 +5241,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -5246,12 +5329,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -5334,12 +5417,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -5367,11 +5450,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5387,11 +5470,11 @@
           "element_title_hidden": false,
           "vis_type": "table",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5407,11 +5490,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5427,11 +5510,11 @@
           "element_title_hidden": false,
           "vis_type": "table",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5447,11 +5530,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5467,11 +5550,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5487,11 +5570,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5507,18 +5590,21 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -5534,8 +5620,6 @@
   "last_accessed_at": "2022-03-14 22:13:45 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Fei Zhang",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -5561,17 +5645,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "104",
@@ -5580,21 +5664,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Fei Zhang",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

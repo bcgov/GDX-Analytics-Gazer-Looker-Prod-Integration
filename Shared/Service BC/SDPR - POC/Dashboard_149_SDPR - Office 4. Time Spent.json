@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "149",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1606",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31148",
@@ -44,47 +44,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31148",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${theq_sdpr_poc.visits_count}*${service_time}*24\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "L0zxjh9pDmKvjg6874iEjx",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -208,19 +177,53 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -362,12 +365,12 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436426",
             "merge_fields": [
 
             ],
+            "query_id": "73C3rwY",
+            "query_slug": "73C3rwY",
             "query": {
-              "id": "436426",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count",
@@ -383,8 +386,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -434,46 +435,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "73C3rwY",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "144361",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.program_name",
                 "source_field_name": "theq_sdpr_poc.program_name"
               }
             ],
+            "query_id": "qx7pcvn",
+            "query_slug": "qx7pcvn",
             "query": {
-              "id": "144361",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average",
@@ -495,8 +500,6 @@
               "sorts": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -674,7 +677,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "qx7pcvn",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"service_time\",\"label\":\"Service Time\",\"expression\":\"\\n (\\n  if(is_null(${theq_sdpr_poc.service_creation_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${theq_sdpr_poc.prep_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${theq_sdpr_poc.serve_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.serve_duration_per_visit_average})\\n)\\n\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -682,41 +688,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -724,6 +732,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "149",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1607",
       "look": null,
@@ -735,7 +744,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31149",
@@ -749,47 +757,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31149",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${theq_sdpr_poc.visits_count}*${service_time}*24\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "GWpUSxuTPVdXUUxw1No1FJ",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -913,19 +890,53 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1067,12 +1078,12 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436427",
             "merge_fields": [
 
             ],
+            "query_id": "695bpHp",
+            "query_slug": "695bpHp",
             "query": {
-              "id": "436427",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count"
@@ -1087,8 +1098,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1138,43 +1147,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "695bpHp",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "144366",
             "merge_fields": [
 
             ],
+            "query_id": "82FdVHw",
+            "query_slug": "82FdVHw",
             "query": {
-              "id": "144366",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average",
@@ -1195,8 +1208,6 @@
               "sorts": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1374,7 +1385,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "82FdVHw",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"service_time\",\"label\":\"Service Time\",\"expression\":\"\\n (\\n  if(is_null(${theq_sdpr_poc.service_creation_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${theq_sdpr_poc.prep_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${theq_sdpr_poc.serve_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.serve_duration_per_visit_average})\\n)\\n\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1382,41 +1396,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1424,6 +1440,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "149",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1608",
       "look": null,
@@ -1435,7 +1452,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31149",
@@ -1449,47 +1465,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31149",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${theq_sdpr_poc.visits_count}*${service_time}*24\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "GWpUSxuTPVdXUUxw1No1FJ",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -1613,19 +1598,53 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1767,12 +1786,12 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436427",
             "merge_fields": [
 
             ],
+            "query_id": "695bpHp",
+            "query_slug": "695bpHp",
             "query": {
-              "id": "436427",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count"
@@ -1787,8 +1806,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1838,43 +1855,47 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "695bpHp",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "144366",
             "merge_fields": [
 
             ],
+            "query_id": "82FdVHw",
+            "query_slug": "82FdVHw",
             "query": {
-              "id": "144366",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average",
@@ -1895,8 +1916,6 @@
               "sorts": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -2074,7 +2093,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "82FdVHw",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"service_time\",\"label\":\"Service Time\",\"expression\":\"\\n (\\n  if(is_null(${theq_sdpr_poc.service_creation_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${theq_sdpr_poc.prep_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${theq_sdpr_poc.serve_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.serve_duration_per_visit_average})\\n)\\n\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2082,41 +2104,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -2124,6 +2148,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "149",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1609",
       "look": null,
@@ -2135,7 +2160,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31148",
@@ -2149,47 +2173,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31148",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${theq_sdpr_poc.visits_count}*${service_time}*24\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "L0zxjh9pDmKvjg6874iEjx",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -2313,19 +2306,53 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -2467,12 +2494,12 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436426",
             "merge_fields": [
 
             ],
+            "query_id": "73C3rwY",
+            "query_slug": "73C3rwY",
             "query": {
-              "id": "436426",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count",
@@ -2488,8 +2515,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -2539,46 +2564,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "73C3rwY",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "144361",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.program_name",
                 "source_field_name": "theq_sdpr_poc.program_name"
               }
             ],
+            "query_id": "qx7pcvn",
+            "query_slug": "qx7pcvn",
             "query": {
-              "id": "144361",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average",
@@ -2600,8 +2629,6 @@
               "sorts": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -2779,7 +2806,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "qx7pcvn",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"service_time\",\"label\":\"Service Time\",\"expression\":\"\\n (\\n  if(is_null(${theq_sdpr_poc.service_creation_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${theq_sdpr_poc.prep_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${theq_sdpr_poc.serve_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.serve_duration_per_visit_average})\\n)\\n\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2787,41 +2817,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -2829,6 +2861,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "149",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1610",
       "look": null,
@@ -2840,7 +2873,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31148",
@@ -2854,39 +2886,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31148",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${theq_sdpr_poc.visits_count}*${service_time}*24\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Hisotry",
-                "field": "theq_sdpr_poc.date"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "L0zxjh9pDmKvjg6874iEjx",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -3010,19 +3019,45 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Hisotry",
+                "field": "theq_sdpr_poc.date"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -3164,12 +3199,12 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436426",
             "merge_fields": [
 
             ],
+            "query_id": "73C3rwY",
+            "query_slug": "73C3rwY",
             "query": {
-              "id": "436426",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count",
@@ -3185,8 +3220,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -3236,46 +3269,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.program_name&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "73C3rwY",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "144361",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.program_name",
                 "source_field_name": "theq_sdpr_poc.program_name"
               }
             ],
+            "query_id": "qx7pcvn",
+            "query_slug": "qx7pcvn",
             "query": {
-              "id": "144361",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average",
@@ -3297,8 +3334,6 @@
               "sorts": [
                 "theq_sdpr_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -3476,7 +3511,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.service_creation_duration_per_visit_average,theq_sdpr_poc.prep_duration_per_visit_average,theq_sdpr_poc.serve_duration_per_visit_average,theq_sdpr_poc.program_name&f[theq_sdpr_poc.service_creation_duration_outlier]=No&f[theq_sdpr_poc.serve_duration_outlier]=No&f[theq_sdpr_poc.prep_duration_outlier]=No&f[theq_sdpr_poc.inaccurate_time]=No&f[theq_sdpr_poc.program_name]=-NULL&f[theq_sdpr_poc.office_name]=-NULL&sorts=theq_sdpr_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&vis=%7B%22stacking%22%3A%22normal%22%2C%22trellis%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%3A%22Reception+Time%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%3A%22Serve+Time%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%3A%22Prepare+Time%22%7D%2C%22series_types%22%3A%7B%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22theq_sdpr_poc.visits_count%22%2C%22name%22%3A%22Theq+Sdpr+Poc+Visits+Count%22%2C%22axisId%22%3A%22theq_sdpr_poc.visits_count%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22name%22%3A%22Reception+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22name%22%3A%22Prepare+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.prep_duration_per_visit_average%22%7D%2C%7B%22id%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%2C%22name%22%3A%22Serve+Time%22%2C%22axisId%22%3A%22theq_sdpr_poc.serve_duration_per_visit_average%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Afalse%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22table%22%2C%22hidden_fields%22%3A%5B%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22theq_sdpr_poc.service_creation_duration_per_visit_average%22%2C%22theq_sdpr_poc.prep_duration_per_visit_average%22%2C%22theq_sdpr_poc.serve_duration_per_visit_average%22%5D%7D&filter_config=%7B%22theq_sdpr_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A9%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A10%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22service_time%22%2C%22label%22%3A%22Service+Time%22%2C%22expression%22%3A%22%5Cn+%28%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Btheq_sdpr_poc.serve_duration_per_visit_average%7D%29%5Cn%29%5Cn%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "qx7pcvn",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"service_time\",\"label\":\"Service Time\",\"expression\":\"\\n (\\n  if(is_null(${theq_sdpr_poc.service_creation_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${theq_sdpr_poc.prep_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${theq_sdpr_poc.serve_duration_per_visit_average})=yes, 0, ${theq_sdpr_poc.serve_duration_per_visit_average})\\n)\\n\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -3484,41 +3522,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     }
@@ -3604,12 +3644,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3695,12 +3735,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3786,12 +3826,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -3819,11 +3859,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_pie",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3839,11 +3879,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3859,11 +3899,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3879,11 +3919,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_pie",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3899,18 +3939,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_pie",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -3926,8 +3969,6 @@
   "last_accessed_at": "2023-10-25 21:32:06 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Fei Zhang",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -3953,17 +3994,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "669",
@@ -3972,21 +4013,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Fei Zhang",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": false,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": false,
+    "see_lookml": true
   }
 }

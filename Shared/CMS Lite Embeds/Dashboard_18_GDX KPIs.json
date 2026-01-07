@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "79",
       "look": {
@@ -34,12 +35,10 @@
         "is_run_on_load": true,
         "last_accessed_at": "2019-07-04 17:50:06 UTC",
         "last_updater_id": "13",
-        "query_id": "32236",
         "short_url": "/looks/57",
         "updated_at": "2018-10-19 22:18:58 UTC",
         "view_count": 3,
         "query": {
-          "id": "32236",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -52,8 +51,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -78,7 +75,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A44%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A44%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "W57Jwm3",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.user_count}, 0) - offset(${sessions.user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":44}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -86,26 +86,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A44%7D%5D&show=data%2Cvis&title=Number+of+users&look_id=57",
@@ -124,17 +125,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -152,24 +153,27 @@
         "public": false,
         "public_slug": "r6fkfRcHxYvcXdnn5cNGxr7V3zkJjb2q",
         "public_url": "https://analytics.gov.bc.ca/looks/r6fkfRcHxYvcXdnn5cNGxr7V3zkJjb2q.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "W57Jwm3",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "57",
@@ -180,7 +184,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "2855",
@@ -194,31 +197,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "2855",
         "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.user_count}, 0) - offset(${sessions.user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":44}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.date_window"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "32236",
         "sql_query_id": "",
         "query": {
-          "id": "32236",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -231,8 +221,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -257,7 +245,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A44%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A44%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "W57Jwm3",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.user_count}, 0) - offset(${sessions.user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":44}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -265,26 +256,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -299,19 +291,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "W57Jwm3"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -321,6 +328,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "80",
       "look": {
@@ -336,12 +344,10 @@
         "is_run_on_load": true,
         "last_accessed_at": "2018-07-09 19:33:20 UTC",
         "last_updater_id": "13",
-        "query_id": "32237",
         "short_url": "/looks/58",
         "updated_at": "2018-10-19 22:18:58 UTC",
         "view_count": 1,
         "query": {
-          "id": "32237",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -354,8 +360,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -380,7 +384,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A61%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A61%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "RW2QKtq",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":61}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -388,26 +395,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A61%7D%5D&show=data%2Cvis&title=Number+of+new+users&look_id=58",
@@ -426,17 +434,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -454,24 +462,27 @@
         "public": false,
         "public_slug": "jrSYCRR9XkYPqmqDfgwSdGdkMq4tzqr5",
         "public_url": "https://analytics.gov.bc.ca/looks/jrSYCRR9XkYPqmqDfgwSdGdkMq4tzqr5.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "RW2QKtq",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "58",
@@ -482,7 +493,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "2856",
@@ -496,31 +506,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "2856",
         "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":61}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.date_window"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "32237",
         "sql_query_id": "",
         "query": {
-          "id": "32237",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -533,8 +530,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -559,7 +554,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A61%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A61%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "RW2QKtq",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":61}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -567,26 +565,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -601,19 +600,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "RW2QKtq"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -623,6 +637,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "81",
       "look": {
@@ -638,12 +653,10 @@
         "is_run_on_load": true,
         "last_accessed_at": "2018-07-09 19:33:19 UTC",
         "last_updater_id": "13",
-        "query_id": "32238",
         "short_url": "/looks/59",
         "updated_at": "2018-10-19 22:18:58 UTC",
         "view_count": 1,
         "query": {
-          "id": "32238",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -658,8 +671,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -684,7 +695,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&f[sessions.user_engaged]=Yes&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A78%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&f[sessions.user_engaged]=Yes&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A78%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "755BV4N",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":78}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -692,26 +706,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&f[sessions.user_engaged]=Yes&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A78%7D%5D&show=data%2Cvis&title=Number+of+engaged+new+users&look_id=59",
@@ -730,17 +745,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -758,24 +773,27 @@
         "public": false,
         "public_slug": "gb55xsRzQQnYTjkzJ2zc9xVhRNPrNg2Q",
         "public_url": "https://analytics.gov.bc.ca/looks/gb55xsRzQQnYTjkzJ2zc9xVhRNPrNg2Q.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "755BV4N",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "59",
@@ -786,7 +804,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "2857",
@@ -800,31 +817,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "2857",
         "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":78}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.date_window"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "32238",
         "sql_query_id": "",
         "query": {
-          "id": "32238",
           "view": "sessions",
           "fields": [
             "sessions.date_window",
@@ -839,8 +843,6 @@
           "sorts": [
             "sessions.date_window"
           ],
-          "limit": null,
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -865,7 +867,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&f[sessions.user_engaged]=Yes&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A78%7D%5D&show=data%2Cvis&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.date_window,sessions.new_user_count&f[sessions.user_engaged]=Yes&sorts=sessions.date_window&vis=%7B%22type%22%3A%22single_value%22%2C%22show_comparison%22%3Atrue%2C%22comparison_type%22%3A%22change%22%2C%22comparison_label%22%3A%22compared+to+last+period%22%2C%22show_comparison_label%22%3Atrue%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22change%22%2C%22label%22%3A%22Change+since+last+period%22%2C%22expression%22%3A%22offset%28%24%7Bsessions.new_user_count%7D%2C+0%29+-+offset%28%24%7Bsessions.new_user_count%7D%2C+1%29%22%2C%22__FILE%22%3A%22snowplow_web_block%2Fweb.dashboard.lookml%22%2C%22__LINE_NUM%22%3A78%7D%5D&show=data%2Cvis",
           "has_table_calculations": true,
+          "id": "755BV4N",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"change\",\"label\":\"Change since last period\",\"expression\":\"offset(${sessions.new_user_count}, 0) - offset(${sessions.new_user_count}, 1)\",\"__FILE\":\"snowplow_web_block/web.dashboard.lookml\",\"__LINE_NUM\":78}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -873,26 +878,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -907,19 +913,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "755BV4N"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -929,6 +950,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "82",
       "look": {
@@ -944,12 +966,10 @@
         "is_run_on_load": true,
         "last_accessed_at": null,
         "last_updater_id": "13",
-        "query_id": "66170",
         "short_url": "/looks/60",
         "updated_at": "2019-03-05 05:04:13 UTC",
         "view_count": 0,
         "query": {
-          "id": "66170",
           "view": "sessions",
           "fields": [
             "sessions.first_or_returning_session",
@@ -968,8 +988,6 @@
             "sessions.first_or_returning_session",
             "sessions.referrer_medium"
           ],
-          "limit": null,
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1036,7 +1054,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.first_or_returning_session,sessions.referrer_medium,sessions.row_count&pivots=sessions.referrer_medium&f[sessions.session_start_time]=28+days&sorts=sessions.first_or_returning_session,sessions.referrer_medium&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22show_value_labels%22%3Atrue%2C%22font_size%22%3A12%2C%22stacking%22%3A%22%22%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_donut_multiples%22%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.first_or_returning_session,sessions.referrer_medium,sessions.row_count&pivots=sessions.referrer_medium&f[sessions.session_start_time]=28+days&sorts=sessions.first_or_returning_session,sessions.referrer_medium&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22show_value_labels%22%3Atrue%2C%22font_size%22%3A12%2C%22stacking%22%3A%22%22%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_donut_multiples%22%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "mXvx8R6",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -1044,26 +1065,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.first_or_returning_session,sessions.referrer_medium,sessions.row_count&pivots=sessions.referrer_medium&f[sessions.session_start_time]=28+days&sorts=sessions.first_or_returning_session,sessions.referrer_medium&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22show_value_labels%22%3Atrue%2C%22font_size%22%3A12%2C%22stacking%22%3A%22%22%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_donut_multiples%22%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&title=Referer+breakdown&look_id=60",
@@ -1082,17 +1104,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -1110,24 +1132,27 @@
         "public": false,
         "public_slug": "2QKcHJMscXDQNBFdgdvHGqFdFJnSnWTq",
         "public_url": "https://analytics.gov.bc.ca/looks/2QKcHJMscXDQNBFdgdvHGqFdFJnSnWTq.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "mXvx8R6",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "60",
@@ -1138,7 +1163,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "5789",
@@ -1152,32 +1176,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "5789",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.first_or_returning_session",
           "sessions.referrer_medium"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "66170",
         "sql_query_id": "",
         "query": {
-          "id": "66170",
           "view": "sessions",
           "fields": [
             "sessions.first_or_returning_session",
@@ -1196,8 +1207,6 @@
             "sessions.first_or_returning_session",
             "sessions.referrer_medium"
           ],
-          "limit": null,
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1264,7 +1273,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.first_or_returning_session,sessions.referrer_medium,sessions.row_count&pivots=sessions.referrer_medium&f[sessions.session_start_time]=28+days&sorts=sessions.first_or_returning_session,sessions.referrer_medium&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22show_value_labels%22%3Atrue%2C%22font_size%22%3A12%2C%22stacking%22%3A%22%22%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_donut_multiples%22%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.first_or_returning_session,sessions.referrer_medium,sessions.row_count&pivots=sessions.referrer_medium&f[sessions.session_start_time]=28+days&sorts=sessions.first_or_returning_session,sessions.referrer_medium&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22show_value_labels%22%3Atrue%2C%22font_size%22%3A12%2C%22stacking%22%3A%22%22%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_donut_multiples%22%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "mXvx8R6",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -1272,26 +1284,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1332,19 +1345,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "mXvx8R6"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1354,6 +1382,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "83",
       "look": {
@@ -1369,12 +1398,10 @@
         "is_run_on_load": true,
         "last_accessed_at": "2018-07-23 21:13:03 UTC",
         "last_updater_id": "13",
-        "query_id": "66171",
         "short_url": "/looks/61",
         "updated_at": "2019-03-05 05:04:13 UTC",
         "view_count": 1,
         "query": {
-          "id": "66171",
           "view": "sessions",
           "fields": [
             "sessions.referrer_medium",
@@ -1393,8 +1420,6 @@
             "sessions.referrer_medium",
             "sessions.session_start_date desc"
           ],
-          "limit": null,
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1463,7 +1488,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.referrer_medium,sessions.session_start_date,sessions.session_count&pivots=sessions.referrer_medium&f[sessions.session_start_date]=28+days&sorts=sessions.referrer_medium,sessions.session_start_date+desc&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_area%22%2C%22stacking%22%3A%22%22%2C%22x_axis_label%22%3A%22Date%22%2C%22y_axis_labels%22%3A%5B%22Sessions%22%5D%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22show_null_points%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22interpolation%22%3A%22linear%22%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.referrer_medium,sessions.session_start_date,sessions.session_count&pivots=sessions.referrer_medium&f[sessions.session_start_date]=28+days&sorts=sessions.referrer_medium,sessions.session_start_date+desc&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_area%22%2C%22stacking%22%3A%22%22%2C%22x_axis_label%22%3A%22Date%22%2C%22y_axis_labels%22%3A%5B%22Sessions%22%5D%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22show_null_points%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22interpolation%22%3A%22linear%22%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "twNJc7w",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -1471,26 +1499,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.referrer_medium,sessions.session_start_date,sessions.session_count&pivots=sessions.referrer_medium&f[sessions.session_start_date]=28+days&sorts=sessions.referrer_medium,sessions.session_start_date+desc&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_area%22%2C%22stacking%22%3A%22%22%2C%22x_axis_label%22%3A%22Date%22%2C%22y_axis_labels%22%3A%5B%22Sessions%22%5D%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22show_null_points%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22interpolation%22%3A%22linear%22%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&title=Sessions+per+referer+medium&look_id=61",
@@ -1509,17 +1538,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -1537,24 +1566,27 @@
         "public": false,
         "public_slug": "BQgFMcXNpXPPST5DwsPSfd2GxmKZzJRm",
         "public_url": "https://analytics.gov.bc.ca/looks/BQgFMcXNpXPPST5DwsPSfd2GxmKZzJRm.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "twNJc7w",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "61",
@@ -1565,7 +1597,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "5790",
@@ -1579,32 +1610,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "5790",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.referrer_medium",
           "sessions.session_start_date desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "66171",
         "sql_query_id": "",
         "query": {
-          "id": "66171",
           "view": "sessions",
           "fields": [
             "sessions.referrer_medium",
@@ -1623,8 +1641,6 @@
             "sessions.referrer_medium",
             "sessions.session_start_date desc"
           ],
-          "limit": null,
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1693,7 +1709,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.referrer_medium,sessions.session_start_date,sessions.session_count&pivots=sessions.referrer_medium&f[sessions.session_start_date]=28+days&sorts=sessions.referrer_medium,sessions.session_start_date+desc&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_area%22%2C%22stacking%22%3A%22%22%2C%22x_axis_label%22%3A%22Date%22%2C%22y_axis_labels%22%3A%5B%22Sessions%22%5D%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22show_null_points%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22interpolation%22%3A%22linear%22%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.referrer_medium,sessions.session_start_date,sessions.session_count&pivots=sessions.referrer_medium&f[sessions.session_start_date]=28+days&sorts=sessions.referrer_medium,sessions.session_start_date+desc&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_area%22%2C%22stacking%22%3A%22%22%2C%22x_axis_label%22%3A%22Date%22%2C%22y_axis_labels%22%3A%5B%22Sessions%22%5D%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22show_null_points%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22interpolation%22%3A%22linear%22%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "twNJc7w",
           "model": "snowplow_web_block",
+          "limit": "5000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -1701,26 +1720,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1763,19 +1783,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "twNJc7w"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1785,6 +1820,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "84",
       "look": null,
@@ -1796,7 +1832,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -1810,18 +1845,21 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1831,6 +1869,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "85",
       "look": null,
@@ -1842,7 +1881,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -1856,18 +1894,21 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1877,6 +1918,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "18",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "86",
       "look": {
@@ -1892,12 +1934,10 @@
         "is_run_on_load": true,
         "last_accessed_at": "2019-04-24 21:10:59 UTC",
         "last_updater_id": "13",
-        "query_id": "37165",
         "short_url": "/looks/64",
         "updated_at": "2018-11-19 22:47:30 UTC",
         "view_count": 2,
         "query": {
-          "id": "37165",
           "view": "sessions",
           "fields": [
             "sessions.geo_location",
@@ -1913,8 +1953,6 @@
           "sorts": [
             "sessions.user_count desc"
           ],
-          "limit": "1000",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -2016,7 +2054,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.geo_location,sessions.user_count&f[sessions.geo_location]=inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180&f[sessions.session_start_time]=28+days&sorts=sessions.user_count+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22positron%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22log%22%2C%22map_marker_color_mode%22%3A%22value%22%2C%22show_view_names%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22map%22%3A%22world%22%2C%22map_projection%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_map%22%2C%22map_zoom%22%3A2%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22point_color%22%3A%22%235245ed%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.geo_location%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.geo_location,sessions.user_count&f[sessions.geo_location]=inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180&f[sessions.session_start_time]=28+days&sorts=sessions.user_count+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22positron%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22log%22%2C%22map_marker_color_mode%22%3A%22value%22%2C%22show_view_names%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22map%22%3A%22world%22%2C%22map_projection%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_map%22%2C%22map_zoom%22%3A2%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22point_color%22%3A%22%235245ed%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.geo_location%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "8kyrPgy",
           "model": "snowplow_web_block",
+          "limit": "1000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -2024,26 +2065,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "url": "/explore/snowplow_web_block/sessions?fields=sessions.geo_location,sessions.user_count&f[sessions.geo_location]=inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180&f[sessions.session_start_time]=28+days&sorts=sessions.user_count+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22positron%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22log%22%2C%22map_marker_color_mode%22%3A%22value%22%2C%22show_view_names%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22map%22%3A%22world%22%2C%22map_projection%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_map%22%2C%22map_zoom%22%3A2%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22point_color%22%3A%22%235245ed%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.geo_location%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&title=Sessions+by+Geographic+Location&look_id=64",
@@ -2062,17 +2104,17 @@
           "is_personal_descendant": false,
           "is_shared_root": false,
           "is_users_root": false,
-          "child_count": 0,
           "can": {
+            "browse_spaces_as_embed_user": false,
+            "create": true,
+            "destroy": true,
+            "edit_content": true,
             "index": true,
             "show": true,
-            "create": true,
-            "see_admin_spaces": true,
-            "save_shared_space_as_embed_user": true,
-            "destroy": true,
-            "update": true,
             "move_content": true,
-            "edit_content": true
+            "save_shared_space_as_embed_user": true,
+            "see_admin_spaces": true,
+            "update": true
           }
         },
         "folder_id": "31",
@@ -2090,24 +2132,27 @@
         "public": false,
         "public_slug": "TQf2PF2gRM9CkvZQw6fpKJBqM9GHjphH",
         "public_url": "https://analytics.gov.bc.ca/looks/TQf2PF2gRM9CkvZQw6fpKJBqM9GHjphH.txt?apply_formatting=true&apply_vis=true",
+        "query_id": "8kyrPgy",
+        "user_name": "Dan Pollock",
         "can": {
-          "download": true,
-          "download_unlimited": true,
+          "certify": false,
+          "copy": true,
           "index": true,
           "show": true,
-          "copy": true,
-          "run": true,
           "create": true,
-          "explore": true,
-          "move": true,
-          "update": true,
           "destroy": true,
+          "move": true,
           "recover": true,
-          "update_publicity": true,
-          "show_errors": true,
+          "update": true,
+          "download": true,
+          "download_unlimited": true,
+          "explore": true,
           "find_and_replace": true,
+          "show_errors": true,
+          "render": true,
+          "run": true,
           "schedule": true,
-          "render": true
+          "update_publicity": true
         }
       },
       "look_id": "64",
@@ -2118,7 +2163,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "3306",
@@ -2132,31 +2176,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "3306",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "City",
-                "field": "sessions.geo_city"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "sessions.user_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "37165",
         "sql_query_id": "",
         "query": {
-          "id": "37165",
           "view": "sessions",
           "fields": [
             "sessions.geo_location",
@@ -2172,8 +2203,6 @@
           "sorts": [
             "sessions.user_count desc"
           ],
-          "limit": "1000",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -2275,7 +2304,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions?fields=sessions.geo_location,sessions.user_count&f[sessions.geo_location]=inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180&f[sessions.session_start_time]=28+days&sorts=sessions.user_count+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22positron%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22log%22%2C%22map_marker_color_mode%22%3A%22value%22%2C%22show_view_names%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22map%22%3A%22world%22%2C%22map_projection%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_map%22%2C%22map_zoom%22%3A2%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22point_color%22%3A%22%235245ed%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.geo_location%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/sessions?fields=sessions.geo_location,sessions.user_count&f[sessions.geo_location]=inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180&f[sessions.session_start_time]=28+days&sorts=sessions.user_count+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22positron%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22log%22%2C%22map_marker_color_mode%22%3A%22value%22%2C%22show_view_names%22%3Atrue%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22map%22%3A%22world%22%2C%22map_projection%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_map%22%2C%22map_zoom%22%3A2%2C%22series_types%22%3A%7B%7D%2C%22colors%22%3A%5B%22palette%3A+Santa+Cruz%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22point_color%22%3A%22%235245ed%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions.geo_location%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22inside+box+from+85.0511287798066%2C+-540+to+-85.05112877980659%2C+180%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions.session_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2228%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "8kyrPgy",
           "model": "snowplow_web_block",
+          "limit": "1000",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -2283,26 +2315,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -2364,19 +2397,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "City",
+                "field": "sessions.geo_city"
+              }
+            ]
+          }
+        ],
+        "query_id": "8kyrPgy"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": true,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -2464,12 +2512,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -2497,11 +2545,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2517,11 +2565,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2537,11 +2585,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2557,11 +2605,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2577,11 +2625,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_area",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2597,11 +2645,11 @@
           "element_title_hidden": false,
           "vis_type": "error",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2617,11 +2665,11 @@
           "element_title_hidden": false,
           "vis_type": "error",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2637,18 +2685,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_map",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -2664,8 +2715,6 @@
   "last_accessed_at": "2022-03-30 14:40:47 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": false,
@@ -2691,17 +2740,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "31",
@@ -2710,21 +2759,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

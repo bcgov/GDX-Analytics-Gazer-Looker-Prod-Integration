@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "150",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1450",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31110",
@@ -44,63 +44,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31110",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "History",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "theq_sdpr_poc.half_hour_bucket"
         ],
         "merge_result_id": "oQnsr9CIE9bzvD4VpbX9mg",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -162,19 +115,69 @@
             "q1_theq_sdpr_poc.count_of_days"
           ],
           "type": "looker_line"
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "History",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -254,10 +257,10 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "436372",
             "merge_fields": null,
+            "query_id": "Wmy7Fqt",
+            "query_slug": "Wmy7Fqt",
             "query": {
-              "id": "436372",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.half_hour_bucket",
@@ -277,8 +280,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -372,7 +373,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.half_hour_bucket,theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days&f[theq_sdpr_poc.date]=after+2019%2F06%2F03&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-06-03T16%3A24%3A32.670Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22visit_count_history%22%2C%22label%22%3A%22Visit+Count+-+History%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.half_hour_bucket,theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days&f[theq_sdpr_poc.date]=after+2019%2F06%2F03&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-06-03T16%3A24%3A32.670Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22visit_count_history%22%2C%22label%22%3A%22Visit+Count+-+History%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "Wmy7Fqt",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"visit_count_history\",\"label\":\"Visit Count - History\",\"expression\":\"${theq_sdpr_poc.visits_count}/${theq_sdpr_poc.count_of_days}\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -380,40 +384,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436373",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.half_hour_bucket",
                 "source_field_name": "theq_sdpr_poc.half_hour_bucket"
               }
             ],
+            "query_id": "Zg3r4PX",
+            "query_slug": "Zg3r4PX",
             "query": {
-              "id": "436373",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.half_hour_bucket",
@@ -433,8 +438,6 @@
               "sorts": [
                 "theq_sdpr_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -528,7 +531,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.half_hour_bucket,theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days&f[theq_sdpr_poc.date]=after+2019%2F06%2F03&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-06-03T16%3A23%3A55.370Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22visit_count_selected_date%22%2C%22label%22%3A%22Visit+Count+-+Selected+Date%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.half_hour_bucket,theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days&f[theq_sdpr_poc.date]=after+2019%2F06%2F03&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.date%22%3A%5B%7B%22type%22%3A%22after%22%2C%22values%22%3A%5B%7B%22date%22%3A%222019-06-03T16%3A23%3A55.370Z%22%2C%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%2C%22tz%22%3Atrue%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%2C%22variant%22%3A%22absolute%22%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22visit_count_selected_date%22%2C%22label%22%3A%22Visit+Count+-+Selected+Date%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "Zg3r4PX",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"visit_count_selected_date\",\"label\":\"Visit Count - Selected Date\",\"expression\":\"${theq_sdpr_poc.visits_count}/${theq_sdpr_poc.count_of_days}\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -536,41 +542,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -578,6 +586,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "150",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1451",
       "look": null,
@@ -589,7 +598,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31111",
@@ -603,63 +611,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31111",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "History",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "History",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "theq_sdpr_poc.day_of_week_number"
         ],
         "merge_result_id": "aJcqQtRKKh9FekSdo3beof",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -738,19 +699,69 @@
             "theq_sdpr_poc.day_of_week_number"
           ],
           "type": "looker_line"
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "History",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "History",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -847,10 +858,10 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "436374",
             "merge_fields": null,
+            "query_id": "Ts8p5Cj",
+            "query_slug": "Ts8p5Cj",
             "query": {
-              "id": "436374",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count",
@@ -870,8 +881,6 @@
               "sorts": [
                 "theq_sdpr_poc.day_of_week"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -949,7 +958,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days,theq_sdpr_poc.day_of_week,theq_sdpr_poc.day_of_week_number&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&sorts=theq_sdpr_poc.day_of_week&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22theq_sdpr_poc.day_of_week_number%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22daily_visits%22%2C%22label%22%3A%22Daily+Visits%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days,theq_sdpr_poc.day_of_week,theq_sdpr_poc.day_of_week_number&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&sorts=theq_sdpr_poc.day_of_week&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22theq_sdpr_poc.day_of_week_number%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22daily_visits%22%2C%22label%22%3A%22Daily+Visits%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "Ts8p5Cj",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"daily_visits\",\"label\":\"Daily Visits\",\"expression\":\"${theq_sdpr_poc.visits_count}/${theq_sdpr_poc.count_of_days}\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -957,40 +969,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436375",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.day_of_week",
                 "source_field_name": "theq_sdpr_poc.day_of_week"
               }
             ],
+            "query_id": "MQf53Wc",
+            "query_slug": "MQf53Wc",
             "query": {
-              "id": "436375",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.day_of_week",
@@ -1011,8 +1024,6 @@
               "sorts": [
                 "theq_sdpr_poc.day_of_week"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1104,7 +1115,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.day_of_week,theq_sdpr_poc.waiting_duration_per_visit_average&fill_fields=theq_sdpr_poc.day_of_week&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.waiting_duration_outlier]=No&sorts=theq_sdpr_poc.day_of_week&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.waiting_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.day_of_week,theq_sdpr_poc.waiting_duration_per_visit_average&fill_fields=theq_sdpr_poc.day_of_week&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.waiting_duration_outlier]=No&sorts=theq_sdpr_poc.day_of_week&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.waiting_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "MQf53Wc",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1112,41 +1126,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1154,6 +1170,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "150",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1459",
       "look": null,
@@ -1165,7 +1182,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31113",
@@ -1179,63 +1195,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31113",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "History",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          },
-          {
-            "model": "theq_sdpr_poc",
-            "view": "theq_sdpr_poc",
-            "name": "Theq Sdpr Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office",
-                "field": "theq_sdpr_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "History",
-                "field": "theq_sdpr_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Weekend",
-                "field": "theq_sdpr_poc.is_weekend"
-              },
-              {
-                "dashboard_filter_name": "Holiday",
-                "field": "theq_sdpr_poc.is_holiday"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "kgb8O1ydt1A4xfby4TDcnz",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -1313,19 +1282,69 @@
             "theq_sdpr_poc.count_of_days"
           ],
           "type": "looker_line"
-        }
+        },
+        "filterables": [
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "History",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          },
+          {
+            "model": "theq_sdpr_poc",
+            "view": "theq_sdpr_poc",
+            "name": "Theq Sdpr Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office",
+                "field": "theq_sdpr_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "History",
+                "field": "theq_sdpr_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Weekend",
+                "field": "theq_sdpr_poc.is_weekend"
+              },
+              {
+                "dashboard_filter_name": "Holiday",
+                "field": "theq_sdpr_poc.is_holiday"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1421,10 +1440,10 @@
         "source_queries": [
           {
             "name": "Theq Sdpr Poc",
-            "query_id": "436378",
             "merge_fields": null,
+            "query_id": "h67YxG3",
+            "query_slug": "h67YxG3",
             "query": {
-              "id": "436378",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.visits_count",
@@ -1443,8 +1462,6 @@
               "sorts": [
                 "theq_sdpr_poc.date desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1494,7 +1511,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days,theq_sdpr_poc.date&fill_fields=theq_sdpr_poc.date&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.date+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22daily_visits%22%2C%22label%22%3A%22Daily+Visits%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.visits_count,theq_sdpr_poc.count_of_days,theq_sdpr_poc.date&fill_fields=theq_sdpr_poc.date&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&sorts=theq_sdpr_poc.date+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22daily_visits%22%2C%22label%22%3A%22Daily+Visits%22%2C%22expression%22%3A%22%24%7Btheq_sdpr_poc.visits_count%7D%2F%24%7Btheq_sdpr_poc.count_of_days%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_0%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "h67YxG3",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"daily_visits\",\"label\":\"Daily Visits\",\"expression\":\"${theq_sdpr_poc.visits_count}/${theq_sdpr_poc.count_of_days}\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1502,40 +1522,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Theq Sdpr Poc 2",
-            "query_id": "436379",
             "merge_fields": [
               {
                 "field_name": "theq_sdpr_poc.date",
                 "source_field_name": "theq_sdpr_poc.date"
               }
             ],
+            "query_id": "yTDQFqn",
+            "query_slug": "yTDQFqn",
             "query": {
-              "id": "436379",
               "view": "theq_sdpr_poc",
               "fields": [
                 "theq_sdpr_poc.date",
@@ -1556,8 +1577,6 @@
               "sorts": [
 
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1648,47 +1667,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.date,theq_sdpr_poc.waiting_duration_per_visit_average&fill_fields=theq_sdpr_poc.date&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.waiting_duration_outlier]=No&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.waiting_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/theq_sdpr_poc/theq_sdpr_poc?fields=theq_sdpr_poc.date,theq_sdpr_poc.waiting_duration_per_visit_average&fill_fields=theq_sdpr_poc.date&f[theq_sdpr_poc.is_holiday]=No&f[theq_sdpr_poc.is_weekend]=No&f[theq_sdpr_poc.office_name]=-NULL&f[theq_sdpr_poc.program_name]=SDPR+-+POC&f[theq_sdpr_poc.waiting_duration_outlier]=No&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22theq_sdpr_poc.is_holiday%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.is_weekend%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.program_name%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22SDPR+-+POC%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22theq_sdpr_poc.waiting_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "yTDQFqn",
               "model": "theq_sdpr_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     }
@@ -1774,12 +1798,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -1865,12 +1889,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -1956,12 +1980,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -2053,12 +2077,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -2150,12 +2174,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -2183,11 +2207,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_line",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2203,11 +2227,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_line",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -2223,18 +2247,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_line",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -2250,8 +2277,6 @@
   "last_accessed_at": "2024-02-13 19:09:25 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Fei Zhang",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -2277,17 +2302,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "669",
@@ -2296,21 +2321,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Fei Zhang",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": false,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": false,
+    "see_lookml": true
   }
 }

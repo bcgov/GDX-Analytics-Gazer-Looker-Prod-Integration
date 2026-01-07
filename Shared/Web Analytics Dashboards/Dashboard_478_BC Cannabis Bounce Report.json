@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "478",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4583",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128611",
@@ -44,74 +44,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "128611",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${page_views_bdp.page_view_count}\",\"label\":\"% of views that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_views_that_were_bounces\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "page_views_bdp",
-            "name": "Page Views Bdp",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "page_views_bdp.page_view_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "page_views_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "page_views_bdp.device_type"
-              }
-            ]
-          },
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "sessions_bdp.session_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "sessions_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          },
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "sessions_bdp.session_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "sessions_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "page_views_bdp.page_view_count desc"
         ],
         "merge_result_id": "GM1eCGg6VRKwQBSHMDgq8a",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -564,19 +506,80 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views_bdp",
+            "name": "Page Views Bdp",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views_bdp.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "page_views_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "page_views_bdp.device_type"
+              }
+            ]
+          },
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "sessions_bdp.session_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "sessions_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          },
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "sessions_bdp.session_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "sessions_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1047,12 +1050,12 @@
         "source_queries": [
           {
             "name": "Page Views Bdp",
-            "query_id": "2058090",
             "merge_fields": [
 
             ],
+            "query_id": "mSHPCfP",
+            "query_slug": "mSHPCfP",
             "query": {
-              "id": "2058090",
               "view": "page_views_bdp",
               "fields": [
                 "page_views_bdp.page_display_url",
@@ -1068,8 +1071,6 @@
               "sorts": [
                 "page_views_bdp.page_view_count desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1116,46 +1117,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views_bdp?fields=page_views_bdp.page_display_url,page_views_bdp.page_view_count&f[page_views_bdp.page_urlhost]=www.bccannabisstores.com&f[page_views_bdp.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views_bdp.page_view_count+desc&limit=5000&column_limit=50&vis=%7B%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views_bdp.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views_bdp.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/page_views_bdp?fields=page_views_bdp.page_display_url,page_views_bdp.page_view_count&f[page_views_bdp.page_urlhost]=www.bccannabisstores.com&f[page_views_bdp.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views_bdp.page_view_count+desc&limit=5000&column_limit=50&vis=%7B%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views_bdp.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views_bdp.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "mSHPCfP",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Sessions Bdp",
-            "query_id": "2058091",
             "merge_fields": [
               {
                 "field_name": "sessions_bdp.first_page_display_url",
                 "source_field_name": "page_views_bdp.page_display_url"
               }
             ],
+            "query_id": "cM7Ftz6",
+            "query_slug": "cM7Ftz6",
             "query": {
-              "id": "2058091",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -1173,8 +1178,6 @@
               "sorts": [
                 "sessions_bdp.session_count desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1223,7 +1226,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "cM7Ftz6",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1231,40 +1237,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Sessions Bdp 2",
-            "query_id": "2058092",
             "merge_fields": [
               {
                 "field_name": "sessions_bdp.first_page_display_url",
                 "source_field_name": "page_views_bdp.page_display_url"
               }
             ],
+            "query_id": "fhzMK8R",
+            "query_slug": "fhzMK8R",
             "query": {
-              "id": "2058092",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -1281,8 +1288,6 @@
               "sorts": [
 
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1372,47 +1377,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "fhzMK8R",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1420,6 +1430,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "478",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4584",
       "look": null,
@@ -1431,7 +1442,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128612",
@@ -1445,55 +1455,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "128612",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp",
-            "listen": [
-              {
-                "dashboard_filter_name": "Marketing Campaign",
-                "field": "sessions_bdp.marketing_campaign"
-              },
-              {
-                "dashboard_filter_name": "Marketing Content",
-                "field": "sessions_bdp.marketing_content"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          },
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Marketing Campaign",
-                "field": "sessions_bdp.marketing_campaign"
-              },
-              {
-                "dashboard_filter_name": "Marketing Content",
-                "field": "sessions_bdp.marketing_content"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "page_views_bdp.page_view_count desc"
         ],
         "merge_result_id": "dhjVOLL6p0MCS2xwpVeC8U",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -2053,19 +2024,61 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp",
+            "listen": [
+              {
+                "dashboard_filter_name": "Marketing Campaign",
+                "field": "sessions_bdp.marketing_campaign"
+              },
+              {
+                "dashboard_filter_name": "Marketing Content",
+                "field": "sessions_bdp.marketing_content"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          },
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Marketing Campaign",
+                "field": "sessions_bdp.marketing_campaign"
+              },
+              {
+                "dashboard_filter_name": "Marketing Content",
+                "field": "sessions_bdp.marketing_content"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -2643,12 +2656,12 @@
         "source_queries": [
           {
             "name": "Sessions Bdp",
-            "query_id": "2058093",
             "merge_fields": [
 
             ],
+            "query_id": "SbCfpPk",
+            "query_slug": "SbCfpPk",
             "query": {
-              "id": "2058093",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -2667,8 +2680,6 @@
               "sorts": [
                 "sessions_bdp.session_count desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2717,7 +2728,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count,sessions_bdp.referrer_medium&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count,sessions_bdp.referrer_medium&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "SbCfpPk",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2725,32 +2739,32 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Sessions Bdp 2",
-            "query_id": "2058094",
             "merge_fields": [
               {
                 "field_name": "sessions_bdp.first_page_display_url",
@@ -2761,8 +2775,9 @@
                 "source_field_name": "sessions_bdp.referrer_medium"
               }
             ],
+            "query_id": "vY3x9Bh",
+            "query_slug": "vY3x9Bh",
             "query": {
-              "id": "2058094",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -2780,8 +2795,6 @@
               "sorts": [
                 "sessions_bdp.engaged_time_average desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2871,47 +2884,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average,sessions_bdp.referrer_medium&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&sorts=sessions_bdp.engaged_time_average+desc&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average,sessions_bdp.referrer_medium&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&sorts=sessions_bdp.engaged_time_average+desc&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "vY3x9Bh",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -2919,6 +2937,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "478",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4585",
       "look": null,
@@ -2930,7 +2949,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128613",
@@ -2944,74 +2962,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "128613",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${page_views_bdp.page_view_count}\",\"label\":\"% of views that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_views_that_were_bounces\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "page_views_bdp",
-            "name": "Page Views Bdp",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "page_views_bdp.page_view_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "page_views_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "page_views_bdp.device_type"
-              }
-            ]
-          },
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "sessions_bdp.session_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "sessions_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          },
-          {
-            "model": "snowplow_web_block",
-            "view": "sessions_bdp",
-            "name": "Sessions Bdp 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "sessions_bdp.session_start_date"
-              },
-              {
-                "dashboard_filter_name": "Channel",
-                "field": "sessions_bdp.referrer_medium"
-              },
-              {
-                "dashboard_filter_name": "Device Type",
-                "field": "sessions_bdp.device_type"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "page_views_bdp.page_view_count desc"
         ],
         "merge_result_id": "1zlhQ6h3eiPrPFpYf8d3E8",
         "total": false,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -3589,19 +3549,80 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views_bdp",
+            "name": "Page Views Bdp",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views_bdp.page_view_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "page_views_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "page_views_bdp.device_type"
+              }
+            ]
+          },
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "sessions_bdp.session_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "sessions_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          },
+          {
+            "model": "snowplow_web_block",
+            "view": "sessions_bdp",
+            "name": "Sessions Bdp 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "sessions_bdp.session_start_date"
+              },
+              {
+                "dashboard_filter_name": "Channel",
+                "field": "sessions_bdp.referrer_medium"
+              },
+              {
+                "dashboard_filter_name": "Device Type",
+                "field": "sessions_bdp.device_type"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -4197,12 +4218,12 @@
         "source_queries": [
           {
             "name": "Page Views Bdp",
-            "query_id": "2058095",
             "merge_fields": [
 
             ],
+            "query_id": "hBqbXxH",
+            "query_slug": "hBqbXxH",
             "query": {
-              "id": "2058095",
               "view": "page_views_bdp",
               "fields": [
                 "page_views_bdp.page_display_url",
@@ -4219,8 +4240,6 @@
               "sorts": [
                 "page_views_bdp.page_view_count desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4267,38 +4286,41 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views_bdp?fields=page_views_bdp.page_display_url,page_views_bdp.page_view_count,page_views_bdp.device_type&f[page_views_bdp.page_urlhost]=www.bccannabisstores.com&f[page_views_bdp.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views_bdp.page_view_count+desc&limit=5000&column_limit=50&vis=%7B%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views_bdp.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views_bdp.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/page_views_bdp?fields=page_views_bdp.page_display_url,page_views_bdp.page_view_count,page_views_bdp.device_type&f[page_views_bdp.page_urlhost]=www.bccannabisstores.com&f[page_views_bdp.page_view_start_date]=7+days+ago+for+7+days&sorts=page_views_bdp.page_view_count+desc&limit=5000&column_limit=50&vis=%7B%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views_bdp.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views_bdp.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "hBqbXxH",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Sessions Bdp",
-            "query_id": "2058096",
             "merge_fields": [
               {
                 "field_name": "sessions_bdp.first_page_display_url",
@@ -4309,8 +4331,9 @@
                 "source_field_name": "page_views_bdp.device_type"
               }
             ],
+            "query_id": "92RJByr",
+            "query_slug": "92RJByr",
             "query": {
-              "id": "2058096",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -4329,8 +4352,6 @@
               "sorts": [
                 "sessions_bdp.session_count desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4379,7 +4400,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count,sessions_bdp.device_type&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.session_count,sessions_bdp.bounced_session_count,sessions_bdp.bounced_user_count,sessions_bdp.device_type&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_start_date]=7+days+ago+for+7+days&sorts=sessions_bdp.session_count+desc&limit=5000&column_limit=50&vis=%7B%22hidden_pivots%22%3A%7B%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
               "has_table_calculations": false,
+              "id": "92RJByr",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": "[]",
               "query_timezone": null,
               "quick_calcs": [
@@ -4387,32 +4411,32 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Sessions Bdp 2",
-            "query_id": "2058097",
             "merge_fields": [
               {
                 "field_name": "sessions_bdp.first_page_display_url",
@@ -4423,8 +4447,9 @@
                 "source_field_name": "page_views_bdp.device_type"
               }
             ],
+            "query_id": "Pvp49Q9",
+            "query_slug": "Pvp49Q9",
             "query": {
-              "id": "2058097",
               "view": "sessions_bdp",
               "fields": [
                 "sessions_bdp.first_page_display_url",
@@ -4442,8 +4467,6 @@
               "sorts": [
                 "sessions_bdp.engaged_time_average desc"
               ],
-              "limit": "5000",
-              "column_limit": "50",
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -4533,47 +4556,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average,sessions_bdp.device_type&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&sorts=sessions_bdp.engaged_time_average+desc&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/snowplow_web_block/sessions_bdp?fields=sessions_bdp.first_page_display_url,sessions_bdp.engaged_time_average,sessions_bdp.device_type&f[sessions_bdp.first_page_urlhost]=www.bccannabisstores.com&f[sessions_bdp.session_end_date]=7+days+ago+for+7+days&f[sessions_bdp.bounced_session]=Yes&sorts=sessions_bdp.engaged_time_average+desc&limit=5000&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22sessions_bdp.first_page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.bccannabisstores.com%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.session_end_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22sessions_bdp.bounced_session%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Yes%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "Pvp49Q9",
               "model": "snowplow_web_block",
+              "limit": "5000",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -4581,6 +4609,7 @@
       "body_text": "[{\"type\":\"h1\",\"children\":[{\"text\":\"Interpretation notes\",\"fontSize\":\"31.1606px\",\"backgroundColor\":\"rgb(255, 255, 255)\",\"bold\":true}],\"id\":1707169172325},{\"type\":\"p\",\"children\":[{\"text\":\"\"}],\"id\":1707169193825},{\"type\":\"h2\",\"children\":[{\"bold\":true,\"text\":\"Dimensions and Metrics\",\"color\":\"hsl(209, 81%, 34%)\"}],\"id\":1707169279113},{\"type\":\"p\",\"children\":[{\"text\":\"\"}],\"id\":1707169279114},{\"type\":\"p\",\"children\":[{\"text\":\"Display URL: \",\"bold\":true},{\"text\":\"This is the URL of the page with query string parameters stripped. For Session metrics it is the URL of the first page in a session.\"}],\"id\":1707169279114},{\"type\":\"p\",\"id\":1707169335180,\"children\":[{\"text\":\"Views: \",\"bold\":true},{\"text\":\"In the first two tables, it is the total number of page views for that URL, whether it was the start of a session or not. \"}]},{\"type\":\"p\",\"id\":1707169383601,\"children\":[{\"text\":\"Sessions (w/ First URL): \",\"bold\":true},{\"text\":\"The number of sessions where the first page was this URL.\"}]},{\"type\":\"p\",\"id\":1707169411348,\"children\":[{\"text\":\"Bounced Sessions (w/ First URL): \",\"bold\":true},{\"text\":\"The number of bounced sessions where the first (and only) page was this URL.\"}]},{\"type\":\"p\",\"children\":[{\"text\":\"% of sessions that were bounces: \",\"bold\":true},{\"text\":\"This is calculated by dividing \\\"Bounced Sessions\\\" by \\\"Sessions\\\" and expressing as a percentage.\"}],\"id\":1707169456063},{\"type\":\"p\",\"children\":[{\"text\":\"% of views that were bounces: \",\"bold\":true},{\"text\":\"This is calculated by dividing \\\"Views\\\" by \\\"Sessions\\\" and expressing as a percentage. It is intended as a metric to show the portion of all the traffic to a URL that were bounced sessions.\"}],\"id\":1707169582582},{\"type\":\"p\",\"children\":[{\"text\":\"Bounced Session Engaged Time: \",\"bold\":true},{\"text\":\"The average engaged time for all bounced sessions. (Calculated using an average of times in 0, 30, 60, 90 second increments.) \"}],\"id\":1707169643465},{\"type\":\"h2\",\"children\":[{\"text\":\"\"}],\"id\":1707169172326},{\"type\":\"h2\",\"id\":1707169352593,\"children\":[{\"bold\":true,\"color\":\"hsl(209, 81%, 34%)\",\"text\":\"Tables \"}]},{\"type\":\"p\",\"children\":[{\"text\":\"Note\",\"bold\":true},{\"text\":\": Sorting by columns other than Views may cause unintended side effects as Looker will sort incorrectly for NULL values. GDX is working to resolve this. \"}],\"id\":1707169172326},{\"type\":\"h3\",\"children\":[{\"text\":\"Bounce Report\"}],\"id\":1707169241688},{\"type\":\"p\",\"children\":[{\"text\":\"The main report shows the key metrics overall. \"}],\"id\":1707169241689},{\"type\":\"p\",\"id\":1707170229289,\"children\":[{\"text\":\"This report can be filtered by Device Type and Date. \"}]},{\"type\":\"p\",\"id\":1707170220927,\"children\":[{\"text\":\"\"}]},{\"type\":\"h3\",\"children\":[{\"text\":\"Bounce Report by Device Type\"}],\"id\":1707169256680},{\"type\":\"p\",\"children\":[{\"text\":\"This report breaks out the metrics for each URL and Device Type. \"}],\"id\":1707169244276},{\"type\":\"p\",\"children\":[{\"text\":\"This report can be filtered by Date and Device Type. \"}],\"id\":1707170270030},{\"type\":\"p\",\"id\":1707170269514,\"children\":[{\"text\":\"\"}]},{\"type\":\"h3\",\"children\":[{\"text\":\"Bounce Report by Channel\"}],\"id\":1707169266866},{\"type\":\"p\",\"children\":[{\"text\":\"This report breaks out the metrics for each URL and “Channel”, which is based on the referring URL or marketing parameters.  \"}],\"id\":1707170284271},{\"type\":\"p\",\"children\":[{\"text\":\"Note that as this report is about inbound traffics, it only referes to the first URL in a session, so doesn't have the page view metric. \"}],\"id\":1707170284271},{\"type\":\"p\",\"id\":1707170305804,\"children\":[{\"text\":\"This report can be filtered by Date, Device Type, Channel, and UTM parameters. \"}]}]",
       "body_text_as_html": "<p>[{“type”:”h1”,”children”:[{“text”:”Interpretation notes”,”fontSize”:”31.1606px”,”backgroundColor”:”rgb(255, 255, 255)”,”bold”:true}],”id”:1707169172325},{“type”:”p”,”children”:[{“text”:””}],”id”:1707169193825},{“type”:”h2”,”children”:[{“bold”:true,”text”:”Dimensions and Metrics”,”color”:”hsl(209, 81%, 34%)”}],”id”:1707169279113},{“type”:”p”,”children”:[{“text”:””}],”id”:1707169279114},{“type”:”p”,”children”:[{“text”:”Display URL: “,”bold”:true},{“text”:”This is the URL of the page with query string parameters stripped. For Session metrics it is the URL of the first page in a session.”}],”id”:1707169279114},{“type”:”p”,”id”:1707169335180,”children”:[{“text”:”Views: “,”bold”:true},{“text”:”In the first two tables, it is the total number of page views for that URL, whether it was the start of a session or not. “}]},{“type”:”p”,”id”:1707169383601,”children”:[{“text”:”Sessions (w/ First URL): “,”bold”:true},{“text”:”The number of sessions where the first page was this URL.”}]},{“type”:”p”,”id”:1707169411348,”children”:[{“text”:”Bounced Sessions (w/ First URL): “,”bold”:true},{“text”:”The number of bounced sessions where the first (and only) page was this URL.”}]},{“type”:”p”,”children”:[{“text”:”% of sessions that were bounces: “,”bold”:true},{“text”:”This is calculated by dividing \"Bounced Sessions\" by \"Sessions\" and expressing as a percentage.”}],”id”:1707169456063},{“type”:”p”,”children”:[{“text”:”% of views that were bounces: “,”bold”:true},{“text”:”This is calculated by dividing \"Views\" by \"Sessions\" and expressing as a percentage. It is intended as a metric to show the portion of all the traffic to a URL that were bounced sessions.”}],”id”:1707169582582},{“type”:”p”,”children”:[{“text”:”Bounced Session Engaged Time: “,”bold”:true},{“text”:”The average engaged time for all bounced sessions. (Calculated using an average of times in 0, 30, 60, 90 second increments.) “}],”id”:1707169643465},{“type”:”h2”,”children”:[{“text”:””}],”id”:1707169172326},{“type”:”h2”,”id”:1707169352593,”children”:[{“bold”:true,”color”:”hsl(209, 81%, 34%)”,”text”:”Tables “}]},{“type”:”p”,”children”:[{“text”:”Note”,”bold”:true},{“text”:”: Sorting by columns other than Views may cause unintended side effects as Looker will sort incorrectly for NULL values. GDX is working to resolve this. “}],”id”:1707169172326},{“type”:”h3”,”children”:[{“text”:”Bounce Report”}],”id”:1707169241688},{“type”:”p”,”children”:[{“text”:”The main report shows the key metrics overall. “}],”id”:1707169241689},{“type”:”p”,”id”:1707170229289,”children”:[{“text”:”This report can be filtered by Device Type and Date. “}]},{“type”:”p”,”id”:1707170220927,”children”:[{“text”:””}]},{“type”:”h3”,”children”:[{“text”:”Bounce Report by Device Type”}],”id”:1707169256680},{“type”:”p”,”children”:[{“text”:”This report breaks out the metrics for each URL and Device Type. “}],”id”:1707169244276},{“type”:”p”,”children”:[{“text”:”This report can be filtered by Date and Device Type. “}],”id”:1707170270030},{“type”:”p”,”id”:1707170269514,”children”:[{“text”:””}]},{“type”:”h3”,”children”:[{“text”:”Bounce Report by Channel”}],”id”:1707169266866},{“type”:”p”,”children”:[{“text”:”This report breaks out the metrics for each URL and “Channel”, which is based on the referring URL or marketing parameters.  “}],”id”:1707170284271},{“type”:”p”,”children”:[{“text”:”Note that as this report is about inbound traffics, it only referes to the first URL in a session, so doesn’t have the page view metric. “}],”id”:1707170284271},{“type”:”p”,”id”:1707170305804,”children”:[{“text”:”This report can be filtered by Date, Device Type, Channel, and UTM parameters. “}]}]</p>\n",
       "dashboard_id": "478",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4586",
       "look": null,
@@ -4592,7 +4621,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -4606,18 +4634,21 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -4714,12 +4745,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -4805,12 +4836,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -4896,12 +4927,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -4990,12 +5021,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -5084,12 +5115,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -5117,11 +5148,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5137,11 +5168,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5157,11 +5188,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -5177,18 +5208,21 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -5204,8 +5238,6 @@
   "last_accessed_at": "2025-07-09 16:29:48 UTC",
   "updated_at": "2024-02-05 22:01:47 UTC",
   "last_updater_id": "13",
-  "last_updater_name": "Dan Pollock",
-  "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -5231,17 +5263,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -5250,21 +5282,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "Dan Pollock",
+  "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": false,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": false,
+    "see_lookml": true
   }
 }

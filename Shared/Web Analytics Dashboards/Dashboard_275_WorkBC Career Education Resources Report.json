@@ -19,6 +19,7 @@
       "body_text": "",
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2838",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -44,18 +44,21 @@
       "title_text_as_html": "Career Education Tool",
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -65,6 +68,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2842",
       "look": null,
@@ -76,7 +80,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142689",
         "view": "workbc_careereducation_find",
         "fields": [
           "workbc_careereducation_find.audiences_count",
@@ -95,8 +98,6 @@
         "sorts": [
 
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -203,35 +204,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.audiences_count,workbc_careereducation_find.competencies_count,workbc_careereducation_find.focus_area_count,workbc_careereducation_find.keyword_count,workbc_careereducation_find.lifecycle_stage_count,workbc_careereducation_find.show_category_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.audiences_count,workbc_careereducation_find.competencies_count,workbc_careereducation_find.focus_area_count,workbc_careereducation_find.keyword_count,workbc_careereducation_find.lifecycle_stage_count,workbc_careereducation_find.show_category_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "23Xt2gj",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142689",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91589",
@@ -245,35 +249,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "23Xt2gj",
       "result_maker": {
         "id": "91589",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_find",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_find.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142689",
         "sql_query_id": "",
         "query": {
-          "id": "1142689",
           "view": "workbc_careereducation_find",
           "fields": [
             "workbc_careereducation_find.audiences_count",
@@ -292,8 +279,6 @@
           "sorts": [
 
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -400,32 +385,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.audiences_count,workbc_careereducation_find.competencies_count,workbc_careereducation_find.focus_area_count,workbc_careereducation_find.keyword_count,workbc_careereducation_find.lifecycle_stage_count,workbc_careereducation_find.show_category_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.audiences_count,workbc_careereducation_find.competencies_count,workbc_careereducation_find.focus_area_count,workbc_careereducation_find.keyword_count,workbc_careereducation_find.lifecycle_stage_count,workbc_careereducation_find.show_category_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "23Xt2gj",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -507,19 +496,38 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_find",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_find.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "23Xt2gj"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -529,6 +537,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2843",
       "look": null,
@@ -540,7 +549,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142690",
         "view": "clicks",
         "fields": [
           "clicks.target_display_url",
@@ -557,8 +565,6 @@
         "sorts": [
           "clicks.click_count desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -639,7 +645,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_display_url,clicks.click_count&f[clicks.page_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch&f[clicks.click_time_date]=7+days+ago+for+7+days&f[clicks.target_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%25%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%25&sorts=clicks.click_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_display_url,clicks.click_count&f[clicks.page_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch&f[clicks.click_time_date]=7+days+ago+for+7+days&f[clicks.target_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%25%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%25&sorts=clicks.click_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "C6Q6yfC",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -647,29 +656,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142690",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91590",
@@ -683,35 +692,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "C6Q6yfC",
       "result_maker": {
         "id": "91590",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "clicks",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "clicks.click_time_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "clicks.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "clicks.click_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142690",
         "sql_query_id": "",
         "query": {
-          "id": "1142690",
           "view": "clicks",
           "fields": [
             "clicks.target_display_url",
@@ -728,8 +720,6 @@
           "sorts": [
             "clicks.click_count desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -810,7 +800,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_display_url,clicks.click_count&f[clicks.page_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch&f[clicks.click_time_date]=7+days+ago+for+7+days&f[clicks.target_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%25%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%25&sorts=clicks.click_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_display_url,clicks.click_count&f[clicks.page_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch&f[clicks.click_time_date]=7+days+ago+for+7+days&f[clicks.target_display_url]=https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%25%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%25&sorts=clicks.click_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22clicks.click_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22clicks.target_display_url%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fcareereducation.workbc.ca%2Fresource%2Chttps%3A%2F%2Fcareereducation.workbc.ca%2Flesson-plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "C6Q6yfC",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -818,26 +811,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -864,19 +858,38 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "clicks.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "C6Q6yfC"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -886,6 +899,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2844",
       "look": null,
@@ -897,7 +911,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142691",
         "view": "workbc_careereducation_find",
         "fields": [
           "workbc_careereducation_find.update_count"
@@ -911,8 +924,6 @@
         "sorts": [
 
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -1031,35 +1042,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.update_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Afalse%2C%22comparison_type%22%3A%22value%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Searches%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22hide_legend%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22single_value%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.update_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Afalse%2C%22comparison_type%22%3A%22value%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Searches%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22hide_legend%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22single_value%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "xFGGcsN",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142691",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91591",
@@ -1073,35 +1087,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "xFGGcsN",
       "result_maker": {
         "id": "91591",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_find",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_find.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142691",
         "sql_query_id": "",
         "query": {
-          "id": "1142691",
           "view": "workbc_careereducation_find",
           "fields": [
             "workbc_careereducation_find.update_count"
@@ -1115,8 +1112,6 @@
           "sorts": [
 
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1235,32 +1230,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.update_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Afalse%2C%22comparison_type%22%3A%22value%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Searches%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22hide_legend%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22single_value%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.update_count&f[workbc_careereducation_find.action]=update&limit=500&vis=%7B%22custom_color_enabled%22%3Atrue%2C%22show_single_value_title%22%3Atrue%2C%22show_comparison%22%3Afalse%2C%22comparison_type%22%3A%22value%22%2C%22comparison_reverse_colors%22%3Afalse%2C%22show_comparison_label%22%3Atrue%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22single_value_title%22%3A%22Searches%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22hide_legend%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22single_value%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22update%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "xFGGcsN",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1354,19 +1353,38 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_find",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_find.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "xFGGcsN"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1376,6 +1394,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2845",
       "look": null,
@@ -1387,7 +1406,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142692",
         "view": "workbc_careereducation_click",
         "fields": [
           "workbc_careereducation_click.resource_id",
@@ -1405,8 +1423,6 @@
         "sorts": [
           "workbc_careereducation_click.download_worksheets_count desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -1512,35 +1528,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.download_worksheets_count,workbc_careereducation_click.download_file_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22download_worksheets%22%2C%22download_file%22&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.download_worksheets_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22download_worksheets%2Cdownload_file%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.download_worksheets_count,workbc_careereducation_click.download_file_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22download_worksheets%22%2C%22download_file%22&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.download_worksheets_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22download_worksheets%2Cdownload_file%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "Qqf9Ym5",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142692",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91592",
@@ -1554,35 +1573,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "Qqf9Ym5",
       "result_maker": {
         "id": "91592",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_click",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_click.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "workbc_careereducation_click.download_worksheets_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142692",
         "sql_query_id": "",
         "query": {
-          "id": "1142692",
           "view": "workbc_careereducation_click",
           "fields": [
             "workbc_careereducation_click.resource_id",
@@ -1600,8 +1602,6 @@
           "sorts": [
             "workbc_careereducation_click.download_worksheets_count desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1705,32 +1705,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.download_worksheets_count,workbc_careereducation_click.download_file_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22download_worksheets%22%2C%22download_file%22&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.download_worksheets_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22download_worksheets%2Cdownload_file%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.download_worksheets_count,workbc_careereducation_click.download_file_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22download_worksheets%22%2C%22download_file%22&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.download_worksheets_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22download_worksheets%2Cdownload_file%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "Qqf9Ym5",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1782,19 +1786,38 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_click",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_click.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "Qqf9Ym5"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1804,6 +1827,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2846",
       "look": null,
@@ -1815,7 +1839,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142693",
         "view": "workbc_careereducation_click",
         "fields": [
           "workbc_careereducation_click.resource_id",
@@ -1835,8 +1858,6 @@
           "workbc_careereducation_click.related_resource_count desc 8",
           "workbc_careereducation_click.text"
         ],
-        "limit": "500",
-        "column_limit": "500",
         "total": true,
         "row_total": "right",
         "subtotals": null,
@@ -1930,35 +1951,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.text,workbc_careereducation_click.related_resource_count&pivots=workbc_careereducation_click.text&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22related_resource%22&sorts=workbc_careereducation_click.related_resource_count+desc+8,workbc_careereducation_click.text&limit=500&column_limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.resource_id%22%3A%22From+Resoure%22%2C%22workbc_careereducation_click.text%22%3A%22To+Resource%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22related_resource%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.text,workbc_careereducation_click.related_resource_count&pivots=workbc_careereducation_click.text&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22related_resource%22&sorts=workbc_careereducation_click.related_resource_count+desc+8,workbc_careereducation_click.text&limit=500&column_limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.resource_id%22%3A%22From+Resoure%22%2C%22workbc_careereducation_click.text%22%3A%22To+Resource%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22related_resource%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "S5mfptj",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "500",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142693",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91593",
@@ -1972,36 +1996,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "S5mfptj",
       "result_maker": {
         "id": "91593",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_click",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_click.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "workbc_careereducation_click.related_resource_count desc 8",
           "workbc_careereducation_click.text"
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "1142693",
         "sql_query_id": "",
         "query": {
-          "id": "1142693",
           "view": "workbc_careereducation_click",
           "fields": [
             "workbc_careereducation_click.resource_id",
@@ -2021,8 +2028,6 @@
             "workbc_careereducation_click.related_resource_count desc 8",
             "workbc_careereducation_click.text"
           ],
-          "limit": "500",
-          "column_limit": "500",
           "total": true,
           "row_total": "right",
           "subtotals": null,
@@ -2114,32 +2119,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.text,workbc_careereducation_click.related_resource_count&pivots=workbc_careereducation_click.text&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22related_resource%22&sorts=workbc_careereducation_click.related_resource_count+desc+8,workbc_careereducation_click.text&limit=500&column_limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.resource_id%22%3A%22From+Resoure%22%2C%22workbc_careereducation_click.text%22%3A%22To+Resource%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22related_resource%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.text,workbc_careereducation_click.related_resource_count&pivots=workbc_careereducation_click.text&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=%22related_resource%22&sorts=workbc_careereducation_click.related_resource_count+desc+8,workbc_careereducation_click.text&limit=500&column_limit=500&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.resource_id%22%3A%22From+Resoure%22%2C%22workbc_careereducation_click.text%22%3A%22To+Resource%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22related_resource%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "S5mfptj",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "500",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -2193,19 +2202,38 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_click",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_click.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "S5mfptj"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -2215,6 +2243,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2847",
       "look": null,
@@ -2226,7 +2255,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142694",
         "view": "workbc_careereducation_click",
         "fields": [
           "workbc_careereducation_click.resource_id",
@@ -2246,8 +2274,6 @@
         "sorts": [
           "workbc_careereducation_click.nav_count desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -2367,7 +2393,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.nav_Activities_count,workbc_careereducation_click.nav_Curriculum_count,workbc_careereducation_click.nav_Lesson_Plan_count,workbc_careereducation_click.nav_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=nav%5E_%25&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.nav_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22workbc_careereducation_click.resource_id%22%2C%22workbc_careereducation_click.nav_Activities_count%22%2C%22workbc_careereducation_click.nav_Curriculum_count%22%2C%22workbc_careereducation_click.nav_Lesson_Plan_count%22%2C%22workbc_careereducation_click.nav_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.nav_count%22%3A%22Total+Nav+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22series_text_format%22%3A%7B%22workbc_careereducation_click.nav_count%22%3A%7B%22bg_color%22%3A%22%239fdee0%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22nav_%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.nav_Activities_count,workbc_careereducation_click.nav_Curriculum_count,workbc_careereducation_click.nav_Lesson_Plan_count,workbc_careereducation_click.nav_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=nav%5E_%25&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.nav_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22workbc_careereducation_click.resource_id%22%2C%22workbc_careereducation_click.nav_Activities_count%22%2C%22workbc_careereducation_click.nav_Curriculum_count%22%2C%22workbc_careereducation_click.nav_Lesson_Plan_count%22%2C%22workbc_careereducation_click.nav_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.nav_count%22%3A%22Total+Nav+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22series_text_format%22%3A%7B%22workbc_careereducation_click.nav_count%22%3A%7B%22bg_color%22%3A%22%239fdee0%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22nav_%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "KrgjCPH",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -2375,29 +2404,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142694",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91594",
@@ -2411,35 +2440,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "KrgjCPH",
       "result_maker": {
         "id": "91594",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_click",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_click.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "workbc_careereducation_click.nav_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142694",
         "sql_query_id": "",
         "query": {
-          "id": "1142694",
           "view": "workbc_careereducation_click",
           "fields": [
             "workbc_careereducation_click.resource_id",
@@ -2459,8 +2471,6 @@
           "sorts": [
             "workbc_careereducation_click.nav_count desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -2578,7 +2588,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.nav_Activities_count,workbc_careereducation_click.nav_Curriculum_count,workbc_careereducation_click.nav_Lesson_Plan_count,workbc_careereducation_click.nav_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=nav%5E_%25&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.nav_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22workbc_careereducation_click.resource_id%22%2C%22workbc_careereducation_click.nav_Activities_count%22%2C%22workbc_careereducation_click.nav_Curriculum_count%22%2C%22workbc_careereducation_click.nav_Lesson_Plan_count%22%2C%22workbc_careereducation_click.nav_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.nav_count%22%3A%22Total+Nav+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22series_text_format%22%3A%7B%22workbc_careereducation_click.nav_count%22%3A%7B%22bg_color%22%3A%22%239fdee0%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22nav_%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_click?fields=workbc_careereducation_click.resource_id,workbc_careereducation_click.nav_Activities_count,workbc_careereducation_click.nav_Curriculum_count,workbc_careereducation_click.nav_Lesson_Plan_count,workbc_careereducation_click.nav_count&f[workbc_careereducation_click.event_date]=7+days+ago+for+7+days&f[workbc_careereducation_click.click_type]=nav%5E_%25&f[workbc_careereducation_click.category]=%22lesson_plan%22&sorts=workbc_careereducation_click.nav_count+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22column_order%22%3A%5B%22%24%24%24_row_numbers_%24%24%24%22%2C%22workbc_careereducation_click.resource_id%22%2C%22workbc_careereducation_click.nav_Activities_count%22%2C%22workbc_careereducation_click.nav_Curriculum_count%22%2C%22workbc_careereducation_click.nav_Lesson_Plan_count%22%2C%22workbc_careereducation_click.nav_count%22%5D%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%22Clicks+to+Download+Widget%22%2C%22workbc_careereducation_click.download_file_count%22%3A%22Files+Downloaded%22%2C%22workbc_careereducation_click.nav_count%22%3A%22Total+Nav+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22workbc_careereducation_click.download_worksheets_count%22%3A%7B%22is_active%22%3Atrue%7D%2C%22workbc_careereducation_click.download_file_count%22%3A%7B%22is_active%22%3Atrue%2C%22palette%22%3A%7B%22palette_id%22%3A%2217acafe9-56e8-2633-4887-844d3ffaf582%22%2C%22collection_id%22%3A%22legacy%22%2C%22custom_colors%22%3A%5B%22%23ffffff%22%2C%22%231627bd%22%5D%7D%7D%7D%2C%22series_text_format%22%3A%7B%22workbc_careereducation_click.nav_count%22%3A%7B%22bg_color%22%3A%22%239fdee0%22%7D%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_click.event_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.click_type%22%3A%5B%7B%22type%22%3A%22starts%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22nav_%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_click.category%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22lesson_plan%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "KrgjCPH",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -2586,26 +2599,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -2671,19 +2685,38 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_click",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_click.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "KrgjCPH"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -2693,6 +2726,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "275",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2848",
       "look": null,
@@ -2704,7 +2738,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1286838",
         "view": "workbc_careereducation_find",
         "fields": [
           "workbc_careereducation_find.keyword_count",
@@ -2720,8 +2753,6 @@
         "sorts": [
           "workbc_careereducation_find.keyword_count desc"
         ],
-        "limit": "500",
-        "column_limit": "50",
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -2857,35 +2888,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.keyword_count,workbc_careereducation_find.keyword&f[workbc_careereducation_find.action]=&f[workbc_careereducation_find.keyword]=-EMPTY&sorts=workbc_careereducation_find.keyword_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_find.keyword%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.keyword_count,workbc_careereducation_find.keyword&f[workbc_careereducation_find.action]=&f[workbc_careereducation_find.keyword]=-EMPTY&sorts=workbc_careereducation_find.keyword_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_find.keyword%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "NT3JmgK",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1286838",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "99288",
@@ -2899,35 +2933,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "NT3JmgK",
       "result_maker": {
         "id": "99288",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "workbc_careereducation_find",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date",
-                "field": "workbc_careereducation_find.event_date"
-              },
-              {
-                "dashboard_filter_name": "Is Government (Yes / No)",
-                "field": "page_views.is_government"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "workbc_careereducation_find.keyword_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1286838",
         "sql_query_id": "",
         "query": {
-          "id": "1286838",
           "view": "workbc_careereducation_find",
           "fields": [
             "workbc_careereducation_find.keyword_count",
@@ -2943,8 +2960,6 @@
           "sorts": [
             "workbc_careereducation_find.keyword_count desc"
           ],
-          "limit": "500",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -3080,32 +3095,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.keyword_count,workbc_careereducation_find.keyword&f[workbc_careereducation_find.action]=&f[workbc_careereducation_find.keyword]=-EMPTY&sorts=workbc_careereducation_find.keyword_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_find.keyword%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/workbc_careereducation_find?fields=workbc_careereducation_find.keyword_count,workbc_careereducation_find.keyword&f[workbc_careereducation_find.action]=&f[workbc_careereducation_find.keyword]=-EMPTY&sorts=workbc_careereducation_find.keyword_count+desc&limit=500&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Afalse%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22id%22%3A%22workbc_careereducation_find.audiences_count%22%2C%22name%22%3A%22Audiences+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22id%22%3A%22workbc_careereducation_find.competencies_count%22%2C%22name%22%3A%22Competencies+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22id%22%3A%22workbc_careereducation_find.focus_area_count%22%2C%22name%22%3A%22Focus+Area+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22id%22%3A%22workbc_careereducation_find.keyword_count%22%2C%22name%22%3A%22Keyword+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22id%22%3A%22workbc_careereducation_find.lifecycle_stage_count%22%2C%22name%22%3A%22Lifecycle+Stage+Count%22%7D%2C%7B%22axisId%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22id%22%3A%22workbc_careereducation_find.show_category_count%22%2C%22name%22%3A%22Show+Category+Count%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22x_axis_label%22%3A%22Search+Filters%22%2C%22hide_legend%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22workbc_careereducation_find.action%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22workbc_careereducation_find.keyword%22%3A%5B%7B%22type%22%3A%22%21empty%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "NT3JmgK",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3202,19 +3221,38 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "workbc_careereducation_find",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date",
+                "field": "workbc_careereducation_find.event_date"
+              },
+              {
+                "dashboard_filter_name": "Is Government (Yes / No)",
+                "field": "page_views.is_government"
+              }
+            ]
+          }
+        ],
+        "query_id": "NT3JmgK"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3311,12 +3349,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3411,12 +3449,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -3444,11 +3482,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3464,11 +3502,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3484,11 +3522,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3504,11 +3542,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3524,11 +3562,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3544,11 +3582,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3564,11 +3602,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3584,18 +3622,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -3611,8 +3652,6 @@
   "last_accessed_at": "2025-12-04 00:01:22 UTC",
   "updated_at": "2023-05-12 02:04:16 UTC",
   "last_updater_id": "13",
-  "last_updater_name": "Dan Pollock",
-  "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -3638,17 +3677,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -3657,21 +3696,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "Dan Pollock",
+  "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

@@ -19,6 +19,7 @@
       "body_text": "Use drill downs to see the Google Search queries resulting in clicks/impressions to each section or topic.",
       "body_text_as_html": "<p>Use drill downs to see the Google Search queries resulting in clicks/impressions to each section or topic.</p>\n",
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2304",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -44,18 +44,21 @@
       "title_text_as_html": "Google Search Console Results",
       "subtitle_text_as_html": "Note: Google data runs on 2-3 day lag.",
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -65,6 +68,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2305",
       "look": null,
@@ -76,7 +80,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142529",
         "view": "google_search",
         "fields": [
           "google_search.welcomebc_page_section",
@@ -94,8 +97,6 @@
         "sorts": [
           "google_search.total_clicks desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -246,35 +247,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.welcomebc_page_section,google_search.total_clicks,google_search.total_impressions&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_section]=-NULL&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/google_api/google_search?fields=google_search.welcomebc_page_section,google_search.total_clicks,google_search.total_impressions&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_section]=-NULL&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "X8NPSHn",
         "model": "google_api",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142529",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91429",
@@ -288,31 +292,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "X8NPSHn",
       "result_maker": {
         "id": "91429",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "google_api",
-            "view": "google_search",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Google Date Range",
-                "field": "google_search.google_search_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "google_search.total_clicks desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142529",
         "sql_query_id": "",
         "query": {
-          "id": "1142529",
           "view": "google_search",
           "fields": [
             "google_search.welcomebc_page_section",
@@ -330,8 +321,6 @@
           "sorts": [
             "google_search.total_clicks desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -464,32 +453,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.welcomebc_page_section,google_search.total_clicks,google_search.total_impressions&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_section]=-NULL&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/google_api/google_search?fields=google_search.welcomebc_page_section,google_search.total_clicks,google_search.total_impressions&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_section]=-NULL&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "X8NPSHn",
           "model": "google_api",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -586,19 +579,34 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "google_api",
+            "view": "google_search",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Google Date Range",
+                "field": "google_search.google_search_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "X8NPSHn"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -608,6 +616,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2306",
       "look": null,
@@ -619,7 +628,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142530",
         "view": "google_search",
         "fields": [
           "google_search.total_clicks",
@@ -637,8 +645,6 @@
         "sorts": [
           "google_search.total_clicks desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -788,35 +794,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.total_clicks,google_search.total_impressions,google_search.welcomebc_page_topic&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_topic]=-NULL&f[google_search.site]=&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.site%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%7D&origin=share-expanded",
         "url": "/explore/google_api/google_search?fields=google_search.total_clicks,google_search.total_impressions,google_search.welcomebc_page_topic&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_topic]=-NULL&f[google_search.site]=&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.site%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "J3hz3nZ",
         "model": "google_api",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142530",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91430",
@@ -830,31 +839,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "J3hz3nZ",
       "result_maker": {
         "id": "91430",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "google_api",
-            "view": "google_search",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Google Date Range",
-                "field": "google_search.google_search_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "google_search.total_clicks desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142530",
         "sql_query_id": "",
         "query": {
-          "id": "1142530",
           "view": "google_search",
           "fields": [
             "google_search.total_clicks",
@@ -872,8 +868,6 @@
           "sorts": [
             "google_search.total_clicks desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1005,32 +999,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.total_clicks,google_search.total_impressions,google_search.welcomebc_page_topic&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_topic]=-NULL&f[google_search.site]=&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.site%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%7D&origin=share-expanded",
           "url": "/explore/google_api/google_search?fields=google_search.total_clicks,google_search.total_impressions,google_search.welcomebc_page_topic&f[google_search.google_search_date]=8+days+ago+for+7+days&f[google_search.welcomebc_page_topic]=-NULL&f[google_search.site]=&sorts=google_search.total_clicks+desc&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.google_search_date%22%3A%5B%7B%22type%22%3A%22advanced%22%2C%22values%22%3A%5B%7B%22constant%22%3A%228+days+ago+for+7+days%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22google_search.welcomebc_page_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22google_search.site%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "J3hz3nZ",
           "model": "google_api",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1127,19 +1125,34 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "google_api",
+            "view": "google_search",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Google Date Range",
+                "field": "google_search.google_search_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "J3hz3nZ"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1149,6 +1162,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2307",
       "look": null,
@@ -1160,7 +1174,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142531",
         "view": "google_search",
         "fields": [
           "google_search.query",
@@ -1182,8 +1195,6 @@
           "google_search.google_search_date desc",
           "google_search.query"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -1323,7 +1334,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_clicks&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_clicks&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "MNPtnFS",
         "model": "google_api",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -1331,29 +1345,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142531",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91431",
@@ -1367,32 +1381,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "MNPtnFS",
       "result_maker": {
         "id": "91431",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "google_api",
-            "view": "google_search",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Google Date Range",
-                "field": "google_search.google_search_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "google_search.google_search_date desc",
           "google_search.query"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142531",
         "sql_query_id": "",
         "query": {
-          "id": "1142531",
           "view": "google_search",
           "fields": [
             "google_search.query",
@@ -1414,8 +1415,6 @@
             "google_search.google_search_date desc",
             "google_search.query"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -1537,7 +1536,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_clicks&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_clicks&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "MNPtnFS",
           "model": "google_api",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -1545,26 +1547,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1665,19 +1668,34 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "google_api",
+            "view": "google_search",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Google Date Range",
+                "field": "google_search.google_search_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "MNPtnFS"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1687,6 +1705,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2308",
       "look": null,
@@ -1698,7 +1717,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142532",
         "view": "google_search",
         "fields": [
           "google_search.query",
@@ -1720,8 +1738,6 @@
           "google_search.google_search_date desc",
           "google_search.query"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -1861,7 +1877,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_impressions&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_impressions&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "CdXBjZc",
         "model": "google_api",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -1869,29 +1888,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142532",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91432",
@@ -1905,32 +1924,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "CdXBjZc",
       "result_maker": {
         "id": "91432",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "google_api",
-            "view": "google_search",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Google Date Range",
-                "field": "google_search.google_search_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "google_search.google_search_date desc",
           "google_search.query"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142532",
         "sql_query_id": "",
         "query": {
-          "id": "1142532",
           "view": "google_search",
           "fields": [
             "google_search.query",
@@ -1952,8 +1958,6 @@
             "google_search.google_search_date desc",
             "google_search.query"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -2075,7 +2079,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_impressions&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/google_api/google_search?fields=google_search.query,google_search.google_search_date,google_search.total_impressions&pivots=google_search.query&fill_fields=google_search.google_search_date&f[google_search.page_urlhost]=www.welcomebc.ca&f[google_search.query]=bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login&sorts=google_search.google_search_date+desc,google_search.query&limit=500&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22time%22%2C%22y_axis_combined%22%3Atrue%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22color_application%22%3A%7B%22collection_id%22%3A%22d754397b-2c05-4470-bbbb-05eb4c2b15cd%22%2C%22palette_id%22%3A%22b0768e0d-03b8-4c12-9e30-9ada6affc357%22%2C%22options%22%3A%7B%22steps%22%3A5%7D%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_clicks%22%2C%22id%22%3A%22google_search.total_clicks%22%2C%22name%22%3A%22Total+Clicks%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%2C%7B%22label%22%3Anull%2C%22orientation%22%3A%22right%22%2C%22series%22%3A%5B%7B%22axisId%22%3A%22google_search.total_impressions%22%2C%22id%22%3A%22google_search.total_impressions%22%2C%22name%22%3A%22Total+Impressions%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22tickDensityCustom%22%3A5%2C%22type%22%3A%22linear%22%7D%5D%2C%22series_types%22%3A%7B%7D%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_line%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%7D&filter_config=%7B%22google_search.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22google_search.query%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22bc+pnp%2Cbritish+columbia%2Cbcpnp%2Cbc%2Cbc+pnp+draw%2Cbritish+columbia+pnp%2Cpnp%2Cbc+pnp+login%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "CdXBjZc",
           "model": "google_api",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -2083,26 +2090,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -2203,19 +2211,34 @@
           "hidden_fields": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "google_api",
+            "view": "google_search",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Google Date Range",
+                "field": "google_search.google_search_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "CdXBjZc"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -2225,6 +2248,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2309",
       "look": null,
@@ -2236,7 +2260,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142533",
         "view": "page_views",
         "fields": [
           "page_views.row_count",
@@ -2255,8 +2278,6 @@
         "sorts": [
           "page_views.row_count desc"
         ],
-        "limit": "20",
-        "column_limit": "50",
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -2406,7 +2427,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "Php8f4r",
         "model": "snowplow_web_block",
+        "limit": "20",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -2414,29 +2438,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142533",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91433",
@@ -2450,31 +2474,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "Php8f4r",
       "result_maker": {
         "id": "91433",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "page_views",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date Range",
-                "field": "page_views.page_view_start_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "page_views.row_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142533",
         "sql_query_id": "",
         "query": {
-          "id": "1142533",
           "view": "page_views",
           "fields": [
             "page_views.row_count",
@@ -2493,8 +2504,6 @@
           "sorts": [
             "page_views.row_count desc"
           ],
-          "limit": "20",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -2644,7 +2653,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "Php8f4r",
           "model": "snowplow_web_block",
+          "limit": "20",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -2652,26 +2664,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -2739,19 +2752,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "page_views.page_view_start_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "Php8f4r"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -2761,6 +2789,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2310",
       "look": null,
@@ -2772,7 +2801,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142534",
         "view": "page_views",
         "fields": [
           "page_views.row_count",
@@ -2791,8 +2819,6 @@
         "sorts": [
           "page_views.row_count desc"
         ],
-        "limit": "20",
-        "column_limit": "50",
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -2942,7 +2968,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "H57KkyC",
         "model": "snowplow_web_block",
+        "limit": "20",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -2950,29 +2979,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142534",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91434",
@@ -2986,31 +3015,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "H57KkyC",
       "result_maker": {
         "id": "91434",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "page_views",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date Range",
-                "field": "page_views.page_view_start_marketing_drill_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "page_views.row_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142534",
         "sql_query_id": "",
         "query": {
-          "id": "1142534",
           "view": "page_views",
           "fields": [
             "page_views.row_count",
@@ -3029,8 +3045,6 @@
           "sorts": [
             "page_views.row_count desc"
           ],
-          "limit": "20",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -3180,7 +3194,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "H57KkyC",
           "model": "snowplow_web_block",
+          "limit": "20",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -3188,26 +3205,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3275,19 +3293,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "page_views.page_view_start_marketing_drill_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "H57KkyC"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3297,6 +3330,7 @@
       "body_text": "The 8 top google search queries were chosen based on the total number of impressions as of Oct 27. There was a clear cut-off at 8 as each had more than 100K impressions at that time. The reports below will continue past that date. If needed, we can update the included terms.\n\nThese 8 queries include the top 4 queries by number of clicks which all had more than 10K clicks (with the 5th top query dropping to 5K clicks) at that time.",
       "body_text_as_html": "<p>The 8 top google search queries were chosen based on the total number of impressions as of Oct 27. There was a clear cut-off at 8 as each had more than 100K impressions at that time. The reports below will continue past that date. If needed, we can update the included terms.</p>\n\n<p>These 8 queries include the top 4 queries by number of clicks which all had more than 10K clicks (with the 5th top query dropping to 5K clicks) at that time.</p>\n",
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2312",
       "look": null,
@@ -3308,7 +3342,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -3322,18 +3355,21 @@
       "title_text_as_html": "Top Googles Search Queries Over Time",
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -3343,6 +3379,7 @@
       "body_text": "This section shows what page people are using the site search box FROM, by presenting which page URLs people originated from prior to landing on the search page.",
       "body_text_as_html": "<p>This section shows what page people are using the site search box FROM, by presenting which page URLs people originated from prior to landing on the search page.</p>\n",
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2313",
       "look": null,
@@ -3354,7 +3391,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -3368,18 +3404,21 @@
       "title_text_as_html": "Site Search Referrals",
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -3389,6 +3428,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "217",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2322",
       "look": null,
@@ -3400,7 +3440,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142541",
         "view": "searches",
         "fields": [
           "searches.page_referrer_display_url",
@@ -3417,8 +3456,6 @@
         "sorts": [
           "searches.row_count desc"
         ],
-        "limit": "20",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -3514,35 +3551,38 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
         "has_table_calculations": false,
+        "id": "4xrMJTx",
         "model": "snowplow_web_block",
+        "limit": "20",
+        "column_limit": "50",
         "dynamic_fields": null,
         "query_timezone": null,
         "quick_calcs": null,
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142541",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91441",
@@ -3556,31 +3596,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "4xrMJTx",
       "result_maker": {
         "id": "91441",
         "dynamic_fields": null,
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "searches",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date Range",
-                "field": "searches.search_time_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "searches.row_count desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142541",
         "sql_query_id": "",
         "query": {
-          "id": "1142541",
           "view": "searches",
           "fields": [
             "searches.page_referrer_display_url",
@@ -3597,8 +3624,6 @@
           "sorts": [
             "searches.row_count desc"
           ],
-          "limit": "20",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -3694,32 +3719,36 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
           "has_table_calculations": false,
+          "id": "4xrMJTx",
           "model": "snowplow_web_block",
+          "limit": "20",
+          "column_limit": "50",
           "dynamic_fields": null,
           "query_timezone": null,
           "quick_calcs": null,
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3761,19 +3790,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "searches",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "searches.search_time_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "4xrMJTx"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3801,12 +3845,12 @@
       "field": null,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3832,12 +3876,12 @@
       "field": null,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -3865,11 +3909,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3885,11 +3929,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3905,11 +3949,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3925,11 +3969,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_line",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3945,11 +3989,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_line",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3965,11 +4009,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -3985,11 +4029,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4005,11 +4049,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4025,11 +4069,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4045,18 +4089,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -4072,8 +4119,6 @@
   "last_accessed_at": "2025-12-23 19:45:48 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Stephanie Yurchak",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -4099,17 +4144,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -4118,21 +4163,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Stephanie Yurchak",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

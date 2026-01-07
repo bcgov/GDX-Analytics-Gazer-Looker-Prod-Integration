@@ -19,6 +19,7 @@
       "body_text": "<p style=\"background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;\">\n\n<b>Filter - Date</b>: Input the date range you want to view results for. Results are currently available for the last completed 24 months.<br>\n\n<b>Filter - Page URL</b>: Input the URL of the page or pages you want to see download clicks for. A reminder to input the various potential URL spellings.<br>\n\n<b>Filter - Downloaded File</b>: Input the PDF URL or URLs if you want to view results for a specific PDF. A reminder to input the various potential URL spellings. For example, include uppercase and lowercase versions if applicable, etc.<br>\n\n<b>View or Download More Rows/Columns of Data</b>: The current live view limit is 20 rows & 50 columns. To view or download more rows/columns of data, use the \"Advanced data options\" of the \"Download Data\" option. <a href=\"https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore\" target=\"_blank\">Go to the online guide for instructions</a>.\n\n<br>\n\n</p>\n",
       "body_text_as_html": "<p style=\"background-color:#d9eaf7;border:1px solid transparent;border-radius:4px;color:#313132;font-size:16px;padding:15px;\">\n\n<b>Filter - Date</b>: Input the date range you want to view results for. Results are currently available for the last completed 24 months.<br>\n\n<b>Filter - Page URL</b>: Input the URL of the page or pages you want to see download clicks for. A reminder to input the various potential URL spellings.<br>\n\n<b>Filter - Downloaded File</b>: Input the PDF URL or URLs if you want to view results for a specific PDF. A reminder to input the various potential URL spellings. For example, include uppercase and lowercase versions if applicable, etc.<br>\n\n<b>View or Download More Rows/Columns of Data</b>: The current live view limit is 20 rows &amp; 50 columns. To view or download more rows/columns of data, use the \"Advanced data options\" of the \"Download Data\" option. <a href=\"https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore\" rel=\"noopener noreferrer\" target=\"_blank\">Go to the online guide for instructions</a>.\n\n<br>\n\n</p>\n",
       "dashboard_id": "488",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4664",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -44,18 +44,21 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": null,
       "can": {
+        "can_clear_cache": false,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": false,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": false,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -65,6 +68,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "488",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "4665",
       "look": null,
@@ -76,7 +80,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "2359389",
         "view": "clicks",
         "fields": [
           "clicks.page_display_url",
@@ -96,8 +99,6 @@
           "clicks.download_click_count desc 7",
           "clicks.click_time_month"
         ],
-        "limit": "20",
-        "column_limit": "50",
         "total": true,
         "row_total": "right",
         "subtotals": null,
@@ -426,7 +427,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_display_url,clicks.target_display_url,clicks.download_click_count,clicks.click_time_month&pivots=clicks.click_time_month&fill_fields=clicks.click_time_month&filter_expression=matches_filter%28%24%7Bclicks.click_time_date%7D%2C+%6026+month%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25pdf%25%2C%25PDF%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60https%3A%2F%2Fgovbcnews.azureedge.net%2Ftranslations%2Freleases%25%2Chttps%3A%2F%2Fbcgovnews-etg7c8etapa6btfr.z03.azurefd.net%2Ftranslations%2Freleases%2F%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25%5E_Arabic%25%2C%25%5E_Chinese%28simplified%29%25%2C%25%5E_Chinese%28Simplified%29%25%2C%25%5E_Chinese%28traditional%29%25%2C%25%5E_Chinese%28Traditional%29%25%2C%25%5E_Dutch%25%2C%25%5E_Farsi%25%2C%25%5E_Finnish%25%2C%25%5E_French%25%2C%25%5E_Gujarati%25%2C%25%5E_Hebrew%25%2C%25%5E_Hindi%25%2C%25%5E_Indonesian%25%2C%25%5E_Japanese%25%2C%25%5E_Korean%25%2C%25%5E_Portuguese%25%2C%25%5E_Punjabi%25%2C%25%5E_Russian%25%2C%25%5E_Somali%25%2C%25%5E_Spanish%25%2C%25%5E_Swahili%25%2C%25%5E_Tagalog%25%2C%25%5E_Ukrainian%25%2C%25%5E_Urdu%25%2C%25%5E_Vietnamese%25%60%29+AND+matches_filter%28%24%7Bclicks.page_display_url%7D%2C+%60https%3A%2F%2Fnews.gov.bc.ca%2Freleases%25%60%29+AND+matches_filter%28%24%7Bclicks.page_urlhost%7D%2C+%60news.gov.bc.ca%60%29&sorts=clicks.download_click_count+desc+7,clicks.click_time_month&limit=20&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22clicks.page_display_url%22%3A%22Page+URL%22%2C%22clicks.target_display_url%22%3A%22Downloaded+File%22%2C%22clicks.download_click_count%22%3A%22Download+Count%22%2C%22clicks.click_time_month%22%3A%22Month%22%7D%2C%22series_column_widths%22%3A%7B%22clicks.page_display_url%22%3A345%2C%22clicks.target_display_url%22%3A826%7D%2C%22series_cell_visualizations%22%3A%7B%22clicks.download_click_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22A+count+of+only+the+download+clicks+in+this+Explore.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Clicks+Download+Click+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Download+Click+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.download_click_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Download+Click+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.download_click_count%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D447%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7Bclick_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3A%5B%7B%22field%22%3A%22clicks.click_type%22%2C%22condition%22%3A%22download%22%7D%5D%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%2C%22pivot_index%22%3A23%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.page_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Target%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Target+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Target+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.target_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Target+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.target_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D201%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.target_display_url%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+timestamp+for+the+page+view+as+recorded+by+the+collector.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Click%22%2C%22fill_style%22%3A%22range%22%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Click+Time+Month%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Click+Time+Month%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.click_time_month%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22date_month%22%2C%22user_attribute_filter_types%22%3A%5B%22datetime%22%2C%22advanced_filter_datetime%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3A%22clicks.click_time%22%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Click+Time+Month%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.click_time_month%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Atrue%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3A%7B%22name%22%3A%22month%22%2C%22count%22%3A1%7D%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D52%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.derived_tstamp+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Afalse%2C%22sort_index%22%3A1%7D%7D%5D%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Downloads%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_downloads%22%2C%22args%22%3A%5B%22clicks.download_click_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_display_url,clicks.target_display_url,clicks.download_click_count,clicks.click_time_month&pivots=clicks.click_time_month&fill_fields=clicks.click_time_month&filter_expression=matches_filter%28%24%7Bclicks.click_time_date%7D%2C+%6026+month%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25pdf%25%2C%25PDF%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60https%3A%2F%2Fgovbcnews.azureedge.net%2Ftranslations%2Freleases%25%2Chttps%3A%2F%2Fbcgovnews-etg7c8etapa6btfr.z03.azurefd.net%2Ftranslations%2Freleases%2F%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25%5E_Arabic%25%2C%25%5E_Chinese%28simplified%29%25%2C%25%5E_Chinese%28Simplified%29%25%2C%25%5E_Chinese%28traditional%29%25%2C%25%5E_Chinese%28Traditional%29%25%2C%25%5E_Dutch%25%2C%25%5E_Farsi%25%2C%25%5E_Finnish%25%2C%25%5E_French%25%2C%25%5E_Gujarati%25%2C%25%5E_Hebrew%25%2C%25%5E_Hindi%25%2C%25%5E_Indonesian%25%2C%25%5E_Japanese%25%2C%25%5E_Korean%25%2C%25%5E_Portuguese%25%2C%25%5E_Punjabi%25%2C%25%5E_Russian%25%2C%25%5E_Somali%25%2C%25%5E_Spanish%25%2C%25%5E_Swahili%25%2C%25%5E_Tagalog%25%2C%25%5E_Ukrainian%25%2C%25%5E_Urdu%25%2C%25%5E_Vietnamese%25%60%29+AND+matches_filter%28%24%7Bclicks.page_display_url%7D%2C+%60https%3A%2F%2Fnews.gov.bc.ca%2Freleases%25%60%29+AND+matches_filter%28%24%7Bclicks.page_urlhost%7D%2C+%60news.gov.bc.ca%60%29&sorts=clicks.download_click_count+desc+7,clicks.click_time_month&limit=20&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22clicks.page_display_url%22%3A%22Page+URL%22%2C%22clicks.target_display_url%22%3A%22Downloaded+File%22%2C%22clicks.download_click_count%22%3A%22Download+Count%22%2C%22clicks.click_time_month%22%3A%22Month%22%7D%2C%22series_column_widths%22%3A%7B%22clicks.page_display_url%22%3A345%2C%22clicks.target_display_url%22%3A826%7D%2C%22series_cell_visualizations%22%3A%7B%22clicks.download_click_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22A+count+of+only+the+download+clicks+in+this+Explore.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Clicks+Download+Click+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Download+Click+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.download_click_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Download+Click+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.download_click_count%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D447%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7Bclick_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3A%5B%7B%22field%22%3A%22clicks.click_type%22%2C%22condition%22%3A%22download%22%7D%5D%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%2C%22pivot_index%22%3A23%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.page_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Target%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Target+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Target+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.target_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Target+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.target_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D201%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.target_display_url%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+timestamp+for+the+page+view+as+recorded+by+the+collector.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Click%22%2C%22fill_style%22%3A%22range%22%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Click+Time+Month%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Click+Time+Month%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.click_time_month%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22date_month%22%2C%22user_attribute_filter_types%22%3A%5B%22datetime%22%2C%22advanced_filter_datetime%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3A%22clicks.click_time%22%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Click+Time+Month%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.click_time_month%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Atrue%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3A%7B%22name%22%3A%22month%22%2C%22count%22%3A1%7D%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D52%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.derived_tstamp+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Afalse%2C%22sort_index%22%3A1%7D%7D%5D%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Downloads%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_downloads%22%2C%22args%22%3A%5B%22clicks.download_click_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
         "has_table_calculations": true,
+        "id": "vZ7xRsC",
         "model": "snowplow_web_block",
+        "limit": "20",
+        "column_limit": "50",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Downloads\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_downloads\",\"args\":[\"clicks.download_click_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\",\"expression\":\"(${clicks.download_click_count} / sum(${clicks.download_click_count}))\"}]",
         "query_timezone": null,
         "quick_calcs": [
@@ -450,29 +454,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "2359389",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "143562",
@@ -486,40 +490,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "vZ7xRsC",
       "result_maker": {
         "id": "143562",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Downloads\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_downloads\",\"args\":[\"clicks.download_click_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "clicks",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date Range",
-                "field": "clicks.click_time_date"
-              },
-              {
-                "dashboard_filter_name": "Page URL",
-                "field": "clicks.page_display_url"
-              },
-              {
-                "dashboard_filter_name": "Downloaded File",
-                "field": "clicks.target_display_url"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "clicks.download_click_count desc 7",
           "clicks.click_time_month"
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "2359389",
         "sql_query_id": "",
         "query": {
-          "id": "2359389",
           "view": "clicks",
           "fields": [
             "clicks.page_display_url",
@@ -539,8 +522,6 @@
             "clicks.download_click_count desc 7",
             "clicks.click_time_month"
           ],
-          "limit": "20",
-          "column_limit": "50",
           "total": true,
           "row_total": "right",
           "subtotals": null,
@@ -869,7 +850,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.page_display_url,clicks.target_display_url,clicks.download_click_count,clicks.click_time_month&pivots=clicks.click_time_month&fill_fields=clicks.click_time_month&filter_expression=matches_filter%28%24%7Bclicks.click_time_date%7D%2C+%6026+month%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25pdf%25%2C%25PDF%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60https%3A%2F%2Fgovbcnews.azureedge.net%2Ftranslations%2Freleases%25%2Chttps%3A%2F%2Fbcgovnews-etg7c8etapa6btfr.z03.azurefd.net%2Ftranslations%2Freleases%2F%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25%5E_Arabic%25%2C%25%5E_Chinese%28simplified%29%25%2C%25%5E_Chinese%28Simplified%29%25%2C%25%5E_Chinese%28traditional%29%25%2C%25%5E_Chinese%28Traditional%29%25%2C%25%5E_Dutch%25%2C%25%5E_Farsi%25%2C%25%5E_Finnish%25%2C%25%5E_French%25%2C%25%5E_Gujarati%25%2C%25%5E_Hebrew%25%2C%25%5E_Hindi%25%2C%25%5E_Indonesian%25%2C%25%5E_Japanese%25%2C%25%5E_Korean%25%2C%25%5E_Portuguese%25%2C%25%5E_Punjabi%25%2C%25%5E_Russian%25%2C%25%5E_Somali%25%2C%25%5E_Spanish%25%2C%25%5E_Swahili%25%2C%25%5E_Tagalog%25%2C%25%5E_Ukrainian%25%2C%25%5E_Urdu%25%2C%25%5E_Vietnamese%25%60%29+AND+matches_filter%28%24%7Bclicks.page_display_url%7D%2C+%60https%3A%2F%2Fnews.gov.bc.ca%2Freleases%25%60%29+AND+matches_filter%28%24%7Bclicks.page_urlhost%7D%2C+%60news.gov.bc.ca%60%29&sorts=clicks.download_click_count+desc+7,clicks.click_time_month&limit=20&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22clicks.page_display_url%22%3A%22Page+URL%22%2C%22clicks.target_display_url%22%3A%22Downloaded+File%22%2C%22clicks.download_click_count%22%3A%22Download+Count%22%2C%22clicks.click_time_month%22%3A%22Month%22%7D%2C%22series_column_widths%22%3A%7B%22clicks.page_display_url%22%3A345%2C%22clicks.target_display_url%22%3A826%7D%2C%22series_cell_visualizations%22%3A%7B%22clicks.download_click_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22A+count+of+only+the+download+clicks+in+this+Explore.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Clicks+Download+Click+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Download+Click+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.download_click_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Download+Click+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.download_click_count%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D447%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7Bclick_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3A%5B%7B%22field%22%3A%22clicks.click_type%22%2C%22condition%22%3A%22download%22%7D%5D%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%2C%22pivot_index%22%3A23%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.page_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Target%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Target+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Target+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.target_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Target+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.target_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D201%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.target_display_url%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+timestamp+for+the+page+view+as+recorded+by+the+collector.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Click%22%2C%22fill_style%22%3A%22range%22%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Click+Time+Month%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Click+Time+Month%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.click_time_month%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22date_month%22%2C%22user_attribute_filter_types%22%3A%5B%22datetime%22%2C%22advanced_filter_datetime%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3A%22clicks.click_time%22%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Click+Time+Month%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.click_time_month%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Atrue%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3A%7B%22name%22%3A%22month%22%2C%22count%22%3A1%7D%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D52%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.derived_tstamp+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Afalse%2C%22sort_index%22%3A1%7D%7D%5D%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Downloads%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_downloads%22%2C%22args%22%3A%5B%22clicks.download_click_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/clicks?fields=clicks.page_display_url,clicks.target_display_url,clicks.download_click_count,clicks.click_time_month&pivots=clicks.click_time_month&fill_fields=clicks.click_time_month&filter_expression=matches_filter%28%24%7Bclicks.click_time_date%7D%2C+%6026+month%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25pdf%25%2C%25PDF%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60https%3A%2F%2Fgovbcnews.azureedge.net%2Ftranslations%2Freleases%25%2Chttps%3A%2F%2Fbcgovnews-etg7c8etapa6btfr.z03.azurefd.net%2Ftranslations%2Freleases%2F%25%60%29+AND+matches_filter%28%24%7Bclicks.target_display_url%7D%2C+%60%25%5E_Arabic%25%2C%25%5E_Chinese%28simplified%29%25%2C%25%5E_Chinese%28Simplified%29%25%2C%25%5E_Chinese%28traditional%29%25%2C%25%5E_Chinese%28Traditional%29%25%2C%25%5E_Dutch%25%2C%25%5E_Farsi%25%2C%25%5E_Finnish%25%2C%25%5E_French%25%2C%25%5E_Gujarati%25%2C%25%5E_Hebrew%25%2C%25%5E_Hindi%25%2C%25%5E_Indonesian%25%2C%25%5E_Japanese%25%2C%25%5E_Korean%25%2C%25%5E_Portuguese%25%2C%25%5E_Punjabi%25%2C%25%5E_Russian%25%2C%25%5E_Somali%25%2C%25%5E_Spanish%25%2C%25%5E_Swahili%25%2C%25%5E_Tagalog%25%2C%25%5E_Ukrainian%25%2C%25%5E_Urdu%25%2C%25%5E_Vietnamese%25%60%29+AND+matches_filter%28%24%7Bclicks.page_display_url%7D%2C+%60https%3A%2F%2Fnews.gov.bc.ca%2Freleases%25%60%29+AND+matches_filter%28%24%7Bclicks.page_urlhost%7D%2C+%60news.gov.bc.ca%60%29&sorts=clicks.download_click_count+desc+7,clicks.click_time_month&limit=20&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22minimum_column_width%22%3A75%2C%22series_labels%22%3A%7B%22clicks.page_display_url%22%3A%22Page+URL%22%2C%22clicks.target_display_url%22%3A%22Downloaded+File%22%2C%22clicks.download_click_count%22%3A%22Download+Count%22%2C%22clicks.click_time_month%22%3A%22Month%22%7D%2C%22series_column_widths%22%3A%7B%22clicks.page_display_url%22%3A345%2C%22clicks.target_display_url%22%3A826%7D%2C%22series_cell_visualizations%22%3A%7B%22clicks.download_click_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22hidden_pivots%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22query_fields%22%3A%7B%22measures%22%3A%5B%7B%22align%22%3A%22right%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22measure%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22A+count+of+only+the+download+clicks+in+this+Explore.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Counts%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Atrue%2C%22label%22%3A%22Clicks+Download+Click+Count%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Download+Click+Count%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.download_click_count%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22count_distinct%22%2C%22user_attribute_filter_types%22%3A%5B%22number%22%2C%22advanced_filter_number%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Download+Click+Count%22%2C%22measure%22%3Atrue%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.download_click_count%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D447%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7Bclick_id%7D+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3A%5B%7B%22field%22%3A%22clicks.click_type%22%2C%22condition%22%3A%22download%22%7D%5D%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Atrue%2C%22sort_index%22%3A0%2C%22pivot_index%22%3A23%7D%7D%5D%2C%22dimensions%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Page%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Page+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Page+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.page_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Page+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.page_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FIncludes%252Fshared_fields_no_session.view.lkml%3Fline%3D145%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.page_display_url+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%2C%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22Cleaned+URL+of+the+page+without+query+string+or+standard+file+names+like+index.html%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Target%22%2C%22fill_style%22%3Anull%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Target+Display+URL%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Target+Display+URL%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.target_display_url%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22string%22%2C%22user_attribute_filter_types%22%3A%5B%22string%22%2C%22advanced_filter_string%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3Anull%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Target+Display+URL%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.target_display_url%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Atrue%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Afalse%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3Anull%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D201%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.target_display_url%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%7D%5D%2C%22table_calculations%22%3A%5B%5D%2C%22pivots%22%3A%5B%7B%22align%22%3A%22left%22%2C%22can_filter%22%3Atrue%2C%22category%22%3A%22dimension%22%2C%22default_filter_value%22%3Anull%2C%22description%22%3A%22The+timestamp+for+the+page+view+as+recorded+by+the+collector.%22%2C%22enumerations%22%3Anull%2C%22field_group_label%22%3A%22Click%22%2C%22fill_style%22%3A%22range%22%2C%22fiscal_month_offset%22%3A3%2C%22has_allowed_values%22%3Afalse%2C%22hidden%22%3Afalse%2C%22is_filter%22%3Afalse%2C%22is_numeric%22%3Afalse%2C%22label%22%3A%22Clicks+Click+Time+Month%22%2C%22label_from_parameter%22%3Anull%2C%22label_short%22%3A%22Click+Time+Month%22%2C%22map_layer%22%3Anull%2C%22name%22%3A%22clicks.click_time_month%22%2C%22strict_value_format%22%3Afalse%2C%22requires_refresh_on_sort%22%3Afalse%2C%22sortable%22%3Atrue%2C%22suggestions%22%3Anull%2C%22tags%22%3A%5B%5D%2C%22type%22%3A%22date_month%22%2C%22user_attribute_filter_types%22%3A%5B%22datetime%22%2C%22advanced_filter_datetime%22%5D%2C%22value_format%22%3Anull%2C%22view%22%3A%22clicks%22%2C%22view_label%22%3A%22Clicks%22%2C%22dynamic%22%3Afalse%2C%22week_start_day%22%3A%22sunday%22%2C%22original_view%22%3A%22clicks%22%2C%22dimension_group%22%3A%22clicks.click_time%22%2C%22error%22%3Anull%2C%22field_group_variant%22%3A%22Click+Time+Month%22%2C%22measure%22%3Afalse%2C%22parameter%22%3Afalse%2C%22primary_key%22%3Afalse%2C%22project_name%22%3A%22snowplow_web_block%22%2C%22scope%22%3A%22clicks%22%2C%22suggest_dimension%22%3A%22clicks.click_time_month%22%2C%22suggest_explore%22%3A%22clicks%22%2C%22suggestable%22%3Afalse%2C%22is_fiscal%22%3Afalse%2C%22is_timeframe%22%3Atrue%2C%22can_time_filter%22%3Afalse%2C%22time_interval%22%3A%7B%22name%22%3A%22month%22%2C%22count%22%3A1%7D%2C%22lookml_link%22%3A%22%2Fprojects%2Fsnowplow_web_block%2Ffiles%2FViews%252Fclicks.view.lkml%3Fline%3D52%22%2C%22permanent%22%3Anull%2C%22source_file%22%3A%22Views%2Fclicks.view.lkml%22%2C%22source_file_path%22%3A%22snowplow_web_block%2FViews%2Fclicks.view.lkml%22%2C%22sql%22%3A%22%24%7BTABLE%7D.derived_tstamp+%22%2C%22sql_case%22%3Anull%2C%22filters%22%3Anull%2C%22times_used%22%3A0%2C%22sorted%22%3A%7B%22desc%22%3Afalse%2C%22sort_index%22%3A1%7D%7D%5D%7D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%7D&dynamic_fields=%5B%7B%22category%22%3A%22table_calculation%22%2C%22label%22%3A%22%25+of+Downloads%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_1%22%2C%22calculation_type%22%3A%22percent_of_column_sum%22%2C%22table_calculation%22%3A%22of_downloads%22%2C%22args%22%3A%5B%22clicks.download_click_count%22%5D%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
           "has_table_calculations": true,
+          "id": "vZ7xRsC",
           "model": "snowplow_web_block",
+          "limit": "20",
+          "column_limit": "50",
           "dynamic_fields": "[{\"category\":\"table_calculation\",\"label\":\"% of Downloads\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"calculation_type\":\"percent_of_column_sum\",\"table_calculation\":\"of_downloads\",\"args\":[\"clicks.download_click_count\"],\"_kind_hint\":\"measure\",\"_type_hint\":\"number\",\"expression\":\"(${clicks.download_click_count} / sum(${clicks.download_click_count}))\"}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -893,26 +877,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -1230,19 +1215,42 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Page URL",
+                "field": "clicks.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Downloaded File",
+                "field": "clicks.target_display_url"
+              }
+            ]
+          }
+        ],
+        "query_id": "vZ7xRsC"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -1339,12 +1347,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -1430,12 +1438,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -1521,12 +1529,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -1554,11 +1562,11 @@
           "element_title_hidden": false,
           "vis_type": "text",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -1574,18 +1582,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -1601,8 +1612,6 @@
   "last_accessed_at": "2025-12-12 16:54:04 UTC",
   "updated_at": "2025-03-03 22:56:12 UTC",
   "last_updater_id": "1302",
-  "last_updater_name": "Linda Mah",
-  "user_name": "Linda Mah",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -1628,17 +1637,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -1647,21 +1656,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "Linda Mah",
+  "user_name": "Linda Mah",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

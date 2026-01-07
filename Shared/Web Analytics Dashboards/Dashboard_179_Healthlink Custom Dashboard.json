@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "179",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1831",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "436509",
         "view": "clicks",
         "fields": [
           "clicks.target_url",
@@ -48,8 +48,6 @@
         "sorts": [
           "clicks.click_count desc 0"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -84,7 +82,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_url,clicks.page_urlhost,clicks.click_count&pivots=clicks.page_urlhost&f[clicks.element_classes]=%22%5B%5C%22banner-link%5C%22%5D%22&sorts=clicks.click_count+desc+0&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.element_classes%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%5B%5C%22banner-link%5C%22%5D%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_url,clicks.page_urlhost,clicks.click_count&pivots=clicks.page_urlhost&f[clicks.element_classes]=%22%5B%5C%22banner-link%5C%22%5D%22&sorts=clicks.click_count+desc+0&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.element_classes%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%5B%5C%22banner-link%5C%22%5D%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "m8386gs",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -92,29 +93,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "436509",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31209",
@@ -128,51 +129,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "m8386gs",
       "result_maker": {
         "id": "31209",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "clicks",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Date Range",
-                "field": "clicks.click_time_date"
-              },
-              {
-                "dashboard_filter_name": "Site",
-                "field": "clicks.page_urlhost"
-              },
-              {
-                "dashboard_filter_name": "City",
-                "field": "clicks.geo_city_and_region"
-              },
-              {
-                "dashboard_filter_name": "Internal Gov Traffic",
-                "field": "clicks.is_government"
-              },
-              {
-                "dashboard_filter_name": "Is Mobile",
-                "field": "clicks.device_is_mobile"
-              },
-              {
-                "dashboard_filter_name": "URL",
-                "field": "clicks.page_display_url"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "clicks.click_count desc 0"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "436509",
         "sql_query_id": "",
         "query": {
-          "id": "436509",
           "view": "clicks",
           "fields": [
             "clicks.target_url",
@@ -190,8 +158,6 @@
           "sorts": [
             "clicks.click_count desc 0"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -226,7 +192,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/clicks?fields=clicks.target_url,clicks.page_urlhost,clicks.click_count&pivots=clicks.page_urlhost&f[clicks.element_classes]=%22%5B%5C%22banner-link%5C%22%5D%22&sorts=clicks.click_count+desc+0&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.element_classes%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%5B%5C%22banner-link%5C%22%5D%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/clicks?fields=clicks.target_url,clicks.page_urlhost,clicks.click_count&pivots=clicks.page_urlhost&f[clicks.element_classes]=%22%5B%5C%22banner-link%5C%22%5D%22&sorts=clicks.click_count+desc+0&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22clicks.element_classes%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%5B%5C%22banner-link%5C%22%5D%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "m8386gs",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -234,26 +203,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -263,19 +233,54 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "clicks",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Date Range",
+                "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Site",
+                "field": "clicks.page_urlhost"
+              },
+              {
+                "dashboard_filter_name": "City",
+                "field": "clicks.geo_city_and_region"
+              },
+              {
+                "dashboard_filter_name": "Internal Gov Traffic",
+                "field": "clicks.is_government"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "clicks.device_is_mobile"
+              },
+              {
+                "dashboard_filter_name": "URL",
+                "field": "clicks.page_display_url"
+              }
+            ]
+          }
+        ],
+        "query_id": "m8386gs"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -300,15 +305,78 @@
 
       ],
       "default_value": "7 days ago for 7 days",
-      "field": null,
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The start time of the first page view of a given session.",
+        "enumerations": null,
+        "field_group_label": "Session Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Session Start Date",
+        "label_from_parameter": null,
+        "label_short": "Session Start Date",
+        "map_layer": null,
+        "name": "sessions.session_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "view": "sessions",
+        "view_label": "Sessions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions",
+        "dimension_group": "sessions.session_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions",
+        "suggest_dimension": "sessions.session_start_date",
+        "suggest_explore": "sessions",
+        "suggestable": false,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsessions.view.lkml?line=36",
+        "permanent": null,
+        "source_file": "Views/sessions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
+        "sql": "${TABLE}.session_start ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -391,12 +459,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -479,12 +547,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -576,12 +644,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -673,12 +741,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -761,12 +829,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -794,18 +862,21 @@
           "element_title_hidden": false,
           "vis_type": "",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -818,11 +889,9 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-01-05 17:17:53 UTC",
+  "last_accessed_at": "2026-01-06 21:58:00 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -848,17 +917,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -867,21 +936,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

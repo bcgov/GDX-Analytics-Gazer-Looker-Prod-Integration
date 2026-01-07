@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1220",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31078",
@@ -44,9 +44,33 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31078",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${average_time_per_visit}*${cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+
+        ],
+        "merge_result_id": "ehMkgFWref1gfLVqVzOOja",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "type": "single_value",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "cfms_poc.service_creation_duration_per_visit_average",
+            "cfms_poc.serve_duration_per_visit_average",
+            "average_time_per_visit",
+            "cfms_poc.visits_count",
+            "cfms_poc.prep_duration_per_visit_average"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -87,41 +111,20 @@
             ]
           }
         ],
-        "sorts": [
-
-        ],
-        "merge_result_id": "ehMkgFWref1gfLVqVzOOja",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "type": "single_value",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "cfms_poc.service_creation_duration_per_visit_average",
-            "cfms_poc.serve_duration_per_visit_average",
-            "average_time_per_visit",
-            "cfms_poc.visits_count",
-            "cfms_poc.prep_duration_per_visit_average"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -156,10 +159,10 @@
         "source_queries": [
           {
             "name": "Cfms Poc",
-            "query_id": "69838",
             "merge_fields": null,
+            "query_id": "HtQNVwX",
+            "query_slug": "HtQNVwX",
             "query": {
-              "id": "69838",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.service_creation_duration_per_visit_average",
@@ -177,8 +180,6 @@
               "sorts": [
                 "cfms_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -293,7 +294,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "HtQNVwX",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_per_visit\",\"label\":\"Average Time per Visit\",\"expression\":\"(\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:SS:mm\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -301,37 +305,38 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 2",
-            "query_id": "436328",
             "merge_fields": [
 
             ],
+            "query_id": "vpS4P36",
+            "query_slug": "vpS4P36",
             "query": {
-              "id": "436328",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.visits_count"
@@ -346,8 +351,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -396,47 +399,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "vpS4P36",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -444,6 +452,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1221",
       "look": null,
@@ -455,7 +464,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31078",
@@ -469,9 +477,33 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31078",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${average_time_per_visit}*${cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+
+        ],
+        "merge_result_id": "ehMkgFWref1gfLVqVzOOja",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "type": "single_value",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "cfms_poc.service_creation_duration_per_visit_average",
+            "cfms_poc.serve_duration_per_visit_average",
+            "average_time_per_visit",
+            "cfms_poc.visits_count",
+            "cfms_poc.prep_duration_per_visit_average"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -512,41 +544,20 @@
             ]
           }
         ],
-        "sorts": [
-
-        ],
-        "merge_result_id": "ehMkgFWref1gfLVqVzOOja",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "type": "single_value",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "cfms_poc.service_creation_duration_per_visit_average",
-            "cfms_poc.serve_duration_per_visit_average",
-            "average_time_per_visit",
-            "cfms_poc.visits_count",
-            "cfms_poc.prep_duration_per_visit_average"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -581,10 +592,10 @@
         "source_queries": [
           {
             "name": "Cfms Poc",
-            "query_id": "69838",
             "merge_fields": null,
+            "query_id": "HtQNVwX",
+            "query_slug": "HtQNVwX",
             "query": {
-              "id": "69838",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.service_creation_duration_per_visit_average",
@@ -602,8 +613,6 @@
               "sorts": [
                 "cfms_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -718,7 +727,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "HtQNVwX",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_per_visit\",\"label\":\"Average Time per Visit\",\"expression\":\"(\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:SS:mm\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -726,37 +738,38 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 2",
-            "query_id": "436328",
             "merge_fields": [
 
             ],
+            "query_id": "vpS4P36",
+            "query_slug": "vpS4P36",
             "query": {
-              "id": "436328",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.visits_count"
@@ -771,8 +784,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -821,47 +832,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "vpS4P36",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -869,6 +885,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1222",
       "look": null,
@@ -880,7 +897,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31079",
@@ -894,55 +910,16 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31079",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${average_time_per_visit}*${cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "cfms_poc",
-            "view": "cfms_poc",
-            "name": "Cfms Poc",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office Name",
-                "field": "cfms_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "cfms_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Program Name",
-                "field": "cfms_poc.program_name"
-              }
-            ]
-          },
-          {
-            "model": "cfms_poc",
-            "view": "cfms_poc",
-            "name": "Cfms Poc 2",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office Name",
-                "field": "cfms_poc.office_name"
-              },
-              {
-                "dashboard_filter_name": "Selected Date",
-                "field": "cfms_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Program Name",
-                "field": "cfms_poc.program_name"
-              }
-            ]
-          }
-        ],
         "sorts": [
 
         ],
         "merge_result_id": "PKLdxBGJrWY3nB8HoOGchO",
         "total": true,
-        "query_id": null,
         "sql_query_id": "",
         "query": null,
         "vis_config": {
@@ -966,19 +943,61 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "cfms_poc",
+            "view": "cfms_poc",
+            "name": "Cfms Poc",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office Name",
+                "field": "cfms_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "cfms_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Program Name",
+                "field": "cfms_poc.program_name"
+              }
+            ]
+          },
+          {
+            "model": "cfms_poc",
+            "view": "cfms_poc",
+            "name": "Cfms Poc 2",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office Name",
+                "field": "cfms_poc.office_name"
+              },
+              {
+                "dashboard_filter_name": "Selected Date",
+                "field": "cfms_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Program Name",
+                "field": "cfms_poc.program_name"
+              }
+            ]
+          }
+        ],
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1020,10 +1039,10 @@
         "source_queries": [
           {
             "name": "Cfms Poc",
-            "query_id": "69881",
             "merge_fields": null,
+            "query_id": "PZHtFxz",
+            "query_slug": "PZHtFxz",
             "query": {
-              "id": "69881",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.service_creation_duration_per_visit_average",
@@ -1042,8 +1061,6 @@
               "sorts": [
                 "cfms_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1158,7 +1175,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.back_office&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.back_office&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "PZHtFxz",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_per_visit\",\"label\":\"Average Time per Visit\",\"expression\":\"(\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:SS:mm\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1166,40 +1186,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 2",
-            "query_id": "436329",
             "merge_fields": [
               {
                 "field_name": "cfms_poc.back_office",
                 "source_field_name": "cfms_poc.back_office"
               }
             ],
+            "query_id": "36D8zff",
+            "query_slug": "36D8zff",
             "query": {
-              "id": "436329",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.visits_count",
@@ -1215,8 +1236,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": true,
               "row_total": null,
               "subtotals": null,
@@ -1265,47 +1284,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count,cfms_poc.back_office&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count,cfms_poc.back_office&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&total=on&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "36D8zff",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1313,6 +1337,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1223",
       "look": null,
@@ -1324,7 +1349,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31080",
@@ -1338,9 +1362,40 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31080",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"${average_time_per_visit}*${cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+
+        ],
+        "merge_result_id": "O9CmvOt1f4YO9vR50YXVlS",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "value_labels": "legend",
+          "label_type": "labPer",
+          "inner_radius": 50,
+          "series_colors": {
+            "Front Office": "#910303",
+            "Back Office": "#294987"
+          },
+          "type": "looker_pie",
+          "series_types": {
+          },
+          "hidden_fields": [
+            "cfms_poc.service_creation_duration_per_visit_average",
+            "cfms_poc.serve_duration_per_visit_average",
+            "average_time_per_visit",
+            "cfms_poc.visits_count",
+            "cfms_poc.prep_duration_per_visit_average"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -1381,48 +1436,20 @@
             ]
           }
         ],
-        "sorts": [
-
-        ],
-        "merge_result_id": "O9CmvOt1f4YO9vR50YXVlS",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "value_labels": "legend",
-          "label_type": "labPer",
-          "inner_radius": 50,
-          "series_colors": {
-            "Front Office": "#910303",
-            "Back Office": "#294987"
-          },
-          "type": "looker_pie",
-          "series_types": {
-          },
-          "hidden_fields": [
-            "cfms_poc.service_creation_duration_per_visit_average",
-            "cfms_poc.serve_duration_per_visit_average",
-            "average_time_per_visit",
-            "cfms_poc.visits_count",
-            "cfms_poc.prep_duration_per_visit_average"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -1464,12 +1491,12 @@
         "source_queries": [
           {
             "name": "Cfms Poc 2",
-            "query_id": "436330",
             "merge_fields": [
 
             ],
+            "query_id": "WgBchxF",
+            "query_slug": "WgBchxF",
             "query": {
-              "id": "436330",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.visits_count",
@@ -1485,8 +1512,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1535,46 +1560,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count,cfms_poc.back_office&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.visits_count,cfms_poc.back_office&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "WgBchxF",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc",
-            "query_id": "165093",
             "merge_fields": [
               {
                 "field_name": "cfms_poc.back_office",
                 "source_field_name": "cfms_poc.back_office"
               }
             ],
+            "query_id": "4PGJhF3",
+            "query_slug": "4PGJhF3",
             "query": {
-              "id": "165093",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.service_creation_duration_per_visit_average",
@@ -1596,8 +1625,6 @@
               "sorts": [
                 "cfms_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -1754,7 +1781,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.back_office&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&f[cfms_poc.inaccurate_time]=No&f[cfms_poc.program_name]=-NULL&f[cfms_poc.office_name]=-NULL&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.back_office&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&f[cfms_poc.inaccurate_time]=No&f[cfms_poc.program_name]=-NULL&f[cfms_poc.office_name]=-NULL&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22value_labels%22%3A%22labels%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22type%22%3A%22single_value%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit%22%2C%22label%22%3A%22Average+Time+per+Visit%22%2C%22expression%22%3A%22%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3ASS%3Amm%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "4PGJhF3",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_per_visit\",\"label\":\"Average Time per Visit\",\"expression\":\"(\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:SS:mm\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -1762,41 +1792,43 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -1804,6 +1836,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1224",
       "look": null,
@@ -1815,7 +1848,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
-      "query_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31081",
@@ -1829,9 +1861,83 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": null,
       "result_maker": {
         "id": "31081",
         "dynamic_fields": "[{\"table_calculation\":\"total_hours_history\",\"label\":\"Total Hours - History\",\"expression\":\"${average_time_pervisit}*${cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent_history\",\"label\":\"Percent - History\",\"expression\":\"${total_hours_history}/sum(${total_hours_history})\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"total_hours_selected_date\",\"label\":\"Total hours - Selected date\",\"expression\":\"${average_time_per_visit_selected_date}*${q3_cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent_selected_date\",\"label\":\"Percent - Selected Date\",\"expression\":\"${total_hours_selected_date}/sum(${total_hours_selected_date})\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
+        "sorts": [
+          "percent_history desc"
+        ],
+        "merge_result_id": "3altitXdXhsAab3CO2I24y",
+        "total": false,
+        "sql_query_id": "",
+        "query": null,
+        "vis_config": {
+          "trellis": "",
+          "stacking": "",
+          "show_value_labels": true,
+          "label_density": 25,
+          "legend_position": "center",
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_view_names": false,
+          "point_style": "circle_outline",
+          "series_colors": {
+            "history_percent": "#294987",
+            "selected_date_percent": "#910303",
+            "percent_history": "#294987",
+            "percent_selected_date": "#910303"
+          },
+          "series_types": {
+            "history_percent": "scatter",
+            "percent_history": "scatter"
+          },
+          "series_point_styles": {
+            "history_percent": "diamond",
+            "percent_history": "diamond"
+          },
+          "limit_displayed_rows": false,
+          "y_axis_combined": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "x_axis_label": "Program",
+          "show_x_axis_ticks": true,
+          "x_axis_scale": "auto",
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "size_by_field": "",
+          "plot_size_by_field": false,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_dropoff": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "type": "looker_column",
+          "hidden_fields": [
+            "cfms_poc.visits_count",
+            "total_hours",
+            "average_time_pervisit",
+            "total_hours_history",
+            "total_hours_selected_date",
+            "q3_cfms_poc.visits_count",
+            "q2_cfms_poc.service_creation_duration_per_visit_average",
+            "q2_cfms_poc.prep_duration_per_visit_average",
+            "q2_cfms_poc.serve_duration_per_visit_average",
+            "average_time_per_visit_selected_date",
+            "cfms_poc.prep_duration_per_visit_average",
+            "cfms_poc.service_creation_duration_per_visit_average",
+            "cfms_poc.serve_duration_per_visit_average"
+          ],
+          "y_axes": [
+
+          ]
+        },
         "filterables": [
           {
             "model": "cfms_poc",
@@ -1910,91 +2016,20 @@
             ]
           }
         ],
-        "sorts": [
-          "percent_history desc"
-        ],
-        "merge_result_id": "3altitXdXhsAab3CO2I24y",
-        "total": false,
-        "query_id": null,
-        "sql_query_id": "",
-        "query": null,
-        "vis_config": {
-          "trellis": "",
-          "stacking": "",
-          "show_value_labels": true,
-          "label_density": 25,
-          "legend_position": "center",
-          "x_axis_gridlines": false,
-          "y_axis_gridlines": true,
-          "show_view_names": false,
-          "point_style": "circle_outline",
-          "series_colors": {
-            "history_percent": "#294987",
-            "selected_date_percent": "#910303",
-            "percent_history": "#294987",
-            "percent_selected_date": "#910303"
-          },
-          "series_types": {
-            "history_percent": "scatter",
-            "percent_history": "scatter"
-          },
-          "series_point_styles": {
-            "history_percent": "diamond",
-            "percent_history": "diamond"
-          },
-          "limit_displayed_rows": false,
-          "y_axis_combined": true,
-          "show_y_axis_labels": true,
-          "show_y_axis_ticks": true,
-          "y_axis_tick_density": "default",
-          "y_axis_tick_density_custom": 5,
-          "show_x_axis_label": true,
-          "x_axis_label": "Program",
-          "show_x_axis_ticks": true,
-          "x_axis_scale": "auto",
-          "y_axis_scale_mode": "linear",
-          "x_axis_reversed": false,
-          "y_axis_reversed": false,
-          "size_by_field": "",
-          "plot_size_by_field": false,
-          "ordering": "none",
-          "show_null_labels": false,
-          "show_dropoff": false,
-          "show_totals_labels": false,
-          "show_silhouette": false,
-          "totals_color": "#808080",
-          "type": "looker_column",
-          "hidden_fields": [
-            "cfms_poc.visits_count",
-            "total_hours",
-            "average_time_pervisit",
-            "total_hours_history",
-            "total_hours_selected_date",
-            "q3_cfms_poc.visits_count",
-            "q2_cfms_poc.service_creation_duration_per_visit_average",
-            "q2_cfms_poc.prep_duration_per_visit_average",
-            "q2_cfms_poc.serve_duration_per_visit_average",
-            "average_time_per_visit_selected_date",
-            "cfms_poc.prep_duration_per_visit_average",
-            "cfms_poc.service_creation_duration_per_visit_average",
-            "cfms_poc.serve_duration_per_visit_average"
-          ],
-          "y_axes": [
-
-          ]
-        }
+        "query_id": null
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": false,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": false
       },
       "alerts": [
 
@@ -2079,10 +2114,10 @@
         "source_queries": [
           {
             "name": "Cfms Poc",
-            "query_id": "69898",
             "merge_fields": null,
+            "query_id": "VnNGg8F",
+            "query_slug": "VnNGg8F",
             "query": {
-              "id": "69898",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.program_name_with_drill_1",
@@ -2102,8 +2137,6 @@
               "sorts": [
                 "average_time_pervisit desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2264,7 +2297,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=average_time_pervisit+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22font_size%22%3A%2212%22%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22serve%22%2C%22cfms_poc.serve_duration_average%22%2C%22cfms_poc.prep_duration_average%22%2C%22cfms_poc.reception_duration_average%22%2C%22average_work_time_sum%22%2C%22total_time_credit%22%2C%22cfms_poc.count%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22total_hours%22%2C%22cfms_poc.prep_duration_per_visit_average%22%5D%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22cfms_poc.count%22%3A%22Count%22%2C%222018-04+-+July%7CFIELD%7C7+-+percent_of_total_time_credit%22%3A%22July%22%7D%2C%22colors%22%3A%5B%22%23477714%22%2C%22%23a9c574%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Percent+of+Front+Desk+Total+Time+Credit%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22percent_of_total_time_credit%22%2C%22name%22%3A%22Percent+of+Total+Time+Credit%22%2C%22axisId%22%3A%22percent_of_total_time_credit%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22type%22%3A%22linear%22%7D%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_pervisit%22%2C%22label%22%3A%22Average+Time+perVisit%22%2C%22expression%22%3A%22+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=average_time_pervisit+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Afalse%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22font_size%22%3A%2212%22%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22serve%22%2C%22cfms_poc.serve_duration_average%22%2C%22cfms_poc.prep_duration_average%22%2C%22cfms_poc.reception_duration_average%22%2C%22average_work_time_sum%22%2C%22total_time_credit%22%2C%22cfms_poc.count%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22total_hours%22%2C%22cfms_poc.prep_duration_per_visit_average%22%5D%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22cfms_poc.count%22%3A%22Count%22%2C%222018-04+-+July%7CFIELD%7C7+-+percent_of_total_time_credit%22%3A%22July%22%7D%2C%22colors%22%3A%5B%22%23477714%22%2C%22%23a9c574%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22y_axes%22%3A%5B%7B%22label%22%3A%22Percent+of+Front+Desk+Total+Time+Credit%22%2C%22orientation%22%3A%22left%22%2C%22series%22%3A%5B%7B%22id%22%3A%22percent_of_total_time_credit%22%2C%22name%22%3A%22Percent+of+Total+Time+Credit%22%2C%22axisId%22%3A%22percent_of_total_time_credit%22%7D%5D%2C%22showLabels%22%3Atrue%2C%22showValues%22%3Atrue%2C%22unpinAxis%22%3Afalse%2C%22tickDensity%22%3A%22default%22%2C%22type%22%3A%22linear%22%7D%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_pervisit%22%2C%22label%22%3A%22Average+Time+perVisit%22%2C%22expression%22%3A%22+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "VnNGg8F",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_pervisit\",\"label\":\"Average Time perVisit\",\"expression\":\" (\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2272,40 +2308,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 2",
-            "query_id": "436331",
             "merge_fields": [
               {
                 "field_name": "cfms_poc.program_name_with_drill_1",
                 "source_field_name": "cfms_poc.program_name_with_drill_1"
               }
             ],
+            "query_id": "C6kmTf7",
+            "query_slug": "C6kmTf7",
             "query": {
-              "id": "436331",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.program_name_with_drill_1",
@@ -2321,8 +2358,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2371,46 +2406,50 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.visits_count&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.office_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.visits_count&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.office_name]=-NULL&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "C6kmTf7",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 3",
-            "query_id": "436332",
             "merge_fields": [
               {
                 "field_name": "cfms_poc.program_name_with_drill_1",
                 "source_field_name": "cfms_poc.program_name_with_drill_1"
               }
             ],
+            "query_id": "Kv4xHhs",
+            "query_slug": "Kv4xHhs",
             "query": {
-              "id": "436332",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.program_name_with_drill_1",
@@ -2431,8 +2470,6 @@
               "sorts": [
                 "cfms_poc.service_creation_duration_per_visit_average desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2525,7 +2562,10 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.inaccurate_time]=No&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit_selected_date%22%2C%22label%22%3A%22Average+Time+per+Visit+Selected+Date%22%2C%22expression%22%3A%22+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.inaccurate_time]=No&f[cfms_poc.prep_duration_outlier]=No&f[cfms_poc.serve_duration_outlier]=No&f[cfms_poc.service_creation_duration_outlier]=No&sorts=cfms_poc.service_creation_duration_per_visit_average+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22hidden_fields%22%3A%5B%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.inaccurate_time%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.prep_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.serve_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.service_creation_duration_outlier%22%3A%5B%7B%22type%22%3A%22is%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22No%22%7D%2C%7B%7D%5D%2C%22id%22%3A4%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22average_time_per_visit_selected_date%22%2C%22label%22%3A%22Average+Time+per+Visit+Selected+Date%22%2C%22expression%22%3A%22+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3A%22hh%3Amm%3Ass%22%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
               "has_table_calculations": true,
+              "id": "Kv4xHhs",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": "[{\"table_calculation\":\"average_time_per_visit_selected_date\",\"label\":\"Average Time per Visit Selected Date\",\"expression\":\" (\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":\"hh:mm:ss\",\"value_format_name\":null,\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
               "query_timezone": null,
               "quick_calcs": [
@@ -2533,40 +2573,41 @@
               ],
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           },
           {
             "name": "Cfms Poc 4",
-            "query_id": "436333",
             "merge_fields": [
               {
                 "field_name": "cfms_poc.program_name_with_drill_1",
                 "source_field_name": "cfms_poc.program_name_with_drill_1"
               }
             ],
+            "query_id": "Z2zH4pB",
+            "query_slug": "Z2zH4pB",
             "query": {
-              "id": "436333",
               "view": "cfms_poc",
               "fields": [
                 "cfms_poc.program_name_with_drill_1",
@@ -2583,8 +2624,6 @@
               "sorts": [
                 "cfms_poc.visits_count desc"
               ],
-              "limit": "500",
-              "column_limit": null,
               "total": null,
               "row_total": null,
               "subtotals": null,
@@ -2678,47 +2717,52 @@
               "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.visits_count&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.office_name]=-NULL&f[cfms_poc.date]=7+days&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22cfms_poc.visits_count%22%3A%22Visits+-+selected+date%22%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&origin=share-expanded",
               "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.program_name_with_drill_1,cfms_poc.visits_count&f[cfms_poc.program_name_with_drill_1]=-NULL&f[cfms_poc.office_name]=-NULL&f[cfms_poc.date]=7+days&sorts=cfms_poc.visits_count+desc&limit=500&query_timezone=America%2FVancouver&vis=%7B%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22point_style%22%3A%22none%22%2C%22series_labels%22%3A%7B%22cfms_poc.visits_count%22%3A%22Visits+-+selected+date%22%7D%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22cfms_poc.program_name_with_drill_1%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22day%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D",
               "has_table_calculations": false,
+              "id": "Z2zH4pB",
               "model": "cfms_poc",
+              "limit": "500",
+              "column_limit": "50",
               "dynamic_fields": null,
               "query_timezone": null,
               "quick_calcs": null,
               "analysis_config": null,
               "can": {
-                "run": true,
-                "see_results": true,
-                "explore": true,
-                "create": true,
-                "show": true,
+                "can_clear_cache": true,
                 "cost_estimate": true,
+                "create": true,
                 "index": true,
-                "see_lookml": true,
-                "see_aggregate_table_lookml": true,
-                "see_derived_table_lookml": true,
-                "see_sql": true,
-                "save": true,
-                "generate_drill_links": true,
+                "show": true,
                 "download": true,
                 "download_unlimited": true,
-                "use_custom_fields": true,
                 "edit_custom_fields": true,
                 "edit_table_calculations": true,
+                "explore": true,
+                "generate_drill_links": true,
+                "render": true,
+                "run": true,
+                "see_results": true,
+                "save": true,
                 "schedule": true,
-                "render": true
+                "see_aggregate_table_lookml": true,
+                "see_derived_table_lookml": true,
+                "see_lookml": true,
+                "see_sql": true,
+                "use_custom_fields": true
               }
             }
           }
         ],
         "can": {
-          "save_to_dashboard": true,
-          "download": true,
-          "view": true,
-          "show": true,
+          "can_clear_cache": true,
           "create": true,
+          "download": true,
+          "edit_table_calculations": true,
           "explore": true,
-          "see_results": true,
           "generate_drill_links": true,
+          "save_to_dashboard": true,
           "see_merge_sql": true,
-          "edit_table_calculations": true
+          "see_results": true,
+          "show": true,
+          "view": true
         }
       }
     },
@@ -2726,6 +2770,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1647",
       "look": null,
@@ -2737,7 +2782,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "165084",
         "view": "cfms_poc",
         "fields": [
           "cfms_poc.back_office_with_drill",
@@ -2760,8 +2804,6 @@
           "cfms_poc.back_office_with_drill desc 0",
           "percent desc 0"
         ],
-        "limit": "500",
-        "column_limit": "50",
         "total": true,
         "row_total": "right",
         "subtotals": null,
@@ -2869,7 +2911,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.back_office_with_drill,cfms_poc.visits_count,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.office_size&pivots=cfms_poc.back_office_with_drill&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.back_office_with_drill+desc+0,percent+desc+0&limit=500&column_limit=50&total=on&row_total=right&query_timezone=America%2FVancouver&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22y_axes%22%3A%5B%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Office+Size%22%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22normal%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.visits_count%22%2C%22all_front_and_back%22%2C%22all_time_credit%22%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22total_time_credit%22%2C%22label%22%3A%22Total+Time+Credit%22%2C%22expression%22%3A%22%24%7Bcfms_poc.visits_count%7D+%2A+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22all_time_credit%22%2C%22label%22%3A%22All+Time+Credit%22%2C%22expression%22%3A%22sum%28pivot_row%28%24%7Btotal_time_credit%7D%29%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_1%22%2C%22_kind_hint%22%3A%22supermeasure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22percent%22%2C%22label%22%3A%22Percent%22%2C%22expression%22%3A%22%24%7Btotal_time_credit%7D%2F%24%7Ball_time_credit%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
         "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.back_office_with_drill,cfms_poc.visits_count,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.office_size&pivots=cfms_poc.back_office_with_drill&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.back_office_with_drill+desc+0,percent+desc+0&limit=500&column_limit=50&total=on&row_total=right&query_timezone=America%2FVancouver&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22y_axes%22%3A%5B%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Office+Size%22%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22normal%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.visits_count%22%2C%22all_front_and_back%22%2C%22all_time_credit%22%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22total_time_credit%22%2C%22label%22%3A%22Total+Time+Credit%22%2C%22expression%22%3A%22%24%7Bcfms_poc.visits_count%7D+%2A+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22all_time_credit%22%2C%22label%22%3A%22All+Time+Credit%22%2C%22expression%22%3A%22sum%28pivot_row%28%24%7Btotal_time_credit%7D%29%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_1%22%2C%22_kind_hint%22%3A%22supermeasure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22percent%22%2C%22label%22%3A%22Percent%22%2C%22expression%22%3A%22%24%7Btotal_time_credit%7D%2F%24%7Ball_time_credit%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
         "has_table_calculations": true,
+        "id": "C6ygMx7",
         "model": "cfms_poc",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[{\"table_calculation\":\"total_time_credit\",\"label\":\"Total Time Credit\",\"expression\":\"${cfms_poc.visits_count} * (\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"all_time_credit\",\"label\":\"All Time Credit\",\"expression\":\"sum(pivot_row(${total_time_credit}))\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"supermeasure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent\",\"label\":\"Percent\",\"expression\":\"${total_time_credit}/${all_time_credit}\",\"value_format\":null,\"value_format_name\":\"percent_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
         "query_timezone": null,
         "quick_calcs": [
@@ -2877,29 +2922,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "165084",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "11605",
@@ -2913,36 +2958,19 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "C6ygMx7",
       "result_maker": {
         "id": "11605",
         "dynamic_fields": "[{\"table_calculation\":\"total_time_credit\",\"label\":\"Total Time Credit\",\"expression\":\"${cfms_poc.visits_count} * (\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"all_time_credit\",\"label\":\"All Time Credit\",\"expression\":\"sum(pivot_row(${total_time_credit}))\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"supermeasure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent\",\"label\":\"Percent\",\"expression\":\"${total_time_credit}/${all_time_credit}\",\"value_format\":null,\"value_format_name\":\"percent_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
-        "filterables": [
-          {
-            "model": "cfms_poc",
-            "view": "cfms_poc",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "History",
-                "field": "cfms_poc.date"
-              },
-              {
-                "dashboard_filter_name": "Program Name",
-                "field": "cfms_poc.program_name"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "cfms_poc.back_office_with_drill desc 0",
           "percent desc 0"
         ],
         "merge_result_id": null,
         "total": true,
-        "query_id": "165084",
         "sql_query_id": "",
         "query": {
-          "id": "165084",
           "view": "cfms_poc",
           "fields": [
             "cfms_poc.back_office_with_drill",
@@ -2965,8 +2993,6 @@
             "cfms_poc.back_office_with_drill desc 0",
             "percent desc 0"
           ],
-          "limit": "500",
-          "column_limit": "50",
           "total": true,
           "row_total": "right",
           "subtotals": null,
@@ -3074,7 +3100,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.back_office_with_drill,cfms_poc.visits_count,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.office_size&pivots=cfms_poc.back_office_with_drill&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.back_office_with_drill+desc+0,percent+desc+0&limit=500&column_limit=50&total=on&row_total=right&query_timezone=America%2FVancouver&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22y_axes%22%3A%5B%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Office+Size%22%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22normal%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.visits_count%22%2C%22all_front_and_back%22%2C%22all_time_credit%22%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22total_time_credit%22%2C%22label%22%3A%22Total+Time+Credit%22%2C%22expression%22%3A%22%24%7Bcfms_poc.visits_count%7D+%2A+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22all_time_credit%22%2C%22label%22%3A%22All+Time+Credit%22%2C%22expression%22%3A%22sum%28pivot_row%28%24%7Btotal_time_credit%7D%29%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_1%22%2C%22_kind_hint%22%3A%22supermeasure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22percent%22%2C%22label%22%3A%22Percent%22%2C%22expression%22%3A%22%24%7Btotal_time_credit%7D%2F%24%7Ball_time_credit%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D&origin=share-expanded",
           "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.back_office_with_drill,cfms_poc.visits_count,cfms_poc.service_creation_duration_per_visit_average,cfms_poc.prep_duration_per_visit_average,cfms_poc.serve_duration_per_visit_average,cfms_poc.office_size&pivots=cfms_poc.back_office_with_drill&f[cfms_poc.office_name]=-NULL&f[cfms_poc.program_name]=-NULL&sorts=cfms_poc.back_office_with_drill+desc+0,percent+desc+0&limit=500&column_limit=50&total=on&row_total=right&query_timezone=America%2FVancouver&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Atrue%2C%22y_axes%22%3A%5B%5D%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22x_axis_label%22%3A%22Office+Size%22%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22normal%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22colors%22%3A%5B%22%23a31742%22%2C%22%23178a99%22%2C%22%23929292%22%2C%22%239fdee0%22%2C%22%231f3e5a%22%2C%22%2390c8ae%22%2C%22%2392818d%22%2C%22%23c5c6a6%22%2C%22%2382c2ca%22%2C%22%23cee0a0%22%2C%22%23928fb4%22%2C%22%239fc190%22%5D%2C%22series_types%22%3A%7B%7D%2C%22point_style%22%3A%22none%22%2C%22series_colors%22%3A%7B%7D%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22inner_radius%22%3A50%2C%22type%22%3A%22looker_column%22%2C%22hidden_fields%22%3A%5B%22calculation_1%22%2C%22calculation_2%22%2C%22total_time_credit%22%2C%22sum_of_front_office_and_back_office_total_time_credit%22%2C%22cfms_poc.prep_duration_per_visit_average%22%2C%22cfms_poc.serve_duration_per_visit_average%22%2C%22cfms_poc.service_creation_duration_per_visit_average%22%2C%22cfms_poc.visits_count%22%2C%22all_front_and_back%22%2C%22all_time_credit%22%5D%7D&filter_config=%7B%22cfms_poc.office_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22cfms_poc.program_name%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A13%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22total_time_credit%22%2C%22label%22%3A%22Total+Time+Credit%22%2C%22expression%22%3A%22%24%7Bcfms_poc.visits_count%7D+%2A+%28%5Cn++if%28is_null%28%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.service_creation_duration_per_visit_average%7D%29+%2B%5Cn++if%28is_null%28%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.prep_duration_per_visit_average%7D%29+%2B+%5Cn++if%28is_null%28%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%3Dyes%2C+0%2C+%24%7Bcfms_poc.serve_duration_per_visit_average%7D%29%5Cn%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22all_time_credit%22%2C%22label%22%3A%22All+Time+Credit%22%2C%22expression%22%3A%22sum%28pivot_row%28%24%7Btotal_time_credit%7D%29%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22decimal_1%22%2C%22_kind_hint%22%3A%22supermeasure%22%2C%22_type_hint%22%3A%22number%22%7D%2C%7B%22table_calculation%22%3A%22percent%22%2C%22label%22%3A%22Percent%22%2C%22expression%22%3A%22%24%7Btotal_time_credit%7D%2F%24%7Ball_time_credit%7D%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3A%22percent_2%22%2C%22_kind_hint%22%3A%22measure%22%2C%22_type_hint%22%3A%22number%22%7D%5D",
           "has_table_calculations": true,
+          "id": "C6ygMx7",
           "model": "cfms_poc",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"total_time_credit\",\"label\":\"Total Time Credit\",\"expression\":\"${cfms_poc.visits_count} * (\\n  if(is_null(${cfms_poc.service_creation_duration_per_visit_average})=yes, 0, ${cfms_poc.service_creation_duration_per_visit_average}) +\\n  if(is_null(${cfms_poc.prep_duration_per_visit_average})=yes, 0, ${cfms_poc.prep_duration_per_visit_average}) + \\n  if(is_null(${cfms_poc.serve_duration_per_visit_average})=yes, 0, ${cfms_poc.serve_duration_per_visit_average})\\n)\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"all_time_credit\",\"label\":\"All Time Credit\",\"expression\":\"sum(pivot_row(${total_time_credit}))\",\"value_format\":null,\"value_format_name\":\"decimal_1\",\"_kind_hint\":\"supermeasure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"percent\",\"label\":\"Percent\",\"expression\":\"${total_time_credit}/${all_time_credit}\",\"value_format\":null,\"value_format_name\":\"percent_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -3082,26 +3111,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3170,19 +3200,38 @@
             "all_front_and_back",
             "all_time_credit"
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "cfms_poc",
+            "view": "cfms_poc",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "History",
+                "field": "cfms_poc.date"
+              },
+              {
+                "dashboard_filter_name": "Program Name",
+                "field": "cfms_poc.program_name"
+              }
+            ]
+          }
+        ],
+        "query_id": "C6ygMx7"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3192,6 +3241,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "28",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "1746",
       "look": null,
@@ -3203,7 +3253,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "436453",
         "view": "cfms_poc",
         "fields": [
           "cfms_poc.office_name",
@@ -3216,8 +3265,6 @@
         "sorts": [
           "program_percent desc"
         ],
-        "limit": "1000",
-        "column_limit": "50",
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -3347,7 +3394,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.office_name,cfms_poc.office_size&sorts=program_percent+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22font_size%22%3A%2212%22%2C%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_gridlines_empty%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22light%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22linear%22%2C%22map_marker_color_mode%22%3A%22fixed%22%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22reverse_map_value_colors%22%3Afalse%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22single_value%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22cfms_poc.count%22%2C%22cfms_poc.office_name%22%2C%22cfms_poc.office_size%22%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22colors%22%3A%5B%22%23990e1f%22%2C%22%23de8214%22%2C%22%23bfbf0f%22%2C%22%23127012%22%2C%22%230c477d%22%2C%22%23480866%22%2C%22%23780d1f%22%2C%22%23734d14%22%2C%22%239dab0e%22%2C%22%23196325%22%2C%22%23160c87%22%2C%22%234d0e75%22%2C%22%23610505%22%2C%22%237a4009%22%2C%22%23089696%22%2C%22%23d92323%22%2C%22%23d92323%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hide_legend%22%3Afalse%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22concat%28%24%7Bcfms_poc.office_name%7D%2C+%5C%22+is+a+%5C%22%2C+%24%7Bcfms_poc.office_size%7D%2C+%5C%22+office.%5C%22%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22dimension%22%2C%22_type_hint%22%3A%22string%22%7D%5D&origin=share-expanded",
         "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.office_name,cfms_poc.office_size&sorts=program_percent+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22font_size%22%3A%2212%22%2C%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_gridlines_empty%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22light%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22linear%22%2C%22map_marker_color_mode%22%3A%22fixed%22%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22reverse_map_value_colors%22%3Afalse%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22single_value%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22cfms_poc.count%22%2C%22cfms_poc.office_name%22%2C%22cfms_poc.office_size%22%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22colors%22%3A%5B%22%23990e1f%22%2C%22%23de8214%22%2C%22%23bfbf0f%22%2C%22%23127012%22%2C%22%230c477d%22%2C%22%23480866%22%2C%22%23780d1f%22%2C%22%23734d14%22%2C%22%239dab0e%22%2C%22%23196325%22%2C%22%23160c87%22%2C%22%234d0e75%22%2C%22%23610505%22%2C%22%237a4009%22%2C%22%23089696%22%2C%22%23d92323%22%2C%22%23d92323%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hide_legend%22%3Afalse%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22concat%28%24%7Bcfms_poc.office_name%7D%2C+%5C%22+is+a+%5C%22%2C+%24%7Bcfms_poc.office_size%7D%2C+%5C%22+office.%5C%22%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22dimension%22%2C%22_type_hint%22%3A%22string%22%7D%5D",
         "has_table_calculations": true,
+        "id": "bKhr7Nd",
         "model": "cfms_poc",
+        "limit": "1000",
+        "column_limit": "50",
         "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"concat(${cfms_poc.office_name}, \\\" is a \\\", ${cfms_poc.office_size}, \\\" office.\\\")\",\"value_format\":null,\"value_format_name\":null,\"_kind_hint\":\"dimension\",\"_type_hint\":\"string\"}]",
         "query_timezone": null,
         "quick_calcs": [
@@ -3355,29 +3405,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "436453",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "31173",
@@ -3391,31 +3441,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "bKhr7Nd",
       "result_maker": {
         "id": "31173",
         "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"concat(${cfms_poc.office_name}, \\\" is a \\\", ${cfms_poc.office_size}, \\\" office.\\\")\",\"value_format\":null,\"value_format_name\":null,\"_kind_hint\":\"dimension\",\"_type_hint\":\"string\"}]",
-        "filterables": [
-          {
-            "model": "cfms_poc",
-            "view": "cfms_poc",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Office Name",
-                "field": "cfms_poc.office_name"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "program_percent desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "436453",
         "sql_query_id": "",
         "query": {
-          "id": "436453",
           "view": "cfms_poc",
           "fields": [
             "cfms_poc.office_name",
@@ -3428,8 +3465,6 @@
           "sorts": [
             "program_percent desc"
           ],
-          "limit": "1000",
-          "column_limit": "50",
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -3559,7 +3594,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/cfms_poc/cfms_poc?fields=cfms_poc.office_name,cfms_poc.office_size&sorts=program_percent+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22font_size%22%3A%2212%22%2C%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_gridlines_empty%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22light%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22linear%22%2C%22map_marker_color_mode%22%3A%22fixed%22%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22reverse_map_value_colors%22%3Afalse%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22single_value%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22cfms_poc.count%22%2C%22cfms_poc.office_name%22%2C%22cfms_poc.office_size%22%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22colors%22%3A%5B%22%23990e1f%22%2C%22%23de8214%22%2C%22%23bfbf0f%22%2C%22%23127012%22%2C%22%230c477d%22%2C%22%23480866%22%2C%22%23780d1f%22%2C%22%23734d14%22%2C%22%239dab0e%22%2C%22%23196325%22%2C%22%23160c87%22%2C%22%234d0e75%22%2C%22%23610505%22%2C%22%237a4009%22%2C%22%23089696%22%2C%22%23d92323%22%2C%22%23d92323%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hide_legend%22%3Afalse%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22concat%28%24%7Bcfms_poc.office_name%7D%2C+%5C%22+is+a+%5C%22%2C+%24%7Bcfms_poc.office_size%7D%2C+%5C%22+office.%5C%22%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22dimension%22%2C%22_type_hint%22%3A%22string%22%7D%5D&origin=share-expanded",
           "url": "/explore/cfms_poc/cfms_poc?fields=cfms_poc.office_name,cfms_poc.office_size&sorts=program_percent+desc&limit=1000&column_limit=50&query_timezone=America%2FVancouver&vis=%7B%22stacking%22%3A%22%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22legend_position%22%3A%22center%22%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22point_style%22%3A%22none%22%2C%22limit_displayed_rows%22%3Afalse%2C%22y_axis_combined%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22font_size%22%3A%2212%22%2C%22map_plot_mode%22%3A%22points%22%2C%22heatmap_gridlines%22%3Afalse%2C%22heatmap_gridlines_empty%22%3Afalse%2C%22heatmap_opacity%22%3A0.5%2C%22show_region_field%22%3Atrue%2C%22draw_map_labels_above_data%22%3Atrue%2C%22map_tile_provider%22%3A%22light%22%2C%22map_position%22%3A%22fit_data%22%2C%22map_scale_indicator%22%3A%22off%22%2C%22map_pannable%22%3Atrue%2C%22map_zoomable%22%3Atrue%2C%22map_marker_type%22%3A%22circle%22%2C%22map_marker_icon_name%22%3A%22default%22%2C%22map_marker_radius_mode%22%3A%22proportional_value%22%2C%22map_marker_units%22%3A%22meters%22%2C%22map_marker_proportional_scale_type%22%3A%22linear%22%2C%22map_marker_color_mode%22%3A%22fixed%22%2C%22show_legend%22%3Atrue%2C%22quantize_map_value_colors%22%3Afalse%2C%22reverse_map_value_colors%22%3Afalse%2C%22show_null_points%22%3Atrue%2C%22interpolation%22%3A%22linear%22%2C%22value_labels%22%3A%22legend%22%2C%22label_type%22%3A%22labPer%22%2C%22show_row_numbers%22%3Atrue%2C%22truncate_column_names%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22table_theme%22%3A%22editable%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22single_value%22%2C%22series_types%22%3A%7B%7D%2C%22hidden_fields%22%3A%5B%22cfms_poc.count%22%2C%22cfms_poc.office_name%22%2C%22cfms_poc.office_size%22%5D%2C%22limit_displayed_rows_values%22%3A%7B%22show_hide%22%3A%22hide%22%2C%22first_last%22%3A%22first%22%2C%22num_rows%22%3A0%7D%2C%22conditional_formatting%22%3A%5B%7B%22type%22%3A%22low+to+high%22%2C%22value%22%3Anull%2C%22background_color%22%3Anull%2C%22font_color%22%3Anull%2C%22palette%22%3A%7B%22name%22%3A%22Red+to+Yellow+to+Green%22%2C%22colors%22%3A%5B%22%23F36254%22%2C%22%23FCF758%22%2C%22%234FBC89%22%5D%7D%2C%22bold%22%3Afalse%2C%22italic%22%3Afalse%2C%22strikethrough%22%3Afalse%2C%22fields%22%3Anull%7D%5D%2C%22colors%22%3A%5B%22%23990e1f%22%2C%22%23de8214%22%2C%22%23bfbf0f%22%2C%22%23127012%22%2C%22%230c477d%22%2C%22%23480866%22%2C%22%23780d1f%22%2C%22%23734d14%22%2C%22%239dab0e%22%2C%22%23196325%22%2C%22%23160c87%22%2C%22%234d0e75%22%2C%22%23610505%22%2C%22%237a4009%22%2C%22%23089696%22%2C%22%23d92323%22%2C%22%23d92323%22%5D%2C%22series_colors%22%3A%7B%7D%2C%22hide_legend%22%3Afalse%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%7B%22table_calculation%22%3A%22calculation_1%22%2C%22label%22%3A%22Calculation+1%22%2C%22expression%22%3A%22concat%28%24%7Bcfms_poc.office_name%7D%2C+%5C%22+is+a+%5C%22%2C+%24%7Bcfms_poc.office_size%7D%2C+%5C%22+office.%5C%22%29%22%2C%22value_format%22%3Anull%2C%22value_format_name%22%3Anull%2C%22_kind_hint%22%3A%22dimension%22%2C%22_type_hint%22%3A%22string%22%7D%5D",
           "has_table_calculations": true,
+          "id": "bKhr7Nd",
           "model": "cfms_poc",
+          "limit": "1000",
+          "column_limit": "50",
           "dynamic_fields": "[{\"table_calculation\":\"calculation_1\",\"label\":\"Calculation 1\",\"expression\":\"concat(${cfms_poc.office_name}, \\\" is a \\\", ${cfms_poc.office_size}, \\\" office.\\\")\",\"value_format\":null,\"value_format_name\":null,\"_kind_hint\":\"dimension\",\"_type_hint\":\"string\"}]",
           "query_timezone": null,
           "quick_calcs": [
@@ -3567,26 +3605,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -3706,19 +3745,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "cfms_poc",
+            "view": "cfms_poc",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Office Name",
+                "field": "cfms_poc.office_name"
+              }
+            ]
+          }
+        ],
+        "query_id": "bKhr7Nd"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -3806,12 +3860,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3897,12 +3951,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -3988,12 +4042,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     },
     {
@@ -4076,12 +4130,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -4109,11 +4163,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4129,11 +4183,11 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4149,11 +4203,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_pie",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4169,11 +4223,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_pie",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4189,11 +4243,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4209,11 +4263,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_column",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -4229,18 +4283,21 @@
           "element_title_hidden": false,
           "vis_type": "single_value",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -4256,8 +4313,6 @@
   "last_accessed_at": "2025-12-30 15:24:46 UTC",
   "updated_at": null,
   "last_updater_id": null,
-  "last_updater_name": "",
-  "user_name": "Brandon Lockhart",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -4283,17 +4338,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "104",
@@ -4302,21 +4357,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "",
+  "user_name": "Brandon Lockhart",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }

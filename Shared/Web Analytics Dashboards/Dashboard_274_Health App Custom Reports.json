@@ -19,6 +19,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "274",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "2810",
       "look": null,
@@ -30,7 +31,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142685",
         "view": "health_app_actions",
         "fields": [
           "health_app_actions.event_time",
@@ -57,8 +57,6 @@
         "sorts": [
           "health_app_actions.event_time desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -95,7 +93,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/health_app_actions?fields=health_app_actions.event_time,health_app_actions.name_tracker,health_app_actions.app_id,health_app_actions.root_id,health_app_actions.action,health_app_actions.text,health_app_actions.message,health_app_actions.session_id,health_app_actions.previous_session_id,health_app_actions.user_id,health_app_actions.os_type,health_app_actions.os_version,health_app_actions.device_manufacturer,health_app_actions.device_model,health_app_actions.dvce_created_tstamp_time,health_app_actions.dvce_sent_tstamp_time&sorts=health_app_actions.event_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/health_app_actions?fields=health_app_actions.event_time,health_app_actions.name_tracker,health_app_actions.app_id,health_app_actions.root_id,health_app_actions.action,health_app_actions.text,health_app_actions.message,health_app_actions.session_id,health_app_actions.previous_session_id,health_app_actions.user_id,health_app_actions.os_type,health_app_actions.os_version,health_app_actions.device_manufacturer,health_app_actions.device_model,health_app_actions.dvce_created_tstamp_time,health_app_actions.dvce_sent_tstamp_time&sorts=health_app_actions.event_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "m2dVP5B",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -103,29 +104,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142685",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91585",
@@ -139,31 +140,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "m2dVP5B",
       "result_maker": {
         "id": "91585",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "health_app_actions",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Event Date",
-                "field": "health_app_actions.event_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "health_app_actions.event_time desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142685",
         "sql_query_id": "",
         "query": {
-          "id": "1142685",
           "view": "health_app_actions",
           "fields": [
             "health_app_actions.event_time",
@@ -190,8 +178,6 @@
           "sorts": [
             "health_app_actions.event_time desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -228,7 +214,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/health_app_actions?fields=health_app_actions.event_time,health_app_actions.name_tracker,health_app_actions.app_id,health_app_actions.root_id,health_app_actions.action,health_app_actions.text,health_app_actions.message,health_app_actions.session_id,health_app_actions.previous_session_id,health_app_actions.user_id,health_app_actions.os_type,health_app_actions.os_version,health_app_actions.device_manufacturer,health_app_actions.device_model,health_app_actions.dvce_created_tstamp_time,health_app_actions.dvce_sent_tstamp_time&sorts=health_app_actions.event_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/health_app_actions?fields=health_app_actions.event_time,health_app_actions.name_tracker,health_app_actions.app_id,health_app_actions.root_id,health_app_actions.action,health_app_actions.text,health_app_actions.message,health_app_actions.session_id,health_app_actions.previous_session_id,health_app_actions.user_id,health_app_actions.os_type,health_app_actions.os_version,health_app_actions.device_manufacturer,health_app_actions.device_model,health_app_actions.dvce_created_tstamp_time,health_app_actions.dvce_sent_tstamp_time&sorts=health_app_actions.event_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "m2dVP5B",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -236,26 +225,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -282,19 +272,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "health_app_actions",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "health_app_actions.event_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "m2dVP5B"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -304,6 +309,7 @@
       "body_text": null,
       "body_text_as_html": null,
       "dashboard_id": "274",
+      "dashboard_layout_id": null,
       "edit_uri": null,
       "id": "3181",
       "look": null,
@@ -315,7 +321,6 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": {
-        "id": "1142847",
         "view": "mobile_screen_views",
         "fields": [
           "mobile_screen_views.screenview_start_time",
@@ -344,8 +349,6 @@
         "sorts": [
           "mobile_screen_views.screenview_start_time desc"
         ],
-        "limit": "500",
-        "column_limit": null,
         "total": null,
         "row_total": null,
         "subtotals": null,
@@ -412,7 +415,10 @@
         "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/mobile_screen_views?fields=mobile_screen_views.screenview_start_time,mobile_screen_views.name_tracker,mobile_screen_views.app_id,mobile_screen_views.screen_view_id,mobile_screen_views.screen_view_name,mobile_screen_views.screen_view_previous_id,mobile_screen_views.screen_view_previous_name,mobile_screen_views.session_id,mobile_screen_views.previous_session_id,mobile_screen_views.session_index,mobile_screen_views.user_id,mobile_screen_views.os_type,mobile_screen_views.os_version,mobile_screen_views.device_manufacturer,mobile_screen_views.device_model&f[mobile_screen_views.screenview_start_time]=1+days+ago+for+1+days&f[mobile_screen_views.app_id]=%22Snowplow_standalone_HApp_prod%22&sorts=mobile_screen_views.screenview_start_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22mobile_screen_views.screenview_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22mobile_screen_views.app_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Snowplow_standalone_HApp_prod%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
         "url": "/explore/snowplow_web_block/mobile_screen_views?fields=mobile_screen_views.screenview_start_time,mobile_screen_views.name_tracker,mobile_screen_views.app_id,mobile_screen_views.screen_view_id,mobile_screen_views.screen_view_name,mobile_screen_views.screen_view_previous_id,mobile_screen_views.screen_view_previous_name,mobile_screen_views.session_id,mobile_screen_views.previous_session_id,mobile_screen_views.session_index,mobile_screen_views.user_id,mobile_screen_views.os_type,mobile_screen_views.os_version,mobile_screen_views.device_manufacturer,mobile_screen_views.device_model&f[mobile_screen_views.screenview_start_time]=1+days+ago+for+1+days&f[mobile_screen_views.app_id]=%22Snowplow_standalone_HApp_prod%22&sorts=mobile_screen_views.screenview_start_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22mobile_screen_views.screenview_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22mobile_screen_views.app_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Snowplow_standalone_HApp_prod%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
+        "id": "P2G4YkJ",
         "model": "snowplow_web_block",
+        "limit": "500",
+        "column_limit": "50",
         "dynamic_fields": "[]",
         "query_timezone": null,
         "quick_calcs": [
@@ -420,29 +426,29 @@
         ],
         "analysis_config": null,
         "can": {
-          "run": true,
-          "see_results": true,
-          "explore": true,
-          "create": true,
-          "show": true,
+          "can_clear_cache": true,
           "cost_estimate": true,
+          "create": true,
           "index": true,
-          "see_lookml": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_sql": true,
-          "save": true,
-          "generate_drill_links": true,
+          "show": true,
           "download": true,
           "download_unlimited": true,
-          "use_custom_fields": true,
           "edit_custom_fields": true,
           "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
           "schedule": true,
-          "render": true
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "use_custom_fields": true
         }
       },
-      "query_id": "1142847",
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91748",
@@ -456,31 +462,18 @@
       "title_text_as_html": null,
       "subtitle_text_as_html": null,
       "extension_id": null,
+      "aria_description": null,
+      "query_id": "P2G4YkJ",
       "result_maker": {
         "id": "91748",
         "dynamic_fields": "[]",
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "mobile_screen_views",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Event Date",
-                "field": "mobile_screen_views.screenview_start_date"
-              }
-            ]
-          }
-        ],
         "sorts": [
           "mobile_screen_views.screenview_start_time desc"
         ],
         "merge_result_id": null,
         "total": false,
-        "query_id": "1142847",
         "sql_query_id": "",
         "query": {
-          "id": "1142847",
           "view": "mobile_screen_views",
           "fields": [
             "mobile_screen_views.screenview_start_time",
@@ -509,8 +502,6 @@
           "sorts": [
             "mobile_screen_views.screenview_start_time desc"
           ],
-          "limit": "500",
-          "column_limit": null,
           "total": null,
           "row_total": null,
           "subtotals": null,
@@ -577,7 +568,10 @@
           "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/mobile_screen_views?fields=mobile_screen_views.screenview_start_time,mobile_screen_views.name_tracker,mobile_screen_views.app_id,mobile_screen_views.screen_view_id,mobile_screen_views.screen_view_name,mobile_screen_views.screen_view_previous_id,mobile_screen_views.screen_view_previous_name,mobile_screen_views.session_id,mobile_screen_views.previous_session_id,mobile_screen_views.session_index,mobile_screen_views.user_id,mobile_screen_views.os_type,mobile_screen_views.os_version,mobile_screen_views.device_manufacturer,mobile_screen_views.device_model&f[mobile_screen_views.screenview_start_time]=1+days+ago+for+1+days&f[mobile_screen_views.app_id]=%22Snowplow_standalone_HApp_prod%22&sorts=mobile_screen_views.screenview_start_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22mobile_screen_views.screenview_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22mobile_screen_views.app_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Snowplow_standalone_HApp_prod%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
           "url": "/explore/snowplow_web_block/mobile_screen_views?fields=mobile_screen_views.screenview_start_time,mobile_screen_views.name_tracker,mobile_screen_views.app_id,mobile_screen_views.screen_view_id,mobile_screen_views.screen_view_name,mobile_screen_views.screen_view_previous_id,mobile_screen_views.screen_view_previous_name,mobile_screen_views.session_id,mobile_screen_views.previous_session_id,mobile_screen_views.session_index,mobile_screen_views.user_id,mobile_screen_views.os_type,mobile_screen_views.os_version,mobile_screen_views.device_manufacturer,mobile_screen_views.device_model&f[mobile_screen_views.screenview_start_time]=1+days+ago+for+1+days&f[mobile_screen_views.app_id]=%22Snowplow_standalone_HApp_prod%22&sorts=mobile_screen_views.screenview_start_time+desc&limit=500&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22mobile_screen_views.screenview_start_time%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%221%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22mobile_screen_views.app_id%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22Snowplow_standalone_HApp_prod%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
+          "id": "P2G4YkJ",
           "model": "snowplow_web_block",
+          "limit": "500",
+          "column_limit": "50",
           "dynamic_fields": "[]",
           "query_timezone": null,
           "quick_calcs": [
@@ -585,26 +579,27 @@
           ],
           "analysis_config": null,
           "can": {
-            "run": true,
-            "see_results": true,
-            "explore": true,
-            "create": true,
-            "show": true,
+            "can_clear_cache": true,
             "cost_estimate": true,
+            "create": true,
             "index": true,
-            "see_lookml": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_sql": true,
-            "save": true,
-            "generate_drill_links": true,
+            "show": true,
             "download": true,
             "download_unlimited": true,
-            "use_custom_fields": true,
             "edit_custom_fields": true,
             "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
             "schedule": true,
-            "render": true
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "use_custom_fields": true
           }
         },
         "vis_config": {
@@ -631,19 +626,34 @@
           "y_axes": [
 
           ]
-        }
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "mobile_screen_views",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Event Date",
+                "field": "mobile_screen_views.screenview_start_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "P2G4YkJ"
       },
       "can": {
+        "can_clear_cache": true,
         "create": true,
-        "update": true,
         "destroy": true,
-        "see_aggregate_table_lookml": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
         "index": true,
         "show": true,
-        "explore": true,
         "run": false,
-        "show_errors": true,
-        "find_and_replace": true
+        "see_aggregate_table_lookml": true
       },
       "alerts": [
 
@@ -740,12 +750,12 @@
       },
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
-        "index": true,
-        "show": true,
+        "update": true,
+        "find_and_replace": true,
         "show_errors": true,
-        "find_and_replace": true
+        "index": true,
+        "show": true
       }
     }
   ],
@@ -773,11 +783,11 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         },
         {
@@ -793,18 +803,21 @@
           "element_title_hidden": false,
           "vis_type": "looker_grid",
           "can": {
-            "index": true,
-            "show": true,
             "create": true,
+            "destroy": true,
             "update": true,
-            "destroy": true
+            "index": true,
+            "show": true
           }
         }
       ],
+      "label": null,
+      "description": null,
+      "order": -1,
       "can": {
         "create": true,
-        "update": true,
         "destroy": true,
+        "update": true,
         "index": true,
         "show": true
       }
@@ -820,8 +833,6 @@
   "last_accessed_at": "2025-12-17 17:25:10 UTC",
   "updated_at": "2022-09-29 09:27:17 UTC",
   "last_updater_id": "13",
-  "last_updater_name": "Dan Pollock",
-  "user_name": "Dan Pollock",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -847,17 +858,17 @@
     "is_personal_descendant": false,
     "is_shared_root": false,
     "is_users_root": false,
-    "child_count": 0,
     "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
       "index": true,
       "show": true,
-      "create": true,
-      "see_admin_spaces": true,
-      "save_shared_space_as_embed_user": true,
-      "destroy": true,
-      "update": true,
       "move_content": true,
-      "edit_content": true
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
     }
   },
   "folder_id": "37",
@@ -866,21 +877,24 @@
   "model": null,
   "deleted": false,
   "last_viewed_at": null,
+  "last_updater_name": "Dan Pollock",
+  "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
-    "download": true,
-    "see_aggregate_table_lookml": true,
+    "certify": false,
+    "copy": true,
     "index": true,
     "show": true,
-    "copy": true,
-    "run": true,
     "create": true,
-    "move": true,
-    "update": true,
     "destroy": true,
+    "move": true,
     "recover": true,
-    "see_lookml": true,
+    "update": true,
+    "download": true,
+    "render": true,
+    "run": true,
     "schedule": true,
-    "render": true
+    "see_aggregate_table_lookml": true,
+    "see_lookml": true
   }
 }
