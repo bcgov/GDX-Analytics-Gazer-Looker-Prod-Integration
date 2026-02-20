@@ -468,7 +468,7 @@
               "args": [
                 "clicks.target_url",
                 [
-                  "#<Sawyer::Resource:0x00007f9e59ae5f98>"
+                  "#<Sawyer::Resource:0x00007fedc2107108>"
                 ],
                 "Other Link"
               ],
@@ -980,7 +980,7 @@
                 "args": [
                   "clicks.target_url",
                   [
-                    "#<Sawyer::Resource:0x00007f9e598b4a80>"
+                    "#<Sawyer::Resource:0x00007fedc1ebba48>"
                   ],
                   "Other Link"
                 ],
@@ -1357,12 +1357,16 @@
             "name": "",
             "listen": [
               {
-                "dashboard_filter_name": "Target URL",
-                "field": "clicks.target_url"
-              },
-              {
                 "dashboard_filter_name": "Date Range",
                 "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Page URL",
+                "field": "clicks.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Target URL",
+                "field": "clicks.target_url"
               }
             ]
           }
@@ -1909,7 +1913,7 @@
               "args": [
                 "clicks.target_url",
                 [
-                  "#<Sawyer::Resource:0x00007f9e595bccb0>"
+                  "#<Sawyer::Resource:0x00007fedc1aaa2d8>"
                 ],
                 "Other Link"
               ],
@@ -2474,7 +2478,7 @@
                 "args": [
                   "clicks.target_url",
                   [
-                    "#<Sawyer::Resource:0x00007f9e594ec678>"
+                    "#<Sawyer::Resource:0x00007fedc19adfd8>"
                   ],
                   "Other Link"
                 ],
@@ -2907,6 +2911,10 @@
                 "field": "clicks.click_time_date"
               },
               {
+                "dashboard_filter_name": "Page URL",
+                "field": "clicks.page_display_url"
+              },
+              {
                 "dashboard_filter_name": "Target URL",
                 "field": "clicks.target_url"
               }
@@ -3040,19 +3048,118 @@
       }
     },
     {
-      "id": "2592",
+      "id": "2600",
+      "dashboard_id": "579",
+      "name": "Page URL",
+      "title": "Page URL",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.page_display_url",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "https://www.healthlinkbc.ca/healthwise/gambling-disorder,https://www.healthlinkbc.ca/healthwise/abortion",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Cleaned URL of the page without query string or standard file names like index.html",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Page Display URL",
+        "label_from_parameter": null,
+        "label_short": "Page Display URL",
+        "map_layer": null,
+        "name": "clicks.page_display_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Display URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.page_display_url",
+        "suggest_explore": "clicks",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${TABLE}.page_display_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2601",
       "dashboard_id": "579",
       "name": "Target URL",
       "title": "Target URL",
       "type": "field_filter",
       "explore": "clicks",
       "dimension": "clicks.target_url",
-      "row": 1,
+      "row": 2,
       "allow_multiple_values": true,
       "required": false,
       "ui_config": {
-        "type": "advanced",
-        "display": "popover"
+        "display": "popover",
+        "type": "advanced"
       },
       "model": "snowplow_web_block",
       "listens_to_filters": [
@@ -3210,8 +3317,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-02-18 18:50:45 UTC",
-  "updated_at": "2026-02-18 18:53:56 UTC",
+  "last_accessed_at": "2026-02-19 21:09:52 UTC",
+  "updated_at": "2026-02-19 21:14:52 UTC",
   "last_updater_id": "1302",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
@@ -3221,7 +3328,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 4,
+  "view_count": 7,
   "url": "/dashboards/579",
   "folder": {
     "name": "Web Analytics Dashboards",
