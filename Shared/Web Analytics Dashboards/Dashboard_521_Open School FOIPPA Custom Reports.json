@@ -14,6 +14,165 @@
   "background_color": null,
   "created_at": "2024-10-10 22:11:55 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "2372",
+      "dashboard_id": "521",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "openschool_actions_foippa",
+      "dimension": "openschool_actions_foippa.start_time_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Start Time Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "OpenSchool Actions FOIPPA Start Time Date",
+        "label_from_parameter": null,
+        "label_short": "Start Time Date",
+        "map_layer": null,
+        "name": "openschool_actions_foippa.start_time_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "openschool_actions_foippa",
+        "view_label": "OpenSchool Actions FOIPPA",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "openschool_actions_foippa",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "openschool_actions_foippa.start_time",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "openschool_actions_foippa",
+        "suggest_dimension": "openschool_actions_foippa.start_time_date",
+        "suggest_explore": "openschool_actions_foippa",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fopenschool_actions_foippa.view.lkml?line=90",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/openschool_actions_foippa.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/openschool_actions_foippa.view.lkml",
+        "sql": "${TABLE}.start_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-01-14 00:12:31 UTC",
+  "updated_at": "2024-10-10 23:07:27 UTC",
+  "last_updater_id": "13",
+  "load_configuration": "cache_run",
+  "lookml_link_id": "snowplow_web_block::open_school_custom_reports_in_dev",
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 2,
+  "url": "/dashboards/521",
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": "1",
+    "id": "37",
+    "content_metadata_id": "105",
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "37",
+  "content_favorite_id": null,
+  "id": "521",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -164,6 +323,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -397,6 +557,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -622,6 +783,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -843,6 +1005,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -923,113 +1086,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "2372",
-      "dashboard_id": "521",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "openschool_actions_foippa",
-      "dimension": "openschool_actions_foippa.start_time_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Start Time Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "OpenSchool Actions FOIPPA Start Time Date",
-        "label_from_parameter": null,
-        "label_short": "Start Time Date",
-        "map_layer": null,
-        "name": "openschool_actions_foippa.start_time_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "openschool_actions_foippa",
-        "view_label": "OpenSchool Actions FOIPPA",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "openschool_actions_foippa",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "openschool_actions_foippa.start_time",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "openschool_actions_foippa",
-        "suggest_dimension": "openschool_actions_foippa.start_time_date",
-        "suggest_explore": "openschool_actions_foippa",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fopenschool_actions_foippa.view.lkml?line=90",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/openschool_actions_foippa.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/openschool_actions_foippa.view.lkml",
-        "sql": "${TABLE}.start_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "521",
@@ -1053,6 +1109,10 @@
           "element_title": "Drop Off Rate",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -1073,6 +1133,10 @@
           "element_title": "Roles",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -1093,6 +1157,10 @@
           "element_title": "Sessions",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -1113,6 +1181,10 @@
           "element_title": "Certificates",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -1134,58 +1206,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-01-14 00:12:31 UTC",
-  "updated_at": "2024-10-10 23:07:27 UTC",
-  "last_updater_id": "13",
-  "load_configuration": "cache_run",
-  "lookml_link_id": "snowplow_web_block::open_school_custom_reports_in_dev",
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 2,
-  "url": "/dashboards/521",
-  "folder": {
-    "name": "Web Analytics Dashboards",
-    "parent_id": "1",
-    "id": "37",
-    "content_metadata_id": "105",
-    "created_at": "2018-05-17 18:34:03 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "37",
-  "content_favorite_id": null,
-  "id": "521",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Dan Pollock",

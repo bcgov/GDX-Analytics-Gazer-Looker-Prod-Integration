@@ -14,6 +14,184 @@
   "background_color": null,
   "created_at": "2018-08-29 07:31:55 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "161",
+      "dashboard_id": "48",
+      "name": "Office Name",
+      "title": "Office Name",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.office_name",
+      "row": 0,
+      "allow_multiple_values": false,
+      "required": false,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Office Info",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Office Name",
+        "label_from_parameter": null,
+        "label_short": "Office Name",
+        "map_layer": null,
+        "name": "cfms_poc.office_name",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Office Name",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.office_name",
+        "suggest_explore": "cfms_poc",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.office_name ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "167",
+      "dashboard_id": "48",
+      "name": "Data Range",
+      "title": "Data Range",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.date_range",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days",
+      "field": null,
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2024-04-20 04:17:21 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 23,
+  "url": "/dashboards/48",
+  "folder": {
+    "name": "Dev",
+    "parent_id": "36",
+    "id": "109",
+    "content_metadata_id": "398",
+    "created_at": "2018-12-18 08:01:55 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "109",
+  "content_favorite_id": null,
+  "id": "48",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -144,6 +322,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -285,6 +464,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -489,6 +669,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -630,6 +811,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -837,6 +1019,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -978,6 +1161,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1229,6 +1413,7 @@
 
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "stacking": "",
           "show_value_labels": false,
@@ -1298,12 +1483,14 @@
           ]
         },
         "id": "QUEs4FTqVe3YmY8RwS6dGC",
+        "client_id": "",
         "dynamic_fields": "[]",
         "source_queries": [
           {
             "name": "Cfms Poc",
             "merge_fields": null,
             "query_id": "MJfSxhF",
+            "query_client_id": "",
             "query_slug": "MJfSxhF",
             "query": {
               "view": "cfms_poc",
@@ -1444,6 +1631,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1457,6 +1645,7 @@
               }
             ],
             "query_id": "97f5X6v",
+            "query_client_id": "",
             "query_slug": "97f5X6v",
             "query": {
               "view": "cfms_poc",
@@ -1567,6 +1756,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1752,6 +1942,7 @@
           "cfms_poc.waiting_duration_bucket"
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "stacking": "",
           "colors": [
@@ -1817,12 +2008,14 @@
           ]
         },
         "id": "tz3LopNkJNqbY6h7c6CLlR",
+        "client_id": "",
         "dynamic_fields": "[]",
         "source_queries": [
           {
             "name": "Cfms Poc",
             "merge_fields": null,
             "query_id": "4CgwD9T",
+            "query_client_id": "",
             "query_slug": "4CgwD9T",
             "query": {
               "view": "cfms_poc",
@@ -1952,6 +2145,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1969,6 +2163,7 @@
               }
             ],
             "query_id": "xQ2RYHN",
+            "query_client_id": "",
             "query_slug": "xQ2RYHN",
             "query": {
               "view": "cfms_poc",
@@ -2096,6 +2291,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -2229,6 +2425,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2354,6 +2551,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2434,132 +2632,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "161",
-      "dashboard_id": "48",
-      "name": "Office Name",
-      "title": "Office Name",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.office_name",
-      "row": 0,
-      "allow_multiple_values": false,
-      "required": false,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Office Info",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Office Name",
-        "label_from_parameter": null,
-        "label_short": "Office Name",
-        "map_layer": null,
-        "name": "cfms_poc.office_name",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Office Name",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.office_name",
-        "suggest_explore": "cfms_poc",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.office_name ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "167",
-      "dashboard_id": "48",
-      "name": "Data Range",
-      "title": "Data Range",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.date_range",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 days",
-      "field": null,
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "48",
@@ -2583,6 +2655,10 @@
           "element_title": "Average Wait Time - Last Active Date",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2603,6 +2679,10 @@
           "element_title": "Average Wait Time - My Office All Time",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2623,6 +2703,10 @@
           "element_title": "Average Wait Time - All Offices All Time",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2643,6 +2727,10 @@
           "element_title": "Wait Time Pattern Compare",
           "element_title_hidden": false,
           "vis_type": "looker_line",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2663,6 +2751,10 @@
           "element_title": "Wait Time Intervals",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2683,6 +2775,10 @@
           "element_title": "Untitled",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2704,58 +2800,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2024-04-20 04:17:21 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 23,
-  "url": "/dashboards/48",
-  "folder": {
-    "name": "Dev",
-    "parent_id": "36",
-    "id": "109",
-    "content_metadata_id": "398",
-    "created_at": "2018-12-18 08:01:55 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "109",
-  "content_favorite_id": null,
-  "id": "48",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",

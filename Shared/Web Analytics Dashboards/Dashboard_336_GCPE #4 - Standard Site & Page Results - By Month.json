@@ -14,551 +14,6 @@
   "background_color": null,
   "created_at": "2023-01-03 22:20:34 UTC",
   "crossfilter_enabled": false,
-  "dashboard_elements": [
-    {
-      "body_text": null,
-      "body_text_as_html": null,
-      "dashboard_id": "336",
-      "dashboard_layout_id": null,
-      "edit_uri": null,
-      "id": "3243",
-      "look": null,
-      "look_id": null,
-      "lookml_link_id": "",
-      "merge_result_id": null,
-      "note_display": "above",
-      "note_state": "collapsed",
-      "note_text": "<p style=\"background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;\">\n\n<b>Filter - Date</b>: Input the date range you want to view results for. Results are broken down by individual months. Results are currently available for the last completed 24 months.<br>\n\n<b>Filter - Site URL</b>: Input the site URL or URLs if you want to view results for all of the pages of one or more sites. A reminder to input the different versions or spellings of the site URL to capture all results. For example, www.cleanbc.gov.bc.ca and cleanbc.gov.bc.ca are two versions of the site URL for CleanBC.<br>\n\n<b>Filter - Page URL</b>: Input the page URL or URLs if you want to view results for a specific page or pages. A reminder to input the various potential URL spellings. For example, include and not include the \"www\"; include and not include the \"/\" at the end of the URL; etc.<br>\n\n<b>View or Download More Rows/Columns of Data</b>: The current live view limit is 25 rows & 50 columns. To view or download more rows/columns of data, use the \"Advanced data options\" of the \"Download Data\" option. <a href=\"https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore\" target=\"_blank\">Go to the online guide for instructions</a>.\n\n\n<br>\n\n</p>",
-      "note_text_as_html": "&lt;p style=&quot;background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;&quot;&gt;\n\n&lt;b&gt;Filter - Date&lt;/b&gt;: Input the date range you want to view results for. Results are broken down by individual months. Results are currently available for the last completed 24 months.&lt;br&gt;\n\n&lt;b&gt;Filter - Site URL&lt;/b&gt;: Input the site URL or URLs if you want to view results for all of the pages of one or more sites. A reminder to input the different versions or spellings of the site URL to capture all results. For example, www.cleanbc.gov.bc.ca and cleanbc.gov.bc.ca are two versions of the site URL for CleanBC.&lt;br&gt;\n\n&lt;b&gt;Filter - Page URL&lt;/b&gt;: Input the page URL or URLs if you want to view results for a specific page or pages. A reminder to input the various potential URL spellings. For example, include and not include the &quot;www&quot;; include and not include the &quot;/&quot; at the end of the URL; etc.&lt;br&gt;\n\n&lt;b&gt;View or Download More Rows/Columns of Data&lt;/b&gt;: The current live view limit is 25 rows &amp; 50 columns. To view or download more rows/columns of data, use the &quot;Advanced data options&quot; of the &quot;Download Data&quot; option. &lt;a href=&quot;https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore&quot; target=&quot;_blank&quot;&gt;Go to the online guide for instructions&lt;/a&gt;.\n\n\n&lt;br&gt;\n\n&lt;/p&gt;",
-      "query": {
-        "view": "page_views",
-        "fields": [
-          "page_views.page_display_url",
-          "page_views.row_count",
-          "page_views.session_count",
-          "page_views.page_view_start_month"
-        ],
-        "pivots": [
-          "page_views.page_view_start_month"
-        ],
-        "fill_fields": [
-          "page_views.page_view_start_month"
-        ],
-        "filters": {
-          "page_views.page_display_url": "",
-          "page_views.page_urlhost": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca",
-          "page_views.page_view_start_date": "27 months"
-        },
-        "filter_expression": null,
-        "sorts": [
-          "page_views.page_view_start_month",
-          "page_views.row_count desc 0"
-        ],
-        "total": true,
-        "row_total": "right",
-        "subtotals": null,
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "transpose": false,
-          "truncate_text": true,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "size_to_fit": true,
-          "table_theme": "white",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "header_text_alignment": "center",
-          "header_font_size": "12",
-          "rows_font_size": "12",
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "show_sql_query_menu_options": false,
-          "show_totals": true,
-          "show_row_totals": true,
-          "truncate_header": false,
-          "series_labels": {
-            "page_views.row_count": "Page Views",
-            "page_views.page_display_url": "Page or Site URL",
-            "page_views.session_count": "Sessions",
-            "page_views.page_view_start_month": "Month"
-          },
-          "series_cell_visualizations": {
-            "page_views.session_count": {
-              "is_active": false
-            }
-          },
-          "series_text_format": {
-            "page_views.page_view_start_month": {
-              "align": "center"
-            }
-          },
-          "x_axis_gridlines": false,
-          "y_axis_gridlines": true,
-          "show_y_axis_labels": true,
-          "show_y_axis_ticks": true,
-          "y_axis_tick_density": "default",
-          "y_axis_tick_density_custom": 5,
-          "show_x_axis_label": true,
-          "show_x_axis_ticks": true,
-          "y_axis_scale_mode": "linear",
-          "x_axis_reversed": false,
-          "y_axis_reversed": false,
-          "plot_size_by_field": false,
-          "trellis": "",
-          "stacking": "",
-          "legend_position": "center",
-          "point_style": "none",
-          "show_value_labels": true,
-          "label_density": 25,
-          "x_axis_scale": "auto",
-          "y_axis_combined": true,
-          "ordering": "none",
-          "show_null_labels": false,
-          "show_totals_labels": false,
-          "show_silhouette": false,
-          "totals_color": "#808080",
-          "y_axes": [
-
-          ],
-          "series_types": {
-          },
-          "series_colors": {
-            "page_views.page_view_count": "#BABABA",
-            "page_views.row_count": "#BABABA"
-          },
-          "label_color": [
-            "#012749"
-          ],
-          "type": "looker_grid",
-          "hidden_fields": [
-
-          ],
-          "defaults_version": 1
-        },
-        "filter_config": {
-          "page_views.page_display_url": [
-            {
-              "type": "=",
-              "values": [
-                {
-                  "constant": ""
-                },
-                {
-                }
-              ],
-              "id": 36,
-              "error": false
-            }
-          ],
-          "page_views.page_urlhost": [
-            {
-              "type": "=",
-              "values": [
-                {
-                  "constant": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca"
-                },
-                {
-                }
-              ],
-              "id": 37,
-              "error": false
-            }
-          ],
-          "page_views.page_view_start_date": [
-            {
-              "type": "past",
-              "values": [
-                {
-                  "constant": "27",
-                  "unit": "mo"
-                },
-                {
-                }
-              ],
-              "id": 38,
-              "error": false
-            }
-          ]
-        },
-        "visible_ui_sections": null,
-        "slug": "HK6RgYY",
-        "client_id": "t8qEqP9wqr14R1Mzyh1zoU",
-        "share_url": "https://analytics.gov.bc.ca/x/t8qEqP9wqr14R1Mzyh1zoU",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
-        "has_table_calculations": false,
-        "id": "HK6RgYY",
-        "model": "snowplow_web_block",
-        "limit": "25",
-        "column_limit": "50",
-        "dynamic_fields": "[]",
-        "query_timezone": null,
-        "quick_calcs": [
-
-        ],
-        "analysis_config": null,
-        "can": {
-          "can_clear_cache": true,
-          "cost_estimate": true,
-          "create": true,
-          "index": true,
-          "show": true,
-          "download": true,
-          "download_unlimited": true,
-          "edit_custom_fields": true,
-          "edit_table_calculations": true,
-          "explore": true,
-          "generate_drill_links": true,
-          "render": true,
-          "run": true,
-          "see_results": true,
-          "save": true,
-          "schedule": true,
-          "see_aggregate_table_lookml": true,
-          "see_derived_table_lookml": true,
-          "see_lookml": true,
-          "see_sql": true,
-          "use_custom_fields": true
-        }
-      },
-      "refresh_interval": null,
-      "refresh_interval_to_i": null,
-      "result_maker_id": "125222",
-      "subtitle_text": null,
-      "title": "URL Results: Page Views & Sessions By Month",
-      "title_hidden": false,
-      "title_text": null,
-      "type": "vis",
-      "alert_count": 0,
-      "rich_content_json": null,
-      "title_text_as_html": null,
-      "subtitle_text_as_html": null,
-      "extension_id": null,
-      "aria_description": null,
-      "query_id": "HK6RgYY",
-      "result_maker": {
-        "id": "125222",
-        "dynamic_fields": "[]",
-        "sorts": [
-          "page_views.page_view_start_month",
-          "page_views.row_count desc 0"
-        ],
-        "merge_result_id": null,
-        "total": true,
-        "sql_query_id": "",
-        "query": {
-          "view": "page_views",
-          "fields": [
-            "page_views.page_display_url",
-            "page_views.row_count",
-            "page_views.session_count",
-            "page_views.page_view_start_month"
-          ],
-          "pivots": [
-            "page_views.page_view_start_month"
-          ],
-          "fill_fields": [
-            "page_views.page_view_start_month"
-          ],
-          "filters": {
-            "page_views.page_display_url": "",
-            "page_views.page_urlhost": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca",
-            "page_views.page_view_start_date": "27 months"
-          },
-          "filter_expression": null,
-          "sorts": [
-            "page_views.page_view_start_month",
-            "page_views.row_count desc 0"
-          ],
-          "total": true,
-          "row_total": "right",
-          "subtotals": null,
-          "vis_config": {
-            "show_view_names": false,
-            "show_row_numbers": true,
-            "transpose": false,
-            "truncate_text": true,
-            "hide_totals": false,
-            "hide_row_totals": false,
-            "size_to_fit": true,
-            "table_theme": "white",
-            "limit_displayed_rows": false,
-            "enable_conditional_formatting": false,
-            "header_text_alignment": "center",
-            "header_font_size": "12",
-            "rows_font_size": "12",
-            "conditional_formatting_include_totals": false,
-            "conditional_formatting_include_nulls": false,
-            "show_sql_query_menu_options": false,
-            "show_totals": true,
-            "show_row_totals": true,
-            "truncate_header": false,
-            "series_labels": {
-              "page_views.row_count": "Page Views",
-              "page_views.page_display_url": "Page or Site URL",
-              "page_views.session_count": "Sessions",
-              "page_views.page_view_start_month": "Month"
-            },
-            "series_cell_visualizations": {
-              "page_views.session_count": {
-                "is_active": false
-              }
-            },
-            "series_text_format": {
-              "page_views.page_view_start_month": {
-                "align": "center"
-              }
-            },
-            "x_axis_gridlines": false,
-            "y_axis_gridlines": true,
-            "show_y_axis_labels": true,
-            "show_y_axis_ticks": true,
-            "y_axis_tick_density": "default",
-            "y_axis_tick_density_custom": 5,
-            "show_x_axis_label": true,
-            "show_x_axis_ticks": true,
-            "y_axis_scale_mode": "linear",
-            "x_axis_reversed": false,
-            "y_axis_reversed": false,
-            "plot_size_by_field": false,
-            "trellis": "",
-            "stacking": "",
-            "legend_position": "center",
-            "point_style": "none",
-            "show_value_labels": true,
-            "label_density": 25,
-            "x_axis_scale": "auto",
-            "y_axis_combined": true,
-            "ordering": "none",
-            "show_null_labels": false,
-            "show_totals_labels": false,
-            "show_silhouette": false,
-            "totals_color": "#808080",
-            "y_axes": [
-
-            ],
-            "series_types": {
-            },
-            "series_colors": {
-              "page_views.page_view_count": "#BABABA",
-              "page_views.row_count": "#BABABA"
-            },
-            "label_color": [
-              "#012749"
-            ],
-            "type": "looker_grid",
-            "hidden_fields": [
-
-            ],
-            "defaults_version": 1
-          },
-          "filter_config": {
-            "page_views.page_display_url": [
-              {
-                "type": "=",
-                "values": [
-                  {
-                    "constant": ""
-                  },
-                  {
-                  }
-                ],
-                "id": 36,
-                "error": false
-              }
-            ],
-            "page_views.page_urlhost": [
-              {
-                "type": "=",
-                "values": [
-                  {
-                    "constant": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca"
-                  },
-                  {
-                  }
-                ],
-                "id": 37,
-                "error": false
-              }
-            ],
-            "page_views.page_view_start_date": [
-              {
-                "type": "past",
-                "values": [
-                  {
-                    "constant": "27",
-                    "unit": "mo"
-                  },
-                  {
-                  }
-                ],
-                "id": 38,
-                "error": false
-              }
-            ]
-          },
-          "visible_ui_sections": null,
-          "slug": "HK6RgYY",
-          "client_id": "t8qEqP9wqr14R1Mzyh1zoU",
-          "share_url": "https://analytics.gov.bc.ca/x/t8qEqP9wqr14R1Mzyh1zoU",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
-          "has_table_calculations": false,
-          "id": "HK6RgYY",
-          "model": "snowplow_web_block",
-          "limit": "25",
-          "column_limit": "50",
-          "dynamic_fields": "[]",
-          "query_timezone": null,
-          "quick_calcs": [
-
-          ],
-          "analysis_config": null,
-          "can": {
-            "can_clear_cache": true,
-            "cost_estimate": true,
-            "create": true,
-            "index": true,
-            "show": true,
-            "download": true,
-            "download_unlimited": true,
-            "edit_custom_fields": true,
-            "edit_table_calculations": true,
-            "explore": true,
-            "generate_drill_links": true,
-            "render": true,
-            "run": true,
-            "see_results": true,
-            "save": true,
-            "schedule": true,
-            "see_aggregate_table_lookml": true,
-            "see_derived_table_lookml": true,
-            "see_lookml": true,
-            "see_sql": true,
-            "use_custom_fields": true
-          }
-        },
-        "vis_config": {
-          "show_view_names": false,
-          "show_row_numbers": true,
-          "transpose": false,
-          "truncate_text": true,
-          "hide_totals": false,
-          "hide_row_totals": false,
-          "size_to_fit": true,
-          "table_theme": "white",
-          "limit_displayed_rows": false,
-          "enable_conditional_formatting": false,
-          "header_text_alignment": "center",
-          "header_font_size": "12",
-          "rows_font_size": "12",
-          "conditional_formatting_include_totals": false,
-          "conditional_formatting_include_nulls": false,
-          "show_sql_query_menu_options": false,
-          "show_totals": true,
-          "show_row_totals": true,
-          "truncate_header": false,
-          "series_labels": {
-            "page_views.row_count": "Page Views",
-            "page_views.page_display_url": "Page or Site URL",
-            "page_views.session_count": "Sessions",
-            "page_views.page_view_start_month": "Month"
-          },
-          "series_cell_visualizations": {
-            "page_views.session_count": {
-              "is_active": false
-            }
-          },
-          "series_text_format": {
-            "page_views.page_view_start_month": {
-              "align": "center"
-            }
-          },
-          "x_axis_gridlines": false,
-          "y_axis_gridlines": true,
-          "show_y_axis_labels": true,
-          "show_y_axis_ticks": true,
-          "y_axis_tick_density": "default",
-          "y_axis_tick_density_custom": 5,
-          "show_x_axis_label": true,
-          "show_x_axis_ticks": true,
-          "y_axis_scale_mode": "linear",
-          "x_axis_reversed": false,
-          "y_axis_reversed": false,
-          "plot_size_by_field": false,
-          "trellis": "",
-          "stacking": "",
-          "legend_position": "center",
-          "point_style": "none",
-          "show_value_labels": true,
-          "label_density": 25,
-          "x_axis_scale": "auto",
-          "y_axis_combined": true,
-          "ordering": "none",
-          "show_null_labels": false,
-          "show_totals_labels": false,
-          "show_silhouette": false,
-          "totals_color": "#808080",
-          "y_axes": [
-
-          ],
-          "series_types": {
-          },
-          "series_colors": {
-            "page_views.page_view_count": "#BABABA",
-            "page_views.row_count": "#BABABA"
-          },
-          "label_color": [
-            "#012749"
-          ],
-          "type": "looker_grid",
-          "hidden_fields": [
-
-          ],
-          "defaults_version": 1
-        },
-        "filterables": [
-          {
-            "model": "snowplow_web_block",
-            "view": "page_views",
-            "name": "",
-            "listen": [
-              {
-                "dashboard_filter_name": "Page URL",
-                "field": "page_views.page_display_url"
-              },
-              {
-                "dashboard_filter_name": "Site URL",
-                "field": "page_views.page_urlhost"
-              },
-              {
-                "dashboard_filter_name": "Date",
-                "field": "page_views.page_view_start_date"
-              }
-            ]
-          }
-        ],
-        "query_id": "HK6RgYY"
-      },
-      "can": {
-        "can_clear_cache": true,
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "explore": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true,
-        "run": false,
-        "see_aggregate_table_lookml": true
-      },
-      "alerts": [
-
-      ]
-    }
-  ],
   "dashboard_filters": [
     {
       "id": "1624",
@@ -802,50 +257,6 @@
       }
     }
   ],
-  "dashboard_layouts": [
-    {
-      "id": "336",
-      "dashboard_id": "336",
-      "type": "newspaper",
-      "active": true,
-      "column_width": null,
-      "width": null,
-      "deleted": false,
-      "dashboard_title": "GCPE #4 - Standard Site & Page Results - By Month",
-      "dashboard_layout_components": [
-        {
-          "id": "3243",
-          "dashboard_layout_id": "336",
-          "dashboard_element_id": "3243",
-          "row": 0,
-          "column": 0,
-          "width": 24,
-          "height": 11,
-          "deleted": false,
-          "element_title": "URL Results: Page Views & Sessions By Month",
-          "element_title_hidden": false,
-          "vis_type": "looker_grid",
-          "can": {
-            "create": true,
-            "destroy": true,
-            "update": true,
-            "index": true,
-            "show": true
-          }
-        }
-      ],
-      "label": null,
-      "description": null,
-      "order": -1,
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -898,6 +309,601 @@
   "content_favorite_id": null,
   "id": "336",
   "model": null,
+  "dashboard_elements": [
+    {
+      "body_text": null,
+      "body_text_as_html": null,
+      "dashboard_id": "336",
+      "dashboard_layout_id": null,
+      "edit_uri": null,
+      "id": "3243",
+      "look": null,
+      "look_id": null,
+      "lookml_link_id": "",
+      "merge_result_id": null,
+      "note_display": "above",
+      "note_state": "collapsed",
+      "note_text": "<p style=\"background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;\">\n\n<b>Filter - Date</b>: Input the date range you want to view results for. Results are broken down by individual months. Results are currently available for the last completed 24 months.<br>\n\n<b>Filter - Site URL</b>: Input the site URL or URLs if you want to view results for all of the pages of one or more sites. A reminder to input the different versions or spellings of the site URL to capture all results. For example, www.cleanbc.gov.bc.ca and cleanbc.gov.bc.ca are two versions of the site URL for CleanBC.<br>\n\n<b>Filter - Page URL</b>: Input the page URL or URLs if you want to view results for a specific page or pages. A reminder to input the various potential URL spellings. For example, include and not include the \"www\"; include and not include the \"/\" at the end of the URL; etc.<br>\n\n<b>View or Download More Rows/Columns of Data</b>: The current live view limit is 25 rows & 50 columns. To view or download more rows/columns of data, use the \"Advanced data options\" of the \"Download Data\" option. <a href=\"https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore\" target=\"_blank\">Go to the online guide for instructions</a>.\n\n\n<br>\n\n</p>",
+      "note_text_as_html": "&lt;p style=&quot;background-color:#d9eaf7; border: 1px solid transparent; border-radius: 4px; color:#313132; font-size: 16px; padding: 15px;&quot;&gt;\n\n&lt;b&gt;Filter - Date&lt;/b&gt;: Input the date range you want to view results for. Results are broken down by individual months. Results are currently available for the last completed 24 months.&lt;br&gt;\n\n&lt;b&gt;Filter - Site URL&lt;/b&gt;: Input the site URL or URLs if you want to view results for all of the pages of one or more sites. A reminder to input the different versions or spellings of the site URL to capture all results. For example, www.cleanbc.gov.bc.ca and cleanbc.gov.bc.ca are two versions of the site URL for CleanBC.&lt;br&gt;\n\n&lt;b&gt;Filter - Page URL&lt;/b&gt;: Input the page URL or URLs if you want to view results for a specific page or pages. A reminder to input the various potential URL spellings. For example, include and not include the &quot;www&quot;; include and not include the &quot;/&quot; at the end of the URL; etc.&lt;br&gt;\n\n&lt;b&gt;View or Download More Rows/Columns of Data&lt;/b&gt;: The current live view limit is 25 rows &amp; 50 columns. To view or download more rows/columns of data, use the &quot;Advanced data options&quot; of the &quot;Download Data&quot; option. &lt;a href=&quot;https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/analytics/download#viewmore&quot; target=&quot;_blank&quot;&gt;Go to the online guide for instructions&lt;/a&gt;.\n\n\n&lt;br&gt;\n\n&lt;/p&gt;",
+      "query": {
+        "view": "page_views",
+        "fields": [
+          "page_views.page_display_url",
+          "page_views.row_count",
+          "page_views.session_count",
+          "page_views.page_view_start_month"
+        ],
+        "pivots": [
+          "page_views.page_view_start_month"
+        ],
+        "fill_fields": [
+          "page_views.page_view_start_month"
+        ],
+        "filters": {
+          "page_views.page_display_url": "",
+          "page_views.page_urlhost": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca",
+          "page_views.page_view_start_date": "27 months"
+        },
+        "filter_expression": null,
+        "sorts": [
+          "page_views.page_view_start_month",
+          "page_views.row_count desc 0"
+        ],
+        "total": true,
+        "row_total": "right",
+        "subtotals": null,
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "center",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.row_count": "Page Views",
+            "page_views.page_display_url": "Page or Site URL",
+            "page_views.session_count": "Sessions",
+            "page_views.page_view_start_month": "Month"
+          },
+          "series_cell_visualizations": {
+            "page_views.session_count": {
+              "is_active": false
+            }
+          },
+          "series_text_format": {
+            "page_views.page_view_start_month": {
+              "align": "center"
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": true,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "y_axes": [
+
+          ],
+          "series_types": {
+          },
+          "series_colors": {
+            "page_views.page_view_count": "#BABABA",
+            "page_views.row_count": "#BABABA"
+          },
+          "label_color": [
+            "#012749"
+          ],
+          "type": "looker_grid",
+          "hidden_fields": [
+
+          ],
+          "defaults_version": 1
+        },
+        "filter_config": {
+          "page_views.page_display_url": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": ""
+                },
+                {
+                }
+              ],
+              "id": 36,
+              "error": false
+            }
+          ],
+          "page_views.page_urlhost": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca"
+                },
+                {
+                }
+              ],
+              "id": 37,
+              "error": false
+            }
+          ],
+          "page_views.page_view_start_date": [
+            {
+              "type": "past",
+              "values": [
+                {
+                  "constant": "27",
+                  "unit": "mo"
+                },
+                {
+                }
+              ],
+              "id": 38,
+              "error": false
+            }
+          ]
+        },
+        "visible_ui_sections": null,
+        "slug": "HK6RgYY",
+        "client_id": "t8qEqP9wqr14R1Mzyh1zoU",
+        "share_url": "https://analytics.gov.bc.ca/x/t8qEqP9wqr14R1Mzyh1zoU",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "has_table_calculations": false,
+        "id": "HK6RgYY",
+        "model": "snowplow_web_block",
+        "limit": "25",
+        "column_limit": "50",
+        "dynamic_fields": "[]",
+        "query_timezone": null,
+        "quick_calcs": [
+
+        ],
+        "analysis_config": null,
+        "can": {
+          "can_clear_cache": true,
+          "cost_estimate": true,
+          "create": true,
+          "index": true,
+          "show": true,
+          "download": true,
+          "download_unlimited": true,
+          "edit_custom_fields": true,
+          "edit_table_calculations": true,
+          "explore": true,
+          "generate_drill_links": true,
+          "render": true,
+          "run": true,
+          "see_results": true,
+          "save": true,
+          "schedule": true,
+          "see_aggregate_table_lookml": true,
+          "see_derived_table_lookml": true,
+          "see_lookml": true,
+          "see_sql": true,
+          "send_all_results": true,
+          "use_custom_fields": true
+        }
+      },
+      "refresh_interval": null,
+      "refresh_interval_to_i": null,
+      "result_maker_id": "125222",
+      "subtitle_text": null,
+      "title": "URL Results: Page Views & Sessions By Month",
+      "title_hidden": false,
+      "title_text": null,
+      "type": "vis",
+      "alert_count": 0,
+      "rich_content_json": null,
+      "title_text_as_html": null,
+      "subtitle_text_as_html": null,
+      "extension_id": null,
+      "aria_description": null,
+      "query_id": "HK6RgYY",
+      "result_maker": {
+        "id": "125222",
+        "dynamic_fields": "[]",
+        "sorts": [
+          "page_views.page_view_start_month",
+          "page_views.row_count desc 0"
+        ],
+        "merge_result_id": null,
+        "total": true,
+        "sql_query_id": "",
+        "query": {
+          "view": "page_views",
+          "fields": [
+            "page_views.page_display_url",
+            "page_views.row_count",
+            "page_views.session_count",
+            "page_views.page_view_start_month"
+          ],
+          "pivots": [
+            "page_views.page_view_start_month"
+          ],
+          "fill_fields": [
+            "page_views.page_view_start_month"
+          ],
+          "filters": {
+            "page_views.page_display_url": "",
+            "page_views.page_urlhost": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca",
+            "page_views.page_view_start_date": "27 months"
+          },
+          "filter_expression": null,
+          "sorts": [
+            "page_views.page_view_start_month",
+            "page_views.row_count desc 0"
+          ],
+          "total": true,
+          "row_total": "right",
+          "subtotals": null,
+          "vis_config": {
+            "show_view_names": false,
+            "show_row_numbers": true,
+            "transpose": false,
+            "truncate_text": true,
+            "hide_totals": false,
+            "hide_row_totals": false,
+            "size_to_fit": true,
+            "table_theme": "white",
+            "limit_displayed_rows": false,
+            "enable_conditional_formatting": false,
+            "header_text_alignment": "center",
+            "header_font_size": "12",
+            "rows_font_size": "12",
+            "conditional_formatting_include_totals": false,
+            "conditional_formatting_include_nulls": false,
+            "show_sql_query_menu_options": false,
+            "show_totals": true,
+            "show_row_totals": true,
+            "truncate_header": false,
+            "series_labels": {
+              "page_views.row_count": "Page Views",
+              "page_views.page_display_url": "Page or Site URL",
+              "page_views.session_count": "Sessions",
+              "page_views.page_view_start_month": "Month"
+            },
+            "series_cell_visualizations": {
+              "page_views.session_count": {
+                "is_active": false
+              }
+            },
+            "series_text_format": {
+              "page_views.page_view_start_month": {
+                "align": "center"
+              }
+            },
+            "x_axis_gridlines": false,
+            "y_axis_gridlines": true,
+            "show_y_axis_labels": true,
+            "show_y_axis_ticks": true,
+            "y_axis_tick_density": "default",
+            "y_axis_tick_density_custom": 5,
+            "show_x_axis_label": true,
+            "show_x_axis_ticks": true,
+            "y_axis_scale_mode": "linear",
+            "x_axis_reversed": false,
+            "y_axis_reversed": false,
+            "plot_size_by_field": false,
+            "trellis": "",
+            "stacking": "",
+            "legend_position": "center",
+            "point_style": "none",
+            "show_value_labels": true,
+            "label_density": 25,
+            "x_axis_scale": "auto",
+            "y_axis_combined": true,
+            "ordering": "none",
+            "show_null_labels": false,
+            "show_totals_labels": false,
+            "show_silhouette": false,
+            "totals_color": "#808080",
+            "y_axes": [
+
+            ],
+            "series_types": {
+            },
+            "series_colors": {
+              "page_views.page_view_count": "#BABABA",
+              "page_views.row_count": "#BABABA"
+            },
+            "label_color": [
+              "#012749"
+            ],
+            "type": "looker_grid",
+            "hidden_fields": [
+
+            ],
+            "defaults_version": 1
+          },
+          "filter_config": {
+            "page_views.page_display_url": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": ""
+                  },
+                  {
+                  }
+                ],
+                "id": 36,
+                "error": false
+              }
+            ],
+            "page_views.page_urlhost": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www2.gov.bc.ca,cleanbc.gov.bc.ca,www.cleanbc.gov.bc.ca,buybc.gov.bc.ca,wildfireready.gov.bc.ca,engage.gov.bc.ca,wellbeing.gov.bc.ca,www.stopoverdose.gov.bc.ca,strongerbc.gov.bc.ca,www.betterhomesbc.ca,www.healthlinkbc.ca,findanswers.workbc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 37,
+                "error": false
+              }
+            ],
+            "page_views.page_view_start_date": [
+              {
+                "type": "past",
+                "values": [
+                  {
+                    "constant": "27",
+                    "unit": "mo"
+                  },
+                  {
+                  }
+                ],
+                "id": 38,
+                "error": false
+              }
+            ]
+          },
+          "visible_ui_sections": null,
+          "slug": "HK6RgYY",
+          "client_id": "t8qEqP9wqr14R1Mzyh1zoU",
+          "share_url": "https://analytics.gov.bc.ca/x/t8qEqP9wqr14R1Mzyh1zoU",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.page_display_url,page_views.row_count,page_views.session_count,page_views.page_view_start_month&pivots=page_views.page_view_start_month&fill_fields=page_views.page_view_start_month&f[page_views.page_display_url]=&f[page_views.page_urlhost]=www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca&f[page_views.page_view_start_date]=27+months&sorts=page_views.page_view_start_month,page_views.row_count+desc+0&limit=25&column_limit=50&total=on&row_total=right&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22center%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22truncate_header%22%3Afalse%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Page+Views%22%2C%22page_views.page_display_url%22%3A%22Page+or+Site+URL%22%2C%22page_views.session_count%22%3A%22Sessions%22%2C%22page_views.page_view_start_month%22%3A%22Month%22%7D%2C%22series_cell_visualizations%22%3A%7B%22page_views.session_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22series_text_format%22%3A%7B%22page_views.page_view_start_month%22%3A%7B%22align%22%3A%22center%22%7D%7D%2C%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Atrue%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22y_axes%22%3A%5B%5D%2C%22series_types%22%3A%7B%7D%2C%22series_colors%22%3A%7B%22page_views.page_view_count%22%3A%22%23BABABA%22%2C%22page_views.row_count%22%3A%22%23BABABA%22%7D%2C%22label_color%22%3A%5B%22%23012749%22%5D%2C%22type%22%3A%22looker_grid%22%2C%22hidden_fields%22%3A%5B%5D%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A36%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www2.gov.bc.ca%2Ccleanbc.gov.bc.ca%2Cwww.cleanbc.gov.bc.ca%2Cbuybc.gov.bc.ca%2Cwildfireready.gov.bc.ca%2Cengage.gov.bc.ca%2Cwellbeing.gov.bc.ca%2Cwww.stopoverdose.gov.bc.ca%2Cstrongerbc.gov.bc.ca%2Cwww.betterhomesbc.ca%2Cwww.healthlinkbc.ca%2Cfindanswers.workbc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A37%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%2227%22%2C%22unit%22%3A%22mo%22%7D%2C%7B%7D%5D%2C%22id%22%3A38%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "has_table_calculations": false,
+          "id": "HK6RgYY",
+          "model": "snowplow_web_block",
+          "limit": "25",
+          "column_limit": "50",
+          "dynamic_fields": "[]",
+          "query_timezone": null,
+          "quick_calcs": [
+
+          ],
+          "analysis_config": null,
+          "can": {
+            "can_clear_cache": true,
+            "cost_estimate": true,
+            "create": true,
+            "index": true,
+            "show": true,
+            "download": true,
+            "download_unlimited": true,
+            "edit_custom_fields": true,
+            "edit_table_calculations": true,
+            "explore": true,
+            "generate_drill_links": true,
+            "render": true,
+            "run": true,
+            "see_results": true,
+            "save": true,
+            "schedule": true,
+            "see_aggregate_table_lookml": true,
+            "see_derived_table_lookml": true,
+            "see_lookml": true,
+            "see_sql": true,
+            "send_all_results": true,
+            "use_custom_fields": true
+          }
+        },
+        "vis_config": {
+          "show_view_names": false,
+          "show_row_numbers": true,
+          "transpose": false,
+          "truncate_text": true,
+          "hide_totals": false,
+          "hide_row_totals": false,
+          "size_to_fit": true,
+          "table_theme": "white",
+          "limit_displayed_rows": false,
+          "enable_conditional_formatting": false,
+          "header_text_alignment": "center",
+          "header_font_size": "12",
+          "rows_font_size": "12",
+          "conditional_formatting_include_totals": false,
+          "conditional_formatting_include_nulls": false,
+          "show_sql_query_menu_options": false,
+          "show_totals": true,
+          "show_row_totals": true,
+          "truncate_header": false,
+          "series_labels": {
+            "page_views.row_count": "Page Views",
+            "page_views.page_display_url": "Page or Site URL",
+            "page_views.session_count": "Sessions",
+            "page_views.page_view_start_month": "Month"
+          },
+          "series_cell_visualizations": {
+            "page_views.session_count": {
+              "is_active": false
+            }
+          },
+          "series_text_format": {
+            "page_views.page_view_start_month": {
+              "align": "center"
+            }
+          },
+          "x_axis_gridlines": false,
+          "y_axis_gridlines": true,
+          "show_y_axis_labels": true,
+          "show_y_axis_ticks": true,
+          "y_axis_tick_density": "default",
+          "y_axis_tick_density_custom": 5,
+          "show_x_axis_label": true,
+          "show_x_axis_ticks": true,
+          "y_axis_scale_mode": "linear",
+          "x_axis_reversed": false,
+          "y_axis_reversed": false,
+          "plot_size_by_field": false,
+          "trellis": "",
+          "stacking": "",
+          "legend_position": "center",
+          "point_style": "none",
+          "show_value_labels": true,
+          "label_density": 25,
+          "x_axis_scale": "auto",
+          "y_axis_combined": true,
+          "ordering": "none",
+          "show_null_labels": false,
+          "show_totals_labels": false,
+          "show_silhouette": false,
+          "totals_color": "#808080",
+          "y_axes": [
+
+          ],
+          "series_types": {
+          },
+          "series_colors": {
+            "page_views.page_view_count": "#BABABA",
+            "page_views.row_count": "#BABABA"
+          },
+          "label_color": [
+            "#012749"
+          ],
+          "type": "looker_grid",
+          "hidden_fields": [
+
+          ],
+          "defaults_version": 1
+        },
+        "filterables": [
+          {
+            "model": "snowplow_web_block",
+            "view": "page_views",
+            "name": "",
+            "listen": [
+              {
+                "dashboard_filter_name": "Page URL",
+                "field": "page_views.page_display_url"
+              },
+              {
+                "dashboard_filter_name": "Site URL",
+                "field": "page_views.page_urlhost"
+              },
+              {
+                "dashboard_filter_name": "Date",
+                "field": "page_views.page_view_start_date"
+              }
+            ]
+          }
+        ],
+        "query_id": "HK6RgYY"
+      },
+      "can": {
+        "can_clear_cache": true,
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "explore": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true,
+        "run": false,
+        "see_aggregate_table_lookml": true
+      },
+      "alerts": [
+
+      ]
+    }
+  ],
+  "dashboard_layouts": [
+    {
+      "id": "336",
+      "dashboard_id": "336",
+      "type": "newspaper",
+      "active": true,
+      "column_width": null,
+      "width": null,
+      "deleted": false,
+      "dashboard_title": "GCPE #4 - Standard Site & Page Results - By Month",
+      "dashboard_layout_components": [
+        {
+          "id": "3243",
+          "dashboard_layout_id": "336",
+          "dashboard_element_id": "3243",
+          "row": 0,
+          "column": 0,
+          "width": 24,
+          "height": 11,
+          "deleted": false,
+          "element_title": "URL Results: Page Views & Sessions By Month",
+          "element_title_hidden": false,
+          "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
+          "can": {
+            "create": true,
+            "destroy": true,
+            "update": true,
+            "index": true,
+            "show": true
+          }
+        }
+      ],
+      "label": null,
+      "description": null,
+      "order": -1,
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Linda Mah",

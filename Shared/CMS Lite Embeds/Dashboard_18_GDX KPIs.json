@@ -14,6 +14,156 @@
   "background_color": "#f6f8fa",
   "created_at": "2018-06-12 04:33:32 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "17",
+      "dashboard_id": "18",
+      "name": "City",
+      "title": "City",
+      "type": "field_filter",
+      "explore": "sessions",
+      "dimension": "sessions.geo_city",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Location",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Geo City",
+        "label_from_parameter": null,
+        "label_short": "Geo City",
+        "map_layer": null,
+        "name": "sessions.geo_city",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions",
+        "view_label": "Sessions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Geo City",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions",
+        "suggest_dimension": "geo_cache.geo_city",
+        "suggest_explore": "geo_cache",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=139",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
+        "sql": "${TABLE}.geo_city ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2022-03-30 14:40:47 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": false,
+  "show_title": true,
+  "text_tile_text_color": "",
+  "tile_background_color": "white",
+  "tile_text_color": "#3a4245",
+  "title_color": "#3a4245",
+  "view_count": 31,
+  "url": "/dashboards/18",
+  "folder": {
+    "name": "CMS Lite Embeds",
+    "parent_id": "1",
+    "id": "31",
+    "content_metadata_id": "96",
+    "created_at": "2018-05-04 06:33:39 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "31",
+  "content_favorite_id": null,
+  "id": "18",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -106,6 +256,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -173,6 +324,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -276,6 +428,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -415,6 +568,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -482,6 +636,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -585,6 +740,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -726,6 +882,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -793,6 +950,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -898,6 +1056,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1085,6 +1244,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1152,6 +1312,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -1304,6 +1465,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1519,6 +1681,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1586,6 +1749,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -1740,6 +1904,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2085,6 +2250,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2152,6 +2318,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -2335,6 +2502,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2431,104 +2599,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "17",
-      "dashboard_id": "18",
-      "name": "City",
-      "title": "City",
-      "type": "field_filter",
-      "explore": "sessions",
-      "dimension": "sessions.geo_city",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Location",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Geo City",
-        "label_from_parameter": null,
-        "label_short": "Geo City",
-        "map_layer": null,
-        "name": "sessions.geo_city",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions",
-        "view_label": "Sessions",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Geo City",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions",
-        "suggest_dimension": "geo_cache.geo_city",
-        "suggest_explore": "geo_cache",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=139",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
-        "sql": "${TABLE}.geo_city ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "18",
@@ -2552,6 +2622,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2572,6 +2646,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2592,6 +2670,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2612,6 +2694,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2632,6 +2718,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_area",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2652,6 +2742,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "error",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2672,6 +2766,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "error",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2692,6 +2790,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_map",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2713,58 +2815,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2022-03-30 14:40:47 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": false,
-  "show_title": true,
-  "text_tile_text_color": "",
-  "tile_background_color": "white",
-  "tile_text_color": "#3a4245",
-  "title_color": "#3a4245",
-  "view_count": 31,
-  "url": "/dashboards/18",
-  "folder": {
-    "name": "CMS Lite Embeds",
-    "parent_id": "1",
-    "id": "31",
-    "content_metadata_id": "96",
-    "created_at": "2018-05-04 06:33:39 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "31",
-  "content_favorite_id": null,
-  "id": "18",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",

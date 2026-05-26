@@ -14,6 +14,159 @@
   "background_color": null,
   "created_at": "2020-06-11 17:44:03 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "919",
+      "dashboard_id": "193",
+      "name": "Date booked",
+      "title": "Date booked",
+      "type": "field_filter",
+      "explore": "appointments",
+      "dimension": "appointments.create_time_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days ago for 7 days",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Create Time Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Appointments Create Time Date",
+        "label_from_parameter": null,
+        "label_short": "Create Time Date",
+        "map_layer": null,
+        "name": "appointments.create_time_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "appointments",
+        "view_label": "Appointments",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "appointments",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "appointments.create_time",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "appointments",
+        "suggest_dimension": "appointments.create_time_date",
+        "suggest_explore": "appointments",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/cfms_block/files/Views%2Fappointments.view.lkml?line=152",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/appointments.view.lkml",
+        "source_file_path": "cfms_block/Views/appointments.view.lkml",
+        "sql": "${TABLE}.min_create_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2024-04-04 17:39:41 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 525,
+  "url": "/dashboards/193",
+  "folder": {
+    "name": "Dev",
+    "parent_id": "36",
+    "id": "109",
+    "content_metadata_id": "398",
+    "created_at": "2018-12-18 08:01:55 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "109",
+  "content_favorite_id": null,
+  "id": "193",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -152,6 +305,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -301,6 +455,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -494,6 +649,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -644,6 +800,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -836,6 +993,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -985,6 +1143,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1203,6 +1362,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1379,6 +1539,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1607,6 +1768,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1769,6 +1931,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2068,6 +2231,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2275,6 +2439,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2599,6 +2764,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2806,6 +2972,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3130,6 +3297,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3337,6 +3505,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3662,6 +3831,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3870,6 +4040,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3982,107 +4153,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "919",
-      "dashboard_id": "193",
-      "name": "Date booked",
-      "title": "Date booked",
-      "type": "field_filter",
-      "explore": "appointments",
-      "dimension": "appointments.create_time_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 days ago for 7 days",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Create Time Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Appointments Create Time Date",
-        "label_from_parameter": null,
-        "label_short": "Create Time Date",
-        "map_layer": null,
-        "name": "appointments.create_time_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "appointments",
-        "view_label": "Appointments",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "appointments",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "appointments.create_time",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "appointments",
-        "suggest_dimension": "appointments.create_time_date",
-        "suggest_explore": "appointments",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/cfms_block/files/Views%2Fappointments.view.lkml?line=152",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/appointments.view.lkml",
-        "source_file_path": "cfms_block/Views/appointments.view.lkml",
-        "sql": "${TABLE}.min_create_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "193",
@@ -4106,6 +4176,10 @@
           "element_title": "Appointment Online by Office",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4126,6 +4200,10 @@
           "element_title": "Appointment Online by Transaction",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4146,6 +4224,10 @@
           "element_title": "Appointment Online by Date",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4166,6 +4248,10 @@
           "element_title": "Appointment Online - Book Date and Start Date",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4186,6 +4272,10 @@
           "element_title": "Appointment booked by Role",
           "element_title_hidden": false,
           "vis_type": "looker_pie",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4206,6 +4296,10 @@
           "element_title": "Appointment Utilization - Yesterday",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4226,6 +4320,10 @@
           "element_title": "Appointment Utilization - Last 5 days",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4246,6 +4344,10 @@
           "element_title": "Appointment Utilization - Last Month",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4266,6 +4368,10 @@
           "element_title": "Appointment Utilization - History",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4287,58 +4393,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2024-04-04 17:39:41 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 525,
-  "url": "/dashboards/193",
-  "folder": {
-    "name": "Dev",
-    "parent_id": "36",
-    "id": "109",
-    "content_metadata_id": "398",
-    "created_at": "2018-12-18 08:01:55 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "109",
-  "content_favorite_id": null,
-  "id": "193",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",

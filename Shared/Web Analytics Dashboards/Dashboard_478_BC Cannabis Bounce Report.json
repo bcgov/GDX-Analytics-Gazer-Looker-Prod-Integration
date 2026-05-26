@@ -14,6 +14,567 @@
   "background_color": null,
   "created_at": "2024-02-05 08:34:23 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "2151",
+      "dashboard_id": "478",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "page_views_bdp",
+      "dimension": "sessions_bdp.session_start_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The start time of the first page view of a given session.",
+        "enumerations": null,
+        "field_group_label": "Session Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Bdp Session Start Date",
+        "label_from_parameter": null,
+        "label_short": "Session Start Date",
+        "map_layer": null,
+        "name": "sessions_bdp.session_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions_bdp",
+        "view_label": "Sessions Bdp",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions_bdp",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "sessions_bdp.session_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions_bdp",
+        "suggest_dimension": "sessions_bdp.session_start_date",
+        "suggest_explore": "page_views_bdp",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsessions_bdp.view.lkml?line=69",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions_bdp.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
+        "sql": "${TABLE}.start_tstamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2153",
+      "dashboard_id": "478",
+      "name": "Device Type",
+      "title": "Device Type",
+      "type": "field_filter",
+      "explore": "sessions_bdp",
+      "dimension": "sessions_bdp.device_type",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "A label that describes the viewing device type as Mobile or Computer.",
+        "enumerations": null,
+        "field_group_label": "Device",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Bdp Device Type",
+        "label_from_parameter": null,
+        "label_short": "Device Type",
+        "map_layer": null,
+        "name": "sessions_bdp.device_type",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions_bdp",
+        "view_label": "Sessions Bdp",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions_bdp",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Device Type",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions_bdp",
+        "suggest_dimension": "sessions_bdp.device_type",
+        "suggest_explore": "sessions_bdp",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=732",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions_bdp.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
+        "sql": "${TABLE}.operating_system_class ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2152",
+      "dashboard_id": "478",
+      "name": "Channel",
+      "title": "Channel",
+      "type": "field_filter",
+      "explore": "page_views_bdp",
+      "dimension": "sessions_bdp.referrer_medium",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Referrer",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Bdp Referrer Medium",
+        "label_from_parameter": null,
+        "label_short": "Referrer Medium",
+        "map_layer": null,
+        "name": "sessions_bdp.referrer_medium",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions_bdp",
+        "view_label": "Sessions Bdp",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions_bdp",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Referrer Medium",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions_bdp",
+        "suggest_dimension": "sessions_bdp.referrer_medium",
+        "suggest_explore": "page_views_bdp",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=350",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions_bdp.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
+        "sql": "CASE\n          WHEN ${TABLE}.refr_medium IS NULL THEN 'direct'\n          WHEN ${TABLE}.refr_medium = 'unknown' THEN 'other'\n          ELSE  ${TABLE}.refr_medium END",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2154",
+      "dashboard_id": "478",
+      "name": "Marketing Campaign",
+      "title": "Marketing Campaign",
+      "type": "field_filter",
+      "explore": "sessions_bdp",
+      "dimension": "sessions_bdp.marketing_campaign",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Marketing",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Bdp Marketing Campaign",
+        "label_from_parameter": null,
+        "label_short": "Marketing Campaign",
+        "map_layer": null,
+        "name": "sessions_bdp.marketing_campaign",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions_bdp",
+        "view_label": "Sessions Bdp",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions_bdp",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Marketing Campaign",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions_bdp",
+        "suggest_dimension": "sessions_bdp.marketing_campaign",
+        "suggest_explore": "sessions_bdp",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=406",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions_bdp.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
+        "sql": "${TABLE}.mkt_campaign ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2155",
+      "dashboard_id": "478",
+      "name": "Marketing Content",
+      "title": "Marketing Content",
+      "type": "field_filter",
+      "explore": "sessions_bdp",
+      "dimension": "sessions_bdp.marketing_content",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Marketing",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Bdp Marketing Content",
+        "label_from_parameter": null,
+        "label_short": "Marketing Content",
+        "map_layer": null,
+        "name": "sessions_bdp.marketing_content",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions_bdp",
+        "view_label": "Sessions Bdp",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions_bdp",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Marketing Content",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions_bdp",
+        "suggest_dimension": "sessions_bdp.marketing_content",
+        "suggest_explore": "sessions_bdp",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=399",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions_bdp.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
+        "sql": "${TABLE}.mkt_content ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-03-11 21:42:23 UTC",
+  "updated_at": "2024-02-05 22:01:47 UTC",
+  "last_updater_id": "13",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 18,
+  "url": "/dashboards/478",
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": "1",
+    "id": "37",
+    "content_metadata_id": "105",
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "37",
+  "content_favorite_id": null,
+  "id": "478",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -594,6 +1155,7 @@
           "page_views_bdp.page_view_count desc"
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "show_sql_query_menu_options": false,
           "column_order": [
@@ -1046,6 +1608,7 @@
           ]
         },
         "id": "GM1eCGg6VRKwQBSHMDgq8a",
+        "client_id": "",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${page_views_bdp.page_view_count}\",\"label\":\"% of views that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_views_that_were_bounces\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
@@ -1054,6 +1617,7 @@
 
             ],
             "query_id": "mSHPCfP",
+            "query_client_id": "",
             "query_slug": "mSHPCfP",
             "query": {
               "view": "page_views_bdp",
@@ -1146,6 +1710,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1159,6 +1724,7 @@
               }
             ],
             "query_id": "cM7Ftz6",
+            "query_client_id": "",
             "query_slug": "cM7Ftz6",
             "query": {
               "view": "sessions_bdp",
@@ -1257,6 +1823,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1270,6 +1837,7 @@
               }
             ],
             "query_id": "fhzMK8R",
+            "query_client_id": "",
             "query_slug": "fhzMK8R",
             "query": {
               "view": "sessions_bdp",
@@ -1406,6 +1974,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -2093,6 +2662,7 @@
           "page_views_bdp.page_view_count desc"
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "show_sql_query_menu_options": false,
           "column_order": [
@@ -2652,6 +3222,7 @@
           ]
         },
         "id": "dhjVOLL6p0MCS2xwpVeC8U",
+        "client_id": "",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
@@ -2660,6 +3231,7 @@
 
             ],
             "query_id": "SbCfpPk",
+            "query_client_id": "",
             "query_slug": "SbCfpPk",
             "query": {
               "view": "sessions_bdp",
@@ -2759,6 +3331,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -2776,6 +3349,7 @@
               }
             ],
             "query_id": "vY3x9Bh",
+            "query_client_id": "",
             "query_slug": "vY3x9Bh",
             "query": {
               "view": "sessions_bdp",
@@ -2913,6 +3487,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -3637,6 +4212,7 @@
           "page_views_bdp.page_view_count desc"
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "show_sql_query_menu_options": false,
           "column_order": [
@@ -4214,6 +4790,7 @@
           ]
         },
         "id": "1zlhQ6h3eiPrPFpYf8d3E8",
+        "client_id": "",
         "dynamic_fields": "[{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${page_views_bdp.page_view_count}\",\"label\":\"% of views that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_views_that_were_bounces\",\"_type_hint\":\"number\"},{\"category\":\"table_calculation\",\"expression\":\"${sessions_bdp.bounced_session_count}/${sessions_bdp.session_count}\",\"label\":\"% of sessions that were bounces\",\"value_format\":null,\"value_format_name\":\"percent_1\",\"_kind_hint\":\"measure\",\"table_calculation\":\"of_sessions_that_were_bounces\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
@@ -4222,6 +4799,7 @@
 
             ],
             "query_id": "hBqbXxH",
+            "query_client_id": "",
             "query_slug": "hBqbXxH",
             "query": {
               "view": "page_views_bdp",
@@ -4315,6 +4893,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4332,6 +4911,7 @@
               }
             ],
             "query_id": "92RJByr",
+            "query_client_id": "",
             "query_slug": "92RJByr",
             "query": {
               "view": "sessions_bdp",
@@ -4431,6 +5011,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4448,6 +5029,7 @@
               }
             ],
             "query_id": "Pvp49Q9",
+            "query_client_id": "",
             "query_slug": "Pvp49Q9",
             "query": {
               "view": "sessions_bdp",
@@ -4585,6 +5167,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4655,515 +5238,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "2151",
-      "dashboard_id": "478",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "page_views_bdp",
-      "dimension": "sessions_bdp.session_start_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The start time of the first page view of a given session.",
-        "enumerations": null,
-        "field_group_label": "Session Start Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Bdp Session Start Date",
-        "label_from_parameter": null,
-        "label_short": "Session Start Date",
-        "map_layer": null,
-        "name": "sessions_bdp.session_start_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions_bdp",
-        "view_label": "Sessions Bdp",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions_bdp",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "sessions_bdp.session_start",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions_bdp",
-        "suggest_dimension": "sessions_bdp.session_start_date",
-        "suggest_explore": "page_views_bdp",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsessions_bdp.view.lkml?line=69",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions_bdp.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
-        "sql": "${TABLE}.start_tstamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2153",
-      "dashboard_id": "478",
-      "name": "Device Type",
-      "title": "Device Type",
-      "type": "field_filter",
-      "explore": "sessions_bdp",
-      "dimension": "sessions_bdp.device_type",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "A label that describes the viewing device type as Mobile or Computer.",
-        "enumerations": null,
-        "field_group_label": "Device",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Bdp Device Type",
-        "label_from_parameter": null,
-        "label_short": "Device Type",
-        "map_layer": null,
-        "name": "sessions_bdp.device_type",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions_bdp",
-        "view_label": "Sessions Bdp",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions_bdp",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Device Type",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions_bdp",
-        "suggest_dimension": "sessions_bdp.device_type",
-        "suggest_explore": "sessions_bdp",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=732",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions_bdp.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
-        "sql": "${TABLE}.operating_system_class ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2152",
-      "dashboard_id": "478",
-      "name": "Channel",
-      "title": "Channel",
-      "type": "field_filter",
-      "explore": "page_views_bdp",
-      "dimension": "sessions_bdp.referrer_medium",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Referrer",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Bdp Referrer Medium",
-        "label_from_parameter": null,
-        "label_short": "Referrer Medium",
-        "map_layer": null,
-        "name": "sessions_bdp.referrer_medium",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions_bdp",
-        "view_label": "Sessions Bdp",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions_bdp",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Referrer Medium",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions_bdp",
-        "suggest_dimension": "sessions_bdp.referrer_medium",
-        "suggest_explore": "page_views_bdp",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=350",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions_bdp.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
-        "sql": "CASE\n          WHEN ${TABLE}.refr_medium IS NULL THEN 'direct'\n          WHEN ${TABLE}.refr_medium = 'unknown' THEN 'other'\n          ELSE  ${TABLE}.refr_medium END",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2154",
-      "dashboard_id": "478",
-      "name": "Marketing Campaign",
-      "title": "Marketing Campaign",
-      "type": "field_filter",
-      "explore": "sessions_bdp",
-      "dimension": "sessions_bdp.marketing_campaign",
-      "row": 3,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Marketing",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Bdp Marketing Campaign",
-        "label_from_parameter": null,
-        "label_short": "Marketing Campaign",
-        "map_layer": null,
-        "name": "sessions_bdp.marketing_campaign",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions_bdp",
-        "view_label": "Sessions Bdp",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions_bdp",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Marketing Campaign",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions_bdp",
-        "suggest_dimension": "sessions_bdp.marketing_campaign",
-        "suggest_explore": "sessions_bdp",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=406",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions_bdp.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
-        "sql": "${TABLE}.mkt_campaign ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2155",
-      "dashboard_id": "478",
-      "name": "Marketing Content",
-      "title": "Marketing Content",
-      "type": "field_filter",
-      "explore": "sessions_bdp",
-      "dimension": "sessions_bdp.marketing_content",
-      "row": 4,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Marketing",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Bdp Marketing Content",
-        "label_from_parameter": null,
-        "label_short": "Marketing Content",
-        "map_layer": null,
-        "name": "sessions_bdp.marketing_content",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions_bdp",
-        "view_label": "Sessions Bdp",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions_bdp",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Marketing Content",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions_bdp",
-        "suggest_dimension": "sessions_bdp.marketing_content",
-        "suggest_explore": "sessions_bdp",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=399",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions_bdp.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions_bdp.view.lkml",
-        "sql": "${TABLE}.mkt_content ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "478",
@@ -5187,6 +5261,10 @@
           "element_title": "Bounce Report",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5207,6 +5285,10 @@
           "element_title": "Bounce Report by Channel",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5227,6 +5309,10 @@
           "element_title": "Bounce Report by Device Type",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5247,6 +5333,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5268,58 +5358,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-03-11 21:42:23 UTC",
-  "updated_at": "2024-02-05 22:01:47 UTC",
-  "last_updater_id": "13",
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 18,
-  "url": "/dashboards/478",
-  "folder": {
-    "name": "Web Analytics Dashboards",
-    "parent_id": "1",
-    "id": "37",
-    "content_metadata_id": "105",
-    "created_at": "2018-05-17 18:34:03 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "37",
-  "content_favorite_id": null,
-  "id": "478",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Dan Pollock",

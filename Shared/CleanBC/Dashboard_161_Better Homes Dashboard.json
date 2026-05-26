@@ -14,6 +14,472 @@
   "background_color": null,
   "created_at": "2019-09-06 05:25:21 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "767",
+      "dashboard_id": "161",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "rebate_search_tool",
+      "dimension": "rebate_search_tool.Event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cleanbc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "14 days ago for 14 days",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Rebate Search Tool Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "rebate_search_tool.Event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "rebate_search_tool",
+        "view_label": "Rebate Search Tool",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "rebate_search_tool",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "rebate_search_tool.Event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cleanbc",
+        "scope": "rebate_search_tool",
+        "suggest_dimension": "rebate_search_tool.Event_date",
+        "suggest_explore": "rebate_search_tool",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=25",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/rebate_search_tool.view.lkml",
+        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
+        "sql": "${TABLE}.event_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "769",
+      "dashboard_id": "161",
+      "name": "Time Period for Traffic Summary",
+      "title": "Time Period for Traffic Summary",
+      "type": "field_filter",
+      "explore": "rebate_search_tool",
+      "dimension": "rebate_search_tool.summary_granularity",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cleanbc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "parameter",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": [
+          {
+            "label": "Day",
+            "value": "Day"
+          },
+          {
+            "label": "Month",
+            "value": "Month"
+          },
+          {
+            "label": "Year",
+            "value": "Year"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": true,
+        "hidden": false,
+        "is_filter": true,
+        "is_numeric": false,
+        "label": "Rebate Search Tool Summary Granularity",
+        "label_from_parameter": null,
+        "label_short": "Summary Granularity",
+        "map_layer": null,
+        "name": "rebate_search_tool.summary_granularity",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "rebate_search_tool",
+        "view_label": "Rebate Search Tool",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "rebate_search_tool",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Summary Granularity",
+        "measure": false,
+        "parameter": true,
+        "primary_key": false,
+        "project_name": "cleanbc",
+        "scope": "rebate_search_tool",
+        "suggest_dimension": "rebate_search_tool.summary_granularity",
+        "suggest_explore": "rebate_search_tool",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cleanbc/files/imported_projects%2Fsnowplow_web_block%2FIncludes%2Fdate_comparisons_common.view.lkml?line=170",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/rebate_search_tool.view.lkml",
+        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "766",
+      "dashboard_id": "161",
+      "name": "Location",
+      "title": "Location",
+      "type": "field_filter",
+      "explore": "rebate_search_tool",
+      "dimension": "rebate_search_tool.location",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cleanbc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "undefined,Vancouver,Victoria,Saanich,Nanaimo,Surrey,Kelowna,Kamloops,Prince George,North Vancouver,Langley,Campbell River,Abbotsford,Burnaby,Chilliwack,Richmond,Courtenay,Port Alberni,Vernon,Duncan,Delta,Penticton,Nanaimo Regional District,Maple Ridge,Parksville,Langley (Township),North Vancouver (District)",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Rebate Search Tool Location",
+        "label_from_parameter": null,
+        "label_short": "Location",
+        "map_layer": null,
+        "name": "rebate_search_tool.location",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "rebate_search_tool",
+        "view_label": "Rebate Search Tool",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "rebate_search_tool",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Location",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cleanbc",
+        "scope": "rebate_search_tool",
+        "suggest_dimension": "rebate_search_tool.location",
+        "suggest_explore": "rebate_search_tool",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=56",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/rebate_search_tool.view.lkml",
+        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
+        "sql": "BTRIM(${TABLE}.location)",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "768",
+      "dashboard_id": "161",
+      "name": "Rebate",
+      "title": "Rebate",
+      "type": "field_filter",
+      "explore": "rebate_search_tool",
+      "dimension": "rebate_search_tool.label",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cleanbc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Window and Door Replacement Rebate,Insulation Rebates,Central Air Source Heat Pump Rebate,Mini-Split or Multi-Split Air Source Heat Pump Rebate,BC Hydro Appliance Rebates,Federal and Provincial GST/HST New Housing Rebate,FortisBC Furnace and Boiler Rebates for Income Qualified Households,FortisBC Natural Gas Water Heater Rebate,FortisBC New Home Program,FortisBC Natural Gas Water Heater Rebates For Income Qualified Households,Combined Space and Hot Water Heat Pump Rebate,FortisBC Natural Gas Furnace Replacement Rebate,Canada Mortgage and Housing Corporation Green Home Program,FortisBC Natural Gas Fireplace Rebate,Mini-Split or Multi-Split Air Source Heat Pump,Hydronic Heat Pump Rebate,EnerGuide Home Evaluation Rebate,Electric Heat Pump Water Heater Rebate,Combined Space and Hot Water Heat Pump,Energy Saving Kits,Energy Conservation Assistance Program,Wood Stove Exchange Program,FortisBC Natural Gas Boiler and Combination Heating and Hot Water System Rebate,Electric Heat Pump Water Heater,FortisBC Appliance Rebates,Dual-Fuel Central Air Source Heat Pump Rebate,Heat Pump Group Purchase Rebate,Electrical Service Upgrade Rebate",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Rebate Search Tool Label",
+        "label_from_parameter": null,
+        "label_short": "Label",
+        "map_layer": null,
+        "name": "rebate_search_tool.label",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "rebate_search_tool",
+        "view_label": "Rebate Search Tool",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "rebate_search_tool",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Label",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cleanbc",
+        "scope": "rebate_search_tool",
+        "suggest_dimension": "rebate_search_tool.label",
+        "suggest_explore": "rebate_search_tool",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=51",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/rebate_search_tool.view.lkml",
+        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
+        "sql": "${TABLE}.label",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-05-21 16:21:34 UTC",
+  "updated_at": "2024-01-25 07:11:06 UTC",
+  "last_updater_id": "13",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 64,
+  "url": "/dashboards/161",
+  "folder": {
+    "name": "CleanBC",
+    "parent_id": "1",
+    "id": "786",
+    "content_metadata_id": "1400",
+    "created_at": "2019-09-06 05:24:28 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "786",
+  "content_favorite_id": null,
+  "id": "161",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -301,6 +767,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -368,6 +835,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -667,6 +1135,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1343,6 +1812,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1410,6 +1880,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -1864,6 +2335,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2450,6 +2922,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2517,6 +2990,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -2722,6 +3196,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3023,6 +3498,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3090,6 +3566,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -3268,6 +3745,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3572,6 +4050,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3639,6 +4118,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -3878,6 +4358,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -4306,6 +4787,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -4373,6 +4855,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -4674,6 +5157,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -4892,420 +5376,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "767",
-      "dashboard_id": "161",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "rebate_search_tool",
-      "dimension": "rebate_search_tool.Event_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cleanbc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "14 days ago for 14 days",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Rebate Search Tool Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "rebate_search_tool.Event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "rebate_search_tool",
-        "view_label": "Rebate Search Tool",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "rebate_search_tool",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "rebate_search_tool.Event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cleanbc",
-        "scope": "rebate_search_tool",
-        "suggest_dimension": "rebate_search_tool.Event_date",
-        "suggest_explore": "rebate_search_tool",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=25",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/rebate_search_tool.view.lkml",
-        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
-        "sql": "${TABLE}.event_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "769",
-      "dashboard_id": "161",
-      "name": "Time Period for Traffic Summary",
-      "title": "Time Period for Traffic Summary",
-      "type": "field_filter",
-      "explore": "rebate_search_tool",
-      "dimension": "rebate_search_tool.summary_granularity",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cleanbc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "Day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "parameter",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": [
-          {
-            "label": "Day",
-            "value": "Day"
-          },
-          {
-            "label": "Month",
-            "value": "Month"
-          },
-          {
-            "label": "Year",
-            "value": "Year"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": true,
-        "hidden": false,
-        "is_filter": true,
-        "is_numeric": false,
-        "label": "Rebate Search Tool Summary Granularity",
-        "label_from_parameter": null,
-        "label_short": "Summary Granularity",
-        "map_layer": null,
-        "name": "rebate_search_tool.summary_granularity",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "rebate_search_tool",
-        "view_label": "Rebate Search Tool",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "rebate_search_tool",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Summary Granularity",
-        "measure": false,
-        "parameter": true,
-        "primary_key": false,
-        "project_name": "cleanbc",
-        "scope": "rebate_search_tool",
-        "suggest_dimension": "rebate_search_tool.summary_granularity",
-        "suggest_explore": "rebate_search_tool",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cleanbc/files/imported_projects%2Fsnowplow_web_block%2FIncludes%2Fdate_comparisons_common.view.lkml?line=170",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/rebate_search_tool.view.lkml",
-        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
-        "sql": null,
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "766",
-      "dashboard_id": "161",
-      "name": "Location",
-      "title": "Location",
-      "type": "field_filter",
-      "explore": "rebate_search_tool",
-      "dimension": "rebate_search_tool.location",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cleanbc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "undefined,Vancouver,Victoria,Saanich,Nanaimo,Surrey,Kelowna,Kamloops,Prince George,North Vancouver,Langley,Campbell River,Abbotsford,Burnaby,Chilliwack,Richmond,Courtenay,Port Alberni,Vernon,Duncan,Delta,Penticton,Nanaimo Regional District,Maple Ridge,Parksville,Langley (Township),North Vancouver (District)",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Rebate Search Tool Location",
-        "label_from_parameter": null,
-        "label_short": "Location",
-        "map_layer": null,
-        "name": "rebate_search_tool.location",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "rebate_search_tool",
-        "view_label": "Rebate Search Tool",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "rebate_search_tool",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Location",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cleanbc",
-        "scope": "rebate_search_tool",
-        "suggest_dimension": "rebate_search_tool.location",
-        "suggest_explore": "rebate_search_tool",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=56",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/rebate_search_tool.view.lkml",
-        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
-        "sql": "BTRIM(${TABLE}.location)",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "768",
-      "dashboard_id": "161",
-      "name": "Rebate",
-      "title": "Rebate",
-      "type": "field_filter",
-      "explore": "rebate_search_tool",
-      "dimension": "rebate_search_tool.label",
-      "row": 3,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cleanbc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "Window and Door Replacement Rebate,Insulation Rebates,Central Air Source Heat Pump Rebate,Mini-Split or Multi-Split Air Source Heat Pump Rebate,BC Hydro Appliance Rebates,Federal and Provincial GST/HST New Housing Rebate,FortisBC Furnace and Boiler Rebates for Income Qualified Households,FortisBC Natural Gas Water Heater Rebate,FortisBC New Home Program,FortisBC Natural Gas Water Heater Rebates For Income Qualified Households,Combined Space and Hot Water Heat Pump Rebate,FortisBC Natural Gas Furnace Replacement Rebate,Canada Mortgage and Housing Corporation Green Home Program,FortisBC Natural Gas Fireplace Rebate,Mini-Split or Multi-Split Air Source Heat Pump,Hydronic Heat Pump Rebate,EnerGuide Home Evaluation Rebate,Electric Heat Pump Water Heater Rebate,Combined Space and Hot Water Heat Pump,Energy Saving Kits,Energy Conservation Assistance Program,Wood Stove Exchange Program,FortisBC Natural Gas Boiler and Combination Heating and Hot Water System Rebate,Electric Heat Pump Water Heater,FortisBC Appliance Rebates,Dual-Fuel Central Air Source Heat Pump Rebate,Heat Pump Group Purchase Rebate,Electrical Service Upgrade Rebate",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Rebate Search Tool Label",
-        "label_from_parameter": null,
-        "label_short": "Label",
-        "map_layer": null,
-        "name": "rebate_search_tool.label",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "rebate_search_tool",
-        "view_label": "Rebate Search Tool",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "rebate_search_tool",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Label",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cleanbc",
-        "scope": "rebate_search_tool",
-        "suggest_dimension": "rebate_search_tool.label",
-        "suggest_explore": "rebate_search_tool",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cleanbc/files/Views%2Frebate_search_tool.view.lkml?line=51",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/rebate_search_tool.view.lkml",
-        "source_file_path": "cleanbc/Views/rebate_search_tool.view.lkml",
-        "sql": "${TABLE}.label",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "161",
@@ -5329,6 +5399,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5349,6 +5423,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5369,6 +5447,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5389,6 +5471,10 @@
           "element_title": "Rebate Search Tool Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5409,6 +5495,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5429,6 +5519,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5450,58 +5544,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-05-21 16:21:34 UTC",
-  "updated_at": "2024-01-25 07:11:06 UTC",
-  "last_updater_id": "13",
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 64,
-  "url": "/dashboards/161",
-  "folder": {
-    "name": "CleanBC",
-    "parent_id": "1",
-    "id": "786",
-    "content_metadata_id": "1400",
-    "created_at": "2019-09-06 05:24:28 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "786",
-  "content_favorite_id": null,
-  "id": "161",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Dan Pollock",

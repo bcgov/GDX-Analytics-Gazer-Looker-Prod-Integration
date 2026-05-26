@@ -14,6 +14,165 @@
   "background_color": null,
   "created_at": "2021-07-05 19:13:24 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "1336",
+      "dashboard_id": "259",
+      "name": "Cluster Size Growth Prediction Period",
+      "title": "Cluster Size Growth Prediction Period",
+      "type": "field_filter",
+      "explore": "table_sizes",
+      "dimension": "table_sizes.timestamp_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "maintenance",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "before 6 month from now",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Timestamp Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Table Sizes Timestamp Date",
+        "label_from_parameter": null,
+        "label_short": "Timestamp Date",
+        "map_layer": null,
+        "name": "table_sizes.timestamp_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "table_sizes",
+        "view_label": "Table Sizes",
+        "dynamic": false,
+        "week_start_day": "monday",
+        "original_view": "table_sizes",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "table_sizes.timestamp",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "maintenance",
+        "scope": "table_sizes",
+        "suggest_dimension": "table_sizes.timestamp_date",
+        "suggest_explore": "table_sizes",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/maintenance/files/views%2Ftable_sizes.view.lkml?line=4",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "views/table_sizes.view.lkml",
+        "source_file_path": "maintenance/views/table_sizes.view.lkml",
+        "sql": "${TABLE}.date ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 1,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-05-26 00:28:08 UTC",
+  "updated_at": "2026-04-02 16:32:25 UTC",
+  "last_updater_id": "88",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 1088,
+  "url": "/dashboards/259",
+  "folder": {
+    "name": "Maintenance",
+    "parent_id": "1",
+    "id": "1397",
+    "content_metadata_id": "2217",
+    "created_at": "2021-07-05 19:13:10 UTC",
+    "creator_id": "513",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "1397",
+  "content_favorite_id": null,
+  "id": "259",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -359,6 +518,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -684,6 +844,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1197,6 +1358,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1404,6 +1566,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1904,6 +2067,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2274,6 +2438,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3113,6 +3278,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3649,6 +3815,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -4485,6 +4652,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -4837,6 +5005,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -5102,113 +5271,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "1336",
-      "dashboard_id": "259",
-      "name": "Cluster Size Growth Prediction Period",
-      "title": "Cluster Size Growth Prediction Period",
-      "type": "field_filter",
-      "explore": "table_sizes",
-      "dimension": "table_sizes.timestamp_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "maintenance",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "before 6 month from now",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Timestamp Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 0,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Table Sizes Timestamp Date",
-        "label_from_parameter": null,
-        "label_short": "Timestamp Date",
-        "map_layer": null,
-        "name": "table_sizes.timestamp_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "table_sizes",
-        "view_label": "Table Sizes",
-        "dynamic": false,
-        "week_start_day": "monday",
-        "original_view": "table_sizes",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "table_sizes.timestamp",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "maintenance",
-        "scope": "table_sizes",
-        "suggest_dimension": "table_sizes.timestamp_date",
-        "suggest_explore": "table_sizes",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/maintenance/files/views%2Ftable_sizes.view.lkml?line=4",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "views/table_sizes.view.lkml",
-        "source_file_path": "maintenance/views/table_sizes.view.lkml",
-        "sql": "${TABLE}.date ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "259",
@@ -5232,6 +5294,10 @@
           "element_title": "Tables that are archived monthly",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5252,6 +5318,10 @@
           "element_title": "Tiles for Recurrent Duty Review",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5272,6 +5342,10 @@
           "element_title": "Table candidates for truncate/drop past 24 hours",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5292,6 +5366,10 @@
           "element_title": "Non-Looker Tables by size, to showing first appearance and persistence, 14 days",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5312,6 +5390,10 @@
           "element_title": "Looker Tables by size, to showing first appearance and persistence, 14 days",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5332,6 +5414,10 @@
           "element_title": "Max size (mb) every day over 14 days, binned by table (only largest 15 tables, Looker schema excluded)",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5353,58 +5439,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 1,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-05-22 15:40:09 UTC",
-  "updated_at": "2026-04-02 16:32:25 UTC",
-  "last_updater_id": "88",
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 1086,
-  "url": "/dashboards/259",
-  "folder": {
-    "name": "Maintenance",
-    "parent_id": "1",
-    "id": "1397",
-    "content_metadata_id": "2217",
-    "created_at": "2021-07-05 19:13:10 UTC",
-    "creator_id": "513",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "1397",
-  "content_favorite_id": null,
-  "id": "259",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Douglas Hon",

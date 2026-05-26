@@ -14,6 +14,447 @@
   "background_color": null,
   "created_at": "2019-05-13 22:13:31 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "655",
+      "dashboard_id": "140",
+      "name": "Program",
+      "title": "Program",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.program_name",
+      "row": 0,
+      "allow_multiple_values": false,
+      "required": true,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "SDPR - POC",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Program Information",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Program Name",
+        "label_from_parameter": null,
+        "label_short": "Program Name",
+        "map_layer": null,
+        "name": "cfms_poc.program_name",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Program Name",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.program_name",
+        "suggest_explore": "cfms_poc",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=817",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.program_name ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "657",
+      "dashboard_id": "140",
+      "name": "Reporting Period",
+      "title": "Reporting Period",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.date",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": true,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "2019/04/01 to 2019/05/01",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Date",
+        "label_from_parameter": null,
+        "label_short": "Date",
+        "map_layer": null,
+        "name": "cfms_poc.date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.date",
+        "suggest_explore": "cfms_poc",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=633",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.welcome_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "656",
+      "dashboard_id": "140",
+      "name": "Area",
+      "title": "Area",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.area_number",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "right",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Office Info",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": true,
+        "label": "Cfms Poc Area Number",
+        "label_from_parameter": null,
+        "label_short": "Area Number",
+        "map_layer": null,
+        "name": "cfms_poc.area_number",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "number",
+        "user_attribute_filter_types": [
+          "number",
+          "advanced_filter_number"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": null,
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Area Number",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.area_number",
+        "suggest_explore": "cfms_poc",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=773",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.area_number ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "658",
+      "dashboard_id": "140",
+      "name": "Office Name",
+      "title": "Office Name",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.office_name",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Office Info",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Office Name",
+        "label_from_parameter": null,
+        "label_short": "Office Name",
+        "map_layer": null,
+        "name": "cfms_poc.office_name",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Office Name",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.office_name",
+        "suggest_explore": "cfms_poc",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.office_name ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2023-08-29 20:05:41 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 36,
+  "url": "/dashboards/140",
+  "folder": {
+    "name": "Service BC  - Director Dashboards",
+    "parent_id": "36",
+    "id": "105",
+    "content_metadata_id": "394",
+    "created_at": "2018-12-18 07:21:24 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "105",
+  "content_favorite_id": null,
+  "id": "140",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -171,6 +612,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -339,6 +781,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -596,6 +1039,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -764,6 +1208,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1070,6 +1515,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1287,6 +1733,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1648,6 +2095,7 @@
 
         ],
         "total": false,
+        "limit": "",
         "vis_config": {
           "custom_color_enabled": true,
           "custom_color": "",
@@ -1771,6 +2219,7 @@
           ]
         },
         "id": "8BRmUhS4dahRz8gkI4RdRP",
+        "client_id": "",
         "dynamic_fields": "[{\"table_calculation\":\"accurate_hours\",\"label\":\"Accurate Hours\",\"expression\":\" ${average_time_per_visit}*${q2_cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"inaccurate_hours\",\"label\":\"Inaccurate Hours\",\"expression\":\"(${cfms_poc.visits_count}-\\n\\nif(is_null(${q2_cfms_poc.visits_count})=yes, 0,${q2_cfms_poc.visits_count})\\n\\n)*\\n${average_service_time}\\n*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"(if(is_null(${accurate_hours})=yes, 0, ${accurate_hours})\\n)\\n+\\n${inaccurate_hours}\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
@@ -1779,6 +2228,7 @@
 
             ],
             "query_id": "Qpts2KZ",
+            "query_client_id": "",
             "query_slug": "Qpts2KZ",
             "query": {
               "view": "cfms_poc",
@@ -1859,6 +2309,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -1869,6 +2320,7 @@
 
             ],
             "query_id": "tbG2MXQ",
+            "query_client_id": "",
             "query_slug": "tbG2MXQ",
             "query": {
               "view": "cfms_poc",
@@ -2058,6 +2510,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -2068,6 +2521,7 @@
 
             ],
             "query_id": "RJSxPZ8",
+            "query_client_id": "",
             "query_slug": "RJSxPZ8",
             "query": {
               "view": "cfms_poc",
@@ -2213,6 +2667,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -2387,6 +2842,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2536,6 +2992,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2823,6 +3280,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2978,6 +3436,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3330,6 +3789,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3560,6 +4020,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3966,6 +4427,7 @@
           "cfms_poc.office_name"
         ],
         "total": true,
+        "limit": "",
         "vis_config": {
           "show_sql_query_menu_options": false,
           "show_totals": true,
@@ -4106,6 +4568,7 @@
           ]
         },
         "id": "yb9ltnwx6hq9V1uLIW3vcX",
+        "client_id": "",
         "dynamic_fields": "[{\"table_calculation\":\"accurate_hours\",\"label\":\"Accurate Hours\",\"expression\":\" ${average_time_per_visit}*${q2_cfms_poc.visits_count}*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"inaccurate_hours\",\"label\":\"Inaccurate Hours\",\"expression\":\"(${cfms_poc.visits_count}-\\n\\nif(is_null(${q2_cfms_poc.visits_count})=yes, 0,${q2_cfms_poc.visits_count})\\n\\n)*\\n${average_service_time}\\n*24\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"total_hours\",\"label\":\"Total Hours\",\"expression\":\"(if(is_null(${accurate_hours})=yes, 0, ${accurate_hours})\\n)\\n+\\n${inaccurate_hours}\",\"value_format\":null,\"value_format_name\":\"decimal_2\",\"_kind_hint\":\"measure\",\"_type_hint\":\"number\"},{\"table_calculation\":\"caseload\",\"label\":\"Caseload\",\"expression\":\"if(${cfms_poc.office_name} =\\\"100 Mile House\\\",582,\\nif(${cfms_poc.office_name} =\\\"Ashcroft\\\",164,\\nif(${cfms_poc.office_name} =\\\"Atlin\\\",1,\\nif(${cfms_poc.office_name} =\\\"Bella Coola\\\",47,\\nif(${cfms_poc.office_name} =\\\"Burns Lake\\\",143,\\nif(${cfms_poc.office_name} =\\\"Campbell River\\\",2133,\\nif(${cfms_poc.office_name} =\\\"Chetwynd\\\",189,\\nif(${cfms_poc.office_name} =\\\"Chilliwack\\\",7877,\\nif(${cfms_poc.office_name} =\\\"Clinton\\\",76,\\nif(${cfms_poc.office_name} =\\\"Courtenay\\\",2468,\\nif(${cfms_poc.office_name} =\\\"Cranbrook\\\",1250,\\nif(${cfms_poc.office_name} =\\\"Creston\\\",479,\\nif(${cfms_poc.office_name} =\\\"Dawson Creek\\\",706,\\nif(${cfms_poc.office_name} =\\\"Dease Lake\\\",6,\\nif(${cfms_poc.office_name} =\\\"Duncan\\\",3128,\\nif(${cfms_poc.office_name} =\\\"Fernie\\\",108,\\nif(${cfms_poc.office_name} =\\\"Fort Nelson\\\",95,\\nif(${cfms_poc.office_name} =\\\"Fort St. James\\\",96,\\nif(${cfms_poc.office_name} =\\\"Fort St. John\\\",580,\\nif(${cfms_poc.office_name} =\\\"Ganges\\\",383,\\nif(${cfms_poc.office_name} =\\\"Golden\\\",132,\\nif(${cfms_poc.office_name} =\\\"Grand Forks\\\",561,\\nif(${cfms_poc.office_name} =\\\"Hazelton\\\",130,\\nif(${cfms_poc.office_name} =\\\"Houston\\\",166,\\nif(${cfms_poc.office_name} =\\\"Invermere\\\",101,\\nif(${cfms_poc.office_name} =\\\"Kamloops\\\",4751,\\nif(${cfms_poc.office_name} =\\\"Kaslo\\\",112,\\nif(${cfms_poc.office_name} =\\\"Kelowna\\\",6162,\\nif(${cfms_poc.office_name} =\\\"Kitimat\\\",284,\\nif(${cfms_poc.office_name} =\\\"Lillooet\\\",183,\\nif(${cfms_poc.office_name} =\\\"Mackenzie\\\",104,\\nif(${cfms_poc.office_name} =\\\"Maple Ridge\\\",9541,\\nif(${cfms_poc.office_name} =\\\"Masset\\\",53,\\nif(${cfms_poc.office_name} =\\\"Merritt\\\",728,\\nif(${cfms_poc.office_name} =\\\"Nakusp\\\",177,\\nif(${cfms_poc.office_name} =\\\"Nanaimo\\\",6534,\\nif(${cfms_poc.office_name} =\\\"Nelson\\\",1232,\\nif(${cfms_poc.office_name} =\\\"Oliver\\\",677,\\nif(${cfms_poc.office_name} =\\\"Penticton\\\",2492,\\nif(${cfms_poc.office_name} =\\\"Port Alberni\\\",2288,\\nif(${cfms_poc.office_name} =\\\"Port Hardy\\\",551,\\nif(${cfms_poc.office_name} =\\\"Powell River\\\",1130,\\nif(${cfms_poc.office_name} =\\\"Prince George\\\",4147,\\nif(${cfms_poc.office_name} =\\\"Prince Rupert\\\",737,\\nif(${cfms_poc.office_name} =\\\"Princeton\\\",295,\\nif(${cfms_poc.office_name} =\\\"Queen Charlotte City\\\",46,\\nif(${cfms_poc.office_name} =\\\"Quesnel\\\",1222,\\nif(${cfms_poc.office_name} =\\\"Revelstoke\\\",160,\\nif(${cfms_poc.office_name} =\\\"Salmon Arm\\\",1682,\\nif(${cfms_poc.office_name} =\\\"Sechelt\\\",951,\\nif(${cfms_poc.office_name} =\\\"Smithers\\\",323,\\nif(${cfms_poc.office_name} =\\\"Sparwood\\\",94,\\nif(${cfms_poc.office_name} =\\\"Squamish\\\",522,\\nif(${cfms_poc.office_name} =\\\"Stewart\\\",3,\\nif(${cfms_poc.office_name} =\\\"Terrace\\\",866,\\nif(${cfms_poc.office_name} =\\\"Trail\\\",1281,\\nif(${cfms_poc.office_name} =\\\"Ucluelet\\\",94,\\nif(${cfms_poc.office_name} =\\\"Valemount\\\",101,\\nif(${cfms_poc.office_name} =\\\"Vancouver Blackout\\\",58092,\\nif(${cfms_poc.office_name} =\\\"Vanderhoof\\\",284,\\nif(${cfms_poc.office_name} =\\\"Vernon\\\",3356,\\nif(${cfms_poc.office_name} =\\\"Victoria\\\",11610,\\nif(${cfms_poc.office_name} =\\\"Williams Lake\\\",985,\\n    0)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))\\n\\n\",\"value_format\":null,\"value_format_name\":\"decimal_0\",\"_kind_hint\":\"dimension\",\"_type_hint\":\"number\"}]",
         "source_queries": [
           {
@@ -4114,6 +4577,7 @@
 
             ],
             "query_id": "hZJRQ9y",
+            "query_client_id": "",
             "query_slug": "hZJRQ9y",
             "query": {
               "view": "cfms_poc",
@@ -4199,6 +4663,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4216,6 +4681,7 @@
               }
             ],
             "query_id": "mKrzJ9h",
+            "query_client_id": "",
             "query_slug": "mKrzJ9h",
             "query": {
               "view": "cfms_poc",
@@ -4407,6 +4873,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4424,6 +4891,7 @@
               }
             ],
             "query_id": "2zjwcpJ",
+            "query_client_id": "",
             "query_slug": "2zjwcpJ",
             "query": {
               "view": "cfms_poc",
@@ -4571,6 +5039,7 @@
                 "see_derived_table_lookml": true,
                 "see_lookml": true,
                 "see_sql": true,
+                "send_all_results": true,
                 "use_custom_fields": true
               }
             }
@@ -4717,6 +5186,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -4855,6 +5325,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -4960,395 +5431,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "655",
-      "dashboard_id": "140",
-      "name": "Program",
-      "title": "Program",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.program_name",
-      "row": 0,
-      "allow_multiple_values": false,
-      "required": true,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "SDPR - POC",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Program Information",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Program Name",
-        "label_from_parameter": null,
-        "label_short": "Program Name",
-        "map_layer": null,
-        "name": "cfms_poc.program_name",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Program Name",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.program_name",
-        "suggest_explore": "cfms_poc",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=817",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.program_name ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "657",
-      "dashboard_id": "140",
-      "name": "Reporting Period",
-      "title": "Reporting Period",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.date",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": true,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "2019/04/01 to 2019/05/01",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Date",
-        "label_from_parameter": null,
-        "label_short": "Date",
-        "map_layer": null,
-        "name": "cfms_poc.date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.date",
-        "suggest_explore": "cfms_poc",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=633",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.welcome_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "656",
-      "dashboard_id": "140",
-      "name": "Area",
-      "title": "Area",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.area_number",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "right",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Office Info",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": true,
-        "label": "Cfms Poc Area Number",
-        "label_from_parameter": null,
-        "label_short": "Area Number",
-        "map_layer": null,
-        "name": "cfms_poc.area_number",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "number",
-        "user_attribute_filter_types": [
-          "number",
-          "advanced_filter_number"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": null,
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Area Number",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.area_number",
-        "suggest_explore": "cfms_poc",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=773",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.area_number ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "658",
-      "dashboard_id": "140",
-      "name": "Office Name",
-      "title": "Office Name",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.office_name",
-      "row": 3,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Office Info",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Office Name",
-        "label_from_parameter": null,
-        "label_short": "Office Name",
-        "map_layer": null,
-        "name": "cfms_poc.office_name",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Office Name",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.office_name",
-        "suggest_explore": "cfms_poc",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.office_name ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "140",
@@ -5372,6 +5454,10 @@
           "element_title": "Total Hours Spent",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5392,6 +5478,10 @@
           "element_title": "Average Service Time per Visit",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5412,6 +5502,10 @@
           "element_title": "Total Visits",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5432,6 +5526,10 @@
           "element_title": "Total Transactions",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5452,6 +5550,10 @@
           "element_title": "Transaction counts",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5472,6 +5574,10 @@
           "element_title": "Service Time per Transaction",
           "element_title_hidden": false,
           "vis_type": "looker_column",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5492,6 +5598,10 @@
           "element_title": "Caseloads",
           "element_title_hidden": false,
           "vis_type": "single_value",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5512,6 +5622,10 @@
           "element_title": "Transaction counts %",
           "element_title_hidden": false,
           "vis_type": "looker_donut_multiples",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5532,6 +5646,10 @@
           "element_title": "Visits and Time by Office",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5553,58 +5671,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2023-08-29 20:05:41 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 36,
-  "url": "/dashboards/140",
-  "folder": {
-    "name": "Service BC  - Director Dashboards",
-    "parent_id": "36",
-    "id": "105",
-    "content_metadata_id": "394",
-    "created_at": "2018-12-18 07:21:24 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "105",
-  "content_favorite_id": null,
-  "id": "140",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",

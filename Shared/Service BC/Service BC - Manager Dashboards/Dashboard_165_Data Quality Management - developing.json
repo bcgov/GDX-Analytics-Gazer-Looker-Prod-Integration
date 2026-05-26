@@ -14,6 +14,261 @@
   "background_color": null,
   "created_at": "2019-10-21 22:14:31 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "780",
+      "dashboard_id": "165",
+      "name": "Office",
+      "title": "Office",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.office_name",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Victoria",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Office Info",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Office Name",
+        "label_from_parameter": null,
+        "label_short": "Office Name",
+        "map_layer": null,
+        "name": "cfms_poc.office_name",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Office Name",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.office_name",
+        "suggest_explore": "cfms_poc",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.office_name ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "779",
+      "dashboard_id": "165",
+      "name": "Reporting Period",
+      "title": "Reporting Period",
+      "type": "field_filter",
+      "explore": "cfms_poc",
+      "dimension": "cfms_poc.date",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "cfms_poc",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "1 months",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cfms Poc Date",
+        "label_from_parameter": null,
+        "label_short": "Date",
+        "map_layer": null,
+        "name": "cfms_poc.date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cfms_poc",
+        "view_label": "Cfms Poc",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cfms_poc",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "cfms_block",
+        "scope": "cfms_poc",
+        "suggest_dimension": "cfms_poc.date",
+        "suggest_explore": "cfms_poc",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=633",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cfms_poc.view.lkml",
+        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
+        "sql": "${TABLE}.welcome_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-03-04 19:54:11 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 7,
+  "url": "/dashboards/165",
+  "folder": {
+    "name": "Service BC - Manager Dashboards",
+    "parent_id": "36",
+    "id": "104",
+    "content_metadata_id": "393",
+    "created_at": "2018-12-18 07:21:10 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "104",
+  "content_favorite_id": null,
+  "id": "165",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -148,6 +403,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -293,6 +549,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -497,6 +754,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -642,6 +900,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -842,6 +1101,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -987,6 +1247,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1187,6 +1448,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1332,6 +1594,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1524,6 +1787,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1661,6 +1925,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1862,6 +2127,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2007,6 +2273,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2207,6 +2474,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2352,6 +2620,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2575,6 +2844,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2743,6 +3013,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3132,6 +3403,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3298,6 +3570,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3550,6 +3823,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -3716,6 +3990,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3815,209 +4090,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "780",
-      "dashboard_id": "165",
-      "name": "Office",
-      "title": "Office",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.office_name",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "Victoria",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Office Info",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Office Name",
-        "label_from_parameter": null,
-        "label_short": "Office Name",
-        "map_layer": null,
-        "name": "cfms_poc.office_name",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Office Name",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.office_name",
-        "suggest_explore": "cfms_poc",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=758",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.office_name ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "779",
-      "dashboard_id": "165",
-      "name": "Reporting Period",
-      "title": "Reporting Period",
-      "type": "field_filter",
-      "explore": "cfms_poc",
-      "dimension": "cfms_poc.date",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "cfms_poc",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "1 months",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cfms Poc Date",
-        "label_from_parameter": null,
-        "label_short": "Date",
-        "map_layer": null,
-        "name": "cfms_poc.date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cfms_poc",
-        "view_label": "Cfms Poc",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cfms_poc",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "cfms_block",
-        "scope": "cfms_poc",
-        "suggest_dimension": "cfms_poc.date",
-        "suggest_explore": "cfms_poc",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/cfms_block/files/Views%2Fcfms_poc.view.lkml?line=633",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cfms_poc.view.lkml",
-        "source_file_path": "cfms_block/Views/cfms_poc.view.lkml",
-        "sql": "${TABLE}.welcome_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "165",
@@ -4041,6 +4113,10 @@
           "element_title": "Data Error - Stuck At Service Creation",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4061,6 +4137,10 @@
           "element_title": "Program name is Null",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4081,6 +4161,10 @@
           "element_title": "Outstanding Visits Overnight",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4101,6 +4185,10 @@
           "element_title": "Back Office Time Over 3-Standard Deviation",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4121,6 +4209,10 @@
           "element_title": "Back Office Activity Duration over 3-standard Deviation",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4141,6 +4233,10 @@
           "element_title": "Data Error - Stuck Being Served",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4161,6 +4257,10 @@
           "element_title": "Data Error - Stuck Waiting in Line",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4181,6 +4281,10 @@
           "element_title": "Citizen Service Time Over 3-Standard Deviation",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4201,6 +4305,10 @@
           "element_title": "Data Error - Stuck At Prep",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4221,6 +4329,10 @@
           "element_title": "Data Error - Stuck On Hold",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4241,6 +4353,10 @@
           "element_title": "Service Time over 3-standard Deviation",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4261,6 +4377,10 @@
           "element_title": "Wait Time Over 3-Standard Deviation",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4281,6 +4401,10 @@
           "element_title": "Wait Time over 3 Standard Deviation",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4302,58 +4426,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-03-04 19:54:11 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 7,
-  "url": "/dashboards/165",
-  "folder": {
-    "name": "Service BC - Manager Dashboards",
-    "parent_id": "36",
-    "id": "104",
-    "content_metadata_id": "393",
-    "created_at": "2018-12-18 07:21:10 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "104",
-  "content_favorite_id": null,
-  "id": "165",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",

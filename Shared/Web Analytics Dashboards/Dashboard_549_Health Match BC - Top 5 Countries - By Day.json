@@ -14,6 +14,165 @@
   "background_color": null,
   "created_at": "2025-03-31 20:06:20 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "2481",
+      "dashboard_id": "549",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_view_start_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "2 day ago for 2 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Page View Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page View Start Date",
+        "label_from_parameter": null,
+        "label_short": "Page View Start Date",
+        "map_layer": null,
+        "name": "page_views.page_view_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "page_views.page_view_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_view_start_date",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=97",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_view_start_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2026-01-22 17:32:23 UTC",
+  "updated_at": "2025-03-31 22:23:46 UTC",
+  "last_updater_id": "1302",
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 7,
+  "url": "/dashboards/549",
+  "folder": {
+    "name": "Web Analytics Dashboards",
+    "parent_id": "1",
+    "id": "37",
+    "content_metadata_id": "105",
+    "created_at": "2018-05-17 18:34:03 UTC",
+    "creator_id": "13",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "37",
+  "content_favorite_id": null,
+  "id": "549",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -263,13 +422,13 @@
               "args": [
                 "page_views.geo_country",
                 [
-                  "#<Sawyer::Resource:0x00007f8ae0629b58>",
-                  "#<Sawyer::Resource:0x00007f8ae0628848>",
-                  "#<Sawyer::Resource:0x00007f8ae062f210>",
-                  "#<Sawyer::Resource:0x00007f8ae062dc30>",
-                  "#<Sawyer::Resource:0x00007f8ae062cbc8>",
-                  "#<Sawyer::Resource:0x00007f8ae0633540>",
-                  "#<Sawyer::Resource:0x00007f8ae0632078>"
+                  "#<Sawyer::Resource:0x00007f57081176f8>",
+                  "#<Sawyer::Resource:0x00007f5708116eb0>",
+                  "#<Sawyer::Resource:0x00007f5708116668>",
+                  "#<Sawyer::Resource:0x00007f5708115e20>",
+                  "#<Sawyer::Resource:0x00007f57081155d8>",
+                  "#<Sawyer::Resource:0x00007f5708114d90>",
+                  "#<Sawyer::Resource:0x00007f5708114548>"
                 ],
                 "Other"
               ],
@@ -301,6 +460,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -544,13 +704,13 @@
                 "args": [
                   "page_views.geo_country",
                   [
-                    "#<Sawyer::Resource:0x00007f8ae05bf488>",
-                    "#<Sawyer::Resource:0x00007f8ae05bde58>",
-                    "#<Sawyer::Resource:0x00007f8ae05bc7b0>",
-                    "#<Sawyer::Resource:0x00007f8ae05c33d0>",
-                    "#<Sawyer::Resource:0x00007f8ae05c1f58>",
-                    "#<Sawyer::Resource:0x00007f8ae05c0bd0>",
-                    "#<Sawyer::Resource:0x00007f8ae05c7e08>"
+                    "#<Sawyer::Resource:0x00007f57080dfd70>",
+                    "#<Sawyer::Resource:0x00007f57080df528>",
+                    "#<Sawyer::Resource:0x00007f57080dece0>",
+                    "#<Sawyer::Resource:0x00007f57080de498>",
+                    "#<Sawyer::Resource:0x00007f57080ddc00>",
+                    "#<Sawyer::Resource:0x00007f57080dd318>",
+                    "#<Sawyer::Resource:0x00007f57080dcad0>"
                   ],
                   "Other"
                 ],
@@ -582,6 +742,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1004,13 +1165,13 @@
               "args": [
                 "page_views.geo_country",
                 [
-                  "#<Sawyer::Resource:0x00007f8ae02f4ff0>",
-                  "#<Sawyer::Resource:0x00007f8ae02faf40>",
-                  "#<Sawyer::Resource:0x00007f8ae02f8d58>",
-                  "#<Sawyer::Resource:0x00007f8ae02fd600>",
-                  "#<Sawyer::Resource:0x00007f8ae0301de0>",
-                  "#<Sawyer::Resource:0x00007f8ae03047c0>",
-                  "#<Sawyer::Resource:0x00007f8ae030f468>"
+                  "#<Sawyer::Resource:0x00007f5708092200>",
+                  "#<Sawyer::Resource:0x00007f57080919b8>",
+                  "#<Sawyer::Resource:0x00007f5708091170>",
+                  "#<Sawyer::Resource:0x00007f5708090928>",
+                  "#<Sawyer::Resource:0x00007f57080900e0>",
+                  "#<Sawyer::Resource:0x00007f5708097868>",
+                  "#<Sawyer::Resource:0x00007f5708097020>"
                 ],
                 "Other"
               ],
@@ -1042,6 +1203,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1287,13 +1449,13 @@
                 "args": [
                   "page_views.geo_country",
                   [
-                    "#<Sawyer::Resource:0x00007f8ae004fc28>",
-                    "#<Sawyer::Resource:0x00007f8ae0055038>",
-                    "#<Sawyer::Resource:0x00007f8ae0061040>",
-                    "#<Sawyer::Resource:0x00007f8ae006fa28>",
-                    "#<Sawyer::Resource:0x00007f8ae0070810>",
-                    "#<Sawyer::Resource:0x00007f8ae007f0e0>",
-                    "#<Sawyer::Resource:0x00007f8ae007cf20>"
+                    "#<Sawyer::Resource:0x00007f5701e3aa08>",
+                    "#<Sawyer::Resource:0x00007f5701e3a1c0>",
+                    "#<Sawyer::Resource:0x00007f5701e39978>",
+                    "#<Sawyer::Resource:0x00007f5701e39130>",
+                    "#<Sawyer::Resource:0x00007f5701e388e8>",
+                    "#<Sawyer::Resource:0x00007f5701e380a0>",
+                    "#<Sawyer::Resource:0x00007f5701e3f828>"
                   ],
                   "Other"
                 ],
@@ -1325,6 +1487,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2157,13 +2320,13 @@
               "args": [
                 "page_views.geo_country",
                 [
-                  "#<Sawyer::Resource:0x00007f8adbcbfd50>",
-                  "#<Sawyer::Resource:0x00007f8adbcbd550>",
-                  "#<Sawyer::Resource:0x00007f8adbcc2190>",
-                  "#<Sawyer::Resource:0x00007f8adbcc6ba0>",
-                  "#<Sawyer::Resource:0x00007f8adbcc42d8>",
-                  "#<Sawyer::Resource:0x00007f8adbcc8720>",
-                  "#<Sawyer::Resource:0x00007f8adbcccf28>"
+                  "#<Sawyer::Resource:0x00007f5701dca708>",
+                  "#<Sawyer::Resource:0x00007f5701dc9ec0>",
+                  "#<Sawyer::Resource:0x00007f5701dc9678>",
+                  "#<Sawyer::Resource:0x00007f5701dc8e30>",
+                  "#<Sawyer::Resource:0x00007f5701dc85e8>",
+                  "#<Sawyer::Resource:0x00007f5701dcfd70>",
+                  "#<Sawyer::Resource:0x00007f5701dcf528>"
                 ],
                 "Other"
               ],
@@ -2195,6 +2358,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -2898,13 +3062,13 @@
                 "args": [
                   "page_views.geo_country",
                   [
-                    "#<Sawyer::Resource:0x00007f8adba57090>",
-                    "#<Sawyer::Resource:0x00007f8adba5be88>",
-                    "#<Sawyer::Resource:0x00007f8adba58490>",
-                    "#<Sawyer::Resource:0x00007f8adba5d0f8>",
-                    "#<Sawyer::Resource:0x00007f8adba609b0>",
-                    "#<Sawyer::Resource:0x00007f8adba66770>",
-                    "#<Sawyer::Resource:0x00007f8adba6ba68>"
+                    "#<Sawyer::Resource:0x00007f5701d76ef0>",
+                    "#<Sawyer::Resource:0x00007f5701d76680>",
+                    "#<Sawyer::Resource:0x00007f5701d75e10>",
+                    "#<Sawyer::Resource:0x00007f5701d755c8>",
+                    "#<Sawyer::Resource:0x00007f5701d74d80>",
+                    "#<Sawyer::Resource:0x00007f5701d74538>",
+                    "#<Sawyer::Resource:0x00007f5701d4bc78>"
                   ],
                   "Other"
                 ],
@@ -2936,6 +3100,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -3518,113 +3683,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "2481",
-      "dashboard_id": "549",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.page_view_start_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "2 day ago for 2 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Page View Start Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page View Start Date",
-        "label_from_parameter": null,
-        "label_short": "Page View Start Date",
-        "map_layer": null,
-        "name": "page_views.page_view_start_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "page_views.page_view_start",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.page_view_start_date",
-        "suggest_explore": "page_views",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=97",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_view_start_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "549",
@@ -3648,6 +3706,10 @@
           "element_title": "Top 5 Countries - By Day",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3668,6 +3730,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3688,6 +3754,10 @@
           "element_title": "Top 5 Countries - All States - By Day",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3708,6 +3778,10 @@
           "element_title": "Top 5 Countries - All States - City - By Day",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3729,58 +3803,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2026-01-22 17:32:23 UTC",
-  "updated_at": "2025-03-31 22:23:46 UTC",
-  "last_updater_id": "1302",
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 7,
-  "url": "/dashboards/549",
-  "folder": {
-    "name": "Web Analytics Dashboards",
-    "parent_id": "1",
-    "id": "37",
-    "content_metadata_id": "105",
-    "created_at": "2018-05-17 18:34:03 UTC",
-    "creator_id": "13",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "37",
-  "content_favorite_id": null,
-  "id": "549",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "Linda Mah",

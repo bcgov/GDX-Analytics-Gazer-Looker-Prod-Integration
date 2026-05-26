@@ -14,6 +14,255 @@
   "background_color": null,
   "created_at": "2018-12-07 20:14:28 UTC",
   "crossfilter_enabled": false,
+  "dashboard_filters": [
+    {
+      "id": "227",
+      "dashboard_id": "66",
+      "name": "DCS ID",
+      "title": "DCS ID",
+      "type": "field_filter",
+      "explore": "sessions",
+      "dimension": "sessions.dcs_id",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The Webtrends profile identifier.",
+        "enumerations": null,
+        "field_group_label": "Application",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Dcs ID",
+        "label_from_parameter": null,
+        "label_short": "Dcs ID",
+        "map_layer": null,
+        "name": "sessions.dcs_id",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions",
+        "view_label": "Sessions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Dcs ID",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions",
+        "suggest_dimension": "sessions.dcs_id",
+        "suggest_explore": "sessions",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=23",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
+        "sql": "${TABLE}.dcs_id ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "228",
+      "dashboard_id": "66",
+      "name": "Session Start Date",
+      "title": "Session Start Date",
+      "type": "field_filter",
+      "explore": "sessions",
+      "dimension": "sessions.session_start_date",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": null,
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "2016/01/01 to 2016/01/01",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The start time of the first page view of a given session.",
+        "enumerations": null,
+        "field_group_label": "Session Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Sessions Session Start Date",
+        "label_from_parameter": null,
+        "label_short": "Session Start Date",
+        "map_layer": null,
+        "name": "sessions.session_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "sessions",
+        "view_label": "Sessions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "sessions",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "sessions.session_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "sessions",
+        "suggest_dimension": "sessions.session_start_date",
+        "suggest_explore": "sessions",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsessions.view.lkml?line=36",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/sessions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
+        "sql": "${TABLE}.session_start ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
+  "deleted_at": null,
+  "deleter_id": null,
+  "edit_uri": null,
+  "enable_viz_full_screen": true,
+  "favorite_count": 0,
+  "filters_bar_collapsed": false,
+  "filters_location_top": true,
+  "last_accessed_at": "2021-04-29 17:47:17 UTC",
+  "updated_at": null,
+  "last_updater_id": null,
+  "load_configuration": "cache_run",
+  "lookml_link_id": null,
+  "show_filters_bar": null,
+  "show_title": null,
+  "text_tile_text_color": null,
+  "tile_background_color": null,
+  "tile_text_color": null,
+  "title_color": null,
+  "view_count": 75,
+  "url": "/dashboards/66",
+  "folder": {
+    "name": "GDXDSD-1428 Sessions Testing",
+    "parent_id": "103",
+    "id": "102",
+    "content_metadata_id": "377",
+    "created_at": "2018-12-06 20:16:21 UTC",
+    "creator_id": "35",
+    "external_id": "",
+    "is_embed": false,
+    "is_embed_shared_root": false,
+    "is_embed_users_root": false,
+    "is_personal": false,
+    "is_personal_descendant": false,
+    "is_shared_root": false,
+    "is_users_root": false,
+    "can": {
+      "browse_spaces_as_embed_user": false,
+      "create": true,
+      "destroy": true,
+      "edit_content": true,
+      "index": true,
+      "show": true,
+      "move_content": true,
+      "save_shared_space_as_embed_user": true,
+      "see_admin_spaces": true,
+      "update": true
+    }
+  },
+  "folder_id": "102",
+  "content_favorite_id": null,
+  "id": "66",
+  "model": null,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -120,6 +369,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -187,6 +437,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -304,6 +555,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -468,6 +720,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -535,6 +788,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -663,6 +917,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -813,6 +1068,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -880,6 +1136,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -994,6 +1251,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1146,6 +1404,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1213,6 +1472,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -1329,6 +1589,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1536,6 +1797,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1603,6 +1865,7 @@
           "render": true,
           "run": true,
           "schedule": true,
+          "send_all_results": true,
           "update_publicity": true
         }
       },
@@ -1725,6 +1988,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -1880,6 +2144,7 @@
           "see_derived_table_lookml": true,
           "see_lookml": true,
           "see_sql": true,
+          "send_all_results": true,
           "use_custom_fields": true
         }
       },
@@ -1999,6 +2264,7 @@
             "see_derived_table_lookml": true,
             "see_lookml": true,
             "see_sql": true,
+            "send_all_results": true,
             "use_custom_fields": true
           }
         },
@@ -2076,203 +2342,6 @@
       ]
     }
   ],
-  "dashboard_filters": [
-    {
-      "id": "227",
-      "dashboard_id": "66",
-      "name": "DCS ID",
-      "title": "DCS ID",
-      "type": "field_filter",
-      "explore": "sessions",
-      "dimension": "sessions.dcs_id",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The Webtrends profile identifier.",
-        "enumerations": null,
-        "field_group_label": "Application",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Dcs ID",
-        "label_from_parameter": null,
-        "label_short": "Dcs ID",
-        "map_layer": null,
-        "name": "sessions.dcs_id",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions",
-        "view_label": "Sessions",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Dcs ID",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions",
-        "suggest_dimension": "sessions.dcs_id",
-        "suggest_explore": "sessions",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=23",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
-        "sql": "${TABLE}.dcs_id ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "228",
-      "dashboard_id": "66",
-      "name": "Session Start Date",
-      "title": "Session Start Date",
-      "type": "field_filter",
-      "explore": "sessions",
-      "dimension": "sessions.session_start_date",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": null,
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "2016/01/01 to 2016/01/01",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The start time of the first page view of a given session.",
-        "enumerations": null,
-        "field_group_label": "Session Start Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Sessions Session Start Date",
-        "label_from_parameter": null,
-        "label_short": "Session Start Date",
-        "map_layer": null,
-        "name": "sessions.session_start_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "sessions",
-        "view_label": "Sessions",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "sessions",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "sessions.session_start",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "sessions",
-        "suggest_dimension": "sessions.session_start_date",
-        "suggest_explore": "sessions",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fsessions.view.lkml?line=36",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/sessions.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/sessions.view.lkml",
-        "sql": "${TABLE}.session_start ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "dashboard_layouts": [
     {
       "id": "66",
@@ -2296,6 +2365,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2316,6 +2389,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2336,6 +2413,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2356,6 +2437,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2376,6 +2461,10 @@
           "element_title": "Dashboard for Comparing Migrated Webtrends Data In Looker to Reports in Webtrends for Sessions",
           "element_title_hidden": false,
           "vis_type": "text",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2396,6 +2485,10 @@
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2416,6 +2509,10 @@
           "element_title": "Page_View's page view count",
           "element_title_hidden": false,
           "vis_type": "table",
+          "granular_row": null,
+          "granular_column": null,
+          "granular_width": null,
+          "granular_height": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2437,58 +2534,6 @@
       }
     }
   ],
-  "deleted_at": null,
-  "deleter_id": null,
-  "edit_uri": null,
-  "enable_viz_full_screen": true,
-  "favorite_count": 0,
-  "filters_bar_collapsed": false,
-  "filters_location_top": true,
-  "last_accessed_at": "2021-04-29 17:47:17 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
-  "load_configuration": "cache_run",
-  "lookml_link_id": null,
-  "show_filters_bar": null,
-  "show_title": null,
-  "text_tile_text_color": null,
-  "tile_background_color": null,
-  "tile_text_color": null,
-  "title_color": null,
-  "view_count": 75,
-  "url": "/dashboards/66",
-  "folder": {
-    "name": "GDXDSD-1428 Sessions Testing",
-    "parent_id": "103",
-    "id": "102",
-    "content_metadata_id": "377",
-    "created_at": "2018-12-06 20:16:21 UTC",
-    "creator_id": "35",
-    "external_id": "",
-    "is_embed": false,
-    "is_embed_shared_root": false,
-    "is_embed_users_root": false,
-    "is_personal": false,
-    "is_personal_descendant": false,
-    "is_shared_root": false,
-    "is_users_root": false,
-    "can": {
-      "browse_spaces_as_embed_user": false,
-      "create": true,
-      "destroy": true,
-      "edit_content": true,
-      "index": true,
-      "show": true,
-      "move_content": true,
-      "save_shared_space_as_embed_user": true,
-      "see_admin_spaces": true,
-      "update": true
-    }
-  },
-  "folder_id": "102",
-  "content_favorite_id": null,
-  "id": "66",
-  "model": null,
   "deleted": false,
   "last_viewed_at": null,
   "last_updater_name": "",
