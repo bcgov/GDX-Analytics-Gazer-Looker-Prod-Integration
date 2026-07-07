@@ -26,7 +26,10 @@
       "row": 0,
       "allow_multiple_values": true,
       "required": false,
-      "ui_config": null,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
       "model": "",
       "listens_to_filters": [
 
@@ -82,9 +85,9 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-06-17 18:13:09 UTC",
-  "updated_at": null,
-  "last_updater_id": null,
+  "last_accessed_at": "2026-07-07 00:49:22 UTC",
+  "updated_at": "2026-07-07 00:48:41 UTC",
+  "last_updater_id": "13",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -93,7 +96,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 47,
+  "view_count": 48,
   "url": "/dashboards/217",
   "folder": {
     "name": "Web Analytics Dashboards",
@@ -2389,8 +2392,8 @@
         "pivots": null,
         "fill_fields": null,
         "filters": {
-          "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%",
-          "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%",
+          "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%,-%https://www.welcomebc.ca/search%",
+          "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%,%https://www.welcomebc.ca/search%",
           "page_views.page_view_start_date": "7 days ago for 7 days",
           "page_views.referrer_urlhost": "www.welcomebc.ca",
           "page_views.welcomebc_page_referrer_section": "-NULL"
@@ -2474,13 +2477,12 @@
               "type": "!contains",
               "values": [
                 {
-                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 0,
-              "error": false
+              "id": 5
             }
           ],
           "page_views.page_display_url": [
@@ -2488,13 +2490,12 @@
               "type": "contains",
               "values": [
                 {
-                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 1,
-              "error": false
+              "id": 6
             }
           ],
           "page_views.page_view_start_date": [
@@ -2508,8 +2509,7 @@
                 {
                 }
               ],
-              "id": 6,
-              "error": false
+              "id": 7
             }
           ],
           "page_views.referrer_urlhost": [
@@ -2522,8 +2522,7 @@
                 {
                 }
               ],
-              "id": 11,
-              "error": false
+              "id": 8
             }
           ],
           "page_views.welcomebc_page_referrer_section": [
@@ -2531,24 +2530,22 @@
               "type": "!null",
               "values": [
                 {
-                  "constant": ""
                 },
                 {
                 }
               ],
-              "id": 12,
-              "error": false
+              "id": 9
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "Php8f4r",
-        "client_id": "ikELGAv3oLlDRJsjGDaE5h",
-        "share_url": "https://analytics.gov.bc.ca/x/ikELGAv3oLlDRJsjGDaE5h",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "slug": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg",
+        "client_id": "yJv9YeGFJNDuCbpX45rl3Q",
+        "share_url": "https://analytics.gov.bc.ca/x/yJv9YeGFJNDuCbpX45rl3Q",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A9%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A9%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
-        "id": "Php8f4r",
+        "id": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg",
         "model": "snowplow_web_block",
         "limit": "20",
         "column_limit": "50",
@@ -2585,7 +2582,7 @@
       },
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "91433",
+      "result_maker_id": "166512",
       "subtitle_text": null,
       "title": "Search Page Views by Originating Page Section",
       "title_hidden": false,
@@ -2597,9 +2594,9 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "aria_description": null,
-      "query_id": "Php8f4r",
+      "query_id": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg",
       "result_maker": {
-        "id": "91433",
+        "id": "166512",
         "dynamic_fields": "[]",
         "sorts": [
           "page_views.row_count desc"
@@ -2616,8 +2613,8 @@
           "pivots": null,
           "fill_fields": null,
           "filters": {
-            "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%",
-            "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%",
+            "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%,-%https://www.welcomebc.ca/search%",
+            "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%,%https://www.welcomebc.ca/search%",
             "page_views.page_view_start_date": "7 days ago for 7 days",
             "page_views.referrer_urlhost": "www.welcomebc.ca",
             "page_views.welcomebc_page_referrer_section": "-NULL"
@@ -2701,13 +2698,12 @@
                 "type": "!contains",
                 "values": [
                   {
-                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 0,
-                "error": false
+                "id": 5
               }
             ],
             "page_views.page_display_url": [
@@ -2715,13 +2711,12 @@
                 "type": "contains",
                 "values": [
                   {
-                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 1,
-                "error": false
+                "id": 6
               }
             ],
             "page_views.page_view_start_date": [
@@ -2735,8 +2730,7 @@
                   {
                   }
                 ],
-                "id": 6,
-                "error": false
+                "id": 7
               }
             ],
             "page_views.referrer_urlhost": [
@@ -2749,8 +2743,7 @@
                   {
                   }
                 ],
-                "id": 11,
-                "error": false
+                "id": 8
               }
             ],
             "page_views.welcomebc_page_referrer_section": [
@@ -2758,24 +2751,22 @@
                 "type": "!null",
                 "values": [
                   {
-                    "constant": ""
                   },
                   {
                   }
                 ],
-                "id": 12,
-                "error": false
+                "id": 9
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "Php8f4r",
-          "client_id": "ikELGAv3oLlDRJsjGDaE5h",
-          "share_url": "https://analytics.gov.bc.ca/x/ikELGAv3oLlDRJsjGDaE5h",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A12%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "slug": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg",
+          "client_id": "yJv9YeGFJNDuCbpX45rl3Q",
+          "share_url": "https://analytics.gov.bc.ca/x/yJv9YeGFJNDuCbpX45rl3Q",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A9%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_section&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_section]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Section%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A5%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A7%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A8%7D%5D%2C%22page_views.welcomebc_page_referrer_section%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A9%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
-          "id": "Php8f4r",
+          "id": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg",
           "model": "snowplow_web_block",
           "limit": "20",
           "column_limit": "50",
@@ -2889,7 +2880,7 @@
             ]
           }
         ],
-        "query_id": "Php8f4r"
+        "query_id": "4SfKNDcsSJvPmbYmTzKBcGFxWsqM5GRg"
       },
       "can": {
         "can_clear_cache": true,
@@ -2932,8 +2923,8 @@
         "pivots": null,
         "fill_fields": null,
         "filters": {
-          "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%",
-          "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%",
+          "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%,-%https://www.welcomebc.ca/search%",
+          "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%,%https://www.welcomebc.ca/search%",
           "page_views.page_view_start_date": "7 days ago for 7 days",
           "page_views.referrer_urlhost": "www.welcomebc.ca",
           "page_views.welcomebc_page_referrer_topic": "-NULL"
@@ -3017,13 +3008,12 @@
               "type": "!contains",
               "values": [
                 {
-                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 0,
-              "error": false
+              "id": 15
             }
           ],
           "page_views.page_display_url": [
@@ -3031,13 +3021,12 @@
               "type": "contains",
               "values": [
                 {
-                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                  "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 1,
-              "error": false
+              "id": 16
             }
           ],
           "page_views.page_view_start_date": [
@@ -3051,8 +3040,7 @@
                 {
                 }
               ],
-              "id": 6,
-              "error": false
+              "id": 17
             }
           ],
           "page_views.referrer_urlhost": [
@@ -3065,8 +3053,7 @@
                 {
                 }
               ],
-              "id": 11,
-              "error": false
+              "id": 18
             }
           ],
           "page_views.welcomebc_page_referrer_topic": [
@@ -3074,24 +3061,22 @@
               "type": "!null",
               "values": [
                 {
-                  "constant": ""
                 },
                 {
                 }
               ],
-              "id": 14,
-              "error": false
+              "id": 19
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "H57KkyC",
-        "client_id": "34qJCL1wuWjEVfeywMtiLw",
-        "share_url": "https://analytics.gov.bc.ca/x/34qJCL1wuWjEVfeywMtiLw",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+        "slug": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG",
+        "client_id": "0aSpSsrWVRRzWfFp9CUsoQ",
+        "share_url": "https://analytics.gov.bc.ca/x/0aSpSsrWVRRzWfFp9CUsoQ",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&dynamic_fields=%5B%5D",
         "has_table_calculations": false,
-        "id": "H57KkyC",
+        "id": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG",
         "model": "snowplow_web_block",
         "limit": "20",
         "column_limit": "50",
@@ -3128,7 +3113,7 @@
       },
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "91434",
+      "result_maker_id": "166511",
       "subtitle_text": null,
       "title": "Search Page Views by Originating Page Topic",
       "title_hidden": false,
@@ -3140,9 +3125,9 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "aria_description": null,
-      "query_id": "H57KkyC",
+      "query_id": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG",
       "result_maker": {
-        "id": "91434",
+        "id": "166511",
         "dynamic_fields": "[]",
         "sorts": [
           "page_views.row_count desc"
@@ -3159,8 +3144,8 @@
           "pivots": null,
           "fill_fields": null,
           "filters": {
-            "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%",
-            "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%",
+            "page_views.page_referrer_display_url": "-%www.welcomebc.ca/Search-Results%,-%www.welcomebc.ca/search-results%,-%https://www.welcomebc.ca/search%",
+            "page_views.page_display_url": "%www.welcomebc.ca/Search-Results%,%www.welcomebc.ca/search-results%,%https://www.welcomebc.ca/search%",
             "page_views.page_view_start_date": "7 days ago for 7 days",
             "page_views.referrer_urlhost": "www.welcomebc.ca",
             "page_views.welcomebc_page_referrer_topic": "-NULL"
@@ -3244,13 +3229,12 @@
                 "type": "!contains",
                 "values": [
                   {
-                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 0,
-                "error": false
+                "id": 15
               }
             ],
             "page_views.page_display_url": [
@@ -3258,13 +3242,12 @@
                 "type": "contains",
                 "values": [
                   {
-                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results"
+                    "constant": "www.welcomebc.ca/Search-Results,www.welcomebc.ca/search-results,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 1,
-                "error": false
+                "id": 16
               }
             ],
             "page_views.page_view_start_date": [
@@ -3278,8 +3261,7 @@
                   {
                   }
                 ],
-                "id": 6,
-                "error": false
+                "id": 17
               }
             ],
             "page_views.referrer_urlhost": [
@@ -3292,8 +3274,7 @@
                   {
                   }
                 ],
-                "id": 11,
-                "error": false
+                "id": 18
               }
             ],
             "page_views.welcomebc_page_referrer_topic": [
@@ -3301,24 +3282,22 @@
                 "type": "!null",
                 "values": [
                   {
-                    "constant": ""
                   },
                   {
                   }
                 ],
-                "id": 14,
-                "error": false
+                "id": 19
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "H57KkyC",
-          "client_id": "34qJCL1wuWjEVfeywMtiLw",
-          "share_url": "https://analytics.gov.bc.ca/x/34qJCL1wuWjEVfeywMtiLw",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A6%2C%22error%22%3Afalse%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A11%2C%22error%22%3Afalse%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22%22%7D%2C%7B%7D%5D%2C%22id%22%3A14%2C%22error%22%3Afalse%7D%5D%7D&dynamic_fields=%5B%5D",
+          "slug": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG",
+          "client_id": "0aSpSsrWVRRzWfFp9CUsoQ",
+          "share_url": "https://analytics.gov.bc.ca/x/0aSpSsrWVRRzWfFp9CUsoQ",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&dynamic_fields=%5B%5D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/page_views?fields=page_views.row_count,page_views.welcomebc_page_referrer_topic&f[page_views.page_referrer_display_url]=-%25www.welcomebc.ca%2FSearch-Results%25%2C-%25www.welcomebc.ca%2Fsearch-results%25%2C-%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_display_url]=%25www.welcomebc.ca%2FSearch-Results%25%2C%25www.welcomebc.ca%2Fsearch-results%25%2C%25https%3A%2F%2Fwww.welcomebc.ca%2Fsearch%25&f[page_views.page_view_start_date]=7+days+ago+for+7+days&f[page_views.referrer_urlhost]=www.welcomebc.ca&f[page_views.welcomebc_page_referrer_topic]=-NULL&sorts=page_views.row_count+desc&limit=20&column_limit=50&vis=%7B%22x_axis_gridlines%22%3Afalse%2C%22y_axis_gridlines%22%3Atrue%2C%22show_view_names%22%3Afalse%2C%22show_y_axis_labels%22%3Atrue%2C%22show_y_axis_ticks%22%3Atrue%2C%22y_axis_tick_density%22%3A%22default%22%2C%22y_axis_tick_density_custom%22%3A5%2C%22show_x_axis_label%22%3Atrue%2C%22show_x_axis_ticks%22%3Atrue%2C%22y_axis_scale_mode%22%3A%22linear%22%2C%22x_axis_reversed%22%3Afalse%2C%22y_axis_reversed%22%3Afalse%2C%22plot_size_by_field%22%3Afalse%2C%22trellis%22%3A%22%22%2C%22stacking%22%3A%22%22%2C%22limit_displayed_rows%22%3Afalse%2C%22legend_position%22%3A%22center%22%2C%22point_style%22%3A%22none%22%2C%22show_value_labels%22%3Afalse%2C%22label_density%22%3A25%2C%22x_axis_scale%22%3A%22auto%22%2C%22y_axis_combined%22%3Atrue%2C%22ordering%22%3A%22none%22%2C%22show_null_labels%22%3Afalse%2C%22show_totals_labels%22%3Afalse%2C%22show_silhouette%22%3Afalse%2C%22totals_color%22%3A%22%23808080%22%2C%22x_axis_label%22%3A%22Originating+Page+Topic%22%2C%22series_types%22%3A%7B%7D%2C%22series_labels%22%3A%7B%22page_views.row_count%22%3A%22Search+Page+Views+Count%22%7D%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_cell_visualizations%22%3A%7B%22page_views.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22truncate_column_names%22%3Afalse%2C%22type%22%3A%22looker_column%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22page_views.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A15%7D%5D%2C%22page_views.page_display_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%2FSearch-Results%2Cwww.welcomebc.ca%2Fsearch-results%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A16%7D%5D%2C%22page_views.page_view_start_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A17%7D%5D%2C%22page_views.referrer_urlhost%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A18%7D%5D%2C%22page_views.welcomebc_page_referrer_topic%22%3A%5B%7B%22type%22%3A%22%21null%22%2C%22values%22%3A%5B%7B%7D%2C%7B%7D%5D%2C%22id%22%3A19%7D%5D%7D&dynamic_fields=%5B%5D",
           "has_table_calculations": false,
-          "id": "H57KkyC",
+          "id": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG",
           "model": "snowplow_web_block",
           "limit": "20",
           "column_limit": "50",
@@ -3432,7 +3411,7 @@
             ]
           }
         ],
-        "query_id": "H57KkyC"
+        "query_id": "mW8ZDPW8C2bJJbCZcHCN4YPN76NKgrGG"
       },
       "can": {
         "can_clear_cache": true,
@@ -3573,8 +3552,8 @@
         "pivots": null,
         "fill_fields": null,
         "filters": {
-          "searches.page_display_url": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx",
-          "searches.page_referrer_display_url": "-https://www.welcomebc.ca/search-results.aspx,-https://www.welcomebc.ca/Search-Results.aspx",
+          "searches.page_display_url": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/search",
+          "searches.page_referrer_display_url": "-https://www.welcomebc.ca/search-results.aspx,-https://www.welcomebc.ca/Search-Results.aspx,-https://www.welcomebc.ca/search",
           "searches.search_time_date": "7 days ago for 7 days"
         },
         "filter_expression": null,
@@ -3630,13 +3609,12 @@
               "type": "=",
               "values": [
                 {
-                  "constant": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx"
+                  "constant": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 0,
-              "error": false
+              "id": 23
             }
           ],
           "searches.page_referrer_display_url": [
@@ -3644,13 +3622,12 @@
               "type": "!=",
               "values": [
                 {
-                  "constant": "https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/Search-Results.aspx"
+                  "constant": "https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search"
                 },
                 {
                 }
               ],
-              "id": 1,
-              "error": false
+              "id": 24
             }
           ],
           "searches.search_time_date": [
@@ -3664,19 +3641,18 @@
                 {
                 }
               ],
-              "id": 3,
-              "error": false
+              "id": 25
             }
           ]
         },
         "visible_ui_sections": null,
-        "slug": "4xrMJTx",
-        "client_id": "WE0FpNhjXVwbOyUXrRN792",
-        "share_url": "https://analytics.gov.bc.ca/x/WE0FpNhjXVwbOyUXrRN792",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
+        "slug": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J",
+        "client_id": "M1U5cfjLrxPxq9wFU7Askm",
+        "share_url": "https://analytics.gov.bc.ca/x/M1U5cfjLrxPxq9wFU7Askm",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A23%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A23%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%7D",
         "has_table_calculations": false,
-        "id": "4xrMJTx",
+        "id": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J",
         "model": "snowplow_web_block",
         "limit": "20",
         "column_limit": "50",
@@ -3711,7 +3687,7 @@
       },
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "91441",
+      "result_maker_id": "166513",
       "subtitle_text": null,
       "title": "Top Search Page Referrers",
       "title_hidden": false,
@@ -3723,9 +3699,9 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "aria_description": null,
-      "query_id": "4xrMJTx",
+      "query_id": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J",
       "result_maker": {
-        "id": "91441",
+        "id": "166513",
         "dynamic_fields": null,
         "sorts": [
           "searches.row_count desc"
@@ -3742,8 +3718,8 @@
           "pivots": null,
           "fill_fields": null,
           "filters": {
-            "searches.page_display_url": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx",
-            "searches.page_referrer_display_url": "-https://www.welcomebc.ca/search-results.aspx,-https://www.welcomebc.ca/Search-Results.aspx",
+            "searches.page_display_url": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/search",
+            "searches.page_referrer_display_url": "-https://www.welcomebc.ca/search-results.aspx,-https://www.welcomebc.ca/Search-Results.aspx,-https://www.welcomebc.ca/search",
             "searches.search_time_date": "7 days ago for 7 days"
           },
           "filter_expression": null,
@@ -3799,13 +3775,12 @@
                 "type": "=",
                 "values": [
                   {
-                    "constant": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx"
+                    "constant": "https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 0,
-                "error": false
+                "id": 23
               }
             ],
             "searches.page_referrer_display_url": [
@@ -3813,13 +3788,12 @@
                 "type": "!=",
                 "values": [
                   {
-                    "constant": "https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/Search-Results.aspx"
+                    "constant": "https://www.welcomebc.ca/search-results.aspx,https://www.welcomebc.ca/Search-Results.aspx,https://www.welcomebc.ca/search"
                   },
                   {
                   }
                 ],
-                "id": 1,
-                "error": false
+                "id": 24
               }
             ],
             "searches.search_time_date": [
@@ -3833,19 +3807,18 @@
                   {
                   }
                 ],
-                "id": 3,
-                "error": false
+                "id": 25
               }
             ]
           },
           "visible_ui_sections": null,
-          "slug": "4xrMJTx",
-          "client_id": "WE0FpNhjXVwbOyUXrRN792",
-          "share_url": "https://analytics.gov.bc.ca/x/WE0FpNhjXVwbOyUXrRN792",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&query_timezone=America%2FVancouver&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%2C%22error%22%3Afalse%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%2C%22error%22%3Afalse%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A3%2C%22error%22%3Afalse%7D%5D%7D",
+          "slug": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J",
+          "client_id": "M1U5cfjLrxPxq9wFU7Askm",
+          "share_url": "https://analytics.gov.bc.ca/x/M1U5cfjLrxPxq9wFU7Askm",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A23%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/searches?fields=searches.page_referrer_display_url,searches.row_count&f[searches.page_display_url]=https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.page_referrer_display_url]=-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2C-https%3A%2F%2Fwww.welcomebc.ca%2Fsearch&f[searches.search_time_date]=7+days+ago+for+7+days&sorts=searches.row_count+desc&limit=20&column_limit=50&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A%2212%22%2C%22rows_font_size%22%3A%2212%22%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22show_sql_query_menu_options%22%3Afalse%2C%22show_totals%22%3Atrue%2C%22show_row_totals%22%3Atrue%2C%22series_labels%22%3A%7B%22searches.page_referrer_display_url%22%3A%22Originating+URL%22%2C%22searches.row_count%22%3A%22Search+Count%22%7D%2C%22series_cell_visualizations%22%3A%7B%22searches.row_count%22%3A%7B%22is_active%22%3Afalse%7D%7D%2C%22header_background_color%22%3A%22%23ccebc5%22%2C%22series_types%22%3A%7B%7D%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%2C%22hidden_fields%22%3A%5B%5D%2C%22y_axes%22%3A%5B%5D%7D&filter_config=%7B%22searches.page_display_url%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A23%7D%5D%2C%22searches.page_referrer_display_url%22%3A%5B%7B%22type%22%3A%22%21%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22https%3A%2F%2Fwww.welcomebc.ca%2Fsearch-results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2FSearch-Results.aspx%2Chttps%3A%2F%2Fwww.welcomebc.ca%2Fsearch%22%7D%2C%7B%7D%5D%2C%22id%22%3A24%7D%5D%2C%22searches.search_time_date%22%3A%5B%7B%22type%22%3A%22past%22%2C%22values%22%3A%5B%7B%22constant%22%3A%227%22%2C%22unit%22%3A%22c_day%22%7D%2C%7B%7D%5D%2C%22id%22%3A25%7D%5D%7D",
           "has_table_calculations": false,
-          "id": "4xrMJTx",
+          "id": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J",
           "model": "snowplow_web_block",
           "limit": "20",
           "column_limit": "50",
@@ -3931,7 +3904,7 @@
             ]
           }
         ],
-        "query_id": "4xrMJTx"
+        "query_id": "hfCKMvjJZ3jKHTx6q3HfSg2cRxrjJv5J"
       },
       "can": {
         "can_clear_cache": true,
@@ -4217,7 +4190,7 @@
   ],
   "deleted": false,
   "last_viewed_at": null,
-  "last_updater_name": "",
+  "last_updater_name": "Dan Pollock",
   "user_name": "Stephanie Yurchak",
   "appearance": null,
   "can": {

@@ -116,6 +116,114 @@
         "index": true,
         "show": true
       }
+    },
+    {
+      "id": "2676",
+      "dashboard_id": "591",
+      "name": "Is Mobile",
+      "title": "Is Mobile",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.device_is_mobile",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "True if the viewing device is mobile; False otherwise.",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": "Device",
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Device Is Mobile (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Device Is Mobile (Yes / No)",
+        "map_layer": null,
+        "name": "clicks.device_is_mobile",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Device Is Mobile (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.device_is_mobile",
+        "suggest_explore": "clicks",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=739",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${TABLE}.dvce_ismobile ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
     }
   ],
   "deleted_at": null,
@@ -125,8 +233,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-06-30 23:21:40 UTC",
-  "updated_at": "2026-06-24 22:05:53 UTC",
+  "last_accessed_at": "2026-07-07 00:06:05 UTC",
+  "updated_at": "2026-07-06 20:31:52 UTC",
   "last_updater_id": "1302",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
@@ -136,7 +244,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 14,
+  "view_count": 18,
   "url": "/dashboards/591",
   "folder": {
     "name": "Web Analytics Dashboards",
@@ -697,6 +805,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "clicks.device_is_mobile"
               }
             ]
           }
@@ -1221,6 +1333,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "clicks.click_time_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "clicks.device_is_mobile"
               }
             ]
           }
@@ -1791,6 +1907,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "searches.search_time_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "searches.device_is_mobile"
               }
             ]
           }
@@ -2279,6 +2399,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "google_search.google_search_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "google_search.is_mobile"
               }
             ]
           }
@@ -2879,6 +3003,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "searches.search_time_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "searches.device_is_mobile"
               }
             ]
           }
@@ -4295,6 +4423,10 @@
               {
                 "dashboard_filter_name": "Date Range",
                 "field": "google_search.google_search_date"
+              },
+              {
+                "dashboard_filter_name": "Is Mobile",
+                "field": "google_search.is_mobile"
               }
             ]
           }
