@@ -236,9 +236,9 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-08-12 18:09:58 UTC",
-  "updated_at": "2026-06-12 18:46:40 UTC",
-  "last_updater_id": "1302",
+  "last_accessed_at": "2026-08-13 21:09:38 UTC",
+  "updated_at": "2026-08-13 18:56:52 UTC",
+  "last_updater_id": "13",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
   "show_filters_bar": null,
@@ -247,7 +247,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 25,
+  "view_count": 29,
   "url": "/dashboards/578",
   "folder": {
     "name": "Web Analytics Dashboards",
@@ -9624,8 +9624,12 @@
         ],
         "pivots": null,
         "fill_fields": null,
-        "filters": null,
-        "filter_expression": "matches_filter(${asset_downloads.asset_host}, `www.welcomebc.ca`) AND matches_filter(${asset_downloads.download_time_date}, `7 days`) AND matches_filter(${asset_downloads.asset_display_url}, `%-pdf%`) AND matches_filter(${asset_downloads.asset_display_url}, `-%form%`)",
+        "filters": {
+          "asset_downloads.asset_host": "www.welcomebc.ca",
+          "asset_downloads.asset_display_url": "-%form%",
+          "asset_downloads.asset_url": "%-pdf%"
+        },
+        "filter_expression": null,
         "sorts": [
           "asset_downloads.count desc"
         ],
@@ -9652,15 +9656,54 @@
           "defaults_version": 1
         },
         "filter_config": {
+          "asset_downloads.asset_host": [
+            {
+              "type": "=",
+              "values": [
+                {
+                  "constant": "www.welcomebc.ca"
+                },
+                {
+                }
+              ],
+              "id": 0
+            }
+          ],
+          "asset_downloads.asset_display_url": [
+            {
+              "type": "!contains",
+              "values": [
+                {
+                  "constant": "form"
+                },
+                {
+                }
+              ],
+              "id": 1
+            }
+          ],
+          "asset_downloads.asset_url": [
+            {
+              "type": "contains",
+              "values": [
+                {
+                  "constant": "-pdf"
+                },
+                {
+                }
+              ],
+              "id": 2
+            }
+          ]
         },
         "visible_ui_sections": null,
-        "slug": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq",
-        "client_id": "SDbFw8DUUsoX9YXPrWzGUs",
-        "share_url": "https://analytics.gov.bc.ca/x/SDbFw8DUUsoX9YXPrWzGUs",
-        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&filter_expression=matches_filter%28%24%7Basset_downloads.asset_host%7D%2C+%60www.welcomebc.ca%60%29+AND+matches_filter%28%24%7Basset_downloads.download_time_date%7D%2C+%607+days%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60%25-pdf%25%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60-%25form%25%60%29&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%7D&origin=share-expanded",
-        "url": "/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&filter_expression=matches_filter%28%24%7Basset_downloads.asset_host%7D%2C+%60www.welcomebc.ca%60%29+AND+matches_filter%28%24%7Basset_downloads.download_time_date%7D%2C+%607+days%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60%25-pdf%25%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60-%25form%25%60%29&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%7D",
+        "slug": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg",
+        "client_id": "LAe1LNfmhQ8RGOI5p29dEM",
+        "share_url": "https://analytics.gov.bc.ca/x/LAe1LNfmhQ8RGOI5p29dEM",
+        "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&f[asset_downloads.asset_host]=www.welcomebc.ca&f[asset_downloads.asset_display_url]=-%25form%25&f[asset_downloads.asset_url]=%25-pdf%25&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22asset_downloads.asset_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%7D%5D%2C%22asset_downloads.asset_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22form%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22asset_downloads.asset_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22-pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&origin=share-expanded",
+        "url": "/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&f[asset_downloads.asset_host]=www.welcomebc.ca&f[asset_downloads.asset_display_url]=-%25form%25&f[asset_downloads.asset_url]=%25-pdf%25&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22asset_downloads.asset_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%7D%5D%2C%22asset_downloads.asset_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22form%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22asset_downloads.asset_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22-pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D",
         "has_table_calculations": false,
-        "id": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq",
+        "id": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg",
         "model": "snowplow_web_block",
         "limit": "500",
         "column_limit": "50",
@@ -9695,7 +9738,7 @@
       },
       "refresh_interval": null,
       "refresh_interval_to_i": null,
-      "result_maker_id": "164514",
+      "result_maker_id": "168365",
       "subtitle_text": null,
       "title": "Asset Downloads",
       "title_hidden": false,
@@ -9707,9 +9750,9 @@
       "subtitle_text_as_html": null,
       "extension_id": null,
       "aria_description": null,
-      "query_id": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq",
+      "query_id": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg",
       "result_maker": {
-        "id": "164514",
+        "id": "168365",
         "dynamic_fields": null,
         "sorts": [
           "asset_downloads.count desc"
@@ -9725,8 +9768,12 @@
           ],
           "pivots": null,
           "fill_fields": null,
-          "filters": null,
-          "filter_expression": "matches_filter(${asset_downloads.asset_host}, `www.welcomebc.ca`) AND matches_filter(${asset_downloads.download_time_date}, `7 days`) AND matches_filter(${asset_downloads.asset_display_url}, `%-pdf%`) AND matches_filter(${asset_downloads.asset_display_url}, `-%form%`)",
+          "filters": {
+            "asset_downloads.asset_host": "www.welcomebc.ca",
+            "asset_downloads.asset_display_url": "-%form%",
+            "asset_downloads.asset_url": "%-pdf%"
+          },
+          "filter_expression": null,
           "sorts": [
             "asset_downloads.count desc"
           ],
@@ -9753,15 +9800,54 @@
             "defaults_version": 1
           },
           "filter_config": {
+            "asset_downloads.asset_host": [
+              {
+                "type": "=",
+                "values": [
+                  {
+                    "constant": "www.welcomebc.ca"
+                  },
+                  {
+                  }
+                ],
+                "id": 0
+              }
+            ],
+            "asset_downloads.asset_display_url": [
+              {
+                "type": "!contains",
+                "values": [
+                  {
+                    "constant": "form"
+                  },
+                  {
+                  }
+                ],
+                "id": 1
+              }
+            ],
+            "asset_downloads.asset_url": [
+              {
+                "type": "contains",
+                "values": [
+                  {
+                    "constant": "-pdf"
+                  },
+                  {
+                  }
+                ],
+                "id": 2
+              }
+            ]
           },
           "visible_ui_sections": null,
-          "slug": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq",
-          "client_id": "SDbFw8DUUsoX9YXPrWzGUs",
-          "share_url": "https://analytics.gov.bc.ca/x/SDbFw8DUUsoX9YXPrWzGUs",
-          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&filter_expression=matches_filter%28%24%7Basset_downloads.asset_host%7D%2C+%60www.welcomebc.ca%60%29+AND+matches_filter%28%24%7Basset_downloads.download_time_date%7D%2C+%607+days%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60%25-pdf%25%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60-%25form%25%60%29&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%7D&origin=share-expanded",
-          "url": "/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&filter_expression=matches_filter%28%24%7Basset_downloads.asset_host%7D%2C+%60www.welcomebc.ca%60%29+AND+matches_filter%28%24%7Basset_downloads.download_time_date%7D%2C+%607+days%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60%25-pdf%25%60%29+AND+matches_filter%28%24%7Basset_downloads.asset_display_url%7D%2C+%60-%25form%25%60%29&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%7D",
+          "slug": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg",
+          "client_id": "LAe1LNfmhQ8RGOI5p29dEM",
+          "share_url": "https://analytics.gov.bc.ca/x/LAe1LNfmhQ8RGOI5p29dEM",
+          "expanded_share_url": "https://analytics.gov.bc.ca/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&f[asset_downloads.asset_host]=www.welcomebc.ca&f[asset_downloads.asset_display_url]=-%25form%25&f[asset_downloads.asset_url]=%25-pdf%25&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22asset_downloads.asset_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%7D%5D%2C%22asset_downloads.asset_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22form%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22asset_downloads.asset_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22-pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D&origin=share-expanded",
+          "url": "/explore/snowplow_web_block/asset_downloads?fields=asset_downloads.asset_display_url,asset_downloads.count&f[asset_downloads.asset_host]=www.welcomebc.ca&f[asset_downloads.asset_display_url]=-%25form%25&f[asset_downloads.asset_url]=%25-pdf%25&sorts=asset_downloads.count+desc&limit=500&column_limit=50&total=on&vis=%7B%22show_view_names%22%3Afalse%2C%22show_row_numbers%22%3Atrue%2C%22transpose%22%3Afalse%2C%22truncate_text%22%3Atrue%2C%22hide_totals%22%3Afalse%2C%22hide_row_totals%22%3Afalse%2C%22size_to_fit%22%3Atrue%2C%22table_theme%22%3A%22white%22%2C%22limit_displayed_rows%22%3Afalse%2C%22enable_conditional_formatting%22%3Afalse%2C%22header_text_alignment%22%3A%22left%22%2C%22header_font_size%22%3A12%2C%22rows_font_size%22%3A12%2C%22conditional_formatting_include_totals%22%3Afalse%2C%22conditional_formatting_include_nulls%22%3Afalse%2C%22type%22%3A%22looker_grid%22%2C%22defaults_version%22%3A1%7D&filter_config=%7B%22asset_downloads.asset_host%22%3A%5B%7B%22type%22%3A%22%3D%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22www.welcomebc.ca%22%7D%2C%7B%7D%5D%2C%22id%22%3A0%7D%5D%2C%22asset_downloads.asset_display_url%22%3A%5B%7B%22type%22%3A%22%21contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22form%22%7D%2C%7B%7D%5D%2C%22id%22%3A1%7D%5D%2C%22asset_downloads.asset_url%22%3A%5B%7B%22type%22%3A%22contains%22%2C%22values%22%3A%5B%7B%22constant%22%3A%22-pdf%22%7D%2C%7B%7D%5D%2C%22id%22%3A2%7D%5D%7D",
           "has_table_calculations": false,
-          "id": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq",
+          "id": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg",
           "model": "snowplow_web_block",
           "limit": "500",
           "column_limit": "50",
@@ -9830,7 +9916,7 @@
             ]
           }
         ],
-        "query_id": "BXDbFtGgz7J3BPpBBTgXNJV6Wbgd25xq"
+        "query_id": "fBtvP7KBWCC6F2ZFgYwPhFk8fsD4sFgg"
       },
       "can": {
         "can_clear_cache": true,
@@ -10573,7 +10659,7 @@
   ],
   "deleted": false,
   "last_viewed_at": null,
-  "last_updater_name": "Linda Mah",
+  "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
   "can": {
