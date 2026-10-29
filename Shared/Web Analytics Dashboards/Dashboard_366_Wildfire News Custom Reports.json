@@ -14,215 +14,6 @@
   "background_color": null,
   "created_at": "2023-03-02 07:41:02 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1772",
-      "dashboard_id": "366",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "wfnews_actions",
-      "dimension": "wfnews_actions.event_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Wildfire News Actions Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "wfnews_actions.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "wfnews_actions",
-        "view_label": "Wildfire News Actions",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "wfnews_actions",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "wfnews_actions.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "wfnews_actions",
-        "suggest_dimension": "wfnews_actions.event_date",
-        "suggest_explore": "wfnews_actions",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fwfnews_actions.view.lkml?line=92",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/wfnews_actions.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/wfnews_actions.view.lkml",
-        "sql": "${TABLE}.timestamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1996",
-      "dashboard_id": "366",
-      "name": "Site",
-      "title": "Site",
-      "type": "field_filter",
-      "explore": "wfnews_actions",
-      "dimension": "wfnews_actions.page_urlhost",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Wildfire News Actions Page Urlhost",
-        "label_from_parameter": null,
-        "label_short": "Page Urlhost",
-        "map_layer": null,
-        "name": "wfnews_actions.page_urlhost",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "wfnews_actions",
-        "view_label": "Wildfire News Actions",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "wfnews_actions",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Urlhost",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "wfnews_actions",
-        "suggest_dimension": "wfnews_actions.page_urlhost",
-        "suggest_explore": "wfnews_actions",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fwfnews_actions.view.lkml?line=70",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/wfnews_actions.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/wfnews_actions.view.lkml",
-        "sql": "${TABLE}.page_urlhost ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -275,6 +66,7 @@
   "content_favorite_id": null,
   "id": "366",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -427,6 +219,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108984",
@@ -667,6 +460,10 @@
         ],
         "query_id": "YZFg23G"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -870,6 +667,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108981",
@@ -1162,6 +960,10 @@
         ],
         "query_id": "kZYQs4V"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1367,6 +1169,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101962",
@@ -1660,6 +1463,10 @@
         ],
         "query_id": "23hfDmz"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1862,6 +1669,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101963",
@@ -2152,6 +1960,10 @@
         ],
         "query_id": "CwWHfJf"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2389,6 +2201,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108982",
@@ -2748,6 +2561,10 @@
         ],
         "query_id": "zHbcvQ3"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2966,6 +2783,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108980",
@@ -3273,6 +3091,10 @@
         ],
         "query_id": "vHGGfvC"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3493,6 +3315,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108957",
@@ -3802,6 +3625,10 @@
         ],
         "query_id": "SZNsNtR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4020,6 +3847,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "109003",
@@ -4327,6 +4155,10 @@
         ],
         "query_id": "mjsgyNf"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4571,6 +4403,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108958",
@@ -4911,6 +4744,10 @@
         ],
         "query_id": "pPWHVtY"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5144,6 +4981,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "109001",
@@ -5466,6 +5304,10 @@
         ],
         "query_id": "Gj7qCG5"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5686,6 +5528,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108978",
@@ -5995,6 +5838,10 @@
         ],
         "query_id": "DCS2V8N"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6233,6 +6080,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108983",
@@ -6565,6 +6413,10 @@
         ],
         "query_id": "Vr4SFZQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6803,6 +6655,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "108985",
@@ -7135,6 +6988,10 @@
         ],
         "query_id": "NW3CD94"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7340,6 +7197,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "153859",
@@ -7635,6 +7493,10 @@
         ],
         "query_id": "2FqKkmp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7839,6 +7701,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "144383",
@@ -8131,6 +7994,10 @@
         ],
         "query_id": "RQwjSGz"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8334,6 +8201,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "144384",
@@ -8626,6 +8494,10 @@
         ],
         "query_id": "zCCBmnM"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8644,6 +8516,215 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1772",
+      "dashboard_id": "366",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "wfnews_actions",
+      "dimension": "wfnews_actions.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Wildfire News Actions Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "wfnews_actions.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "wfnews_actions",
+        "view_label": "Wildfire News Actions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "wfnews_actions",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "wfnews_actions.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "wfnews_actions",
+        "suggest_dimension": "wfnews_actions.event_date",
+        "suggest_explore": "wfnews_actions",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fwfnews_actions.view.lkml?line=92",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/wfnews_actions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/wfnews_actions.view.lkml",
+        "sql": "${TABLE}.timestamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1996",
+      "dashboard_id": "366",
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "wfnews_actions",
+      "dimension": "wfnews_actions.page_urlhost",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Wildfire News Actions Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "wfnews_actions.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "wfnews_actions",
+        "view_label": "Wildfire News Actions",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "wfnews_actions",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "wfnews_actions",
+        "suggest_dimension": "wfnews_actions.page_urlhost",
+        "suggest_explore": "wfnews_actions",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fwfnews_actions.view.lkml?line=70",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/wfnews_actions.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/wfnews_actions.view.lkml",
+        "sql": "${TABLE}.page_urlhost ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "366",
@@ -8654,23 +8735,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Wildfire News Custom Reports",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "3373",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "3373",
-          "row": 3,
-          "column": 15,
           "width": 9,
           "height": 9,
           "deleted": false,
           "element_title": "Navigation Counts",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 3,
+          "column": 15,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8683,18 +8768,18 @@
           "id": "3375",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "3375",
-          "row": 12,
-          "column": 0,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Area Restriction Map Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8707,18 +8792,18 @@
           "id": "3376",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "3376",
-          "row": 12,
-          "column": 8,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Wildfire List Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 8,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8731,18 +8816,18 @@
           "id": "3377",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "3377",
-          "row": 12,
-          "column": 16,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Order List Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 16,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8755,18 +8840,18 @@
           "id": "3378",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "3378",
-          "row": 0,
-          "column": 0,
           "width": 15,
           "height": 12,
           "deleted": false,
           "element_title": "Actions Over Time",
           "element_title_hidden": false,
           "vis_type": "looker_area",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8779,18 +8864,18 @@
           "id": "4247",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4247",
-          "row": 19,
-          "column": 0,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Feature Layer Navigation Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 19,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8803,18 +8888,18 @@
           "id": "4248",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4248",
-          "row": 26,
-          "column": 0,
           "width": 16,
           "height": 7,
           "deleted": false,
           "element_title": "Incident List Options",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8827,18 +8912,18 @@
           "id": "4249",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4249",
-          "row": 19,
-          "column": 8,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Alert List Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 19,
+          "column": 8,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8851,18 +8936,18 @@
           "id": "4250",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4250",
-          "row": 19,
-          "column": 16,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Location Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 19,
+          "column": 16,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8875,18 +8960,18 @@
           "id": "4251",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4251",
-          "row": 26,
-          "column": 16,
           "width": 8,
           "height": 7,
           "deleted": false,
           "element_title": "Top Locations",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 16,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8899,18 +8984,18 @@
           "id": "4253",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4253",
-          "row": 33,
-          "column": 0,
           "width": 16,
           "height": 8,
           "deleted": false,
           "element_title": "Outbound Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 33,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8923,18 +9008,18 @@
           "id": "4254",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4254",
-          "row": 0,
-          "column": 15,
           "width": 4,
           "height": 3,
           "deleted": false,
           "element_title": "Actions",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 15,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8947,18 +9032,18 @@
           "id": "4255",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "4255",
-          "row": 0,
-          "column": 19,
           "width": 4,
           "height": 3,
           "deleted": false,
           "element_title": "Sessions",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 19,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8971,18 +9056,18 @@
           "id": "5278",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "5278",
-          "row": 41,
-          "column": 8,
           "width": 16,
           "height": 8,
           "deleted": false,
           "element_title": "Top Incident Details Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 41,
+          "column": 8,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -8995,18 +9080,18 @@
           "id": "5279",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "5279",
-          "row": 33,
-          "column": 16,
           "width": 8,
           "height": 8,
           "deleted": false,
           "element_title": "Top Shares from Mobile",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 33,
+          "column": 16,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9019,18 +9104,18 @@
           "id": "5280",
           "dashboard_layout_id": "366",
           "dashboard_element_id": "5280",
-          "row": 41,
-          "column": 0,
           "width": 8,
           "height": 8,
           "deleted": false,
           "element_title": "Top Highlights Card Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 41,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9040,9 +9125,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -9057,6 +9139,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

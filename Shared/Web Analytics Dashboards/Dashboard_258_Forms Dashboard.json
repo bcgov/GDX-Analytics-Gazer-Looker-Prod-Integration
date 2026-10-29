@@ -14,215 +14,6 @@
   "background_color": null,
   "created_at": "2021-06-28 07:25:19 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1324",
-      "dashboard_id": "258",
-      "name": "Title",
-      "title": "Title",
-      "type": "field_filter",
-      "explore": "form_action",
-      "dimension": "form_action.title",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "checkboxes",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Form Action Title",
-        "label_from_parameter": null,
-        "label_short": "Title",
-        "map_layer": null,
-        "name": "form_action.title",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "form_action",
-        "view_label": "Form Action",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "form_action",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Title",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "form_action",
-        "suggest_dimension": "form_action.title",
-        "suggest_explore": "form_action",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fform_action.view.lkml?line=103",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/form_action.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/form_action.view.lkml",
-        "sql": "form_action.title",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1325",
-      "dashboard_id": "258",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "form_action",
-      "dimension": "form_action.event_date",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Form Action Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "form_action.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "form_action",
-        "view_label": "Form Action",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "form_action",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "form_action.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "form_action",
-        "suggest_dimension": "form_action.event_date",
-        "suggest_explore": "form_action",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fform_action.view.lkml?line=80",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/form_action.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/form_action.view.lkml",
-        "sql": "${TABLE}.timestamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -275,6 +66,7 @@
   "content_favorite_id": null,
   "id": "258",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -481,6 +273,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "121577",
@@ -811,6 +604,10 @@
         ],
         "query_id": "Dv3NNWY"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -946,6 +743,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91525",
@@ -1117,6 +915,10 @@
         ],
         "query_id": "wvWB958"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1338,6 +1140,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91526",
@@ -1645,6 +1448,10 @@
         ],
         "query_id": "pgGCCFR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1902,6 +1709,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "56764",
@@ -2263,6 +2071,10 @@
         ],
         "query_id": "2qHw78b"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2281,6 +2093,215 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1324",
+      "dashboard_id": "258",
+      "name": "Title",
+      "title": "Title",
+      "type": "field_filter",
+      "explore": "form_action",
+      "dimension": "form_action.title",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "checkboxes",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Form Action Title",
+        "label_from_parameter": null,
+        "label_short": "Title",
+        "map_layer": null,
+        "name": "form_action.title",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "form_action",
+        "view_label": "Form Action",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "form_action",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Title",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "form_action",
+        "suggest_dimension": "form_action.title",
+        "suggest_explore": "form_action",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fform_action.view.lkml?line=103",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/form_action.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/form_action.view.lkml",
+        "sql": "form_action.title",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1325",
+      "dashboard_id": "258",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "form_action",
+      "dimension": "form_action.event_date",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Form Action Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "form_action.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "form_action",
+        "view_label": "Form Action",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "form_action",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "form_action.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "form_action",
+        "suggest_dimension": "form_action.event_date",
+        "suggest_explore": "form_action",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fform_action.view.lkml?line=80",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/form_action.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/form_action.view.lkml",
+        "sql": "${TABLE}.timestamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "258",
@@ -2291,23 +2312,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Forms Dashboard",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "2624",
           "dashboard_layout_id": "258",
           "dashboard_element_id": "2624",
-          "row": 0,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Completion Rates by Sub-Theme",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2320,18 +2345,18 @@
           "id": "2627",
           "dashboard_layout_id": "258",
           "dashboard_element_id": "2627",
-          "row": 7,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top  Form Errors",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 7,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2344,18 +2369,18 @@
           "id": "2628",
           "dashboard_layout_id": "258",
           "dashboard_element_id": "2628",
-          "row": 0,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Average Submit Time",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2368,18 +2393,18 @@
           "id": "2629",
           "dashboard_layout_id": "258",
           "dashboard_element_id": "2629",
-          "row": 7,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "All Submissions",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 7,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2389,9 +2414,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -2406,6 +2428,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

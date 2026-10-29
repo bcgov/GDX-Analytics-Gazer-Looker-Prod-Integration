@@ -14,76 +14,6 @@
   "background_color": null,
   "created_at": "2024-05-14 07:14:45 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "2211",
-      "dashboard_id": "493",
-      "name": "Start Time Date",
-      "title": "Start Time Date",
-      "type": "field_filter",
-      "explore": "openschool_actions_foippa",
-      "dimension": "openschool_actions.start_time_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": null,
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2212",
-      "dashboard_id": "493",
-      "name": "Course",
-      "title": "Course",
-      "type": "field_filter",
-      "explore": "openschool_actions_foippa",
-      "dimension": "openschool_actions.course",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": null,
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -136,6 +66,7 @@
   "content_favorite_id": null,
   "id": "493",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -273,6 +204,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128626",
@@ -482,6 +414,10 @@
         ],
         "query_id": "GWTyjsh"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -500,6 +436,76 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "2211",
+      "dashboard_id": "493",
+      "name": "Start Time Date",
+      "title": "Start Time Date",
+      "type": "field_filter",
+      "explore": "openschool_actions_foippa",
+      "dimension": "openschool_actions.start_time_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": null,
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2212",
+      "dashboard_id": "493",
+      "name": "Course",
+      "title": "Course",
+      "type": "field_filter",
+      "explore": "openschool_actions_foippa",
+      "dimension": "openschool_actions.course",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": null,
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "493",
@@ -510,23 +516,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Openschool Dashboard",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "4682",
           "dashboard_layout_id": "493",
           "dashboard_element_id": "4682",
-          "row": 0,
-          "column": 0,
           "width": 24,
           "height": 12,
           "deleted": false,
           "element_title": "Drop Off Rate",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -536,9 +546,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -553,6 +560,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

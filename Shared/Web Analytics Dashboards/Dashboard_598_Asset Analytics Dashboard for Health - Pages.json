@@ -14,222 +14,6 @@
   "background_color": null,
   "created_at": "2026-10-02 16:48:30 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "2697",
-      "dashboard_id": "598",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.page_view_start_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Page View Start Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page View Start Date",
-        "label_from_parameter": null,
-        "label_short": "Page View Start Date",
-        "map_layer": null,
-        "name": "page_views.page_view_start_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "page_views.page_view_start",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.page_view_start_date",
-        "suggest_explore": "page_views",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=97",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_view_start_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2699",
-      "dashboard_id": "598",
-      "name": "Time Period for Traffic Summary",
-      "title": "Time Period for Traffic Summary",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.summary_granularity",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "Day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "parameter",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": [
-          {
-            "label": "Day",
-            "value": "Day"
-          },
-          {
-            "label": "Month",
-            "value": "Month"
-          },
-          {
-            "label": "Year",
-            "value": "Year"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": true,
-        "hidden": false,
-        "is_filter": true,
-        "is_numeric": false,
-        "label": "Page Views Summary Granularity",
-        "label_from_parameter": null,
-        "label_short": "Summary Granularity",
-        "map_layer": null,
-        "name": "page_views.summary_granularity",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Summary Granularity",
-        "measure": false,
-        "parameter": true,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.summary_granularity",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=170",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": null,
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -282,6 +66,7 @@
   "content_favorite_id": null,
   "id": "598",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -764,6 +549,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170077",
@@ -1642,6 +1428,10 @@
         ],
         "query_id": "8ZTkVZD3vG2RRvdNCdYmMddtJzQqMDYD"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1880,6 +1670,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170078",
@@ -2204,6 +1995,10 @@
         ],
         "query_id": "4VzwN5WtHvr7ZS8pXJ7sMxkQGHfvnNvw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2237,6 +2032,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -2253,6 +2049,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -2451,6 +2251,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170101",
@@ -2709,6 +2510,10 @@
         ],
         "query_id": "Z6tcYYQvJDSjSypnY4KcB4C4XMjzJWFq"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3208,6 +3013,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170102",
@@ -4090,6 +3896,10 @@
         ],
         "query_id": "qvgvVyVRp7DjcxpvNRr63cVbnbdgGhrj"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4288,6 +4098,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170117",
@@ -4542,6 +4353,10 @@
         ],
         "query_id": "fJ8Y7qZrxKvmzTzJ8wgXjZnyf3wqTQvr"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4961,6 +4776,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170118",
@@ -5713,6 +5529,10 @@
         ],
         "query_id": "fcKy4pGSyDyQjK8ZvGFhqBXmRQnJDrfy"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5746,6 +5566,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -5762,6 +5583,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -6000,6 +5825,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170108",
@@ -6324,6 +6150,10 @@
         ],
         "query_id": "bhdJFb4YtvDGszpDK6CWDpsrJ4zX4h2Z"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6536,6 +6366,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170110",
@@ -6808,6 +6639,10 @@
         ],
         "query_id": "TfWX5nX2Q22MhgWVJY22pm75rMkBMQTV"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7307,6 +7142,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170115",
@@ -8189,6 +8025,10 @@
         ],
         "query_id": "DRMYPGVTCXxtpHRdTMTyGHcRKPJpsnqP"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8387,6 +8227,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170116",
@@ -8641,6 +8482,10 @@
         ],
         "query_id": "s6xcm8j4z2F76QWrTdc5wNbw6bPdRVBf"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8674,6 +8519,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -8690,6 +8536,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -8928,6 +8778,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170120",
@@ -9252,6 +9103,10 @@
         ],
         "query_id": "MZpyTyR22XJjQSWxz6r8BWFGfc8zTYhn"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9464,6 +9319,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170121",
@@ -9736,6 +9592,10 @@
         ],
         "query_id": "c4b5bhvNDBWTfx8TwMYBKNBPcJpWyYtb"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10235,6 +10095,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170122",
@@ -11117,6 +10978,10 @@
         ],
         "query_id": "Str33h3H53R2dRgrNZz64qDWBDW2xtMR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -11315,6 +11180,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170123",
@@ -11569,6 +11435,10 @@
         ],
         "query_id": "frn6yMtRzcfhkZXWz23QgfpKJRnPTJpY"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -11602,6 +11472,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -11618,6 +11489,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -11854,6 +11729,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170125",
@@ -12176,6 +12052,10 @@
         ],
         "query_id": "gxGpNXrZw7qC6CJZ2XR3nFxX24N8bX4K"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -12388,6 +12268,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170126",
@@ -12660,6 +12541,10 @@
         ],
         "query_id": "6DJ5BfHQkKrvSTYVp6m7v4yqMqvdpmy6"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -12693,6 +12578,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -12709,6 +12595,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -12947,6 +12837,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170127",
@@ -13271,6 +13162,10 @@
         ],
         "query_id": "2Gb6qYxWSkvqxDs3Jcwf8Nkm3YDQZ4Df"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -13770,6 +13665,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170128",
@@ -14652,6 +14548,10 @@
         ],
         "query_id": "7HQXBnzbHTBkhNd7zNrGkf4bntrQctRg"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -14850,6 +14750,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170129",
@@ -15104,6 +15005,10 @@
         ],
         "query_id": "vsbzXWSNdhjmhFB28H4KXkvVRf5fBS6z"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -15509,6 +15414,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170130",
@@ -16234,6 +16140,10 @@
         ],
         "query_id": "3x56xzkJQbWR2BJ5rC87P52P6nTMrdyF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -16639,6 +16549,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170131",
@@ -17364,6 +17275,10 @@
         ],
         "query_id": "bmGFbNBhcQ5pxnj2CTB7GjR5rMWZ3jMc"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -17769,6 +17684,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170132",
@@ -18494,6 +18410,10 @@
         ],
         "query_id": "BKd5V6t766M4yHfPHYCCh6kdQyZW4WBc"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -18706,6 +18626,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170133",
@@ -18978,6 +18899,10 @@
         ],
         "query_id": "fDyFVJKzxVZ5bqWYRJmmwct4p6tvssNk"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -19477,6 +19402,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170134",
@@ -20359,6 +20285,10 @@
         ],
         "query_id": "2JSf4Y4Tc8FZ5f38nDgNGWbhCjJ4ZpyP"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -20557,6 +20487,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170135",
@@ -20811,6 +20742,10 @@
         ],
         "query_id": "DPY58YWMN6YkXwwBxw5wnQWScnZfqCqb"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -21216,6 +21151,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170136",
@@ -21941,6 +21877,10 @@
         ],
         "query_id": "KgzdwxzFyH6GPPHrRVsW2yzJWmndz48S"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -21974,6 +21914,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -21990,6 +21931,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -22226,6 +22171,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170137",
@@ -22548,6 +22494,10 @@
         ],
         "query_id": "DsgjjJZG5ZBXvCCYcN7z3pYD6SvXcGTf"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -22760,6 +22710,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170138",
@@ -23032,6 +22983,10 @@
         ],
         "query_id": "Wb2y8sFnpDRSS6rkqb26CVhNMWcn6Z8G"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -23529,6 +23484,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170139",
@@ -24409,6 +24365,10 @@
         ],
         "query_id": "bMm6kTbtpgHDVcfJ7s5GJp8G37Mq3Rzq"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -24607,6 +24567,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170140",
@@ -24861,6 +24822,10 @@
         ],
         "query_id": "7Rb5fw6Wj7ntFPNzPBCNCR8bR8s4KD4S"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -25266,6 +25231,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170141",
@@ -25991,6 +25957,10 @@
         ],
         "query_id": "qRrvXRFYs7jpmXpKwhVv4qXjhNcrmKsF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -26024,6 +25994,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -26040,6 +26011,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -26278,6 +26253,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170142",
@@ -26602,6 +26578,10 @@
         ],
         "query_id": "2TNvtBhJNjczKykfBWj4ydthB5gDMk7q"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -26814,6 +26794,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170143",
@@ -27086,6 +27067,10 @@
         ],
         "query_id": "ZjxDKDGjVnkjX3ccK6CfKzCrfCv4CFQ3"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -27585,6 +27570,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170144",
@@ -28467,6 +28453,10 @@
         ],
         "query_id": "sHH28y3D7ZrHZyDHQwvF6p7JGGK4c78z"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -28665,6 +28655,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170145",
@@ -28919,6 +28910,10 @@
         ],
         "query_id": "TSG2T2s6wybQTjChJC3DhmgbzybZZtTZ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -29324,6 +29319,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170146",
@@ -30049,6 +30045,10 @@
         ],
         "query_id": "jQdQzyc3TfRMghdhyQfGzSJs6w6BqBcp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -30082,6 +30082,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -30098,6 +30099,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -30336,6 +30341,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170147",
@@ -30660,6 +30666,10 @@
         ],
         "query_id": "t3SKTvJmYJY8nGM3wWjhZMSdh42ZC6Yw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -30872,6 +30882,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170148",
@@ -31144,6 +31155,10 @@
         ],
         "query_id": "zzV3zvDqKQDRBJnwfgZ33QdBMj5zRkqt"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -31643,6 +31658,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170149",
@@ -32525,6 +32541,10 @@
         ],
         "query_id": "QKg8wsm7fkt4Zd78cjygb37JQvxmYQQt"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -32723,6 +32743,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170150",
@@ -32977,6 +32998,10 @@
         ],
         "query_id": "TRHRMMNyrw47sPbqdvkGc7TDCRyymyvJ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -33382,6 +33407,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "170151",
@@ -34107,6 +34133,10 @@
         ],
         "query_id": "c8tDXJ7VtB6DkGPrV7dNMB6Mg2q8mbKg"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -34125,6 +34155,222 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "2697",
+      "dashboard_id": "598",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_view_start_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Page View Start Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page View Start Date",
+        "label_from_parameter": null,
+        "label_short": "Page View Start Date",
+        "map_layer": null,
+        "name": "page_views.page_view_start_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "page_views.page_view_start",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_view_start_date",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=97",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_view_start_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2699",
+      "dashboard_id": "598",
+      "name": "Time Period for Traffic Summary",
+      "title": "Time Period for Traffic Summary",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.summary_granularity",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "parameter",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": [
+          {
+            "label": "Day",
+            "value": "Day"
+          },
+          {
+            "label": "Month",
+            "value": "Month"
+          },
+          {
+            "label": "Year",
+            "value": "Year"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": true,
+        "hidden": false,
+        "is_filter": true,
+        "is_numeric": false,
+        "label": "Page Views Summary Granularity",
+        "label_from_parameter": null,
+        "label_short": "Summary Granularity",
+        "map_layer": null,
+        "name": "page_views.summary_granularity",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Summary Granularity",
+        "measure": false,
+        "parameter": true,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.summary_granularity",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=170",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "598",
@@ -34135,23 +34381,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Asset Analytics Dashboard for Health - Pages",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "5931",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5931",
-          "row": 0,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Page Views, Sessions, Average Time Engaged for All Page URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34164,18 +34414,18 @@
           "id": "5932",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5932",
-          "row": 10,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34188,18 +34438,18 @@
           "id": "5933",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5933",
-          "row": 7,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 7,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34212,18 +34462,18 @@
           "id": "5934",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5934",
-          "row": 10,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34236,18 +34486,18 @@
           "id": "5935",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5935",
-          "row": 25,
-          "column": 0,
           "width": 24,
           "height": 8,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 25,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34260,18 +34510,18 @@
           "id": "5936",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5936",
-          "row": 33,
-          "column": 0,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 33,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34284,18 +34534,18 @@
           "id": "5937",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5937",
-          "row": 33,
-          "column": 12,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 33,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34308,18 +34558,18 @@
           "id": "5938",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5938",
-          "row": 41,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 41,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34332,18 +34582,18 @@
           "id": "5939",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5939",
-          "row": 44,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 44,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34356,18 +34606,18 @@
           "id": "5940",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5940",
-          "row": 44,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 44,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34380,18 +34630,18 @@
           "id": "5941",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5941",
-          "row": 59,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 59,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34404,18 +34654,18 @@
           "id": "5942",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5942",
-          "row": 66,
-          "column": 0,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 66,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34428,18 +34678,18 @@
           "id": "5944",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5944",
-          "row": 75,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 2)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 75,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34452,18 +34702,18 @@
           "id": "5945",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5945",
-          "row": 78,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 78,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34476,18 +34726,18 @@
           "id": "5946",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5946",
-          "row": 78,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 78,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34500,18 +34750,18 @@
           "id": "5947",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5947",
-          "row": 93,
-          "column": 0,
           "width": 24,
           "height": 8,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 93,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34524,18 +34774,18 @@
           "id": "5948",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5948",
-          "row": 101,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 101,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34548,18 +34798,18 @@
           "id": "5950",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5950",
-          "row": 110,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 3)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 110,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34572,18 +34822,18 @@
           "id": "5951",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5951",
-          "row": 113,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 113,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34596,18 +34846,18 @@
           "id": "5952",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5952",
-          "row": 113,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 113,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34620,18 +34870,18 @@
           "id": "5953",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5953",
-          "row": 144,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 4)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 144,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34644,18 +34894,18 @@
           "id": "5954",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5954",
-          "row": 147,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 147,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34668,18 +34918,18 @@
           "id": "5955",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5955",
-          "row": 128,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 128,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34692,18 +34942,18 @@
           "id": "5956",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5956",
-          "row": 135,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 135,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34716,18 +34966,18 @@
           "id": "5957",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5957",
-          "row": 135,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 135,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34740,18 +34990,18 @@
           "id": "5958",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5958",
-          "row": 101,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 101,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34764,18 +35014,18 @@
           "id": "5959",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5959",
-          "row": 66,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 66,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34788,18 +35038,18 @@
           "id": "5960",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5960",
-          "row": 147,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 147,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34812,18 +35062,18 @@
           "id": "5961",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5961",
-          "row": 162,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 162,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34836,18 +35086,18 @@
           "id": "5962",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5962",
-          "row": 169,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 169,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34860,18 +35110,18 @@
           "id": "5963",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5963",
-          "row": 169,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 169,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34884,18 +35134,18 @@
           "id": "5964",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5964",
-          "row": 178,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 5)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 178,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34908,18 +35158,18 @@
           "id": "5965",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5965",
-          "row": 181,
-          "column": 0,
           "width": 13,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 181,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34932,18 +35182,18 @@
           "id": "5966",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5966",
-          "row": 181,
-          "column": 13,
           "width": 11,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 181,
+          "column": 13,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34956,18 +35206,18 @@
           "id": "5967",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5967",
-          "row": 196,
-          "column": 0,
           "width": 24,
           "height": 8,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 196,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -34980,18 +35230,18 @@
           "id": "5968",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5968",
-          "row": 204,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 204,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35004,18 +35254,18 @@
           "id": "5969",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5969",
-          "row": 204,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 204,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35028,18 +35278,18 @@
           "id": "5970",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5970",
-          "row": 213,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 6)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 213,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35052,18 +35302,18 @@
           "id": "5971",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5971",
-          "row": 216,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 216,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35076,18 +35326,18 @@
           "id": "5972",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5972",
-          "row": 216,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 216,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35100,18 +35350,18 @@
           "id": "5973",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5973",
-          "row": 231,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 231,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35124,18 +35374,18 @@
           "id": "5974",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5974",
-          "row": 238,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 238,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35148,18 +35398,18 @@
           "id": "5975",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5975",
-          "row": 238,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 238,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35172,18 +35422,18 @@
           "id": "5976",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5976",
-          "row": 247,
-          "column": 0,
           "width": 24,
           "height": 3,
           "deleted": false,
           "element_title": " (Copy 7)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 247,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35196,18 +35446,18 @@
           "id": "5977",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5977",
-          "row": 250,
-          "column": 0,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Time of Day and Day of Week Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 250,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35220,18 +35470,18 @@
           "id": "5978",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5978",
-          "row": 250,
-          "column": 12,
           "width": 12,
           "height": 15,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 250,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35244,18 +35494,18 @@
           "id": "5979",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5979",
-          "row": 265,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 265,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35268,18 +35518,18 @@
           "id": "5980",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5980",
-          "row": 272,
-          "column": 0,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 272,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35292,18 +35542,18 @@
           "id": "5981",
           "dashboard_layout_id": "598",
           "dashboard_element_id": "5981",
-          "row": 272,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Top gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 272,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -35313,9 +35563,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -35330,6 +35577,8 @@
   "last_updater_name": "Linda Mah",
   "user_name": "Linda Mah",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

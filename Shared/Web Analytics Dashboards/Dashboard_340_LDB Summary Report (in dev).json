@@ -14,221 +14,6 @@
   "background_color": null,
   "created_at": "2023-01-12 01:39:23 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1638",
-      "dashboard_id": "340",
-      "name": "Event Date",
-      "title": "Event Date",
-      "type": "field_filter",
-      "explore": "ldb_summary",
-      "dimension": "ldb_summary.event_date",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "LDB Summary Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "ldb_summary.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "ldb_summary",
-        "view_label": "LDB Summary",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "ldb_summary",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "ldb_summary.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "ldb_summary",
-        "suggest_dimension": "ldb_summary.event_date",
-        "suggest_explore": "ldb_summary",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_summary.view.lkml?line=82",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/ldb_summary.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/ldb_summary.view.lkml",
-        "sql": "${TABLE}.date ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1770",
-      "dashboard_id": "340",
-      "name": "Spider or Robot (Yes / No)",
-      "title": "Spider or Robot (Yes / No)",
-      "type": "field_filter",
-      "explore": "ldb_summary",
-      "dimension": "ldb_summary.spider_or_robot",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "inline",
-        "type": "button_group"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "No",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": "enumeration",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "LDB Summary Spider or Robot (Yes / No)",
-        "label_from_parameter": null,
-        "label_short": "Spider or Robot (Yes / No)",
-        "map_layer": null,
-        "name": "ldb_summary.spider_or_robot",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "yesno",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "ldb_summary",
-        "view_label": "LDB Summary",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "ldb_summary",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Spider or Robot (Yes / No)",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "ldb_summary",
-        "suggest_dimension": "ldb_summary.spider_or_robot",
-        "suggest_explore": "ldb_summary",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_summary.view.lkml?line=114",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/ldb_summary.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/ldb_summary.view.lkml",
-        "sql": "ldb_summary.spider_or_robot",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -281,6 +66,7 @@
   "content_favorite_id": null,
   "id": "340",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -401,6 +187,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101936",
@@ -562,6 +349,10 @@
         ],
         "query_id": "tpRFPMX"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1062,6 +853,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101937",
@@ -1943,6 +1735,10 @@
         ],
         "query_id": "y6mZ8VR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2442,6 +2238,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101938",
@@ -3322,6 +3119,10 @@
         ],
         "query_id": "vzHwnHN"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3822,6 +3623,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101939",
@@ -4703,6 +4505,10 @@
         ],
         "query_id": "qKJVMTf"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5203,6 +5009,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101940",
@@ -6084,6 +5891,10 @@
         ],
         "query_id": "CQzM7xB"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6584,6 +6395,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101941",
@@ -7465,6 +7277,10 @@
         ],
         "query_id": "SgtSHk6"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7965,6 +7781,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101942",
@@ -8846,6 +8663,10 @@
         ],
         "query_id": "9HHwYkD"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9061,6 +8882,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101955",
@@ -9351,6 +9173,10 @@
         ],
         "query_id": "6PH2bdP"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9553,6 +9379,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101956",
@@ -9830,6 +9657,10 @@
         ],
         "query_id": "sMz6DJm"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10023,6 +9854,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101957",
@@ -10297,6 +10129,10 @@
         ],
         "query_id": "VNxWWWR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10484,6 +10320,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "101958",
@@ -10746,6 +10583,10 @@
         ],
         "query_id": "NGctwhd"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10961,6 +10802,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "98975",
@@ -11260,6 +11102,10 @@
         ],
         "query_id": "QHrmgDH"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -11278,6 +11124,221 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1638",
+      "dashboard_id": "340",
+      "name": "Event Date",
+      "title": "Event Date",
+      "type": "field_filter",
+      "explore": "ldb_summary",
+      "dimension": "ldb_summary.event_date",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "LDB Summary Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "ldb_summary.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "ldb_summary",
+        "view_label": "LDB Summary",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "ldb_summary",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "ldb_summary.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "ldb_summary",
+        "suggest_dimension": "ldb_summary.event_date",
+        "suggest_explore": "ldb_summary",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_summary.view.lkml?line=82",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/ldb_summary.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/ldb_summary.view.lkml",
+        "sql": "${TABLE}.date ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1770",
+      "dashboard_id": "340",
+      "name": "Spider or Robot (Yes / No)",
+      "title": "Spider or Robot (Yes / No)",
+      "type": "field_filter",
+      "explore": "ldb_summary",
+      "dimension": "ldb_summary.spider_or_robot",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "inline",
+        "type": "button_group"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "No",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "LDB Summary Spider or Robot (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Spider or Robot (Yes / No)",
+        "map_layer": null,
+        "name": "ldb_summary.spider_or_robot",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "ldb_summary",
+        "view_label": "LDB Summary",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "ldb_summary",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Spider or Robot (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "ldb_summary",
+        "suggest_dimension": "ldb_summary.spider_or_robot",
+        "suggest_explore": "ldb_summary",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fldb_summary.view.lkml?line=114",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/ldb_summary.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/ldb_summary.view.lkml",
+        "sql": "ldb_summary.spider_or_robot",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "340",
@@ -11288,23 +11349,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "LDB Summary Report (in dev)",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "3266",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3266",
-          "row": 0,
-          "column": 0,
           "width": 9,
           "height": 8,
           "deleted": false,
           "element_title": "Top Categories",
           "element_title_hidden": false,
           "vis_type": "looker_pie",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11317,18 +11382,18 @@
           "id": "3267",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3267",
-          "row": 0,
-          "column": 9,
           "width": 15,
           "height": 5,
           "deleted": false,
           "element_title": "Top Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 9,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11341,18 +11406,18 @@
           "id": "3268",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3268",
-          "row": 15,
-          "column": 0,
           "width": 12,
           "height": 11,
           "deleted": false,
           "element_title": "Top Wine Sub Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 15,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11365,18 +11430,18 @@
           "id": "3269",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3269",
-          "row": 22,
-          "column": 12,
           "width": 12,
           "height": 4,
           "deleted": false,
           "element_title": "Top Beer Sub Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 22,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11389,18 +11454,18 @@
           "id": "3270",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3270",
-          "row": 26,
-          "column": 12,
           "width": 12,
           "height": 4,
           "deleted": false,
           "element_title": "Top Coolers & Ciders Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11413,18 +11478,18 @@
           "id": "3271",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3271",
-          "row": 26,
-          "column": 0,
           "width": 12,
           "height": 4,
           "deleted": false,
           "element_title": "Top General Merchandise Sub Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11437,18 +11502,18 @@
           "id": "3272",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3272",
-          "row": 15,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Top Spirit Sub Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 15,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11461,18 +11526,18 @@
           "id": "3368",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3368",
-          "row": 5,
-          "column": 9,
           "width": 15,
           "height": 10,
           "deleted": false,
           "element_title": "Top \"Product\" Pages w/o SKU Lookup",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 5,
+          "column": 9,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11485,18 +11550,18 @@
           "id": "3369",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3369",
-          "row": 30,
-          "column": 0,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top Stores",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 30,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11509,18 +11574,18 @@
           "id": "3370",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3371",
-          "row": 40,
-          "column": 12,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top Pages",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 40,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11533,18 +11598,18 @@
           "id": "3371",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3370",
-          "row": 40,
-          "column": 0,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top Landing Pages",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 40,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11557,18 +11622,18 @@
           "id": "3372",
           "dashboard_layout_id": "340",
           "dashboard_element_id": "3372",
-          "row": 30,
-          "column": 12,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top Site Search Terms",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 30,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -11578,9 +11643,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -11595,6 +11657,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

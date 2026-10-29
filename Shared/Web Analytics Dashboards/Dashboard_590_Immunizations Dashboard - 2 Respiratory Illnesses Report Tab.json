@@ -14,429 +14,6 @@
   "background_color": null,
   "created_at": "2026-06-22 20:13:01 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "2663",
-      "dashboard_id": "590",
-      "name": "Date Range",
-      "title": "Date Range",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.flexible_filter_date_range",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "filter",
-        "default_filter_value": null,
-        "description": "This provides a date range used by dimensions in the Flexible Filters group. NOTE: On its own it does not do anything.",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": true,
-        "is_numeric": false,
-        "label": "Page Views Flexible Filter Date Range",
-        "label_from_parameter": null,
-        "label_short": "Flexible Filter Date Range",
-        "map_layer": null,
-        "name": "page_views.flexible_filter_date_range",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Flexible Filter Date Range",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.flexible_filter_date_range",
-        "suggest_explore": "page_views",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=27",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": null,
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2664",
-      "dashboard_id": "590",
-      "name": "Time Period for Traffic Summary",
-      "title": "Time Period for Traffic Summary",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.summary_granularity",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "Day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "parameter",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": [
-          {
-            "label": "Day",
-            "value": "Day"
-          },
-          {
-            "label": "Month",
-            "value": "Month"
-          },
-          {
-            "label": "Year",
-            "value": "Year"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": true,
-        "hidden": false,
-        "is_filter": true,
-        "is_numeric": false,
-        "label": "Page Views Summary Granularity",
-        "label_from_parameter": null,
-        "label_short": "Summary Granularity",
-        "map_layer": null,
-        "name": "page_views.summary_granularity",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Summary Granularity",
-        "measure": false,
-        "parameter": true,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.summary_granularity",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=170",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": null,
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2666",
-      "dashboard_id": "590",
-      "name": "Is Mobile",
-      "title": "Is Mobile",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.device_is_mobile",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "True if the viewing device is mobile; False otherwise.",
-        "enumerations": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ],
-        "field_group_label": "Device",
-        "fill_style": "enumeration",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Device Is Mobile (Yes / No)",
-        "label_from_parameter": null,
-        "label_short": "Device Is Mobile (Yes / No)",
-        "map_layer": null,
-        "name": "page_views.device_is_mobile",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "yesno",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Device Is Mobile (Yes / No)",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.device_is_mobile",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=739",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.dvce_ismobile ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2675",
-      "dashboard_id": "590",
-      "name": "URL",
-      "title": "URL",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.page_display_url",
-      "row": 3,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/covid-19-immunization,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/flu,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/responses,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/covid-19-treatments,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/covid-19,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/rsv-immunization-program",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Cleaned URL of the page without query string or standard file names like index.html",
-        "enumerations": null,
-        "field_group_label": "Page",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page Display URL",
-        "label_from_parameter": null,
-        "label_short": "Page Display URL",
-        "map_layer": null,
-        "name": "page_views.page_display_url",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Display URL",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.page_display_url",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_display_url ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -489,6 +66,7 @@
   "content_favorite_id": null,
   "id": "590",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -671,6 +249,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166102",
@@ -937,6 +516,10 @@
         ],
         "query_id": "y6g5WW3QDZHRmrFTFbyQjJRmQjQxFg3b"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1126,6 +709,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166103",
@@ -1367,6 +951,10 @@
         ],
         "query_id": "fRsP5xqyFfKQ8zfSR6kPDNQZcyxH33kw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1807,6 +1395,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166104",
@@ -2576,6 +2165,10 @@
         ],
         "query_id": "tfzfw3ztRKrpvSvKx45vpGtJjYX7qytW"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3018,6 +2611,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166124",
@@ -3790,6 +3384,10 @@
         ],
         "query_id": "tCtwQKKNwSvs2SqmwPQRgWgffHGgZXjH"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3982,6 +3580,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166159",
@@ -4245,6 +3844,10 @@
         ],
         "query_id": "MBKDFX3NgQrp8d8CrnPdqsk2gq6hzh3T"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4477,6 +4080,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166164",
@@ -4801,6 +4405,10 @@
         ],
         "query_id": "H4vyzYhXCZTjPQBmRzWqYNYCx6YrTYgR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5032,6 +4640,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166168",
@@ -5374,6 +4983,10 @@
         ],
         "query_id": "FXdq2dtSWrB6BXNq5PtcyygSBxvJKJjY"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5565,6 +5178,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166169",
@@ -5842,6 +5456,10 @@
         ],
         "query_id": "ZPQ7FVSGJtB6DDPdgTTFz6Dqzp538vFS"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6020,6 +5638,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166440",
@@ -6298,6 +5917,10 @@
         ],
         "query_id": "fqQYJQqK6rkRXvZdSj7hTPSgKMmD7QBM"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6703,6 +6326,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166441",
@@ -7378,6 +7002,10 @@
         ],
         "query_id": "8KnbSgtgtDKM3P7pYgxkrtqbKYjVkH33"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7396,6 +7024,429 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "2663",
+      "dashboard_id": "590",
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.flexible_filter_date_range",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "filter",
+        "default_filter_value": null,
+        "description": "This provides a date range used by dimensions in the Flexible Filters group. NOTE: On its own it does not do anything.",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": true,
+        "is_numeric": false,
+        "label": "Page Views Flexible Filter Date Range",
+        "label_from_parameter": null,
+        "label_short": "Flexible Filter Date Range",
+        "map_layer": null,
+        "name": "page_views.flexible_filter_date_range",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Flexible Filter Date Range",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.flexible_filter_date_range",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=27",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2664",
+      "dashboard_id": "590",
+      "name": "Time Period for Traffic Summary",
+      "title": "Time Period for Traffic Summary",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.summary_granularity",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "Day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "parameter",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": [
+          {
+            "label": "Day",
+            "value": "Day"
+          },
+          {
+            "label": "Month",
+            "value": "Month"
+          },
+          {
+            "label": "Year",
+            "value": "Year"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": true,
+        "hidden": false,
+        "is_filter": true,
+        "is_numeric": false,
+        "label": "Page Views Summary Granularity",
+        "label_from_parameter": null,
+        "label_short": "Summary Granularity",
+        "map_layer": null,
+        "name": "page_views.summary_granularity",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Summary Granularity",
+        "measure": false,
+        "parameter": true,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.summary_granularity",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=170",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2666",
+      "dashboard_id": "590",
+      "name": "Is Mobile",
+      "title": "Is Mobile",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.device_is_mobile",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "True if the viewing device is mobile; False otherwise.",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": "Device",
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Device Is Mobile (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Device Is Mobile (Yes / No)",
+        "map_layer": null,
+        "name": "page_views.device_is_mobile",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Device Is Mobile (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.device_is_mobile",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=739",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.dvce_ismobile ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2675",
+      "dashboard_id": "590",
+      "name": "URL",
+      "title": "URL",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_display_url",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/covid-19-immunization,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/flu,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/responses,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/covid-19-treatments,https://www2.gov.bc.ca/gov/content/health/managing-your-health/respiratory-illness/covid-19,https://www2.gov.bc.ca/gov/content/health/managing-your-health/immunizations/rsv-immunization-program",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Cleaned URL of the page without query string or standard file names like index.html",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page Display URL",
+        "label_from_parameter": null,
+        "label_short": "Page Display URL",
+        "map_layer": null,
+        "name": "page_views.page_display_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Display URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_display_url",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_display_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "590",
@@ -7406,23 +7457,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Immunizations Dashboard - 2 Respiratory Illnesses Report Tab",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "5813",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5813",
-          "row": 0,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Traffic Summary",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7435,18 +7490,18 @@
           "id": "5814",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5814",
-          "row": 0,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Page Views Comparison",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7459,18 +7514,18 @@
           "id": "5815",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5815",
-          "row": 14,
-          "column": 0,
           "width": 24,
           "height": 6,
           "deleted": false,
           "element_title": "Weekly Page Views",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 14,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7483,18 +7538,18 @@
           "id": "5816",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5816",
-          "row": 20,
-          "column": 0,
           "width": 24,
           "height": 6,
           "deleted": false,
           "element_title": "Monthly Page Views",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 20,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7507,18 +7562,18 @@
           "id": "5817",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5817",
-          "row": 26,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Referral URLs",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7531,18 +7586,18 @@
           "id": "5819",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5819",
-          "row": 7,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Mobile vs. Desktop Page Views Breakdown",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 7,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7555,18 +7610,18 @@
           "id": "5822",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5822",
-          "row": 47,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Top Site Search Terms",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 47,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7579,18 +7634,18 @@
           "id": "5823",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5823",
-          "row": 47,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Top Google Search Terms",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 47,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7603,18 +7658,18 @@
           "id": "5845",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5845",
-          "row": 33,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Gov.bc.ca Link Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 33,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7627,18 +7682,18 @@
           "id": "5846",
           "dashboard_layout_id": "590",
           "dashboard_element_id": "5846",
-          "row": 40,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Top Offsite Links",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 40,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -7648,9 +7703,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -7665,6 +7717,8 @@
   "last_updater_name": "Linda Mah",
   "user_name": "Linda Mah",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

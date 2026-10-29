@@ -14,317 +14,6 @@
   "background_color": null,
   "created_at": "2022-03-09 02:59:52 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1506",
-      "dashboard_id": "300",
-      "name": "Event Date",
-      "title": "Event Date",
-      "type": "field_filter",
-      "explore": "corp_calendar_searches",
-      "dimension": "corp_calendar_searches.event_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Corp Calendar Searches Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "corp_calendar_searches.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "corp_calendar_searches",
-        "view_label": "Corp Calendar Searches",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "corp_calendar_searches",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "corp_calendar_searches.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "corp_calendar_searches",
-        "suggest_dimension": "corp_calendar_searches.event_date",
-        "suggest_explore": "corp_calendar_searches",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=81",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/corp_calendar_searches.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
-        "sql": "${TABLE}.timestamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1508",
-      "dashboard_id": "300",
-      "name": "Site",
-      "title": "Site",
-      "type": "field_filter",
-      "explore": "corp_calendar_searches",
-      "dimension": "corp_calendar_searches.page_urlhost",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Corp Calendar Searches Page Urlhost",
-        "label_from_parameter": null,
-        "label_short": "Page Urlhost",
-        "map_layer": null,
-        "name": "corp_calendar_searches.page_urlhost",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "corp_calendar_searches",
-        "view_label": "Corp Calendar Searches",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "corp_calendar_searches",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Urlhost",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "corp_calendar_searches",
-        "suggest_dimension": "corp_calendar_searches.page_urlhost",
-        "suggest_explore": "corp_calendar_searches",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=69",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/corp_calendar_searches.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
-        "sql": "${TABLE}.page_urlhost ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1507",
-      "dashboard_id": "300",
-      "name": "Page URL",
-      "title": "Page URL",
-      "type": "field_filter",
-      "explore": "corp_calendar_searches",
-      "dimension": "corp_calendar_searches.page_url",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Corp Calendar Searches Page URL",
-        "label_from_parameter": null,
-        "label_short": "Page URL",
-        "map_layer": null,
-        "name": "corp_calendar_searches.page_url",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "corp_calendar_searches",
-        "view_label": "Corp Calendar Searches",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "corp_calendar_searches",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page URL",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "corp_calendar_searches",
-        "suggest_dimension": "corp_calendar_searches.page_url",
-        "suggest_explore": "corp_calendar_searches",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=73",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/corp_calendar_searches.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
-        "sql": "corp_calendar_searches.page_url",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -377,6 +66,7 @@
   "content_favorite_id": null,
   "id": "300",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -528,6 +218,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91662",
@@ -785,6 +476,10 @@
         ],
         "query_id": "7bfHNdJ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -945,6 +640,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91663",
@@ -1186,6 +882,10 @@
         ],
         "query_id": "fw42SfQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1374,6 +1074,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91664",
@@ -1650,6 +1351,10 @@
         ],
         "query_id": "CVcF9SW"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1846,6 +1551,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91665",
@@ -2144,6 +1850,10 @@
         ],
         "query_id": "HPPjqjm"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2340,6 +2050,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91666",
@@ -2638,6 +2349,10 @@
         ],
         "query_id": "KcYv3mS"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2834,6 +2549,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91667",
@@ -3132,6 +2848,10 @@
         ],
         "query_id": "rHC5jnV"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3328,6 +3048,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91668",
@@ -3626,6 +3347,10 @@
         ],
         "query_id": "cckbBN8"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3833,6 +3558,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91669",
@@ -4124,6 +3850,10 @@
         ],
         "query_id": "2bPZR9m"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4576,6 +4306,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91670",
@@ -5400,6 +5131,10 @@
         ],
         "query_id": "4Cqfkbg"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5545,6 +5280,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91671",
@@ -5727,6 +5463,10 @@
         ],
         "query_id": "23zrWNF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5745,6 +5485,317 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1506",
+      "dashboard_id": "300",
+      "name": "Event Date",
+      "title": "Event Date",
+      "type": "field_filter",
+      "explore": "corp_calendar_searches",
+      "dimension": "corp_calendar_searches.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Corp Calendar Searches Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "corp_calendar_searches.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "corp_calendar_searches",
+        "view_label": "Corp Calendar Searches",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "corp_calendar_searches",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "corp_calendar_searches.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "corp_calendar_searches",
+        "suggest_dimension": "corp_calendar_searches.event_date",
+        "suggest_explore": "corp_calendar_searches",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=81",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/corp_calendar_searches.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
+        "sql": "${TABLE}.timestamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1508",
+      "dashboard_id": "300",
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "corp_calendar_searches",
+      "dimension": "corp_calendar_searches.page_urlhost",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Corp Calendar Searches Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "corp_calendar_searches.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "corp_calendar_searches",
+        "view_label": "Corp Calendar Searches",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "corp_calendar_searches",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "corp_calendar_searches",
+        "suggest_dimension": "corp_calendar_searches.page_urlhost",
+        "suggest_explore": "corp_calendar_searches",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=69",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/corp_calendar_searches.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
+        "sql": "${TABLE}.page_urlhost ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1507",
+      "dashboard_id": "300",
+      "name": "Page URL",
+      "title": "Page URL",
+      "type": "field_filter",
+      "explore": "corp_calendar_searches",
+      "dimension": "corp_calendar_searches.page_url",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Corp Calendar Searches Page URL",
+        "label_from_parameter": null,
+        "label_short": "Page URL",
+        "map_layer": null,
+        "name": "corp_calendar_searches.page_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "corp_calendar_searches",
+        "view_label": "Corp Calendar Searches",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "corp_calendar_searches",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "corp_calendar_searches",
+        "suggest_dimension": "corp_calendar_searches.page_url",
+        "suggest_explore": "corp_calendar_searches",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fcorp_calendar_searches.view.lkml?line=73",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/corp_calendar_searches.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/corp_calendar_searches.view.lkml",
+        "sql": "corp_calendar_searches.page_url",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "300",
@@ -5755,23 +5806,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Corp Calendar Reports",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "3039",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3039",
-          "row": 3,
-          "column": 12,
           "width": 12,
           "height": 9,
           "deleted": false,
           "element_title": "Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 3,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5784,18 +5839,18 @@
           "id": "3040",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3040",
-          "row": 12,
-          "column": 0,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Most Used Filters",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5808,18 +5863,18 @@
           "id": "3041",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3041",
-          "row": 12,
-          "column": 12,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Most Used \"More\" Categories",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5832,18 +5887,18 @@
           "id": "3042",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3042",
-          "row": 26,
-          "column": 0,
           "width": 12,
           "height": 6,
           "deleted": false,
           "element_title": "Top Comm Contacts",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5856,18 +5911,18 @@
           "id": "3043",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3043",
-          "row": 20,
-          "column": 12,
           "width": 12,
           "height": 6,
           "deleted": false,
           "element_title": "Top Categories",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 20,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5880,18 +5935,18 @@
           "id": "3044",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3044",
-          "row": 20,
-          "column": 0,
           "width": 12,
           "height": 6,
           "deleted": false,
           "element_title": "Top Search Terms ",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 20,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5904,18 +5959,18 @@
           "id": "3045",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3045",
-          "row": 26,
-          "column": 12,
           "width": 12,
           "height": 6,
           "deleted": false,
           "element_title": "Top Ministries",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 26,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5928,18 +5983,18 @@
           "id": "3046",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3046",
-          "row": 0,
-          "column": 12,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Searches",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5952,18 +6007,18 @@
           "id": "3047",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3047",
-          "row": 0,
-          "column": 0,
           "width": 12,
           "height": 12,
           "deleted": false,
           "element_title": "Time of Day Heatmap",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5976,18 +6031,18 @@
           "id": "3048",
           "dashboard_layout_id": "300",
           "dashboard_element_id": "3048",
-          "row": 0,
-          "column": 18,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Clicks",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 18,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -5997,9 +6052,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -6014,6 +6066,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

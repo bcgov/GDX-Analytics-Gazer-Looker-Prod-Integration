@@ -14,215 +14,6 @@
   "background_color": null,
   "created_at": "2022-02-28 22:01:59 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1504",
-      "dashboard_id": "299",
-      "name": "Completed Date",
-      "title": "Completed Date",
-      "type": "field_filter",
-      "explore": "history",
-      "dimension": "history.completed_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "looker_dashboard_reporting",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Completed Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 0,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "History Completed Date",
-        "label_from_parameter": null,
-        "label_short": "Completed Date",
-        "map_layer": null,
-        "name": "history.completed_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "history",
-        "view_label": "History",
-        "dynamic": false,
-        "week_start_day": "monday",
-        "original_view": "history",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "history.completed",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "looker_dashboard_reporting",
-        "scope": "history",
-        "suggest_dimension": "history.completed_date",
-        "suggest_explore": "history",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/looker_dashboard_reporting/files/views%2Fhistory.view.lkml?line=45",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "views/history.view.lkml",
-        "source_file_path": "looker_dashboard_reporting/views/history.view.lkml",
-        "sql": "${TABLE}.completed_at ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1505",
-      "dashboard_id": "299",
-      "name": "Title",
-      "title": "Title",
-      "type": "field_filter",
-      "explore": "history",
-      "dimension": "dashboard.title",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "looker_dashboard_reporting",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 0,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Dashboard Title",
-        "label_from_parameter": null,
-        "label_short": "Title",
-        "map_layer": null,
-        "name": "dashboard.title",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "dashboard",
-        "view_label": "Dashboard",
-        "dynamic": false,
-        "week_start_day": "monday",
-        "original_view": "dashboard",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Title",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "looker_dashboard_reporting",
-        "scope": "dashboard",
-        "suggest_dimension": "dashboard.title",
-        "suggest_explore": "history",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/looker_dashboard_reporting/files/views%2Fdashboard.view.lkml?line=186",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "views/dashboard.view.lkml",
-        "source_file_path": "looker_dashboard_reporting/views/dashboard.view.lkml",
-        "sql": "${TABLE}.title ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -275,6 +66,7 @@
   "content_favorite_id": null,
   "id": "299",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -440,6 +232,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91672",
@@ -674,6 +467,10 @@
         ],
         "query_id": "MVFvsFy"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -818,6 +615,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91673",
@@ -1011,6 +809,10 @@
         ],
         "query_id": "YMTJM5k"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1180,6 +982,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91674",
@@ -1423,6 +1226,10 @@
         ],
         "query_id": "3TnvCbT"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1571,6 +1378,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91675",
@@ -1768,6 +1576,10 @@
         ],
         "query_id": "nJqqmdr"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1981,6 +1793,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91689",
@@ -2272,6 +2085,10 @@
         ],
         "query_id": "CsrW9Fw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2290,6 +2107,215 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1504",
+      "dashboard_id": "299",
+      "name": "Completed Date",
+      "title": "Completed Date",
+      "type": "field_filter",
+      "explore": "history",
+      "dimension": "history.completed_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "looker_dashboard_reporting",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Completed Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "History Completed Date",
+        "label_from_parameter": null,
+        "label_short": "Completed Date",
+        "map_layer": null,
+        "name": "history.completed_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "history",
+        "view_label": "History",
+        "dynamic": false,
+        "week_start_day": "monday",
+        "original_view": "history",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "history.completed",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "looker_dashboard_reporting",
+        "scope": "history",
+        "suggest_dimension": "history.completed_date",
+        "suggest_explore": "history",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/looker_dashboard_reporting/files/views%2Fhistory.view.lkml?line=45",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "views/history.view.lkml",
+        "source_file_path": "looker_dashboard_reporting/views/history.view.lkml",
+        "sql": "${TABLE}.completed_at ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1505",
+      "dashboard_id": "299",
+      "name": "Title",
+      "title": "Title",
+      "type": "field_filter",
+      "explore": "history",
+      "dimension": "dashboard.title",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "looker_dashboard_reporting",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 0,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Dashboard Title",
+        "label_from_parameter": null,
+        "label_short": "Title",
+        "map_layer": null,
+        "name": "dashboard.title",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "dashboard",
+        "view_label": "Dashboard",
+        "dynamic": false,
+        "week_start_day": "monday",
+        "original_view": "dashboard",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Title",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "looker_dashboard_reporting",
+        "scope": "dashboard",
+        "suggest_dimension": "dashboard.title",
+        "suggest_explore": "history",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/looker_dashboard_reporting/files/views%2Fdashboard.view.lkml?line=186",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "views/dashboard.view.lkml",
+        "source_file_path": "looker_dashboard_reporting/views/dashboard.view.lkml",
+        "sql": "${TABLE}.title ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "299",
@@ -2300,23 +2326,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "SBC Dashboard Usage",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "3049",
           "dashboard_layout_id": "299",
           "dashboard_element_id": "3049",
-          "row": 0,
-          "column": 0,
           "width": 23,
           "height": 6,
           "deleted": false,
           "element_title": "Dashboard Usage Comparison",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2329,18 +2359,18 @@
           "id": "3050",
           "dashboard_layout_id": "299",
           "dashboard_element_id": "3050",
-          "row": 6,
-          "column": 0,
           "width": 14,
           "height": 7,
           "deleted": false,
           "element_title": "Service BC Dashboard Run Counts",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 6,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2353,18 +2383,18 @@
           "id": "3052",
           "dashboard_layout_id": "299",
           "dashboard_element_id": "3052",
-          "row": 13,
-          "column": 0,
           "width": 9,
           "height": 8,
           "deleted": false,
           "element_title": "Dashboard Usage in Minutes",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 13,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2377,18 +2407,18 @@
           "id": "3053",
           "dashboard_layout_id": "299",
           "dashboard_element_id": "3053",
-          "row": 13,
-          "column": 9,
           "width": 14,
           "height": 8,
           "deleted": false,
           "element_title": "Most Active Service BC Dashboard Users",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 13,
+          "column": 9,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2401,18 +2431,18 @@
           "id": "3069",
           "dashboard_layout_id": "299",
           "dashboard_element_id": "3069",
-          "row": 6,
-          "column": 14,
           "width": 9,
           "height": 7,
           "deleted": false,
           "element_title": "Dashboard Access",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 6,
+          "column": 14,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2422,9 +2452,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -2439,6 +2466,8 @@
   "last_updater_name": "Brendan Jennings",
   "user_name": "Brendan Jennings",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

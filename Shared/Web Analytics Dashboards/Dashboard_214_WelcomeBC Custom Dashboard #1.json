@@ -14,150 +14,6 @@
   "background_color": null,
   "created_at": "2020-10-21 16:20:55 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1048",
-      "dashboard_id": "214",
-      "name": "Date Range",
-      "title": "Date Range",
-      "type": "date_filter",
-      "explore": "",
-      "dimension": "",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover",
-        "options": [
-
-        ]
-      },
-      "model": "",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 days ago for 7 days",
-      "field": null,
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2631",
-      "dashboard_id": "214",
-      "name": "Internal Gov Traffic",
-      "title": "Internal Gov Traffic",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.is_government",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "No",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Yes if the IP address maps to a known BC Government network.",
-        "enumerations": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": "enumeration",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Is Government (Yes / No)",
-        "label_from_parameter": null,
-        "label_short": "Is Government (Yes / No)",
-        "map_layer": null,
-        "name": "page_views.is_government",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "yesno",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Is Government (Yes / No)",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.is_government",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.is_government",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -210,6 +66,7 @@
   "content_favorite_id": null,
   "id": "214",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": "",
@@ -227,6 +84,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -243,6 +101,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -464,6 +326,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91414",
@@ -745,6 +608,10 @@
         ],
         "query_id": "6b3D8kH"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -931,6 +798,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91415",
@@ -1175,6 +1043,10 @@
         ],
         "query_id": "vRhnqKx"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1208,6 +1080,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -1224,6 +1097,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -1431,6 +1308,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91416",
@@ -1690,6 +1568,10 @@
         ],
         "query_id": "HX4jw9b"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1910,6 +1792,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91417",
@@ -2188,6 +2071,10 @@
         ],
         "query_id": "tzgc8sF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2221,6 +2108,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -2237,6 +2125,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -2404,6 +2296,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91435",
@@ -2624,6 +2517,10 @@
         ],
         "query_id": "x7fKhWp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2792,6 +2689,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91436",
@@ -3014,6 +2912,10 @@
         ],
         "query_id": "ZC9sdZY"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3183,6 +3085,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91437",
@@ -3407,6 +3310,10 @@
         ],
         "query_id": "dz2MXJZ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3576,6 +3483,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "91438",
@@ -3800,6 +3708,10 @@
         ],
         "query_id": "8npmJgp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3833,6 +3745,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -3849,6 +3762,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -4024,6 +3941,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128491",
@@ -4246,6 +4164,10 @@
         ],
         "query_id": "Rx2d2CG"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4406,6 +4328,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128492",
@@ -4613,6 +4536,10 @@
         ],
         "query_id": "sQPJjsB"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4631,6 +4558,150 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1048",
+      "dashboard_id": "214",
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "date_filter",
+      "explore": "",
+      "dimension": "",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover",
+        "options": [
+
+        ]
+      },
+      "model": "",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days ago for 7 days",
+      "field": null,
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2631",
+      "dashboard_id": "214",
+      "name": "Internal Gov Traffic",
+      "title": "Internal Gov Traffic",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.is_government",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "No",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Yes if the IP address maps to a known BC Government network.",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Is Government (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Is Government (Yes / No)",
+        "map_layer": null,
+        "name": "page_views.is_government",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Is Government (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.is_government",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.is_government",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "214",
@@ -4641,23 +4712,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "WelcomeBC Custom Dashboard #1",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "2249",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2249",
-          "row": 23,
-          "column": 1,
           "width": 22,
           "height": 2,
           "deleted": false,
           "element_title": "Documents Page",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 23,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4670,18 +4745,18 @@
           "id": "2252",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2252",
-          "row": 25,
-          "column": 7,
           "width": 10,
           "height": 5,
           "deleted": false,
           "element_title": "Table Of Contents Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 25,
+          "column": 7,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4694,18 +4769,18 @@
           "id": "2253",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2253",
-          "row": 30,
-          "column": 1,
           "width": 22,
           "height": 8,
           "deleted": false,
           "element_title": "Top Outbound Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 30,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4718,18 +4793,18 @@
           "id": "2266",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2266",
-          "row": 38,
-          "column": 1,
           "width": 22,
           "height": 2,
           "deleted": false,
           "element_title": "Offsite Link Clicks",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 38,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4742,18 +4817,18 @@
           "id": "2267",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2267",
-          "row": 53,
-          "column": 6,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top WelcomeBC Offsite Link Clicks (excluding PNP)",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 53,
+          "column": 6,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4766,18 +4841,18 @@
           "id": "2268",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2268",
-          "row": 40,
-          "column": 1,
           "width": 22,
           "height": 11,
           "deleted": false,
           "element_title": "Top WelcomeBC Pages with Clicks to PNP",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 40,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4790,18 +4865,18 @@
           "id": "2314",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2314",
-          "row": 10,
-          "column": 1,
           "width": 22,
           "height": 2,
           "deleted": false,
           "element_title": "Site Navigation",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4814,18 +4889,18 @@
           "id": "2315",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2315",
-          "row": 12,
-          "column": 1,
           "width": 11,
           "height": 6,
           "deleted": false,
           "element_title": "Navigation across Sections",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4838,18 +4913,18 @@
           "id": "2316",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2316",
-          "row": 12,
-          "column": 12,
           "width": 11,
           "height": 6,
           "deleted": false,
           "element_title": "Navigation from Sections to Topics",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 12,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4862,18 +4937,18 @@
           "id": "2317",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2317",
-          "row": 18,
-          "column": 12,
           "width": 11,
           "height": 5,
           "deleted": false,
           "element_title": "Navigation across Topics",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 18,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4886,18 +4961,18 @@
           "id": "2318",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2318",
-          "row": 18,
-          "column": 1,
           "width": 11,
           "height": 5,
           "deleted": false,
           "element_title": "Navigation from Topics to Sections",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 18,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4910,18 +4985,18 @@
           "id": "2320",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "2320",
-          "row": 51,
-          "column": 1,
           "width": 22,
           "height": 2,
           "deleted": false,
           "element_title": "Offsite Link Clicks",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 51,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4934,18 +5009,18 @@
           "id": "3910",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "3910",
-          "row": 0,
-          "column": 1,
           "width": 11,
           "height": 8,
           "deleted": false,
           "element_title": "WelcomeBC Traffic by Province",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 1,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4958,18 +5033,18 @@
           "id": "3911",
           "dashboard_layout_id": "214",
           "dashboard_element_id": "3911",
-          "row": 0,
-          "column": 12,
           "width": 11,
           "height": 10,
           "deleted": false,
           "element_title": "WelcomeBC Traffic by Country",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4979,9 +5054,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -4996,6 +5068,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Stephanie Yurchak",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

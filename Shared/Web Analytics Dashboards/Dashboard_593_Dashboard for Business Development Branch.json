@@ -14,614 +14,6 @@
   "background_color": null,
   "created_at": "2026-07-08 22:56:13 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "2680",
-      "dashboard_id": "593",
-      "name": "Date Range",
-      "title": "Date Range",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.flexible_filter_date_range",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 days ago for 7 days",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "filter",
-        "default_filter_value": null,
-        "description": "This provides a date range used by dimensions in the Flexible Filters group. NOTE: On its own it does not do anything.",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": true,
-        "is_numeric": false,
-        "label": "Page Views Flexible Filter Date Range",
-        "label_from_parameter": null,
-        "label_short": "Flexible Filter Date Range",
-        "map_layer": null,
-        "name": "page_views.flexible_filter_date_range",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Flexible Filter Date Range",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.flexible_filter_date_range",
-        "suggest_explore": "page_views",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=27",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": null,
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2682",
-      "dashboard_id": "593",
-      "name": "Internal Gov Traffic",
-      "title": "Internal Gov Traffic",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.is_government",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "No",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Yes if the IP address maps to a known BC Government network.",
-        "enumerations": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": "enumeration",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Is Government (Yes / No)",
-        "label_from_parameter": null,
-        "label_short": "Is Government (Yes / No)",
-        "map_layer": null,
-        "name": "page_views.is_government",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "yesno",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Is Government (Yes / No)",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.is_government",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.is_government",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2681",
-      "dashboard_id": "593",
-      "name": "URL",
-      "title": "URL",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.page_display_url",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/evaluate-your-business-idea,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/conduct-market-research,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/conduct-market-research/resources-for-market-research,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/business-plan,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/marketing-plan,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/choosing-your-business-structure,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/permits-licences,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/permits-licences/mobile-business-licence-program,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-franchise-in-bc,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-franchise-in-bc/francises-act,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-restaurant-in-bc,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-restaurant-in-bc/food-delivery-service-fee,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/import-goods-into-canada,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/export-goods-from-canada,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/protect-personal-information,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/protect-personal-information/principles,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/exiting-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/help-for-small-businesses-and-entrepreneurs,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/organizations,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/resources,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/indigenous-business-resources,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business/ease-of-doing-business-actions,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business/ease-of-doing-business-progress",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Cleaned URL of the page without query string or standard file names like index.html",
-        "enumerations": null,
-        "field_group_label": "Page",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page Display URL",
-        "label_from_parameter": null,
-        "label_short": "Page Display URL",
-        "map_layer": null,
-        "name": "page_views.page_display_url",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Display URL",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.page_display_url",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_display_url ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2683",
-      "dashboard_id": "593",
-      "name": "Theme",
-      "title": "Theme",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "cmslite_themes.theme",
-      "row": 3,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The CMS Lite theme.",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cmslite Themes Theme",
-        "label_from_parameter": null,
-        "label_short": "Theme",
-        "map_layer": null,
-        "name": "cmslite_themes.theme",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cmslite_themes",
-        "view_label": "Cmslite Themes",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cmslite_themes",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Theme",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "cmslite_themes",
-        "suggest_dimension": "themes_cache.theme",
-        "suggest_explore": "themes_cache",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=45",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cmslite_themes.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
-        "sql": "COALESCE(${TABLE}.theme, '(no theme)') ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2684",
-      "dashboard_id": "593",
-      "name": "Sub Theme",
-      "title": "Sub Theme",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "cmslite_themes.subtheme",
-      "row": 4,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The CMS Lite subtheme.",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cmslite Themes Subtheme",
-        "label_from_parameter": null,
-        "label_short": "Subtheme",
-        "map_layer": null,
-        "name": "cmslite_themes.subtheme",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cmslite_themes",
-        "view_label": "Cmslite Themes",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cmslite_themes",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Subtheme",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "cmslite_themes",
-        "suggest_dimension": "themes_cache.subtheme",
-        "suggest_explore": "themes_cache",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=36",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cmslite_themes.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
-        "sql": "COALESCE(${TABLE}.subtheme, '(no subtheme)') ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2685",
-      "dashboard_id": "593",
-      "name": "Topic",
-      "title": "Topic",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "cmslite_themes.topic",
-      "row": 5,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "type": "advanced",
-        "display": "popover"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The CMS Lite topic.",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Cmslite Themes Topic",
-        "label_from_parameter": null,
-        "label_short": "Topic",
-        "map_layer": null,
-        "name": "cmslite_themes.topic",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "cmslite_themes",
-        "view_label": "Cmslite Themes",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "cmslite_themes",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Topic",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "cmslite_themes",
-        "suggest_dimension": "themes_cache.topic",
-        "suggest_explore": "themes_cache",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=71",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/cmslite_themes.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
-        "sql": "COALESCE(${TABLE}.topic, '(no topic)') ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -674,6 +66,7 @@
   "content_favorite_id": null,
   "id": "593",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -818,6 +211,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168707",
@@ -1029,6 +423,10 @@
         ],
         "query_id": "7dS843MjJtxz4xSZp2yBrcg2GMBrnZ6S"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1189,6 +587,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168708",
@@ -1400,6 +799,10 @@
         ],
         "query_id": "qQmdjsXhrXrTyqDMyq87zfCXJ2fWZms6"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1563,6 +966,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168709",
@@ -1780,6 +1184,10 @@
         ],
         "query_id": "kV4X2j4nXKTfzbps2Cr6PsXG33TXyGxn"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1943,6 +1351,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168710",
@@ -2160,6 +1569,10 @@
         ],
         "query_id": "CHbvX4QDd75YnrfZNZxBR6DHBNc2mCgG"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2372,6 +1785,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168712",
@@ -2694,6 +2108,10 @@
         ],
         "query_id": "nN2FD2XHfPDXXmJD4v5kn7CGXH5QDW7g"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3334,6 +2752,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168716",
@@ -4499,6 +3918,10 @@
         ],
         "query_id": "CPBSCRYHN5MF84FN7yBJQz5pvfhTbN8j"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4713,6 +4136,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168714",
@@ -4992,6 +4416,10 @@
         ],
         "query_id": "drmpYKn6FGtrSbHJSJ7RTpJrVPqC5zTQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5564,6 +4992,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168717",
@@ -6607,6 +6036,10 @@
         ],
         "query_id": "JRzhJN3kS64263VMt5KDjsyJCVkQRVpQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6785,6 +6218,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168713",
@@ -7042,6 +6476,10 @@
         ],
         "query_id": "h5TBg3BCTGvMk35sHS6KzfRZbMFkKdcx"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7573,6 +7011,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "167999",
@@ -8491,6 +7930,10 @@
         ],
         "query_id": "KNnpMSXdTbQ56x2q8pDJhWnXN4YBjQ4t"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9015,6 +8458,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168001",
@@ -9930,6 +9374,10 @@
         ],
         "query_id": "hM6DgmkrR73jTdX2vbDb7zS45FHd8tJ8"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10128,6 +9576,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166598",
@@ -10391,6 +9840,10 @@
         ],
         "query_id": "T32JTqyxCwbYyM4KZmKVSB67XMzqhM4x"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -10931,6 +10384,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168718",
@@ -11897,6 +11351,10 @@
         ],
         "query_id": "Cx2Rm2KfBYYXpbS83QrW56bFQbjtVWDr"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -12414,6 +11872,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168000",
@@ -13315,6 +12774,10 @@
         ],
         "query_id": "FwDMSxW34JvtbRynY6j2DGM2hP7g8zn2"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -13751,7 +13214,7 @@
               "args": [
                 "clicks.target_url",
                 [
-                  "#<Sawyer::Resource:0x00007fc593d3a850>"
+                  "#<Sawyer::Resource:0x00007f46a1c4b1b8>"
                 ],
                 "Other Links"
               ],
@@ -13787,6 +13250,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168004",
@@ -14216,7 +13680,7 @@
                 "args": [
                   "clicks.target_url",
                   [
-                    "#<Sawyer::Resource:0x00007fc593cd4050>"
+                    "#<Sawyer::Resource:0x00007f469adbdd18>"
                   ],
                   "Other Links"
                 ],
@@ -14578,6 +14042,10 @@
         ],
         "query_id": "pY5DwtFbTBscPNgY5Nfw8MjBm7WvJsrw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -15077,6 +14545,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168719",
@@ -15959,6 +15428,10 @@
         ],
         "query_id": "PzVXr4ktcnrxTfxPWbPcnxSSCDhgch4B"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -16192,6 +15665,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "168715",
@@ -16542,6 +16016,10 @@
         ],
         "query_id": "dzfB3SskmnNxM7gJXVy2MxcxcH8YFhPJ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -17044,6 +16522,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "166653",
@@ -17875,6 +17354,10 @@
         ],
         "query_id": "SFJCb2DxKPtzZXkG6qrSSXFKQz8X8YjT"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -17908,6 +17391,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -17924,6 +17408,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -17957,6 +17445,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -17973,6 +17462,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -18006,6 +17499,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -18022,6 +17516,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -18055,6 +17553,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -18071,6 +17570,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -18104,6 +17607,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -18120,6 +17624,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -18153,6 +17661,7 @@
       "note_text": null,
       "note_text_as_html": null,
       "query": null,
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": null,
@@ -18169,6 +17678,10 @@
       "aria_description": null,
       "query_id": null,
       "result_maker": null,
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": false,
         "create": true,
@@ -18677,6 +18190,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "169416",
@@ -19570,6 +19084,10 @@
         ],
         "query_id": "pvk8fFNFxP6vmQCg4TYjknQTWPgMF2tp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -19588,6 +19106,614 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "2680",
+      "dashboard_id": "593",
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.flexible_filter_date_range",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 days ago for 7 days",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "filter",
+        "default_filter_value": null,
+        "description": "This provides a date range used by dimensions in the Flexible Filters group. NOTE: On its own it does not do anything.",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": true,
+        "is_numeric": false,
+        "label": "Page Views Flexible Filter Date Range",
+        "label_from_parameter": null,
+        "label_short": "Flexible Filter Date Range",
+        "map_layer": null,
+        "name": "page_views.flexible_filter_date_range",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Flexible Filter Date Range",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.flexible_filter_date_range",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fdate_comparisons_common.view.lkml?line=27",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": null,
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2682",
+      "dashboard_id": "593",
+      "name": "Internal Gov Traffic",
+      "title": "Internal Gov Traffic",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.is_government",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "No",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Yes if the IP address maps to a known BC Government network.",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Is Government (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Is Government (Yes / No)",
+        "map_layer": null,
+        "name": "page_views.is_government",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Is Government (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.is_government",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.is_government",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2681",
+      "dashboard_id": "593",
+      "name": "URL",
+      "title": "URL",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_display_url",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/evaluate-your-business-idea,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/conduct-market-research,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/conduct-market-research/resources-for-market-research,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/business-plan,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/marketing-plan,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/choosing-your-business-structure,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/permits-licences,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/permits-licences/mobile-business-licence-program,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-franchise-in-bc,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-franchise-in-bc/francises-act,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-restaurant-in-bc,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/starting-a-business/starting-a-restaurant-in-bc/food-delivery-service-fee,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/import-goods-into-canada,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/export-goods-from-canada,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/protect-personal-information,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/running-a-business/protect-personal-information/principles,https://www2.gov.bc.ca/gov/content/employment-business/business/managing-a-business/exiting-a-business,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/help-for-small-businesses-and-entrepreneurs,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/organizations,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/resources,https://www2.gov.bc.ca/gov/content/employment-business/business/small-business/indigenous-business-resources,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business/ease-of-doing-business-actions,https://www2.gov.bc.ca/gov/content/employment-business/business/ease-of-doing-business/ease-of-doing-business-progress",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Cleaned URL of the page without query string or standard file names like index.html",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page Display URL",
+        "label_from_parameter": null,
+        "label_short": "Page Display URL",
+        "map_layer": null,
+        "name": "page_views.page_display_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Display URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_display_url",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_display_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2683",
+      "dashboard_id": "593",
+      "name": "Theme",
+      "title": "Theme",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "cmslite_themes.theme",
+      "row": 3,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The CMS Lite theme.",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cmslite Themes Theme",
+        "label_from_parameter": null,
+        "label_short": "Theme",
+        "map_layer": null,
+        "name": "cmslite_themes.theme",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cmslite_themes",
+        "view_label": "Cmslite Themes",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cmslite_themes",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Theme",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "cmslite_themes",
+        "suggest_dimension": "themes_cache.theme",
+        "suggest_explore": "themes_cache",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=45",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cmslite_themes.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
+        "sql": "COALESCE(${TABLE}.theme, '(no theme)') ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2684",
+      "dashboard_id": "593",
+      "name": "Sub Theme",
+      "title": "Sub Theme",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "cmslite_themes.subtheme",
+      "row": 4,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The CMS Lite subtheme.",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cmslite Themes Subtheme",
+        "label_from_parameter": null,
+        "label_short": "Subtheme",
+        "map_layer": null,
+        "name": "cmslite_themes.subtheme",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cmslite_themes",
+        "view_label": "Cmslite Themes",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cmslite_themes",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Subtheme",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "cmslite_themes",
+        "suggest_dimension": "themes_cache.subtheme",
+        "suggest_explore": "themes_cache",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=36",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cmslite_themes.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
+        "sql": "COALESCE(${TABLE}.subtheme, '(no subtheme)') ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2685",
+      "dashboard_id": "593",
+      "name": "Topic",
+      "title": "Topic",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "cmslite_themes.topic",
+      "row": 5,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The CMS Lite topic.",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Cmslite Themes Topic",
+        "label_from_parameter": null,
+        "label_short": "Topic",
+        "map_layer": null,
+        "name": "cmslite_themes.topic",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "cmslite_themes",
+        "view_label": "Cmslite Themes",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "cmslite_themes",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Topic",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "cmslite_themes",
+        "suggest_dimension": "themes_cache.topic",
+        "suggest_explore": "themes_cache",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/imported_projects%2Fcmslite_metadata%2FViews%2Fthemes.view.lkml?line=71",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/cmslite_themes.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/cmslite_themes.view.lkml",
+        "sql": "COALESCE(${TABLE}.topic, '(no topic)') ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "593",
@@ -19598,23 +19724,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Dashboard for Business Development Branch",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "5849",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5849",
-          "row": 2,
-          "column": 0,
           "width": 6,
           "height": 2,
           "deleted": false,
           "element_title": "In-Progress: Dashboard for Business Development Branch",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 2,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19627,18 +19757,18 @@
           "id": "5851",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5851",
-          "row": 2,
-          "column": 6,
           "width": 6,
           "height": 2,
           "deleted": false,
           "element_title": "Sessions",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 2,
+          "column": 6,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19651,18 +19781,18 @@
           "id": "5852",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5852",
-          "row": 2,
-          "column": 12,
           "width": 6,
           "height": 2,
           "deleted": false,
           "element_title": "Users",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 2,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19675,18 +19805,18 @@
           "id": "5853",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5853",
-          "row": 2,
-          "column": 18,
           "width": 6,
           "height": 2,
           "deleted": false,
           "element_title": "Average Time Engaged",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 2,
+          "column": 18,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19699,18 +19829,18 @@
           "id": "5855",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5855",
-          "row": 4,
-          "column": 0,
           "width": 24,
           "height": 16,
           "deleted": false,
           "element_title": "Individual Pages by Page Views, By Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 4,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19723,18 +19853,18 @@
           "id": "5857",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5857",
-          "row": 57,
-          "column": 0,
           "width": 24,
           "height": 8,
           "deleted": false,
           "element_title": "Top 10 Asset Download Clicks by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 57,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19747,18 +19877,18 @@
           "id": "5858",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5858",
-          "row": 32,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Traffic Map",
           "element_title_hidden": false,
           "vis_type": "looker_map",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 32,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19771,18 +19901,18 @@
           "id": "5859",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5859",
-          "row": 46,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Top 10 Cities by Sessions, by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 46,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19795,18 +19925,18 @@
           "id": "5860",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5860",
-          "row": 41,
-          "column": 0,
           "width": 24,
           "height": 5,
           "deleted": false,
           "element_title": "Sessions by Region, by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 41,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19819,18 +19949,18 @@
           "id": "5862",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5862",
-          "row": 85,
-          "column": 0,
           "width": 24,
           "height": 6,
           "deleted": false,
           "element_title": "Clicks to Advisory Services Link by Page, by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 85,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19843,18 +19973,18 @@
           "id": "5863",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5863",
-          "row": 91,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Clicks to Advisory Services Link, Phone Link, Email Link on Government Help Page",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 91,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19867,18 +19997,18 @@
           "id": "5864",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5864",
-          "row": 100,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Clicks to Specific YouTube Links by Page, by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 100,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19891,18 +20021,18 @@
           "id": "5865",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5865",
-          "row": 107,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Clicks to Any YouTube Video Link by Page, by Month - Top 10",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 107,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19915,18 +20045,18 @@
           "id": "5866",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5866",
-          "row": 116,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Offsite Link Clicks for Ease of Doing Business Pages by Page, by Month",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 116,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19939,18 +20069,18 @@
           "id": "5867",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5867",
-          "row": 123,
-          "column": 0,
           "width": 24,
           "height": 5,
           "deleted": false,
           "element_title": "Clicks for EaseBiz BC Form Link on Ease of Doing Business Main Page by Month ",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 123,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19963,18 +20093,18 @@
           "id": "5868",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5868",
-          "row": 128,
-          "column": 0,
           "width": 24,
           "height": 7,
           "deleted": false,
           "element_title": "Clicks for Links on Ease of Doing Business Actions Page by Month - Top 10",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 128,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -19987,18 +20117,18 @@
           "id": "5869",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5869",
-          "row": 22,
-          "column": 0,
           "width": 24,
           "height": 10,
           "deleted": false,
           "element_title": "Top 10 Referral URLs by Page Views, by Month - Not Including Internal or Search Engine Referrals",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 22,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20011,18 +20141,18 @@
           "id": "5870",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5870",
-          "row": 65,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Asset Downloads from the Server by Month - Top 10",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 65,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20035,18 +20165,18 @@
           "id": "5871",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5871",
-          "row": 20,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": " (Copy)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 20,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20059,18 +20189,18 @@
           "id": "5872",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5872",
-          "row": 0,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": "",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20083,18 +20213,18 @@
           "id": "5873",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5873",
-          "row": 55,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": " (Copy 2)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 55,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20107,18 +20237,18 @@
           "id": "5874",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5874",
-          "row": 83,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": " (Copy 3)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 83,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20131,18 +20261,18 @@
           "id": "5875",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5875",
-          "row": 98,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": " (Copy 4)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 98,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20155,18 +20285,18 @@
           "id": "5876",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5876",
-          "row": 114,
-          "column": 0,
           "width": 24,
           "height": 2,
           "deleted": false,
           "element_title": " (Copy 5)",
           "element_title_hidden": false,
           "vis_type": "text",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 114,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20179,18 +20309,18 @@
           "id": "5889",
           "dashboard_layout_id": "593",
           "dashboard_element_id": "5889",
-          "row": 74,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Traffic Map - Asset Download Clicks",
           "element_title_hidden": false,
           "vis_type": "looker_google_map",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 74,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -20200,9 +20330,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -20217,6 +20344,8 @@
   "last_updater_name": "Linda Mah",
   "user_name": "Linda Mah",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

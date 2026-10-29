@@ -14,212 +14,6 @@
   "background_color": null,
   "created_at": "2023-08-17 03:56:34 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1997",
-      "dashboard_id": "451",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "pims_listing_clicks",
-      "dimension": "pims_listing_clicks.event_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "PIMS Listing Clicks Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "pims_listing_clicks.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "pims_listing_clicks",
-        "view_label": "PIMS Listing Clicks",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "pims_listing_clicks",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "pims_listing_clicks.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "pims_listing_clicks",
-        "suggest_dimension": "pims_listing_clicks.event_date",
-        "suggest_explore": "pims_listing_clicks",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpims_listing_clicks.view.lkml?line=82",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/pims_listing_clicks.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/pims_listing_clicks.view.lkml",
-        "sql": "${TABLE}.timestamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1998",
-      "dashboard_id": "451",
-      "name": "Site",
-      "title": "Site",
-      "type": "field_filter",
-      "explore": "pims_listing_clicks",
-      "dimension": "pims_listing_clicks.page_urlhost",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "pims.gov.bc.ca",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": null,
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "PIMS Listing Clicks Page Urlhost",
-        "label_from_parameter": null,
-        "label_short": "Page Urlhost",
-        "map_layer": null,
-        "name": "pims_listing_clicks.page_urlhost",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "pims_listing_clicks",
-        "view_label": "PIMS Listing Clicks",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "pims_listing_clicks",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Urlhost",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "pims_listing_clicks",
-        "suggest_dimension": "pims_listing_clicks.page_urlhost",
-        "suggest_explore": "pims_listing_clicks",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpims_listing_clicks.view.lkml?line=55",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/pims_listing_clicks.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/pims_listing_clicks.view.lkml",
-        "sql": "${TABLE}.page_urlhost ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -272,6 +66,7 @@
   "content_favorite_id": null,
   "id": "451",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -411,6 +206,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128569",
@@ -620,6 +416,10 @@
         ],
         "query_id": "mG5vyjV"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -734,6 +534,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128570",
@@ -881,6 +682,10 @@
         ],
         "query_id": "xv598bT"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1072,6 +877,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128571",
@@ -1351,6 +1157,10 @@
         ],
         "query_id": "bJk3NdQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1524,6 +1334,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128572",
@@ -1781,6 +1592,10 @@
         ],
         "query_id": "kSDMSzc"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1954,6 +1769,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128573",
@@ -2211,6 +2027,10 @@
         ],
         "query_id": "RNJsV62"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2379,6 +2199,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128574",
@@ -2603,6 +2424,10 @@
         ],
         "query_id": "FJqr5by"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2792,6 +2617,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128575",
@@ -3043,6 +2869,10 @@
         ],
         "query_id": "VyDfRMw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3173,6 +3003,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128576",
@@ -3350,6 +3181,10 @@
         ],
         "query_id": "qDXdTvd"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3518,6 +3353,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128577",
@@ -3742,6 +3578,10 @@
         ],
         "query_id": "dpqbYCS"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3931,6 +3771,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "128578",
@@ -4182,6 +4023,10 @@
         ],
         "query_id": "h8jTyrv"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4200,6 +4045,212 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1997",
+      "dashboard_id": "451",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "pims_listing_clicks",
+      "dimension": "pims_listing_clicks.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "PIMS Listing Clicks Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "pims_listing_clicks.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "pims_listing_clicks",
+        "view_label": "PIMS Listing Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "pims_listing_clicks",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "pims_listing_clicks.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "pims_listing_clicks",
+        "suggest_dimension": "pims_listing_clicks.event_date",
+        "suggest_explore": "pims_listing_clicks",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpims_listing_clicks.view.lkml?line=82",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/pims_listing_clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/pims_listing_clicks.view.lkml",
+        "sql": "${TABLE}.timestamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1998",
+      "dashboard_id": "451",
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "pims_listing_clicks",
+      "dimension": "pims_listing_clicks.page_urlhost",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "pims.gov.bc.ca",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": null,
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "PIMS Listing Clicks Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "pims_listing_clicks.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "pims_listing_clicks",
+        "view_label": "PIMS Listing Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "pims_listing_clicks",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "pims_listing_clicks",
+        "suggest_dimension": "pims_listing_clicks.page_urlhost",
+        "suggest_explore": "pims_listing_clicks",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpims_listing_clicks.view.lkml?line=55",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/pims_listing_clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/pims_listing_clicks.view.lkml",
+        "sql": "${TABLE}.page_urlhost ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "451",
@@ -4210,23 +4261,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "PIMS Custom Reports",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "4237",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4237",
-          "row": 3,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Clicks by Date",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 3,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4239,18 +4294,18 @@
           "id": "4238",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4238",
-          "row": 20,
-          "column": 0,
           "width": 24,
           "height": 8,
           "deleted": false,
           "element_title": "PIMS Error Message Log",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 20,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4263,18 +4318,18 @@
           "id": "4239",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4239",
-          "row": 10,
-          "column": 0,
           "width": 12,
           "height": 10,
           "deleted": false,
           "element_title": "Top Agencies",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4287,18 +4342,18 @@
           "id": "4240",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4241",
-          "row": 14,
-          "column": 12,
           "width": 12,
           "height": 6,
           "deleted": false,
           "element_title": "Top Property Names",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 14,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4311,18 +4366,18 @@
           "id": "4241",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4240",
-          "row": 10,
-          "column": 12,
           "width": 12,
           "height": 4,
           "deleted": false,
           "element_title": "Top Classifications",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4335,18 +4390,18 @@
           "id": "4242",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4242",
-          "row": 0,
-          "column": 12,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Search Count",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4359,18 +4414,18 @@
           "id": "4243",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4243",
-          "row": 0,
-          "column": 0,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Click Count",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4383,18 +4438,18 @@
           "id": "4244",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4244",
-          "row": 3,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Searches by Date",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 3,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4407,18 +4462,18 @@
           "id": "4245",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4245",
-          "row": 0,
-          "column": 18,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Search Session Count",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 18,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4431,18 +4486,18 @@
           "id": "4246",
           "dashboard_layout_id": "451",
           "dashboard_element_id": "4246",
-          "row": 0,
-          "column": 6,
           "width": 5,
           "height": 3,
           "deleted": false,
           "element_title": "Click Session Count",
           "element_title_hidden": false,
           "vis_type": "single_value",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 6,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -4452,9 +4507,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -4469,6 +4521,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

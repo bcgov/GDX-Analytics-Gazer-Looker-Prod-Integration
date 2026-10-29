@@ -14,212 +14,6 @@
   "background_color": null,
   "created_at": "2023-06-06 05:46:54 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1926",
-      "dashboard_id": "426",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "feedbc_search",
-      "dimension": "feedbc_search.event_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "30 day ago for 30 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Event Date",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "FeedBC Search Event Date",
-        "label_from_parameter": null,
-        "label_short": "Event Date",
-        "map_layer": null,
-        "name": "feedbc_search.event_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "feedbc_search",
-        "view_label": "FeedBC Search",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "feedbc_search",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "feedbc_search.event",
-        "error": null,
-        "field_group_variant": "Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "feedbc_search",
-        "suggest_dimension": "feedbc_search.event_date",
-        "suggest_explore": "feedbc_search",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Ffeedbc_search.view.lkml?line=115",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/feedbc_search.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/feedbc_search.view.lkml",
-        "sql": "${TABLE}.timestamp",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2379",
-      "dashboard_id": "426",
-      "name": "Site",
-      "title": "Site",
-      "type": "field_filter",
-      "explore": "feedbc_search",
-      "dimension": "page_views.page_urlhost",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "bcfooddirectory.gov.bc.ca,feedbcdirectory.gov.bc.ca",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The web page domain or host.",
-        "enumerations": null,
-        "field_group_label": "Page",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page Urlhost",
-        "label_from_parameter": null,
-        "label_short": "Page Urlhost",
-        "map_layer": null,
-        "name": "page_views.page_urlhost",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Urlhost",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "site_cache.page_urlhost",
-        "suggest_explore": "site_cache",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=197",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_urlhost ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -272,6 +66,7 @@
   "content_favorite_id": null,
   "id": "426",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -474,6 +269,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106103",
@@ -791,6 +587,10 @@
         ],
         "query_id": "tBpCwpp"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1026,6 +826,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106431",
@@ -1376,6 +1177,10 @@
         ],
         "query_id": "y4Ch6QQ"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1614,6 +1419,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106107",
@@ -1958,6 +1764,10 @@
         ],
         "query_id": "gY9ZWYn"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2183,6 +1993,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106428",
@@ -2500,6 +2311,10 @@
         ],
         "query_id": "Nc2rPJS"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2706,6 +2521,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106417",
@@ -3001,6 +2817,10 @@
         ],
         "query_id": "9PQ4jZw"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3271,6 +3091,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106114",
@@ -3678,6 +3499,10 @@
         ],
         "query_id": "rZ5Xfmk"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3889,6 +3714,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106418",
@@ -4193,6 +4019,10 @@
         ],
         "query_id": "sf3SYpc"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4421,6 +4251,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106113",
@@ -4764,6 +4595,10 @@
         ],
         "query_id": "r8BJm5G"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -4999,6 +4834,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106429",
@@ -5349,6 +5185,10 @@
         ],
         "query_id": "tHHDJR9"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -5572,6 +5412,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106419",
@@ -5899,6 +5740,10 @@
         ],
         "query_id": "8WrnPwy"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6111,6 +5956,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106420",
@@ -6417,6 +6263,10 @@
         ],
         "query_id": "Z9H6Dsh"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -6623,6 +6473,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106433",
@@ -6918,6 +6769,10 @@
         ],
         "query_id": "r8sZrCH"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7158,6 +7013,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106427",
@@ -7525,6 +7381,10 @@
         ],
         "query_id": "bvqfgxF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -7750,6 +7610,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106432",
@@ -8067,6 +7928,10 @@
         ],
         "query_id": "HDVtthK"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8285,6 +8150,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106425",
@@ -8589,6 +8455,10 @@
         ],
         "query_id": "QVc75yn"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -8872,6 +8742,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "106426",
@@ -9303,6 +9174,10 @@
         ],
         "query_id": "gTfVsRG"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9525,6 +9400,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "135200",
@@ -9852,6 +9728,10 @@
         ],
         "query_id": "sZDXrKP"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -9870,6 +9750,212 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1926",
+      "dashboard_id": "426",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "feedbc_search",
+      "dimension": "feedbc_search.event_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "30 day ago for 30 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Event Date",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "FeedBC Search Event Date",
+        "label_from_parameter": null,
+        "label_short": "Event Date",
+        "map_layer": null,
+        "name": "feedbc_search.event_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "feedbc_search",
+        "view_label": "FeedBC Search",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "feedbc_search",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "feedbc_search.event",
+        "error": null,
+        "field_group_variant": "Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "feedbc_search",
+        "suggest_dimension": "feedbc_search.event_date",
+        "suggest_explore": "feedbc_search",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Ffeedbc_search.view.lkml?line=115",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/feedbc_search.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/feedbc_search.view.lkml",
+        "sql": "${TABLE}.timestamp",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2379",
+      "dashboard_id": "426",
+      "name": "Site",
+      "title": "Site",
+      "type": "field_filter",
+      "explore": "feedbc_search",
+      "dimension": "page_views.page_urlhost",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "bcfooddirectory.gov.bc.ca,feedbcdirectory.gov.bc.ca",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The web page domain or host.",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page Urlhost",
+        "label_from_parameter": null,
+        "label_short": "Page Urlhost",
+        "map_layer": null,
+        "name": "page_views.page_urlhost",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Urlhost",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "site_cache.page_urlhost",
+        "suggest_explore": "site_cache",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=197",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_urlhost ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "426",
@@ -9880,23 +9966,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "FeedBC Custom Reports",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "3960",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3960",
-          "row": 16,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Filter Usage Count",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 16,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9909,18 +9999,18 @@
           "id": "3961",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3961",
-          "row": 23,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Filter Usage % of all Searches",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 23,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9933,18 +10023,18 @@
           "id": "3962",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3962",
-          "row": 37,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Filter Usage Count",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 37,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9957,18 +10047,18 @@
           "id": "3963",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3963",
-          "row": 44,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Filter Usage % of all Searches",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 44,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -9981,18 +10071,18 @@
           "id": "3965",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3965",
-          "row": 4,
-          "column": 0,
           "width": 8,
           "height": 6,
           "deleted": false,
           "element_title": "Searches by Category",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 4,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10005,18 +10095,18 @@
           "id": "3966",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3966",
-          "row": 51,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Queries",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 51,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10029,18 +10119,18 @@
           "id": "3967",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3967",
-          "row": 4,
-          "column": 8,
           "width": 16,
           "height": 6,
           "deleted": false,
           "element_title": "Searches by Category Time Series",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 4,
+          "column": 8,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10053,18 +10143,18 @@
           "id": "3968",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3968",
-          "row": 30,
-          "column": 0,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Queries",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 30,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10077,18 +10167,18 @@
           "id": "3987",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3987",
-          "row": 23,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Filter Usage % of all Searches by Session",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 23,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10101,18 +10191,18 @@
           "id": "3988",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3988",
-          "row": 16,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Filter Usage Count by Session",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 16,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10125,18 +10215,18 @@
           "id": "3989",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3989",
-          "row": 10,
-          "column": 8,
           "width": 16,
           "height": 6,
           "deleted": false,
           "element_title": "Searches by Category by Session Time Series",
           "element_title_hidden": false,
           "vis_type": "looker_line",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 8,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10149,18 +10239,18 @@
           "id": "3990",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3990",
-          "row": 10,
-          "column": 0,
           "width": 8,
           "height": 6,
           "deleted": false,
           "element_title": "Searches by Category by Session",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 10,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10173,18 +10263,18 @@
           "id": "3991",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3991",
-          "row": 30,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Product Search Queries by Session",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 30,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10197,18 +10287,18 @@
           "id": "3992",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3992",
-          "row": 44,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Filter Usage % of all Searches by Session",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 44,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10221,18 +10311,18 @@
           "id": "3993",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3993",
-          "row": 37,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Filter Usage Count by Session",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 37,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10245,18 +10335,18 @@
           "id": "3994",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "3994",
-          "row": 51,
-          "column": 12,
           "width": 12,
           "height": 7,
           "deleted": false,
           "element_title": "Producer Search Queries by Session",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 51,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10269,18 +10359,18 @@
           "id": "4008",
           "dashboard_layout_id": "426",
           "dashboard_element_id": "4008",
-          "row": 0,
-          "column": 6,
           "width": 11,
           "height": 4,
           "deleted": false,
           "element_title": "Regional Traffic Breakdown",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 6,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -10290,9 +10380,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -10307,6 +10394,8 @@
   "last_updater_name": "Linda Mah",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

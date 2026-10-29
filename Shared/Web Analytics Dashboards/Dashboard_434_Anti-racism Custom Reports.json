@@ -14,221 +14,6 @@
   "background_color": null,
   "created_at": "2023-06-21 20:38:41 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "1950",
-      "dashboard_id": "434",
-      "name": "Date",
-      "title": "Date",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.page_view_start_marketing_drill_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "7 day ago for 7 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The start time of the first page view of a given session.",
-        "enumerations": null,
-        "field_group_label": "Page View Date (Marketing Drill)",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Page View Start Date",
-        "label_from_parameter": null,
-        "label_short": "Page View Start Date",
-        "map_layer": null,
-        "name": "page_views.page_view_start_marketing_drill_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "page_views.page_view_start_marketing_drill",
-        "error": null,
-        "field_group_variant": "Page View Start Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.page_view_start_marketing_drill_date",
-        "suggest_explore": "page_views",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=117",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.page_view_start_time ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "1949",
-      "dashboard_id": "434",
-      "name": "Is Government (Yes / No)",
-      "title": "Is Government (Yes / No)",
-      "type": "field_filter",
-      "explore": "page_views",
-      "dimension": "page_views.is_government",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Yes if the IP address maps to a known BC Government network.",
-        "enumerations": [
-          {
-            "label": "Yes",
-            "value": "Yes"
-          },
-          {
-            "label": "No",
-            "value": "No"
-          }
-        ],
-        "field_group_label": null,
-        "fill_style": "enumeration",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Page Views Is Government (Yes / No)",
-        "label_from_parameter": null,
-        "label_short": "Is Government (Yes / No)",
-        "map_layer": null,
-        "name": "page_views.is_government",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "yesno",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "page_views",
-        "view_label": "Page Views",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "page_views",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Is Government (Yes / No)",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "page_views",
-        "suggest_dimension": "page_views.is_government",
-        "suggest_explore": "page_views",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/page_views.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
-        "sql": "${TABLE}.is_government",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -281,6 +66,7 @@
   "content_favorite_id": null,
   "id": "434",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -430,20 +216,20 @@
               "args": [
                 "page_views.page_section",
                 [
-                  "#<Sawyer::Resource:0x00007fc593515df0>",
-                  "#<Sawyer::Resource:0x00007fc5935151c0>",
-                  "#<Sawyer::Resource:0x00007fc5935145b8>",
-                  "#<Sawyer::Resource:0x00007fc59351ba70>",
-                  "#<Sawyer::Resource:0x00007fc59351aee0>",
-                  "#<Sawyer::Resource:0x00007fc59351a2b0>",
-                  "#<Sawyer::Resource:0x00007fc593519770>",
-                  "#<Sawyer::Resource:0x00007fc593518c08>",
-                  "#<Sawyer::Resource:0x00007fc5935180f0>",
-                  "#<Sawyer::Resource:0x00007fc59351f788>",
-                  "#<Sawyer::Resource:0x00007fc59351eba8>",
-                  "#<Sawyer::Resource:0x00007fc59351e040>",
-                  "#<Sawyer::Resource:0x00007fc59351d3e8>",
-                  "#<Sawyer::Resource:0x00007fc59351c970>"
+                  "#<Sawyer::Resource:0x00007f469bb85d38>",
+                  "#<Sawyer::Resource:0x00007f469bb84cf8>",
+                  "#<Sawyer::Resource:0x00007f469bb8bb20>",
+                  "#<Sawyer::Resource:0x00007f469bb8a748>",
+                  "#<Sawyer::Resource:0x00007f469bb89488>",
+                  "#<Sawyer::Resource:0x00007f469bb88240>",
+                  "#<Sawyer::Resource:0x00007f469bb8efc8>",
+                  "#<Sawyer::Resource:0x00007f469bb8dbf0>",
+                  "#<Sawyer::Resource:0x00007f469bb8c840>",
+                  "#<Sawyer::Resource:0x00007f469bb93348>",
+                  "#<Sawyer::Resource:0x00007f469bb92448>",
+                  "#<Sawyer::Resource:0x00007f469bb90ff8>",
+                  "#<Sawyer::Resource:0x00007f469bb97bc8>",
+                  "#<Sawyer::Resource:0x00007f469bb967c8>"
                 ],
                 "EN"
               ],
@@ -465,20 +251,20 @@
               "args": [
                 "page_views.referrer_urlpath",
                 [
-                  "#<Sawyer::Resource:0x00007fc593520458>",
-                  "#<Sawyer::Resource:0x00007fc593527870>",
-                  "#<Sawyer::Resource:0x00007fc593526c68>",
-                  "#<Sawyer::Resource:0x00007fc5935261c8>",
-                  "#<Sawyer::Resource:0x00007fc593525638>",
-                  "#<Sawyer::Resource:0x00007fc593524af8>",
-                  "#<Sawyer::Resource:0x00007fc5934ebf78>",
-                  "#<Sawyer::Resource:0x00007fc5934eb3e8>",
-                  "#<Sawyer::Resource:0x00007fc5934eaab0>",
-                  "#<Sawyer::Resource:0x00007fc5934ea088>",
-                  "#<Sawyer::Resource:0x00007fc5934e94d0>",
-                  "#<Sawyer::Resource:0x00007fc5934e89b8>",
-                  "#<Sawyer::Resource:0x00007fc5934efba0>",
-                  "#<Sawyer::Resource:0x00007fc5934ee318>"
+                  "#<Sawyer::Resource:0x00007f469bb99f18>",
+                  "#<Sawyer::Resource:0x00007f469bb996d0>",
+                  "#<Sawyer::Resource:0x00007f469bb98e60>",
+                  "#<Sawyer::Resource:0x00007f469bb985c8>",
+                  "#<Sawyer::Resource:0x00007f469bb9f918>",
+                  "#<Sawyer::Resource:0x00007f469bb9e590>",
+                  "#<Sawyer::Resource:0x00007f469bb9d5f0>",
+                  "#<Sawyer::Resource:0x00007f469bb9cc90>",
+                  "#<Sawyer::Resource:0x00007f469bba3d10>",
+                  "#<Sawyer::Resource:0x00007f469bba2e88>",
+                  "#<Sawyer::Resource:0x00007f469bba19e8>",
+                  "#<Sawyer::Resource:0x00007f469bba04a8>",
+                  "#<Sawyer::Resource:0x00007f469bb57168>",
+                  "#<Sawyer::Resource:0x00007f469bb55de0>"
                 ],
                 "EN"
               ],
@@ -514,6 +300,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "135241",
@@ -672,20 +459,20 @@
                 "args": [
                   "page_views.page_section",
                   [
-                    "#<Sawyer::Resource:0x00007fc5934d17b8>",
-                    "#<Sawyer::Resource:0x00007fc5934d0b88>",
-                    "#<Sawyer::Resource:0x00007fc5934d0020>",
-                    "#<Sawyer::Resource:0x00007fc5934d74d8>",
-                    "#<Sawyer::Resource:0x00007fc5934d69e8>",
-                    "#<Sawyer::Resource:0x00007fc5934d5e58>",
-                    "#<Sawyer::Resource:0x00007fc5934d5278>",
-                    "#<Sawyer::Resource:0x00007fc5934d47b0>",
-                    "#<Sawyer::Resource:0x00007fc5934dbba0>",
-                    "#<Sawyer::Resource:0x00007fc5934daf48>",
-                    "#<Sawyer::Resource:0x00007fc5934da520>",
-                    "#<Sawyer::Resource:0x00007fc5934d98c8>",
-                    "#<Sawyer::Resource:0x00007fc5934d8e00>",
-                    "#<Sawyer::Resource:0x00007fc5934d8360>"
+                    "#<Sawyer::Resource:0x00007f469bb2e010>",
+                    "#<Sawyer::Resource:0x00007f469bb2cf58>",
+                    "#<Sawyer::Resource:0x00007f469bb33b00>",
+                    "#<Sawyer::Resource:0x00007f469bb32778>",
+                    "#<Sawyer::Resource:0x00007f469bb313a0>",
+                    "#<Sawyer::Resource:0x00007f469bb30338>",
+                    "#<Sawyer::Resource:0x00007f469bb372a0>",
+                    "#<Sawyer::Resource:0x00007f469bb35d10>",
+                    "#<Sawyer::Resource:0x00007f469bb34618>",
+                    "#<Sawyer::Resource:0x00007f469bb3b440>",
+                    "#<Sawyer::Resource:0x00007f469bb3a1f8>",
+                    "#<Sawyer::Resource:0x00007f469bb38ab0>",
+                    "#<Sawyer::Resource:0x00007f469bb3f6d0>",
+                    "#<Sawyer::Resource:0x00007f469bb3e348>"
                   ],
                   "EN"
                 ],
@@ -707,20 +494,20 @@
                 "args": [
                   "page_views.referrer_urlpath",
                   [
-                    "#<Sawyer::Resource:0x00007fc5934e3918>",
-                    "#<Sawyer::Resource:0x00007fc5934e2dd8>",
-                    "#<Sawyer::Resource:0x00007fc5934e21d0>",
-                    "#<Sawyer::Resource:0x00007fc5934e16e0>",
-                    "#<Sawyer::Resource:0x00007fc5934e0a60>",
-                    "#<Sawyer::Resource:0x00007fc5934e7d60>",
-                    "#<Sawyer::Resource:0x00007fc5934e71d0>",
-                    "#<Sawyer::Resource:0x00007fc5934e65c8>",
-                    "#<Sawyer::Resource:0x00007fc5934e5a88>",
-                    "#<Sawyer::Resource:0x00007fc5934e4f70>",
-                    "#<Sawyer::Resource:0x00007fc5934e4368>",
-                    "#<Sawyer::Resource:0x00007fc5934ab680>",
-                    "#<Sawyer::Resource:0x00007fc5934aaaf0>",
-                    "#<Sawyer::Resource:0x00007fc5934a9f88>"
+                    "#<Sawyer::Resource:0x00007f469bb47cb8>",
+                    "#<Sawyer::Resource:0x00007f469bb47448>",
+                    "#<Sawyer::Resource:0x00007f469bb46bd8>",
+                    "#<Sawyer::Resource:0x00007f469bb46390>",
+                    "#<Sawyer::Resource:0x00007f469bb45990>",
+                    "#<Sawyer::Resource:0x00007f469bb450d0>",
+                    "#<Sawyer::Resource:0x00007f469bb44838>",
+                    "#<Sawyer::Resource:0x00007f469bb4bf98>",
+                    "#<Sawyer::Resource:0x00007f469bb4af80>",
+                    "#<Sawyer::Resource:0x00007f469bb49bd0>",
+                    "#<Sawyer::Resource:0x00007f469bb48910>",
+                    "#<Sawyer::Resource:0x00007f469bb4f490>",
+                    "#<Sawyer::Resource:0x00007f469bb4e068>",
+                    "#<Sawyer::Resource:0x00007f469bb4cab0>"
                   ],
                   "EN"
                 ],
@@ -812,6 +599,10 @@
         ],
         "query_id": "kW98XwS"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1017,20 +808,20 @@
               "args": [
                 "page_views.page_section",
                 [
-                  "#<Sawyer::Resource:0x00007fc59346f090>",
-                  "#<Sawyer::Resource:0x00007fc59346e528>",
-                  "#<Sawyer::Resource:0x00007fc59346da38>",
-                  "#<Sawyer::Resource:0x00007fc59346ce58>",
-                  "#<Sawyer::Resource:0x00007fc59346c160>",
-                  "#<Sawyer::Resource:0x00007fc593473578>",
-                  "#<Sawyer::Resource:0x00007fc593472a38>",
-                  "#<Sawyer::Resource:0x00007fc593471ea8>",
-                  "#<Sawyer::Resource:0x00007fc5934712a0>",
-                  "#<Sawyer::Resource:0x00007fc593470738>",
-                  "#<Sawyer::Resource:0x00007fc593477bc8>",
-                  "#<Sawyer::Resource:0x00007fc5934770d8>",
-                  "#<Sawyer::Resource:0x00007fc5934765c0>",
-                  "#<Sawyer::Resource:0x00007fc593475a80>"
+                  "#<Sawyer::Resource:0x00007f469baad370>",
+                  "#<Sawyer::Resource:0x00007f469bab3ec8>",
+                  "#<Sawyer::Resource:0x00007f469bab2be0>",
+                  "#<Sawyer::Resource:0x00007f469bab1830>",
+                  "#<Sawyer::Resource:0x00007f469bab04d0>",
+                  "#<Sawyer::Resource:0x00007f469bab71b8>",
+                  "#<Sawyer::Resource:0x00007f469bab5e30>",
+                  "#<Sawyer::Resource:0x00007f469bab4eb8>",
+                  "#<Sawyer::Resource:0x00007f469babbc90>",
+                  "#<Sawyer::Resource:0x00007f469babb420>",
+                  "#<Sawyer::Resource:0x00007f469bababd8>",
+                  "#<Sawyer::Resource:0x00007f469baba200>",
+                  "#<Sawyer::Resource:0x00007f469bab9940>",
+                  "#<Sawyer::Resource:0x00007f469bab90d0>"
                 ],
                 "EN"
               ],
@@ -1052,20 +843,20 @@
               "args": [
                 "page_views.referrer_urlpath",
                 [
-                  "#<Sawyer::Resource:0x00007fc593479518>",
-                  "#<Sawyer::Resource:0x00007fc593478b90>",
-                  "#<Sawyer::Resource:0x00007fc59347ffd0>",
-                  "#<Sawyer::Resource:0x00007fc59347f418>",
-                  "#<Sawyer::Resource:0x00007fc59347e8b0>",
-                  "#<Sawyer::Resource:0x00007fc59347dcd0>",
-                  "#<Sawyer::Resource:0x00007fc59347d0c8>",
-                  "#<Sawyer::Resource:0x00007fc59347c650>",
-                  "#<Sawyer::Resource:0x00007fc593483388>",
-                  "#<Sawyer::Resource:0x00007fc593481b28>",
-                  "#<Sawyer::Resource:0x00007fc5934803b8>",
-                  "#<Sawyer::Resource:0x00007fc593487690>",
-                  "#<Sawyer::Resource:0x00007fc593486a88>",
-                  "#<Sawyer::Resource:0x00007fc593485f20>"
+                  "#<Sawyer::Resource:0x00007f469bac3328>",
+                  "#<Sawyer::Resource:0x00007f469bac1e60>",
+                  "#<Sawyer::Resource:0x00007f469bac0ab0>",
+                  "#<Sawyer::Resource:0x00007f469bac75e0>",
+                  "#<Sawyer::Resource:0x00007f469bac6a28>",
+                  "#<Sawyer::Resource:0x00007f469bac6050>",
+                  "#<Sawyer::Resource:0x00007f469bac5038>",
+                  "#<Sawyer::Resource:0x00007f469bacbf50>",
+                  "#<Sawyer::Resource:0x00007f469bacab50>",
+                  "#<Sawyer::Resource:0x00007f469bac9818>",
+                  "#<Sawyer::Resource:0x00007f469bac8648>",
+                  "#<Sawyer::Resource:0x00007f469bacf3f8>",
+                  "#<Sawyer::Resource:0x00007f469bace070>",
+                  "#<Sawyer::Resource:0x00007f469baccd88>"
                 ],
                 "EN"
               ],
@@ -1101,6 +892,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "135240",
@@ -1296,20 +1088,20 @@
                 "args": [
                   "page_views.page_section",
                   [
-                    "#<Sawyer::Resource:0x00007fc5934322f8>",
-                    "#<Sawyer::Resource:0x00007fc593431768>",
-                    "#<Sawyer::Resource:0x00007fc593430d90>",
-                    "#<Sawyer::Resource:0x00007fc593430340>",
-                    "#<Sawyer::Resource:0x00007fc593437758>",
-                    "#<Sawyer::Resource:0x00007fc593436bf0>",
-                    "#<Sawyer::Resource:0x00007fc593436100>",
-                    "#<Sawyer::Resource:0x00007fc593435548>",
-                    "#<Sawyer::Resource:0x00007fc593434a08>",
-                    "#<Sawyer::Resource:0x00007fc59343bce0>",
-                    "#<Sawyer::Resource:0x00007fc59343a728>",
-                    "#<Sawyer::Resource:0x00007fc593438f90>",
-                    "#<Sawyer::Resource:0x00007fc59343fac0>",
-                    "#<Sawyer::Resource:0x00007fc59343ef30>"
+                    "#<Sawyer::Resource:0x00007f469ba5e4a0>",
+                    "#<Sawyer::Resource:0x00007f469ba5d528>",
+                    "#<Sawyer::Resource:0x00007f469ba5c600>",
+                    "#<Sawyer::Resource:0x00007f469ba63248>",
+                    "#<Sawyer::Resource:0x00007f469ba61e20>",
+                    "#<Sawyer::Resource:0x00007f469ba60b10>",
+                    "#<Sawyer::Resource:0x00007f469ba67d48>",
+                    "#<Sawyer::Resource:0x00007f469ba674b0>",
+                    "#<Sawyer::Resource:0x00007f469ba66bc8>",
+                    "#<Sawyer::Resource:0x00007f469ba662b8>",
+                    "#<Sawyer::Resource:0x00007f469ba659a8>",
+                    "#<Sawyer::Resource:0x00007f469ba65070>",
+                    "#<Sawyer::Resource:0x00007f469ba64710>",
+                    "#<Sawyer::Resource:0x00007f469ba6bb50>"
                   ],
                   "EN"
                 ],
@@ -1331,20 +1123,20 @@
                 "args": [
                   "page_views.referrer_urlpath",
                   [
-                    "#<Sawyer::Resource:0x00007fc593442a90>",
-                    "#<Sawyer::Resource:0x00007fc593441f78>",
-                    "#<Sawyer::Resource:0x00007fc593441230>",
-                    "#<Sawyer::Resource:0x00007fc593440628>",
-                    "#<Sawyer::Resource:0x00007fc593447ae0>",
-                    "#<Sawyer::Resource:0x00007fc593446f28>",
-                    "#<Sawyer::Resource:0x00007fc593446410>",
-                    "#<Sawyer::Resource:0x00007fc593445790>",
-                    "#<Sawyer::Resource:0x00007fc593444de0>",
-                    "#<Sawyer::Resource:0x00007fc5934443b8>",
-                    "#<Sawyer::Resource:0x00007fc59340b8b0>",
-                    "#<Sawyer::Resource:0x00007fc59340ae10>",
-                    "#<Sawyer::Resource:0x00007fc59340a1b8>",
-                    "#<Sawyer::Resource:0x00007fc593409678>"
+                    "#<Sawyer::Resource:0x00007f469ba6d0b8>",
+                    "#<Sawyer::Resource:0x00007f469ba73d28>",
+                    "#<Sawyer::Resource:0x00007f469ba72888>",
+                    "#<Sawyer::Resource:0x00007f469ba715c8>",
+                    "#<Sawyer::Resource:0x00007f469ba70538>",
+                    "#<Sawyer::Resource:0x00007f469ba775e0>",
+                    "#<Sawyer::Resource:0x00007f469ba76370>",
+                    "#<Sawyer::Resource:0x00007f469ba74cf0>",
+                    "#<Sawyer::Resource:0x00007f469ba7b9b0>",
+                    "#<Sawyer::Resource:0x00007f469ba7a920>",
+                    "#<Sawyer::Resource:0x00007f469ba79570>",
+                    "#<Sawyer::Resource:0x00007f469ba781e8>",
+                    "#<Sawyer::Resource:0x00007f469ba7ef70>",
+                    "#<Sawyer::Resource:0x00007f469ba7dee0>"
                   ],
                   "EN"
                 ],
@@ -1478,6 +1270,10 @@
         ],
         "query_id": "KVtycpF"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -1667,20 +1463,20 @@
               "args": [
                 "page_views.page_section",
                 [
-                  "#<Sawyer::Resource:0x00007fc5933d4b30>",
-                  "#<Sawyer::Resource:0x00007fc5933dbef8>",
-                  "#<Sawyer::Resource:0x00007fc5933db390>",
-                  "#<Sawyer::Resource:0x00007fc5933da7d8>",
-                  "#<Sawyer::Resource:0x00007fc5933d9c20>",
-                  "#<Sawyer::Resource:0x00007fc5933d9130>",
-                  "#<Sawyer::Resource:0x00007fc5933d8500>",
-                  "#<Sawyer::Resource:0x00007fc5933df940>",
-                  "#<Sawyer::Resource:0x00007fc5933def68>",
-                  "#<Sawyer::Resource:0x00007fc5933de2c0>",
-                  "#<Sawyer::Resource:0x00007fc5933dd820>",
-                  "#<Sawyer::Resource:0x00007fc5933dce70>",
-                  "#<Sawyer::Resource:0x00007fc5933dc420>",
-                  "#<Sawyer::Resource:0x00007fc5933e3950>"
+                  "#<Sawyer::Resource:0x00007f469b9ec4e0>",
+                  "#<Sawyer::Resource:0x00007f469b9f3218>",
+                  "#<Sawyer::Resource:0x00007f469b9f2200>",
+                  "#<Sawyer::Resource:0x00007f469b9f0c98>",
+                  "#<Sawyer::Resource:0x00007f469b9f7ca0>",
+                  "#<Sawyer::Resource:0x00007f469b9f7458>",
+                  "#<Sawyer::Resource:0x00007f469b9f6be8>",
+                  "#<Sawyer::Resource:0x00007f469b9f62d8>",
+                  "#<Sawyer::Resource:0x00007f469b9f5a18>",
+                  "#<Sawyer::Resource:0x00007f469b9f5180>",
+                  "#<Sawyer::Resource:0x00007f469b9f48e8>",
+                  "#<Sawyer::Resource:0x00007f469b9fbf30>",
+                  "#<Sawyer::Resource:0x00007f469b9fac48>",
+                  "#<Sawyer::Resource:0x00007f469b9f98e8>"
                 ],
                 "EN"
               ],
@@ -1702,20 +1498,20 @@
               "args": [
                 "page_views.referrer_urlpath",
                 [
-                  "#<Sawyer::Resource:0x00007fc5933e7280>",
-                  "#<Sawyer::Resource:0x00007fc5933e6768>",
-                  "#<Sawyer::Resource:0x00007fc5933e5b60>",
-                  "#<Sawyer::Resource:0x00007fc5933e5048>",
-                  "#<Sawyer::Resource:0x00007fc5933e4468>",
-                  "#<Sawyer::Resource:0x00007fc5933aaec0>",
-                  "#<Sawyer::Resource:0x00007fc5933a9818>",
-                  "#<Sawyer::Resource:0x00007fc5933a8058>",
-                  "#<Sawyer::Resource:0x00007fc5933af4e8>",
-                  "#<Sawyer::Resource:0x00007fc5933ae980>",
-                  "#<Sawyer::Resource:0x00007fc5933adda0>",
-                  "#<Sawyer::Resource:0x00007fc5933ad210>",
-                  "#<Sawyer::Resource:0x00007fc5933ac5b8>",
-                  "#<Sawyer::Resource:0x00007fc5933b38e0>"
+                  "#<Sawyer::Resource:0x00007f469ba03190>",
+                  "#<Sawyer::Resource:0x00007f469ba01bd8>",
+                  "#<Sawyer::Resource:0x00007f469ba00210>",
+                  "#<Sawyer::Resource:0x00007f469b9bac60>",
+                  "#<Sawyer::Resource:0x00007f469b9b9838>",
+                  "#<Sawyer::Resource:0x00007f469b9b8528>",
+                  "#<Sawyer::Resource:0x00007f469b9bf9e0>",
+                  "#<Sawyer::Resource:0x00007f469b9bf170>",
+                  "#<Sawyer::Resource:0x00007f469b9be888>",
+                  "#<Sawyer::Resource:0x00007f469b9be040>",
+                  "#<Sawyer::Resource:0x00007f469b9bd7a8>",
+                  "#<Sawyer::Resource:0x00007f469b9bcf10>",
+                  "#<Sawyer::Resource:0x00007f469b9bc628>",
+                  "#<Sawyer::Resource:0x00007f469b9c3838>"
                 ],
                 "EN"
               ],
@@ -1751,6 +1547,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "135201",
@@ -1930,20 +1727,20 @@
                 "args": [
                   "page_views.page_section",
                   [
-                    "#<Sawyer::Resource:0x00007fc59339bf88>",
-                    "#<Sawyer::Resource:0x00007fc59339b448>",
-                    "#<Sawyer::Resource:0x00007fc59339a868>",
-                    "#<Sawyer::Resource:0x00007fc5933995a8>",
-                    "#<Sawyer::Resource:0x00007fc593398b30>",
-                    "#<Sawyer::Resource:0x00007fc59339ff20>",
-                    "#<Sawyer::Resource:0x00007fc59339f480>",
-                    "#<Sawyer::Resource:0x00007fc59339ea30>",
-                    "#<Sawyer::Resource:0x00007fc59339e080>",
-                    "#<Sawyer::Resource:0x00007fc59339d5e0>",
-                    "#<Sawyer::Resource:0x00007fc59339ca78>",
-                    "#<Sawyer::Resource:0x00007fc5933a3e18>",
-                    "#<Sawyer::Resource:0x00007fc5933a3210>",
-                    "#<Sawyer::Resource:0x00007fc5933a26f8>"
+                    "#<Sawyer::Resource:0x00007f469b9ab0d0>",
+                    "#<Sawyer::Resource:0x00007f469b9a9cf8>",
+                    "#<Sawyer::Resource:0x00007f469b9a8a10>",
+                    "#<Sawyer::Resource:0x00007f469b9af5e0>",
+                    "#<Sawyer::Resource:0x00007f469b9ae2a8>",
+                    "#<Sawyer::Resource:0x00007f469b9aced0>",
+                    "#<Sawyer::Resource:0x00007f469b9b3bb8>",
+                    "#<Sawyer::Resource:0x00007f469b9b2c90>",
+                    "#<Sawyer::Resource:0x00007f469b9b23f8>",
+                    "#<Sawyer::Resource:0x00007f469b9b1548>",
+                    "#<Sawyer::Resource:0x00007f469b9b0490>",
+                    "#<Sawyer::Resource:0x00007f469b9b6f48>",
+                    "#<Sawyer::Resource:0x00007f469b9b5b20>",
+                    "#<Sawyer::Resource:0x00007f469b9b47c0>"
                   ],
                   "EN"
                 ],
@@ -1965,20 +1762,20 @@
                 "args": [
                   "page_views.referrer_urlpath",
                   [
-                    "#<Sawyer::Resource:0x00007fc5933a5cb8>",
-                    "#<Sawyer::Resource:0x00007fc5933a51c8>",
-                    "#<Sawyer::Resource:0x00007fc5933a45c0>",
-                    "#<Sawyer::Resource:0x00007fc59336ba18>",
-                    "#<Sawyer::Resource:0x00007fc59336ae60>",
-                    "#<Sawyer::Resource:0x00007fc59336a370>",
-                    "#<Sawyer::Resource:0x00007fc593369880>",
-                    "#<Sawyer::Resource:0x00007fc593368d68>",
-                    "#<Sawyer::Resource:0x00007fc593368188>",
-                    "#<Sawyer::Resource:0x00007fc59336f5c8>",
-                    "#<Sawyer::Resource:0x00007fc59336eb00>",
-                    "#<Sawyer::Resource:0x00007fc59336df70>",
-                    "#<Sawyer::Resource:0x00007fc59336d3e0>",
-                    "#<Sawyer::Resource:0x00007fc59336c850>"
+                    "#<Sawyer::Resource:0x00007f469b969248>",
+                    "#<Sawyer::Resource:0x00007f469b968a00>",
+                    "#<Sawyer::Resource:0x00007f469b968168>",
+                    "#<Sawyer::Resource:0x00007f469b96eef0>",
+                    "#<Sawyer::Resource:0x00007f469b96dbe0>",
+                    "#<Sawyer::Resource:0x00007f469b96cc40>",
+                    "#<Sawyer::Resource:0x00007f469b973860>",
+                    "#<Sawyer::Resource:0x00007f469b972528>",
+                    "#<Sawyer::Resource:0x00007f469b971218>",
+                    "#<Sawyer::Resource:0x00007f469b977ca8>",
+                    "#<Sawyer::Resource:0x00007f469b9768f8>",
+                    "#<Sawyer::Resource:0x00007f469b975610>",
+                    "#<Sawyer::Resource:0x00007f469b9747b0>",
+                    "#<Sawyer::Resource:0x00007f469b97bf60>"
                   ],
                   "EN"
                 ],
@@ -2112,6 +1909,10 @@
         ],
         "query_id": "TRHVgNR"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2338,20 +2139,20 @@
               "args": [
                 "page_views.page_section",
                 [
-                  "#<Sawyer::Resource:0x00007fc5933420a0>",
-                  "#<Sawyer::Resource:0x00007fc593341510>",
-                  "#<Sawyer::Resource:0x00007fc593340930>",
-                  "#<Sawyer::Resource:0x00007fc593347dc0>",
-                  "#<Sawyer::Resource:0x00007fc593346f38>",
-                  "#<Sawyer::Resource:0x00007fc5933462e0>",
-                  "#<Sawyer::Resource:0x00007fc593345750>",
-                  "#<Sawyer::Resource:0x00007fc593344a58>",
-                  "#<Sawyer::Resource:0x00007fc59330be88>",
-                  "#<Sawyer::Resource:0x00007fc59330b208>",
-                  "#<Sawyer::Resource:0x00007fc59330a3d0>",
-                  "#<Sawyer::Resource:0x00007fc593309660>",
-                  "#<Sawyer::Resource:0x00007fc593308850>",
-                  "#<Sawyer::Resource:0x00007fc59330fb28>"
+                  "#<Sawyer::Resource:0x00007f469b90b080>",
+                  "#<Sawyer::Resource:0x00007f469b90a7e8>",
+                  "#<Sawyer::Resource:0x00007f469b909f50>",
+                  "#<Sawyer::Resource:0x00007f469b9096e0>",
+                  "#<Sawyer::Resource:0x00007f469b908e70>",
+                  "#<Sawyer::Resource:0x00007f469b908600>",
+                  "#<Sawyer::Resource:0x00007f469b90fd60>",
+                  "#<Sawyer::Resource:0x00007f469b90f518>",
+                  "#<Sawyer::Resource:0x00007f469b90eca8>",
+                  "#<Sawyer::Resource:0x00007f469b90e3c0>",
+                  "#<Sawyer::Resource:0x00007f469b90db00>",
+                  "#<Sawyer::Resource:0x00007f469b90d268>",
+                  "#<Sawyer::Resource:0x00007f469b90c9a8>",
+                  "#<Sawyer::Resource:0x00007f469b90c138>"
                 ],
                 "EN"
               ],
@@ -2373,20 +2174,20 @@
               "args": [
                 "page_views.referrer_urlpath",
                 [
-                  "#<Sawyer::Resource:0x00007fc5933127d8>",
-                  "#<Sawyer::Resource:0x00007fc593311658>",
-                  "#<Sawyer::Resource:0x00007fc593310708>",
-                  "#<Sawyer::Resource:0x00007fc5933178c8>",
-                  "#<Sawyer::Resource:0x00007fc593316b08>",
-                  "#<Sawyer::Resource:0x00007fc593315e60>",
-                  "#<Sawyer::Resource:0x00007fc5933151b8>",
-                  "#<Sawyer::Resource:0x00007fc593314358>",
-                  "#<Sawyer::Resource:0x00007fc59331b680>",
-                  "#<Sawyer::Resource:0x00007fc59331a9b0>",
-                  "#<Sawyer::Resource:0x00007fc593319830>",
-                  "#<Sawyer::Resource:0x00007fc593318160>",
-                  "#<Sawyer::Resource:0x00007fc59331f578>",
-                  "#<Sawyer::Resource:0x00007fc59331ec18>"
+                  "#<Sawyer::Resource:0x00007f469b910d50>",
+                  "#<Sawyer::Resource:0x00007f469b910490>",
+                  "#<Sawyer::Resource:0x00007f469b917bf0>",
+                  "#<Sawyer::Resource:0x00007f469b917330>",
+                  "#<Sawyer::Resource:0x00007f469b916a20>",
+                  "#<Sawyer::Resource:0x00007f469b9161d8>",
+                  "#<Sawyer::Resource:0x00007f469b915918>",
+                  "#<Sawyer::Resource:0x00007f469b9150d0>",
+                  "#<Sawyer::Resource:0x00007f469b914810>",
+                  "#<Sawyer::Resource:0x00007f469b91bed0>",
+                  "#<Sawyer::Resource:0x00007f469b91ad28>",
+                  "#<Sawyer::Resource:0x00007f469b919950>",
+                  "#<Sawyer::Resource:0x00007f469b918500>",
+                  "#<Sawyer::Resource:0x00007f469b91f0d0>"
                 ],
                 "EN"
               ],
@@ -2422,6 +2223,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "135245",
@@ -2639,20 +2441,20 @@
                 "args": [
                   "page_views.page_section",
                   [
-                    "#<Sawyer::Resource:0x00007fc5932c7828>",
-                    "#<Sawyer::Resource:0x00007fc5932c6900>",
-                    "#<Sawyer::Resource:0x00007fc5932c5b90>",
-                    "#<Sawyer::Resource:0x00007fc5932c4d08>",
-                    "#<Sawyer::Resource:0x00007fc5932c4010>",
-                    "#<Sawyer::Resource:0x00007fc5932ca7a8>",
-                    "#<Sawyer::Resource:0x00007fc5932c9060>",
-                    "#<Sawyer::Resource:0x00007fc5932cf910>",
-                    "#<Sawyer::Resource:0x00007fc5932ceb00>",
-                    "#<Sawyer::Resource:0x00007fc5932cdde0>",
-                    "#<Sawyer::Resource:0x00007fc5932cd138>",
-                    "#<Sawyer::Resource:0x00007fc5932cc3f0>",
-                    "#<Sawyer::Resource:0x00007fc5932d3588>",
-                    "#<Sawyer::Resource:0x00007fc5932d2a48>"
+                    "#<Sawyer::Resource:0x00007f469b8d95d0>",
+                    "#<Sawyer::Resource:0x00007f469b8d8bf8>",
+                    "#<Sawyer::Resource:0x00007f469b8d82c0>",
+                    "#<Sawyer::Resource:0x00007f469b8df980>",
+                    "#<Sawyer::Resource:0x00007f469b8def80>",
+                    "#<Sawyer::Resource:0x00007f469b8de5d0>",
+                    "#<Sawyer::Resource:0x00007f469b8ddc70>",
+                    "#<Sawyer::Resource:0x00007f469b8dd2c0>",
+                    "#<Sawyer::Resource:0x00007f469b8dc960>",
+                    "#<Sawyer::Resource:0x00007f469b8dc078>",
+                    "#<Sawyer::Resource:0x00007f469b8e3468>",
+                    "#<Sawyer::Resource:0x00007f469b8e2888>",
+                    "#<Sawyer::Resource:0x00007f469b8e1c08>",
+                    "#<Sawyer::Resource:0x00007f469b8e1078>"
                   ],
                   "EN"
                 ],
@@ -2674,20 +2476,20 @@
                 "args": [
                   "page_views.referrer_urlpath",
                   [
-                    "#<Sawyer::Resource:0x00007fc5932d59a0>",
-                    "#<Sawyer::Resource:0x00007fc5932d4c08>",
-                    "#<Sawyer::Resource:0x00007fc5932dbf30>",
-                    "#<Sawyer::Resource:0x00007fc5932db238>",
-                    "#<Sawyer::Resource:0x00007fc5932da3d8>",
-                    "#<Sawyer::Resource:0x00007fc5932d95a0>",
-                    "#<Sawyer::Resource:0x00007fc5932d8808>",
-                    "#<Sawyer::Resource:0x00007fc5932dfc70>",
-                    "#<Sawyer::Resource:0x00007fc5932dee38>",
-                    "#<Sawyer::Resource:0x00007fc5932de028>",
-                    "#<Sawyer::Resource:0x00007fc5932dd268>",
-                    "#<Sawyer::Resource:0x00007fc5932dc480>",
-                    "#<Sawyer::Resource:0x00007fc5932e36e0>",
-                    "#<Sawyer::Resource:0x00007fc5932e2920>"
+                    "#<Sawyer::Resource:0x00007f469b8e5498>",
+                    "#<Sawyer::Resource:0x00007f469b8e4c00>",
+                    "#<Sawyer::Resource:0x00007f469b8e42a0>",
+                    "#<Sawyer::Resource:0x00007f469b8eb8e8>",
+                    "#<Sawyer::Resource:0x00007f469b8eafb0>",
+                    "#<Sawyer::Resource:0x00007f469b8ea600>",
+                    "#<Sawyer::Resource:0x00007f469b8e9c78>",
+                    "#<Sawyer::Resource:0x00007f469b8e92f0>",
+                    "#<Sawyer::Resource:0x00007f469b8e8918>",
+                    "#<Sawyer::Resource:0x00007f469b8efec0>",
+                    "#<Sawyer::Resource:0x00007f469b8ef588>",
+                    "#<Sawyer::Resource:0x00007f469b8eec28>",
+                    "#<Sawyer::Resource:0x00007f469b8ee2c8>",
+                    "#<Sawyer::Resource:0x00007f469b8ed918>"
                   ],
                   "EN"
                 ],
@@ -2823,6 +2625,10 @@
         ],
         "query_id": "FHtC8fq"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2841,6 +2647,221 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "1950",
+      "dashboard_id": "434",
+      "name": "Date",
+      "title": "Date",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.page_view_start_marketing_drill_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "7 day ago for 7 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The start time of the first page view of a given session.",
+        "enumerations": null,
+        "field_group_label": "Page View Date (Marketing Drill)",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Page View Start Date",
+        "label_from_parameter": null,
+        "label_short": "Page View Start Date",
+        "map_layer": null,
+        "name": "page_views.page_view_start_marketing_drill_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "page_views.page_view_start_marketing_drill",
+        "error": null,
+        "field_group_variant": "Page View Start Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.page_view_start_marketing_drill_date",
+        "suggest_explore": "page_views",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fpage_views.view.lkml?line=117",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.page_view_start_time ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "1949",
+      "dashboard_id": "434",
+      "name": "Is Government (Yes / No)",
+      "title": "Is Government (Yes / No)",
+      "type": "field_filter",
+      "explore": "page_views",
+      "dimension": "page_views.is_government",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Yes if the IP address maps to a known BC Government network.",
+        "enumerations": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "field_group_label": null,
+        "fill_style": "enumeration",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Page Views Is Government (Yes / No)",
+        "label_from_parameter": null,
+        "label_short": "Is Government (Yes / No)",
+        "map_layer": null,
+        "name": "page_views.is_government",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "yesno",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "page_views",
+        "view_label": "Page Views",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "page_views",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Is Government (Yes / No)",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "page_views",
+        "suggest_dimension": "page_views.is_government",
+        "suggest_explore": "page_views",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_common.view.lkml?line=584",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/page_views.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
+        "sql": "${TABLE}.is_government",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "434",
@@ -2851,23 +2872,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "Anti-racism Custom Reports",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "4059",
           "dashboard_layout_id": "434",
           "dashboard_element_id": "4059",
-          "row": 8,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Traffic Between Languages",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 8,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2880,18 +2905,18 @@
           "id": "4060",
           "dashboard_layout_id": "434",
           "dashboard_element_id": "4060",
-          "row": 0,
-          "column": 12,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Traffic from bcstats.apps.gov.bc.ca by Lanaguge",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 12,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2904,18 +2929,18 @@
           "id": "4061",
           "dashboard_layout_id": "434",
           "dashboard_element_id": "4061",
-          "row": 0,
-          "column": 0,
           "width": 12,
           "height": 8,
           "deleted": false,
           "element_title": "Overall Traffic by Language",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2928,18 +2953,18 @@
           "id": "4071",
           "dashboard_layout_id": "434",
           "dashboard_element_id": "4071",
-          "row": 17,
-          "column": 0,
           "width": 24,
           "height": 9,
           "deleted": false,
           "element_title": "Translation Traffic Comparison",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 17,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -2949,9 +2974,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -2966,6 +2988,8 @@
   "last_updater_name": "Ozdemir Ozcelik",
   "user_name": "Dan Pollock",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,

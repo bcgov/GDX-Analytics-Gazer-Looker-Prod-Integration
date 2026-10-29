@@ -14,311 +14,6 @@
   "background_color": null,
   "created_at": "2026-02-18 18:00:36 UTC",
   "crossfilter_enabled": false,
-  "dashboard_filters": [
-    {
-      "id": "2590",
-      "dashboard_id": "579",
-      "name": "Date Range",
-      "title": "Date Range",
-      "type": "field_filter",
-      "explore": "clicks",
-      "dimension": "clicks.click_time_date",
-      "row": 0,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "options": [
-
-        ],
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "30 day ago for 30 day",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "The timestamp for the page view as recorded by the collector.",
-        "enumerations": null,
-        "field_group_label": "Click",
-        "fill_style": "range",
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Clicks Click Time Date",
-        "label_from_parameter": null,
-        "label_short": "Click Time Date",
-        "map_layer": null,
-        "name": "clicks.click_time_date",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "date_date",
-        "user_attribute_filter_types": [
-          "datetime",
-          "advanced_filter_datetime"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "clicks",
-        "view_label": "Clicks",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "clicks",
-        "datatype": "timestamp",
-        "convert_tz": true,
-        "dimension_group": "clicks.click_time",
-        "error": null,
-        "field_group_variant": "Click Time Date",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "clicks",
-        "suggest_dimension": "clicks.click_time_date",
-        "suggest_explore": "clicks",
-        "suggestable": false,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": true,
-        "can_time_filter": false,
-        "time_interval": {
-          "name": "day",
-          "count": 1
-        },
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fclicks.view.lkml?line=52",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/clicks.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
-        "sql": "${TABLE}.derived_tstamp ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2600",
-      "dashboard_id": "579",
-      "name": "Page URL",
-      "title": "Page URL",
-      "type": "field_filter",
-      "explore": "clicks",
-      "dimension": "clicks.page_display_url",
-      "row": 1,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "https://www.healthlinkbc.ca/healthwise/gambling-disorder,https://www.healthlinkbc.ca/healthwise/abortion",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "Cleaned URL of the page without query string or standard file names like index.html",
-        "enumerations": null,
-        "field_group_label": "Page",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Clicks Page Display URL",
-        "label_from_parameter": null,
-        "label_short": "Page Display URL",
-        "map_layer": null,
-        "name": "clicks.page_display_url",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "clicks",
-        "view_label": "Clicks",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "clicks",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Page Display URL",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "clicks",
-        "suggest_dimension": "clicks.page_display_url",
-        "suggest_explore": "clicks",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/clicks.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
-        "sql": "${TABLE}.page_display_url ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    },
-    {
-      "id": "2601",
-      "dashboard_id": "579",
-      "name": "Target URL",
-      "title": "Target URL",
-      "type": "field_filter",
-      "explore": "clicks",
-      "dimension": "clicks.target_url",
-      "row": 2,
-      "allow_multiple_values": true,
-      "required": false,
-      "ui_config": {
-        "display": "popover",
-        "type": "advanced"
-      },
-      "model": "snowplow_web_block",
-      "listens_to_filters": [
-
-      ],
-      "default_value": "",
-      "field": {
-        "align": "left",
-        "can_filter": true,
-        "category": "dimension",
-        "default_filter_value": null,
-        "description": "",
-        "enumerations": null,
-        "field_group_label": "Target",
-        "fill_style": null,
-        "fiscal_month_offset": 3,
-        "has_allowed_values": false,
-        "hidden": false,
-        "is_filter": false,
-        "is_numeric": false,
-        "label": "Clicks Target URL",
-        "label_from_parameter": null,
-        "label_short": "Target URL",
-        "map_layer": null,
-        "name": "clicks.target_url",
-        "strict_value_format": false,
-        "requires_refresh_on_sort": false,
-        "sortable": true,
-        "suggestions": null,
-        "synonyms": [
-
-        ],
-        "tags": [
-
-        ],
-        "type": "string",
-        "user_attribute_filter_types": [
-          "string",
-          "advanced_filter_string"
-        ],
-        "value_format": null,
-        "value_format_name": null,
-        "view": "clicks",
-        "view_label": "Clicks",
-        "dynamic": false,
-        "week_start_day": "sunday",
-        "original_view": "clicks",
-        "datatype": "false",
-        "convert_tz": null,
-        "dimension_group": null,
-        "error": null,
-        "field_group_variant": "Target URL",
-        "measure": false,
-        "parameter": false,
-        "primary_key": false,
-        "project_name": "snowplow_web_block",
-        "scope": "clicks",
-        "suggest_dimension": "clicks.target_url",
-        "suggest_explore": "clicks",
-        "suggestable": true,
-        "lookml_expression": null,
-        "is_fiscal": false,
-        "is_timeframe": false,
-        "can_time_filter": false,
-        "time_interval": null,
-        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fclicks.view.lkml?line=109",
-        "period_over_period_params": null,
-        "permanent": null,
-        "source_file": "Views/clicks.view.lkml",
-        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
-        "sql": "${TABLE}.target_url ",
-        "sql_case": null,
-        "filters": null,
-        "times_used": 0
-      },
-      "can": {
-        "create": true,
-        "destroy": true,
-        "update": true,
-        "find_and_replace": true,
-        "show_errors": true,
-        "index": true,
-        "show": true
-      }
-    }
-  ],
   "deleted_at": null,
   "deleter_id": null,
   "edit_uri": null,
@@ -326,7 +21,7 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-04-21 17:57:23 UTC",
+  "last_accessed_at": "2026-10-28 18:30:34 UTC",
   "updated_at": "2026-04-15 00:32:59 UTC",
   "last_updater_id": "13",
   "load_configuration": "cache_run",
@@ -337,7 +32,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 20,
+  "view_count": 21,
   "url": "/dashboards/579",
   "folder": {
     "name": "Web Analytics Dashboards",
@@ -371,6 +66,7 @@
   "content_favorite_id": null,
   "id": "579",
   "model": null,
+  "chat_enabled": true,
   "dashboard_elements": [
     {
       "body_text": null,
@@ -825,7 +521,7 @@
               "args": [
                 "clicks.target_url",
                 [
-                  "#<Sawyer::Resource:0x00007fc5938a5e70>"
+                  "#<Sawyer::Resource:0x00007f46a0190e18>"
                 ],
                 "Other Link"
               ],
@@ -878,6 +574,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "159650",
@@ -1338,7 +1035,7 @@
                 "args": [
                   "clicks.target_url",
                   [
-                    "#<Sawyer::Resource:0x00007fc59385e818>"
+                    "#<Sawyer::Resource:0x00007f46a00d1950>"
                   ],
                   "Other Link"
                 ],
@@ -1732,6 +1429,10 @@
         ],
         "query_id": "mYdQmtdqkbDZ4zTb77FwP6t6fV65g738"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -2275,7 +1976,7 @@
               "args": [
                 "clicks.target_url",
                 [
-                  "#<Sawyer::Resource:0x00007fc59377a140>"
+                  "#<Sawyer::Resource:0x00007f469bf9db78>"
                 ],
                 "Other Link"
               ],
@@ -2311,6 +2012,7 @@
           "use_custom_fields": true
         }
       },
+      "filter_id": null,
       "refresh_interval": null,
       "refresh_interval_to_i": null,
       "result_maker_id": "161324",
@@ -2844,7 +2546,7 @@
                 "args": [
                   "clicks.target_url",
                   [
-                    "#<Sawyer::Resource:0x00007fc5936ebb70>"
+                    "#<Sawyer::Resource:0x00007f469bf445a0>"
                   ],
                   "Other Link"
                 ],
@@ -3293,6 +2995,10 @@
         ],
         "query_id": "87S7QM2pD7Yh3n3mRjggpffqvX2QgZ4m"
       },
+      "image_id": null,
+      "images": [
+
+      ],
       "can": {
         "can_clear_cache": true,
         "create": true,
@@ -3311,6 +3017,311 @@
       ]
     }
   ],
+  "dashboard_filters": [
+    {
+      "id": "2590",
+      "dashboard_id": "579",
+      "name": "Date Range",
+      "title": "Date Range",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.click_time_date",
+      "row": 0,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "options": [
+
+        ],
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "30 day ago for 30 day",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "The timestamp for the page view as recorded by the collector.",
+        "enumerations": null,
+        "field_group_label": "Click",
+        "fill_style": "range",
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Click Time Date",
+        "label_from_parameter": null,
+        "label_short": "Click Time Date",
+        "map_layer": null,
+        "name": "clicks.click_time_date",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "date_date",
+        "user_attribute_filter_types": [
+          "datetime",
+          "advanced_filter_datetime"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "datatype": "timestamp",
+        "convert_tz": true,
+        "dimension_group": "clicks.click_time",
+        "error": null,
+        "field_group_variant": "Click Time Date",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.click_time_date",
+        "suggest_explore": "clicks",
+        "suggestable": false,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": true,
+        "can_time_filter": false,
+        "time_interval": {
+          "name": "day",
+          "count": 1
+        },
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fclicks.view.lkml?line=52",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${TABLE}.derived_tstamp ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2600",
+      "dashboard_id": "579",
+      "name": "Page URL",
+      "title": "Page URL",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.page_display_url",
+      "row": 1,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "https://www.healthlinkbc.ca/healthwise/gambling-disorder,https://www.healthlinkbc.ca/healthwise/abortion",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "Cleaned URL of the page without query string or standard file names like index.html",
+        "enumerations": null,
+        "field_group_label": "Page",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Page Display URL",
+        "label_from_parameter": null,
+        "label_short": "Page Display URL",
+        "map_layer": null,
+        "name": "clicks.page_display_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Page Display URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.page_display_url",
+        "suggest_explore": "clicks",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Includes%2Fshared_fields_no_session.view.lkml?line=145",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${TABLE}.page_display_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2601",
+      "dashboard_id": "579",
+      "name": "Target URL",
+      "title": "Target URL",
+      "type": "field_filter",
+      "explore": "clicks",
+      "dimension": "clicks.target_url",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "display": "popover",
+        "type": "advanced"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "",
+      "field": {
+        "align": "left",
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Target",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Clicks Target URL",
+        "label_from_parameter": null,
+        "label_short": "Target URL",
+        "map_layer": null,
+        "name": "clicks.target_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "clicks",
+        "view_label": "Clicks",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "clicks",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Target URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "clicks",
+        "suggest_dimension": "clicks.target_url",
+        "suggest_explore": "clicks",
+        "suggestable": true,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fclicks.view.lkml?line=109",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/clicks.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/clicks.view.lkml",
+        "sql": "${TABLE}.target_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    }
+  ],
   "dashboard_layouts": [
     {
       "id": "579",
@@ -3321,23 +3332,27 @@
       "width": null,
       "deleted": false,
       "dashboard_title": "HealthLink BC - How People Are Using BC SIMs (example dashboard)",
+      "label": null,
+      "description": null,
+      "order": -1,
+      "lookml_link_id": "",
       "dashboard_layout_components": [
         {
           "id": "5660",
           "dashboard_layout_id": "579",
           "dashboard_element_id": "5660",
-          "row": 0,
-          "column": 4,
           "width": 16,
           "height": 9,
           "deleted": false,
           "element_title": "Chart: Total Clicks by BCSIMS Links and Other Links",
           "element_title_hidden": false,
           "vis_type": "looker_column",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 0,
+          "column": 4,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3350,18 +3365,18 @@
           "id": "5662",
           "dashboard_layout_id": "579",
           "dashboard_element_id": "5662",
-          "row": 9,
-          "column": 0,
           "width": 24,
           "height": 15,
           "deleted": false,
           "element_title": "Total Link Clicks for a BCSIMs page - by BC SIMs page, by link clicked, by link type ",
           "element_title_hidden": false,
           "vis_type": "looker_grid",
-          "granular_row": null,
-          "granular_column": null,
           "granular_width": null,
           "granular_height": null,
+          "row": 9,
+          "column": 0,
+          "granular_row": null,
+          "granular_column": null,
           "can": {
             "create": true,
             "destroy": true,
@@ -3371,9 +3386,6 @@
           }
         }
       ],
-      "label": null,
-      "description": null,
-      "order": -1,
       "can": {
         "create": true,
         "destroy": true,
@@ -3388,6 +3400,8 @@
   "last_updater_name": "Dan Pollock",
   "user_name": "Linda Mah",
   "appearance": null,
+  "layout_granularity": null,
+  "preserve_desktop_layout": false,
   "can": {
     "certify": false,
     "copy": true,
