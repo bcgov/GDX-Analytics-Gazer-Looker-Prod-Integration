@@ -21,8 +21,8 @@
   "favorite_count": 0,
   "filters_bar_collapsed": false,
   "filters_location_top": true,
-  "last_accessed_at": "2026-11-04 22:38:32 UTC",
-  "updated_at": "2026-11-04 22:39:01 UTC",
+  "last_accessed_at": "2026-11-05 20:57:17 UTC",
+  "updated_at": "2026-11-05 20:10:46 UTC",
   "last_updater_id": "13",
   "load_configuration": "cache_run",
   "lookml_link_id": null,
@@ -32,7 +32,7 @@
   "tile_background_color": null,
   "tile_text_color": null,
   "title_color": null,
-  "view_count": 7,
+  "view_count": 10,
   "url": "/dashboards/606",
   "folder": {
     "name": "Web Analytics Dashboards",
@@ -3303,6 +3303,10 @@
               {
                 "dashboard_filter_name": "Date",
                 "field": "asset_downloads.download_time_date"
+              },
+              {
+                "dashboard_filter_name": "Asset URL",
+                "field": "asset_downloads.asset_display_url"
               }
             ]
           }
@@ -3791,6 +3795,10 @@
               {
                 "dashboard_filter_name": "Date",
                 "field": "asset_downloads.download_time_date"
+              },
+              {
+                "dashboard_filter_name": "Asset URL",
+                "field": "asset_downloads.asset_display_url"
               }
             ]
           }
@@ -4508,7 +4516,7 @@
       "listens_to_filters": [
 
       ],
-      "default_value": "7 days ago for 7 days",
+      "default_value": "30 day ago for 30 day",
       "field": {
         "align": "left",
         "can_filter": true,
@@ -4676,6 +4684,107 @@
         "source_file": "Views/page_views.view.lkml",
         "source_file_path": "snowplow_web_block/Views/page_views.view.lkml",
         "sql": "${TABLE}.page_display_url ",
+        "sql_case": null,
+        "filters": null,
+        "times_used": 0
+      },
+      "can": {
+        "create": true,
+        "destroy": true,
+        "update": true,
+        "find_and_replace": true,
+        "show_errors": true,
+        "index": true,
+        "show": true
+      }
+    },
+    {
+      "id": "2716",
+      "dashboard_id": "606",
+      "name": "Asset URL",
+      "title": "Asset URL",
+      "type": "field_filter",
+      "explore": "asset_downloads",
+      "dimension": "asset_downloads.asset_display_url",
+      "row": 2,
+      "allow_multiple_values": true,
+      "required": false,
+      "ui_config": {
+        "type": "advanced",
+        "display": "popover"
+      },
+      "model": "snowplow_web_block",
+      "listens_to_filters": [
+
+      ],
+      "default_value": "\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa013_fill.pdf\",https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa409.pdf,\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa410b_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa411_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa412b_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa413_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa430b_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa434d_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa509a_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa509c_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa510p_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/health/forms/vital-statistics/vsa796_fill.pdf\",https://www2.gov.bc.ca/assets/gov/birth-adoption-death-marriage-and-divorce/births/vsa052.pdf,\"https://www2.gov.bc.ca/assets/gov/birth-adoption-death-marriage-and-divorce/births/vsa404b_fill.pdf\",\"https://www2.gov.bc.ca/assets/gov/birth-adoption-death-marriage-and-divorce/births/vsa404_ebr.pdf\"",
+      "field": {
+        "align": "left",
+        "available_custom_timeframes": null,
+        "can_filter": true,
+        "category": "dimension",
+        "default_filter_value": null,
+        "description": "",
+        "enumerations": null,
+        "field_group_label": "Asset",
+        "fill_style": null,
+        "fiscal_month_offset": 3,
+        "has_allowed_values": false,
+        "hidden": false,
+        "is_filter": false,
+        "is_numeric": false,
+        "label": "Asset Downloads  Asset Display URL",
+        "label_from_parameter": null,
+        "label_short": "Asset Display URL",
+        "map_layer": null,
+        "name": "asset_downloads.asset_display_url",
+        "strict_value_format": false,
+        "requires_refresh_on_sort": false,
+        "sortable": true,
+        "suggestions": null,
+        "synonyms": [
+
+        ],
+        "tags": [
+
+        ],
+        "type": "string",
+        "user_attribute_filter_types": [
+          "string",
+          "advanced_filter_string"
+        ],
+        "value_format": null,
+        "value_format_name": null,
+        "view": "asset_downloads",
+        "view_label": "Asset Downloads ",
+        "dynamic": false,
+        "week_start_day": "sunday",
+        "original_view": "asset_downloads",
+        "datatype": "false",
+        "convert_tz": null,
+        "dimension_group": null,
+        "error": null,
+        "field_group_variant": "Asset Display URL",
+        "measure": false,
+        "parameter": false,
+        "primary_key": false,
+        "project_name": "snowplow_web_block",
+        "scope": "asset_downloads",
+        "suggest_dimension": "asset_downloads.asset_display_url",
+        "suggest_explore": "asset_downloads",
+        "suggestable": true,
+        "liquid_expression": null,
+        "lookml_expression": null,
+        "is_fiscal": false,
+        "is_timeframe": false,
+        "can_time_filter": false,
+        "time_interval": null,
+        "lookml_link": "/projects/snowplow_web_block/files/Views%2Fasset_downloads.view.lkml?line=133",
+        "period_over_period_params": null,
+        "permanent": null,
+        "source_file": "Views/asset_downloads.view.lkml",
+        "source_file_path": "snowplow_web_block/Views/asset_downloads.view.lkml",
+        "sql": "SPLIT_PART(SPLIT_PART(${TABLE}.asset_url,'?', 1), '#', 1) ",
         "sql_case": null,
         "filters": null,
         "times_used": 0
